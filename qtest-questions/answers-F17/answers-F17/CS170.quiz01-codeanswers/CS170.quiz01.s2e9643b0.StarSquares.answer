@@ -1,0 +1,23 @@
+public class StarSquares {
+
+    // write your method here
+    public static void starSquares(Turtle t, double x) {
+        for(int i; i < 5; i++) {
+            t.forward(x);
+            t.right(144);
+        }
+        for(int k; k < 4; k++){
+            t.forward(x / 5.0);
+            t.left(90);
+        }
+        t. forward(x / 2.5);
+        t. left(72);
+        t. forward(x / 2.5);
+        t. right(54);
+    }
+    public static void main(String[] args) {
+        // test your method here
+    Turtle t = new Turtle();
+    t(t, 100);
+    }
+}

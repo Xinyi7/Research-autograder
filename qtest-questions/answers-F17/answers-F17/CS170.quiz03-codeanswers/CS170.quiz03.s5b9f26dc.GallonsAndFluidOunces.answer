@@ -1,0 +1,13 @@
+public class GallonsAndFluidOunces {
+
+    public static void gallons(int n){
+        oz + " oz equals" + gallon + " gal" + ozrem +" fl oz"
+    }
+        
+    
+    public static void main(String[] args) {
+        System.out.println(gallons(300));
+        
+    }
+
+}

@@ -1,0 +1,24 @@
+public class EvenStrings {
+
+    // write your method here
+    public static boolean evenString(String s1,String s2){
+        boolean result;
+        int a=s1.length();
+        int b=s2.length();
+        if(a==b&&a%2==0){
+           return true;
+        }else{
+            return false;
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(evenString("blue","pink"));
+         System.out.println(evenString("blu","pink"));
+          System.out.println(evenString("ble","pik"));
+           System.out.println(evenString("blues","pink"));
+            System.out.println(evenString("ue","nk"));
+    }
+
+}

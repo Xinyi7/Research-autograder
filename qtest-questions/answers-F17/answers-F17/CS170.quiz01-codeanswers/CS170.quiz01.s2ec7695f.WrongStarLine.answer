@@ -1,0 +1,26 @@
+public class StarLine {
+
+    public static void star(Turtle t) {
+        for (int i = 0; i < 4; i++) {
+            t.forward(40);
+            t.right(134);
+        }
+          
+    }
+    
+    public static void starLine(Turtle t) {
+        for (int j = 0; j < 4; j++) {
+            star(t);
+            t.penup();
+            t.right(45);
+            t.forward(80);
+            t.pendown(); //added
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        starLine(t);
+    }
+
+}

@@ -1,0 +1,39 @@
+public class SplitAtChar {
+
+    // write your method here
+    public static String[] splitAtChar(String s, char c){
+        String[] result = new String[2];
+        String word1 = "";
+        String word2 = "";
+        boolean t = false;
+        for(int i = 0; i < s.length(); i ++){
+            if ( t == false){    
+                if(s.charAt(i) != c){
+                    word1 += s.charAt(i);  
+                }else{
+                    t = true;
+                    word2 += s.charAt(i);
+                }
+            }else if( t == true){
+                word2 += s.charAt(i);
+            }
+        }
+        result[0] = word1;
+        result[1] = word2;
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x;
+        x = splitAtChar("apple", 'p');
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'a');
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'e');
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'q');
+        System.out.println(x[0] + ", " + x[1]);
+    }
+
+}

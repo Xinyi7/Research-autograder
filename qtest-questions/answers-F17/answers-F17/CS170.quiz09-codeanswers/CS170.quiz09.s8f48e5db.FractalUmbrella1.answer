@@ -1,0 +1,33 @@
+public class FractalUmbrella {
+    // f(t, 200, 3) is called 9 times, as it goes through each level to level 1 and runs through the loop.  
+    //FOr f(t, 200, 4) it is called 12 times, as it goes through each level to level 1 and runs through the loop.
+    // General f(t, 200, N) is called n*3. 
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(60);
+            for (int i = 0; i < 3; i++) {
+                t.forward(x);
+                
+                t.left(180);
+                f(t, x * .25, level - 1);
+                t.right(180);
+                f(t, x * 0.25, level - 1);
+                t.backward(x);
+                
+                t.right(60);
+           
+            }
+            t.left(120);
+            
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 4);
+    }
+}

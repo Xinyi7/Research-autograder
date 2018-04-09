@@ -1,0 +1,11 @@
+public class DifferentDivisions {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+public static String (int x, int y) {
+    return "Look: " + x + " / " + y + " is " + (x/y) + " but " + double(x) + " / " +
+}
+}

@@ -1,0 +1,27 @@
+public class RecursiveSumProducts {
+
+    // write your method here
+    public static int sumProducts(int[] x, int[] y, int n){
+        
+
+        if(n>1)
+            return x[n-1]*y[n-1] + sumProducts(x,y,n-1);
+         else
+            return x[n-1]*y[n-1];
+        
+        
+        }
+
+
+    
+    public static void main(String[] args) {
+        int[] a = {1,2,3};
+        int[] b = {4,5,6};
+
+
+    System.out.println(sumProducts(a,b,3));
+        
+        // test your method here
+    }
+
+}

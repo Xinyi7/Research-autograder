@@ -1,0 +1,21 @@
+public class RepeatChars {
+
+    // write your method here
+    public static String repeatChars(String s, int[]k){
+        String result ="";
+        for (int i =0; i < k.length;i++){
+            for ( int j =0; j< k[i];j++){
+                result += s.charAt(i);
+            } 
+        }
+        return result;
+   }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String s ="hey";
+        int [] k = {2,3}; //hheee
+        System.out.println(repeatChars(s,k));
+    }
+
+}

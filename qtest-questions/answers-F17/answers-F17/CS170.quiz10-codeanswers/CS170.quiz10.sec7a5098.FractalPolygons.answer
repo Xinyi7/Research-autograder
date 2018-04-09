@@ -1,0 +1,34 @@
+//f(t,120,2) is invoked 1+4=5 times
+//f(t,120,3) is invoked 1+5+4*5=26
+//f(t,x,n) is invoked 1+N+2+(N+2)*(N+1)+(N+2)*(N+1)*(N).....
+public class FractalPolygons {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            int n = level + 2; //
+            for (int i = 0; i < n; i++) {
+                f(t, x / 2, level - 1);
+                t.forward(x);
+                t.left(360.0 / n);
+                t.forward(x);
+                t.left(360.0/n);
+                f(t, x / 2, level - 1);
+                t.forward(x);
+                t.left(360.0 / n);
+                 
+                
+             }
+             
+             
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 120, 4);
+        t.hideturtle();
+    }
+}

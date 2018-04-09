@@ -1,0 +1,47 @@
+//f(t, 120, 2) smallest side is 60
+//f(t, 120, 3) smallest side is 30
+//f(t, X, N) smallest side is X / 2^(N-1)
+
+public class FractalPolygons {
+
+  // public static void f(Turtle t, double x, int level) {
+    //    if (level < 1) {
+      //      return;
+        //} else {
+//            int n = level + 2;
+  //          for (int i = 0; i < n; i++) {
+    //            f(t, x / 2, level - 1);
+      //          t.forward(x);
+        //        t.left(360.0 / n);
+          //   }
+//        }
+  //  }
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            for (int i = 0; i < level + 2; i++) {
+                //t.forward(x);
+                f(t, x/2, level - 1);
+                  t.forward(x);
+                 t.left(360.0/(level + 2));
+                    
+                 //t.forward(x*2);
+            //f(t, x*2, level + 1);
+            }
+         //   for (int i = 0; i < level + 1; i++) {
+        //        f(t, x/2, level - 1);
+        //        t.forward(x);
+        //        t.left(360.0/i);
+        //    }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 120, 4);
+        t.hideturtle();
+    }
+}

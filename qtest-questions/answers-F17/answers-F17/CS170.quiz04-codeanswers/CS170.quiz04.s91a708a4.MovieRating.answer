@@ -1,0 +1,26 @@
+public class MovieRating {
+
+    // write your method here
+    public static String movieRating(double stars){
+        int rating=0;
+        if (stars<=2.5){
+            return "bad";
+        }
+        else if(stars<4.2){
+            return "ok";
+        }
+        else{
+            return "mustsee";
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(movieRating(2));
+        System.out.println(movieRating(2.5));
+        System.out.println(movieRating(3));
+        System.out.println(movieRating(4.2));
+        System.out.println(movieRating(5));
+    }
+
+}

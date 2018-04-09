@@ -1,0 +1,26 @@
+public class SplitAt {
+
+    public static String[] splitAt(String s, int n){
+     String[] z = new String[2];
+    z[0]="";
+    z[1]="";
+
+    for(int i=0; i<n; i++){
+        z[0]+=s.charAt(i);
+    }
+    System.out.println(z[0]);
+    for(int x=n; x<s.length(); x++){
+        z[1]+=s.charAt(x);
+    }
+    System.out.println(z[1]);
+    return z;
+        
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(splitAt("apple", 2));
+        System.out.println(splitAt("apple", 0));
+        
+    }
+
+}

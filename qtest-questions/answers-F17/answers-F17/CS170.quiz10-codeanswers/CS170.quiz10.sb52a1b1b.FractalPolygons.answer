@@ -1,0 +1,27 @@
+//for f(t, 120, 2) , size = 60
+//for f(t, 120, 3), size = 30
+//for f(t, X, N), size = X * (0.5**(n-1))
+public class FractalPolygons {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 3) {
+            return;
+        } else {
+            int n = level;
+
+            for (int i = 1; i < n+1; i++) {
+               if (i%2 == 1){
+                f(t, x / 2, level - 1);}
+                t.forward(x);
+                t.left(360.0 / n);
+             }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(2);
+        f(t, 120, 6);
+        //t.hideturtle();
+    }
+}

@@ -1,0 +1,37 @@
+public class Arrow {
+
+    // write your method here
+    public static void onearrow(Turtle t, double x){
+
+        t.forward(x);
+        t.backward(x);
+        t.left(45);
+        t.forward(x);
+        t.backward(x);
+        t.right(90);
+        t.forward(x);
+        t.backward(x);
+        t.left(45);
+    }
+
+    public static void arrow(Turtle t, double x, int n){
+
+   for(int i=0;i<n;i++){
+    onearrow(t,x/(i+1));
+    t.forward(x/n);
+    
+   }
+
+   t.backward(x);
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t=new Turtle();
+        t.delay(10);
+        arrow(t,150,5);
+        
+        
+    }
+    
+}

@@ -1,0 +1,26 @@
+public class ProdOdds {
+
+    // write your method here
+
+    public static double prodOdds(int a, int b){
+        double prod = 1.0;
+        for(int i=a;i<=b;i++){
+            if(i%2!=0)
+                prod*=i;
+            }
+        return prod;
+        }
+    
+    public static void main(String[] args) {
+        System.out.println(prodOdds(1,6));
+        System.out.println(prodOdds(3,6));
+        System.out.println(prodOdds(2,4));
+        //we are going to get some funky outputs if we dont use float--er double
+        
+        System.out.println(prodOdds(1,100));
+        //well, we still will
+        System.out.println(prodOdds(1,500));
+        // test your method here
+    }
+
+}

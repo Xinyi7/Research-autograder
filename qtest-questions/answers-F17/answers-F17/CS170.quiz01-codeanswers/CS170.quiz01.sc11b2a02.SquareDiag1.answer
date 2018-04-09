@@ -1,0 +1,77 @@
+public class SquareDiag {
+
+    // write your method here
+    public static void squareDiag(Turtle t, double x, int n) {
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+          t.penup();
+        t.forward(25);
+        t.left(90);
+        t.forward(25);
+        t.pendown();
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+          t.penup();
+        t.forward(25);
+        t.left(90);
+        t.forward(25);
+        t.pendown();
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+         t.penup();
+        t.forward(25);
+        t.left(90);
+        t.forward(25);
+        t.pendown();
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+         t.penup();
+        t.forward(25);
+        t.left(90);
+        t.forward(25);
+        t.pendown();
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.forward(50);
+        t.left(90);
+        t.penup();
+        t.right(90);
+        t.forward(100);
+        t.right(90);
+        t.forward(100);
+    }
+    public static void main(String[] args) {
+        // test your method here
+    } for (int i = 0; i < 2; i++) {
+        squareDiag(t, i, x);
+    }
+
+}

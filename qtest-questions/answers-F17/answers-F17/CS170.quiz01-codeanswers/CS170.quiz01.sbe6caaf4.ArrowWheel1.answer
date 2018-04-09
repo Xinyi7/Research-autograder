@@ -1,0 +1,27 @@
+public class ArrowWheel {
+
+    // write your method here
+    public static void triangle(Turtle t, double x) {
+        for (int i = 0; i < 3; i++){
+            t.forward(x / 5);
+            t.left(120);
+        }
+    }
+    public static void arrowWheel(Turtle t, double x, int n){
+        for (int i = 0; i < n; i++){
+            triangle(t, 100);
+            t.penup();
+            t.forward(50);
+            t.pendown();
+            t.left(90);
+            t.backward(x);
+        }
+        t.right(40);
+    }
+   
+    public static void main(String[] args) {
+        // test your method here
+    }   Turtle t = new Turtle();
+        arrowWheel(t, 100, 9);
+
+}

@@ -1,0 +1,12 @@
+public class SplitAt {
+        
+    public static void main(String[] args) {
+      System.out.println(splitAt("apple",2)); // {ap, pple} 
+      System.out.println(splitAt("apple",0)); //{, apple}
+    }
+
+    public static String splitAt (String s, int n){
+        return "{" + s.substring(0, n) + ", " +s.substring (n) + "}";
+    }
+
+}

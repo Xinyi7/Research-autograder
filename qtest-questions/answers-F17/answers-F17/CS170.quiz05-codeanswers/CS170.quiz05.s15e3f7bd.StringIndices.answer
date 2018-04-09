@@ -1,0 +1,22 @@
+public class StringIndices {
+
+    public static String indices( String s, String pre, String post){
+        String result=pre;
+       
+        for (int i=0;i<s.length(); i++){
+            result+=i;
+            if (i!= s.length()-1){
+                result+=pre;
+            }
+           
+            
+        }
+        result += post;
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(indices("abc", "--", "$"));
+    }
+
+}

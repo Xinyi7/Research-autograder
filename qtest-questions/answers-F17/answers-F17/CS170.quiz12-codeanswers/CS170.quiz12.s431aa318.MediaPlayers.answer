@@ -1,0 +1,245 @@
+public class TestMediaPlayer {
+
+    public static void main(String[] args) {
+        // Uncomment the following lines to activate the test cases
+        System.out.println("----- Test Mp3Player -----");
+        Mp3Player p1 = new Mp3Player("iPod Shuffle");
+        System.out.println(p1);
+        System.out.println("Model: " + p1.getModel());
+        p1.add("Country Road", "audio");
+        p1.add("Star Wars", "video");
+        p1.add("Panorama", "picture");
+        System.out.println(p1);
+        System.out.println("Type of Country Road: " + p1.getType("Country Road"));
+        System.out.println("Type of Star Wars: " + p1.getType("Star Wars"));
+        System.out.println("Type of Panorama: " + p1.getType("Panorama"));
+        System.out.println("Type of Let It Be: " + p1.getType("Let It Be"));
+        String[] t = p1.getTitles();
+        for (int i = 0; i < t.length; i++) {
+            System.out.println(t[i]);
+        }
+        p1.play("Country Road");
+        p1.play("Star Wars");
+        p1.play("Panorama");
+        p1.play("Let It Be");
+
+        System.out.println("----- Test SmartTV -----");
+        SmartTV p2 = new SmartTV("Samsung QLED", 65);
+        System.out.println(p2);
+        System.out.println("Model: " + p2.getModel());
+        System.out.println("Size: " + p2.getSize());
+        p2.add("Country Road", "audio");
+        p2.add("Star Wars", "video");
+        p2.add("Panorama", "picture");
+        System.out.println(p2);
+        System.out.println("Type of Country Road: " + p2.getType("Country Road"));
+        System.out.println("Type of Star Wars: " + p2.getType("Star Wars"));
+        System.out.println("Type of Panorama: " + p2.getType("Panorama"));
+        System.out.println("Type of Let It Be: " + p2.getType("Let It Be"));
+        String[] t2 = p2.getTitles();
+        for (int i = 0; i < t2.length; i++) {
+            System.out.println(t2[i]);
+        }
+        p2.play("Country Road");
+        p2.play("Star Wars");
+        p2.play("Panorama");
+        p2.play("Let It Be");
+    }
+
+}
+
+abstract class MediaPlayer {
+    
+    protected String model; // model name of this device
+    
+    protected int numTitles; // number of titles in the playlist
+    
+    protected String[] titles; // titles of media files in the playlist
+    
+    protected String[] types; // types of the media files in the playlist
+    
+    // Constructor
+    // Assumes that there can be no more than 1000 titles in the playlist
+    public MediaPlayer(String model) {
+        // You implement this method
+        this.model = model;
+        numTitles = 0;
+        titles = new String[1000];
+        types = new String[1000];
+    }
+    
+    // Returns the model name of this device
+    public String getModel() {
+        return model;
+    }
+        
+    // Adds a title and its type to the playlist.
+    // If the playlist is full (1000 titles), the method does nothing.
+    public void add(String title, String type) {
+        if (numTitles < 1000) {
+            titles[numTitles] = title;
+            types[numTitles] = type;
+            numTitles++;
+    }
+    }
+    
+
+    // Return the type of a media file in the playlist given its title.
+    // If the title is not in the playlist, it returns null
+    public String getType(String title) {
+        for (int i = 0; i < numTitles; i++) {
+            if (titles[i].equals(title)) {
+                return types[i];
+            }
+        }
+        return null;
+        
+    
+        
+    }
+    
+    // Returns a new array of Strings containing a copy of the
+    // titles in the playlist.
+    // The size of the new array is exactly the number of titles.
+    public String[] getTitles() {
+        String[] copy = new String[numTitles];
+        for (int i = 0; i < numTitles; i++) {
+            copy[i] = titles[i];
+            
+        }
+        return copy;
+    }
+
+    // Plays a media file.
+    public abstract void play(String title);
+    
+}
+
+
+interface AudioPlayer {
+    
+    public void playAudio(String title);
+    
+}
+
+
+interface VideoPlayer {
+    
+    public void playVideo(String title);
+    
+}
+
+
+class Mp3Player extends MediaPlayer implements AudioPlayer {
+
+    // Constructor
+    public Mp3Player(String model) {
+        super(model);
+        
+    }
+
+    // Returns a String representation of this object in the following format:
+    // "<model> Mp3 Player with <numTitles> titles in the playlist"
+    public String toString() {
+        return model + "> Mp3 Player with " + numTitles + " titles in the playlist";
+    }
+
+    // Prints a message with this format:
+    // "I'm playing audio: <title> on this <model> Mp3 Player"
+    public void playAudio(String title) {
+       System.out.println("I'm playing audio: " + title + "> on this " + model + " Mp3 Player");
+    }
+
+    // If the given title is not in the playlist,
+    // prints "Title <title> is not in the playlist"
+    // If the title is in the playlist and is an audio file,
+    // plays it using the playAudio method.
+    // If the tile is in the playlist and is of any other type,
+    // prints "Cannot play <type>: <title>"
+    public void play(String title) {
+        int index = -1;
+        for (int i = 0; i < numTitles; i++) {
+            if (titles[i].equals(title)) {
+                index = i;
+            } 
+        }
+        if (index == -1) {
+            System.out.println("Title " + title + " is not in the playlist");
+        } else if (types[index].equals("audio")) {
+           playAudio(title);
+            
+            
+        } else {
+            System.out.println("Cannot play " + types[index] + ": " + title);
+            
+        }
+    }
+    
+}
+
+
+class SmartTV extends MediaPlayer implements AudioPlayer, VideoPlayer {
+
+    private int size; // size of this TV screen in inches
+    
+    // Constructor
+    public SmartTV(String model, int size) {
+        super(model);
+        this.size = size;
+    }
+
+    // Returns the size of this TV screen in inches
+    public int getSize() {
+        return size;
+    }
+    
+    // Returns a String representation of this object in the following format:
+    // "<model> <size> inch Smart TV with <numTitles> titles in the playlist"
+    public String toString() {
+        return model + " " + size + " inch Smart TV with " + numTitles + " titles in the playlist";
+        
+    }
+
+    // Prints a message with this format:
+    // "I'm playing audio: <title> on this <model> <size> inch Smart TV"
+    public void playAudio(String title) {
+       System.out.println("I'm playing audio: " + title + " on this " + model +  " " + size + " inch Smart TV"); 
+    }
+
+    // Prints a message with this format:
+    // "I'm playing video: <title> on this <model> <size> inch Smart TV"
+    public void playVideo(String title) {
+       System.out.println("I'm playing a video: " + title + " on this " + model + " " + size + " inch Smart TV");
+    }
+
+    // If the given title is not in the playlist,
+    // prints "Title <title> is not in the playlist"
+    // If the title is in the playlist and is an audio file,
+    // plays it using the playAudio method.
+    // If the title is in the playlist and is a video file,
+    // plays it using the playVideo method.
+    // If the tile is in the playlist and is of any other type,
+    // prints "Cannot play <type>: <title>"
+    public void play(String title) {
+        int index = -1;
+        for (int i = 0; i < numTitles; i++) {
+            if (titles[i].equals(title)) {
+                index = i;
+            }
+            
+        }
+        if (index == -1) {
+            System.out.println("Title " + title + " is not in the playlist");
+        } else if (types[index].equals("audio")) {
+            playAudio(title);
+        } else if (types[index].equals("video")) {
+            playVideo(title);
+            
+        }
+        else {
+            System.out.println("Cannot play " + types[index] + ": " + title);
+        }
+        
+    }
+    
+}

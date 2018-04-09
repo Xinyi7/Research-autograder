@@ -1,0 +1,15 @@
+public class RecursiveRepeatRemove {
+
+    public static String repeatRemove(String s, char c, char r){
+    if (s == ""){
+    return ""
+    } else if {
+
+    }
+    }
+    
+    public static void main(String[] args) {
+    System.out.println(repeatRemove("abcd", 'a', 'b');
+    }
+
+}

@@ -1,0 +1,30 @@
+public class DifferentDivisions {
+
+    // write your method here
+    public static void divisions(int x, int y) {
+        int z = x/y;
+        double a = Double.parseDouble(x);
+        double b = Double.parseDouble(y);
+        double j = a/b;
+        String sentence = "Look: " + "x" + " / " + "y" + " is " + z + ", but " + "a" + " / " + "b" + " is " + j + ".";
+        return sentence;
+
+
+
+        
+        //String fraction = "x / y";
+        //String result = "" + x/y;
+        //double a = Double.parseDouble(x);
+        //double b = Double.parseDouble(y);
+        //String fraction2 = "a / b";
+        //String result2 = "" + a/b;
+        //String sentence = "Look: " + fraction + " is " + result + ", but " + fraction2 + " is " + result2 + ".";
+        //return sentence;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(divisions(3, 2));
+    }
+
+}

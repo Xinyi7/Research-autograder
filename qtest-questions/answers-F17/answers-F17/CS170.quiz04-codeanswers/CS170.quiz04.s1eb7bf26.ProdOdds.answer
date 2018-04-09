@@ -1,0 +1,36 @@
+public class ProdOdds {
+
+    // write your method here
+    public static int prodOdds(int a, int b){
+        if(a<=b){
+            return prod(a,b);
+        }else{
+            return prod(b,a);
+        }
+    }
+    public static int prod(int a, int b){
+        int result=1;
+        if(a%2==1){
+            for(int i=a;i<=b;i+=2){
+                result*=i;
+            }
+        }else{
+            for(int i=a+1;i<=b;i+=2){
+                result*=i;
+            }
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        System.out.println(prodOdds(1,8));
+        System.out.println(prodOdds(2,7));
+        System.out.println(prodOdds(3,9));
+        System.out.println(prodOdds(2,6));
+        System.out.println(prodOdds(5,5));
+        System.out.println(prodOdds(6,2));
+        System.out.println(prodOdds(7,3));
+        System.out.println(prodOdds(6,1));
+        // test your method here
+    }
+
+}

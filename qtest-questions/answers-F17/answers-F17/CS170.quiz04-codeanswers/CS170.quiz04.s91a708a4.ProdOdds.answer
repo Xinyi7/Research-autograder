@@ -1,0 +1,21 @@
+public class ProdOdds {
+
+    // write your method here
+    public static int probOdds(int a, int b){
+        int product= 1;
+        for( int x= a; x<=b; x++){
+            if(x%2 !=0){
+                product=product*x;
+            }
+        }
+        return product;
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(probOdds(0,3));
+        System.out.println(probOdds(1,5));
+        System.out.println(probOdds(5,5));
+
+    }
+
+}

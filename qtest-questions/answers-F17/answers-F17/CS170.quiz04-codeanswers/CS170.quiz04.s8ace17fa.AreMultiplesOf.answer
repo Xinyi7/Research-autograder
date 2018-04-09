@@ -1,0 +1,28 @@
+public class AreMultiplesOf {
+
+    // write your method here
+    public static boolean areMultiplesOf(int a, int b, int c){
+        boolean x = true;
+        
+
+        if ((c < a) && (c < b)){
+            x = true;
+        }else if ((c > a)||(c>b)){
+            x = false; 
+        } else if (c.isEven() == a.isEven() == b.isEven()){
+            x = true;
+        } else {
+            x = false;
+        }
+       
+        return x;
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(areMultiplesOf(10, 6, 2 )); 
+        System.out.println(areMultiplesOf(10, 6, 20 ));
+        System.out.println(areMultiplesOf(10, 6, 20 ));
+        
+    }
+
+}

@@ -1,0 +1,92 @@
+/* first class*/
+public class Main {
+    public static void main(String[] args){
+        Player p1 = new Player("Poome");
+        Player p2 = new Player("Pat");
+        Game g = new Game(); 
+        g.play(p1,p2,10);
+
+        if (p1.getWins() > p2.getWins()) {
+            System.out.println(p1.getName() + " wins!");
+        } else if (p2.getWins() > p1.getWins()) {
+            System.out.println(p2.getName() + " wins!");
+        } else {
+            System.out.println("Tie game!");
+        }
+
+        g.play(p1,p2,10);                                   // rematch (for testing)
+
+        if (p1.getWins() > p2.getWins()) {
+            System.out.println(p1.getName() + " wins!");
+        } else if (p2.getWins() > p1.getWins()) {
+            System.out.println(p2.getName() + " wins!");
+        } else {
+            System.out.println("Tie game!");
+        }
+    }
+}
+
+/* second class*/
+class Die {
+
+    public int roll() {
+        return (int)(Math.random() * 5 + 1);
+    }
+}
+
+/* third class*/
+class Player {
+    private String name;
+    private int wins;
+
+    public Player(String name){
+        this.name = name;
+        wins = 0;
+    }
+
+    public void recordWin(){
+        wins += 1;
+    }
+
+    public void resetWins() {
+        wins = 0;
+    }
+
+    public String getName() {
+        return "" + name;
+    }
+
+    public int getWins() {
+        return wins;
+    }
+}
+
+/* fourth class*/
+class Game {
+    private Die die;
+
+    public Game() {
+    }
+
+    public void play(Player player1, Player player2, int rounds) {
+        player1.resetWins();
+        player2.resetWins();
+
+        Die die = new Die();
+
+        for (int i = 0; i < rounds; i++) {
+            
+        int roll1 = die.roll();
+        int roll2 = die.roll();
+
+        if(roll1 > roll2) {
+            player1.recordWin();
+        } else if (roll2 > roll1) {
+            player2.recordWin();
+        } else {
+            
+        }
+        
+        }
+    }
+}

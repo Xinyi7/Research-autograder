@@ -1,0 +1,29 @@
+public class Arrow {
+
+    // write your method here
+    public static void arrow(Turtle t, double length, int branches){
+    for(int i = 0; i < branches; i++){
+        t.left(45);
+        t.forward(length*(1/(1.0+i)));
+
+        t.right(180);
+        t.forward(length*(1/(1.0+i)));
+      
+        t.left(90);
+        t.forward(length*(1/(1.0+i)));
+      
+        t.right(180);
+        t.forward(length*(1/(1.0+i)));
+        t.right(135);
+        t.forward(20);
+        
+    }
+        
+    }
+    public static void main(String[] args) {
+        // test your method here
+    Turtle t = new Turtle();
+    arrow(t, 150, 5);
+    }
+    
+}

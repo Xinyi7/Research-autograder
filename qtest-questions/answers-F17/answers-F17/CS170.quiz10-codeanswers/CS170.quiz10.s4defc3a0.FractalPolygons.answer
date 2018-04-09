@@ -1,0 +1,29 @@
+public class FractalPolygons {
+
+
+
+    //f(t, 120, 2)= 1 + 4 = 5
+    //f(t, 120, 3) = 1 + 5 + 10 = 16
+    //f(t, X, N)= 1 + ... + (N + 2)*(N-1)
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            int n = level + 1; // decrease the size of n in order to match the number of sides of the image, whihc is 6
+            for (int i = 0; i < n; i++) {
+                f(t, x / 2, level - 1);
+                t.forward(x);
+                t.left(360.0 / 2);
+                
+             }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 120, 5);
+        t.hideturtle();
+    }
+}

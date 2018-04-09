@@ -1,0 +1,26 @@
+public class Separate {
+    public static String separate(String s, int n){
+        String result = "";
+        int i = 0;
+        while (i < n) {
+            result += s.charAt(i);
+            i++;
+        }
+        result += "-" + s.charAt(n) + "-";
+        int j = n + 1;
+        while (j < s.length()){
+            result += s.charAt(j);
+        }
+        return result;
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(separate("orange", 2));
+        System.out.println(separate("whatever", 5));
+        System.out.println(separate("hey", 0));
+        System.out.println(separate("hey", 2));
+    }
+
+}

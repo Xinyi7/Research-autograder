@@ -1,0 +1,27 @@
+public class BinarySearch {
+
+    public static void main(String[] args) {
+        String[] s = {"apple", "carrot", "mango", "orange", "pineapple"};
+        System.out.println("Search for apple: " + binarySearch("apple", s, 0, s.length)); // true
+        System.out.println("Search for pineapple: " + binarySearch("pineapple", s, 0, s.length)); // true
+        System.out.println("Search for orange: " + binarySearch("orange", s, 0, s.length)); // true
+        System.out.println("Search for banana: " + binarySearch("banana", s, 0, s.length)); // false
+    }
+
+    // Searches for element key in array x using binary search.
+    // Returns true if key is in x, false otherwise.
+    public static boolean binarySearch(String key, String[] x, int start, int end) {
+        if (start >= end) { //change > to >=
+            return false; //return false instead of 0
+        }
+        int middle = (start + end) / 2;
+        if (x[middle].equals(key)) {
+            return true;
+        } else if (x[middle].compareTo(key)<0) { //Change x[middle]< key to x[middle].compareTo(key)<0
+            return binarySearch(key, x, middle + 1, end);
+        } else {
+            return binarySearch(key, x, start, middle);
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+public class GrowPoly {
+
+    // write your method here
+    public static void polygon(Turtle t, double x, int numSides){
+        for (int i = 0 ; i < numSides, i++){
+            t.forward(x);
+            t.left(360.0/numSides);
+        }
+    }
+    public static void growPoly(Turtle t, double x, int n, int m){
+        for (int j = n; j <= m; j++){
+            polygon(t,x,n);
+            t.left(15);
+            t.forward(x);
+        }
+    }
+    public static void main(String[] args) {
+        // test your method here
+    Turtle t = new Turtle();
+    growPoly(t,20,5,7);
+    }
+    
+}

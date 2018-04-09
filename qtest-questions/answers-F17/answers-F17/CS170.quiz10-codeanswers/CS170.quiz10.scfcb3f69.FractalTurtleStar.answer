@@ -1,0 +1,27 @@
+//  f(t, 150, 3): 1 + 3 + 9 = 13
+// f(t, 150, 4): 1 + 3 + 9 + 27 = 40
+// f(t, 150, N): 1 + 3**1 + 3**2 + ... + 3**(N-1)
+
+public class FractalTurtleStar {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            for (int i = 0; i < 9; i++) { // change to 9
+                t.forward(x);
+                if (i % 3 == 0) { //change to % 3
+                    f(t, x * 0.4, level - 1);
+                }
+                t.backward(x);
+                t.left(360.0 / 9); // change to / 9
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 150, 5); // change to f(t, 150, 5)
+    }
+}

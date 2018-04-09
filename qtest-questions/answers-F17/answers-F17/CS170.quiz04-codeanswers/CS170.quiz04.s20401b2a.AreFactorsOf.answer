@@ -1,0 +1,14 @@
+public class AreFactorsOf {
+
+    public static void areFactorsOf(int a, int b, int c) {
+        System.out.println(c % a == 0 && c % b == 0);
+    }
+    
+    public static void main(String[] args) {
+        areFactorsOf(3, 2, 6);
+        areFactorsOf(3, 1, 27);
+        areFactorsOf(3, 2, 5);
+        
+    }
+
+}

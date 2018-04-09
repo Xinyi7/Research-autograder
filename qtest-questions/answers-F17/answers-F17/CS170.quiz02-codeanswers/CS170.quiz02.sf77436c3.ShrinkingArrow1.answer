@@ -1,0 +1,28 @@
+public class Arrow {
+
+    public static void branch(Turtle t, double length){ //one branch biggest
+       t.pendown();
+        t.left(135);
+        
+        t.forward(length);
+        t.backward(length);
+        t.left(90);
+        t.forward(length);
+        t.backward(length);
+        t.left(135);
+    }
+
+    public static void arrow(Turtle t, double length,int branches){ //length=size of stem  --- branches= number of branches
+      for(int j=0; j<branches; j++){
+        branch(t,length*(1/branches));
+        t.forward(length/branches);
+      }
+    }
+    
+    public static void main(String[] args) {
+        Turtle dan= new Turtle();
+        dan.pendown();
+        arrow(dan,150,5);
+    }
+    
+}

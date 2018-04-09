@@ -1,0 +1,70 @@
+<question>
+<title>WrongGrid</title>
+<type>JavaCode</type>
+<points>12</points>
+<text>
+The following program is supposed to draw a 3x3 square grid like the figure, but it contains three mistakes. Can you fix them?
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAKwAAACoAQMAAABHbpeNAAAABlBMVEX///8AAABVwtN+AAAAZ0lE
+QVRIx+3UMQ6AIBBE0TWS0NJBwWG4/ym28ADeQAna8VsTjTPly2aKLcbswRTmzJycuTKvzObM2JLi
+MWXvHMb1ch21u6GzI0dDrswbcg7IhdnEYvHXmddHrxKLxVofsVj8q/V5S06uSIFkfQ7HCwAAAABJ
+RU5ErkJggg==
+</figure>
+<init>
+public class Grid {
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 4; k++) {
+                    t.forward(50);
+                    t.left(80);
+                }
+                t.penup();
+                t.forward(50);
+                t.pendown();
+            }
+            t.penup();
+            t.backward(150);;
+            t.left(90);
+            t.forward(50);
+            t.pendown();
+        }
+    }
+
+}
+</init>
+<answer>
+public class Grid {
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        for (int i = 0; i < 3; i++) { // i < 3 instead of i < 2
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 4; k++) {
+                    t.forward(50);
+                    t.left(90); // 90 instead of 80
+                }
+                t.penup();
+                t.forward(50);
+                t.pendown();
+            }
+            t.penup();
+            t.backward(150);;
+            t.left(90);
+            t.forward(50);
+            t.right(90); // add right(90) here
+            t.pendown();
+        }
+    }
+
+}
+</answer>
+<rubric>
+4 points for each mistake fixed correctly
+-4 points for each new mistake introduced
+</rubric>
+</question>
+

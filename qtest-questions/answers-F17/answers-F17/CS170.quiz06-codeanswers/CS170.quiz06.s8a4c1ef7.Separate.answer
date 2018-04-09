@@ -1,0 +1,21 @@
+public class Separate {
+
+    // write your method here
+    public static String separate (String s, int n)
+    {
+        //the string result creates the string
+        //I am going to assume that "n" is always less than the length of "s", and by extention "s" is never empty
+        String result= s.substring(0, n)+ "-"+ s.charAt(n)+ "-"+ s.substring(n+1);
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(separate("orange",2));
+        System.out.println(separate("whatever",5));
+        System.out.println(separate("hey",0));
+        System.out.println(separate("hey",2));
+        
+    }
+
+}

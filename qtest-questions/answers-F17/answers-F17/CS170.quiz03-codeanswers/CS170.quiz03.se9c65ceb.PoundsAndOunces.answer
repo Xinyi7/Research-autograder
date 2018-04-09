@@ -1,0 +1,14 @@
+public class PoundsAndOunces {
+    
+    public static void main(String[] args) {
+       System.out.print (pounds(60)); // "60 oz equals 3 lb 12 oz"
+       }
+
+    public static String pounds (int x){
+        
+        
+        return (x*16) + " oz equals " + x/16 ;
+
+    }
+    
+}

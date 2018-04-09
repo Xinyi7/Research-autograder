@@ -1,0 +1,34 @@
+<question>
+<title>IntDoubleString1</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+int x = 5;
+double y = 5.0;
+String z = "0.5";
+System.out.println(y - x + z);
+System.out.println((int)y + x + z);
+System.out.println(x + (int)y + (int)Double.parseDouble(z));
+System.out.println( Double.parseDouble(z + x) - x + z);
+System.out.println((double)x / (int)y);
+System.out.println(Double.parseDouble(z + (int)y * x));
+for (int i = (int)(x + y) / x; i < x + 1; i++) {
+    System.out.println(z + i + x + y);
+} 
+</text>
+<answer>
+0.00.5
+100.5
+10
+-4.450.5
+1.0
+0.525
+0.5255.0
+0.5355.0
+0.5455.0
+0.5555.0
+</answer>
+</question>
+

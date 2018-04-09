@@ -1,0 +1,12 @@
+public class FeetAndInches {
+
+    // write your method here
+    public static String feet(int n){
+        return n + " in equals " + n/12 +" ft " + n%12 + " in." ;
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(feet(68));
+    }
+
+}

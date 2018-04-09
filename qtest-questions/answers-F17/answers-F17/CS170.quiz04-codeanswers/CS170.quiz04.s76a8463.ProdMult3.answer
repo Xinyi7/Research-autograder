@@ -1,0 +1,17 @@
+public class ProdMult3 {
+
+    // write your method here
+    public static void ProdMult3(int a, int b) {
+        for (int i = a; i < b; i++) {
+            
+        }
+        return result; 
+    }
+
+    
+    public static void main(String[] args) {
+        // test your method here
+        ProdMult(5,10); 
+    }
+
+}

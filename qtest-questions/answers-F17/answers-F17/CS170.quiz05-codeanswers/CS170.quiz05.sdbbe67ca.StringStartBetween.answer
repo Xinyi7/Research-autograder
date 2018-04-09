@@ -1,0 +1,23 @@
+public class StringStartBetween {
+
+    // write your method here
+
+    public static String betweenEnd(String s, String start, String between) {
+        String result = "";
+        result += start; 
+        for(int i = 0; i<s.length(); i++) {
+            result += s.substring(i, i+1); 
+            result += between; 
+            
+        }
+
+     return result; 
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(betweenEnd("hello", "@#!", "."));
+        
+    }
+
+}

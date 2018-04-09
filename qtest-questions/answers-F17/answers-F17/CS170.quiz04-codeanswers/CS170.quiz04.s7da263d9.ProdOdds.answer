@@ -1,0 +1,20 @@
+public class ProdOdds {
+
+    public static int prodOdds(int a, int b) {
+        int x = 0;
+        for (int i = a; i <= b; i++)
+            if (i % 2 != 0) {
+                x += i;
+            }
+            return x;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(prodOdds(3, 8));
+        System.out.println(prodOdds(2, 9));
+        System.out.println(prodOdds(4, 6));
+        System.out.println(prodOdds(1, 5));
+        
+    }
+
+}

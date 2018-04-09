@@ -1,0 +1,11 @@
+public class SquareDiag {Turtle t, double x, int n)
+
+    new Turtle=turtle t
+    for(i=0, i<4, i++);
+    squareDiag(10, 50, 5);
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

@@ -1,0 +1,39 @@
+<question>
+<title>LineLength2c</title>
+<type>MultipleChoice</type>
+<points>4</points>
+<text>
+What is the total length of the line drawn by the following program?
+
+    public static void f(Turtle t, double x) {
+        for (int k = 0; k < 3; k++) {
+            t.forward(50);
+            t.left(x);
+        }
+    }
+
+    public static void g(Turtle t, double x) {
+        t.left(x);
+        t.forward(2*x);
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        for (int j = 0; j < 3; j++) {
+            t.forward(100);
+            f(t, 10);
+        }
+        g(t, 100);
+    }
+</text>
+<option>100</option>
+<option>300</option>
+<option>350</option>
+<option>400</option>
+<option>510</option>
+<option>650</option>
+<option>750</option>
+<option>950</option>
+<answer>950</answer>
+</question>
+

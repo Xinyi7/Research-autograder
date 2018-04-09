@@ -1,0 +1,39 @@
+public class ArrowWheel {
+    
+    public static void main(String[] args) {
+         Turtle t= new Turtle ();
+         arrowWheel(t, 70 , 9);
+
+    public static void arrowWheel(Turtle t, double x, int n){
+        for(int i=0; i< 9)
+        t.forward(70);
+        t.left(x/10);
+    }
+    }
+
+}
+
+
+public class  {
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        pinwheel(t, 100, 5, 5);
+    }
+
+    public static void pinwheel(Turtle t, double x, int s, int f){
+        for(int i = 0 ; i < 1 ; i++) {
+            t.forward(x);
+            polygon(t, 500, 5);
+            t.backward(x/2);
+            t.right(360.0/f);
+        }
+    }
+
+    public static void polygon(Turtle t, double length, int numsides) {
+        for(int i = 0 ; i < numsides; i++) {
+            t.forward(length);
+            t.left(360.0/numsides);
+        }
+    }
+}

@@ -1,0 +1,24 @@
+public class Arrow {
+
+    arrow(Turtle t, double length, int branches); {
+        t.forward(x);
+        t.penup();
+        t.backward(x);
+        t.pendown();
+        t.right(45)
+        t.forward(x);
+        t.penup();
+        t.backward(x);
+        t.pendown();
+        t.left(45)
+        t.forward(x);
+        
+        
+    }
+    
+    public static void main(String[] args) {
+        arrow(t, 150, 5);
+        
+    }
+    
+}

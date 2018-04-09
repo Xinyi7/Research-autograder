@@ -1,0 +1,15 @@
+public class LengthProduct {
+    public static int lengthproduct( String[] x) {
+    int result = 0;
+    x[1].length = result;
+    return result;
+    }
+    
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        lengthproduct({"hello"});
+    }
+
+}

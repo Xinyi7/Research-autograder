@@ -1,0 +1,127 @@
+/* first class*/
+public class Main {
+    public static void main(String[] args){
+        Player p1 = new Player("Poome");
+        Player p2 = new Player("Pat");
+        Game g = new Game(); 
+        g.play(p1,p2,10);
+
+        if (p1.getWins() > p2.getWins()) {
+            System.out.println(p1.getName() + " wins!");
+        } else if (p2.getWins() > p1.getWins()) {
+            System.out.println(p2.getName() + " wins!");
+        } else {
+            System.out.println("Tie game!");
+        }
+    }
+}
+
+/* second class*/
+class Die {
+
+    /**
+     * @return a random number between 1 and 6 inclusive   
+     */ 
+    public int roll() {
+        // to be implemented
+        int randomNumber = (int) Math.random()*7;
+        if (randomNumber == 0){
+            return 1;
+        }else{
+            return randomNumber;
+        }
+        
+    }
+}
+
+/* third class*/
+class Player {
+    
+    private String name;
+    private int wins;
+
+    /**
+     * creates a new player. 
+     * @param name - the name of the player
+     * and initializes wins to zero.    
+     */
+    public Player(String name){
+        Player isac = new Player ("Bob"); // change this 
+        this.name = name;
+        int wins = 0;
+       
+    }
+
+    /**
+     * increases wins by one.   
+     */ 
+    public void recordWin(){
+        // to be implemented
+        wins++;
+        
+    }
+
+    /**
+     * sets win to zero.   
+     */ 
+    public void resetWins() {
+        // to be implemented
+        wins = 0;
+    }
+
+
+    /**
+     * @return the player's name   
+     */ 
+    public String getName() {
+        // to be implemented
+        return name;
+    }
+
+    /**
+     * @return the number of wins the player has   
+     */ 
+    public int getWins() {
+        // to be implemented
+        return wins;
+    }
+}
+
+/* fourth class*/
+class Game {
+    
+    private Die die;
+
+    /**
+     * creates a new game. 
+     * initializes die with a new Die.    
+     */
+    public Game() {
+        // to be implemented
+        Game a = new Game();
+       
+    }
+
+    /**
+     * Plays a game. 
+     * @param player1 - the first player
+     * @param player2 - the second player
+     * @param rounds - the number of rounds in this game
+     * Note: the game begins by resetting each player's wins;
+     * in each round, 
+     *      the roll of a die for player1 is recorded,
+     *      the roll of a die for player2 is recorded,
+     *      if the result of player1's roll is higher than player2's result
+     *          player1 records a win,
+     *      if the result of player2's roll is higher than player1's result
+     *          player2 records a win,
+     *      otherwise, nothing happens.
+     */
+    public void play(Player player1, Player player2, int rounds) {
+        // to be implemented
+        
+        Game a1 = new Game (player1, player2, rounds);
+        
+        
+    }
+}

@@ -1,0 +1,20 @@
+public class MergeRepeat {
+
+    // write your method here
+    public static String mergeRepeat(String[]n, int k){
+        int r = (int)(Math.random() + s.length);
+        while = (s[r].length() > k) {
+            r = (int)(Math.random() + s.length);
+            
+        }
+        return s[r];
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        mergeRepeat({"A", "BC"} , 3); 
+        mergeRepeat({"hey", "you", "hi"}, 2);
+        System.out.println(mergeStrings);
+    }
+
+}

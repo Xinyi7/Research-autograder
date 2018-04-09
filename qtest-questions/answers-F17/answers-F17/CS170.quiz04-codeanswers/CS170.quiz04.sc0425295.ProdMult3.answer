@@ -1,0 +1,39 @@
+public class ProdMult3 {
+
+    // write your method here
+    public static int prodMult3(int a, int b)
+    {
+        int sum = 1;
+        
+        if (a < b)
+        {
+            for (int i = a; i <= b; i++)
+            {
+                if (i % 3 == 0)
+                {
+                 sum *= i;
+                }
+            }
+        }
+        else
+        {
+            for (int i = b; i <= a; i++)
+            {
+                if (i % 3 == 0)
+                {
+                  sum *= i;
+                }
+             }
+        }
+        
+        return sum;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(prodMult3(3, 7));
+        System.out.println(prodMult3(9, 4));
+        System.out.println(prodMult3(6, 6));
+    }
+
+}

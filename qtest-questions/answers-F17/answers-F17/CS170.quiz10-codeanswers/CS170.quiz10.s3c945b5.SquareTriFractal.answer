@@ -1,0 +1,33 @@
+// 4 times, 20 times, 4^n-1 + 4^n-2.....
+public class SquareTriFractal {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.penup();
+            t.backward(x * 0.33);
+            t.right(90);
+            t.forward(x * 0.33);
+            t.left(90);
+            t.pendown();
+            for (int i = 0; i < 3; i++) {
+                t.forward(x);
+                t.left(360.0 / 3.0);
+                f(t, x * 0.4, level - 1);
+            }
+            t.penup();
+            t.right(90);
+            t.backward(x * 0.33);
+            t.left(90);
+            t.forward(x * 0.33);
+            t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(0);
+        f(t, 200, 5);
+    }
+}

@@ -1,0 +1,18 @@
+public class SplitAt {
+
+    // write your method here
+    public static String[] splitAt(String s, int n){
+        String a = s[0].substring(0, n);
+        String b = s[0].substring(n);
+
+    `   String [] x = new String [2];
+
+    return String 
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

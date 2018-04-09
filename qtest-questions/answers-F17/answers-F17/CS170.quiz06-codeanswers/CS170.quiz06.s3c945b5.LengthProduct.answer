@@ -1,0 +1,19 @@
+public class LengthProduct {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] h1 = {"hell", "grew"};
+        System.out.println(lengthProduct(h1));
+    }
+
+    public static int lengthProduct(String[] x) {
+        int j = 1;
+        for (int i = 0; i < x.length; i++) {
+            j = j * x[i].length();
+        }
+        return j;
+    }
+
+}

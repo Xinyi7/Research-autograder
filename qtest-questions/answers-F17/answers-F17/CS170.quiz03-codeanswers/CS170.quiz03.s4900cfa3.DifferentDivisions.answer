@@ -1,0 +1,10 @@
+public class DifferentDivisions {
+    return look : "((int)X / (int)Y)"
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

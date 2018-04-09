@@ -1,0 +1,19 @@
+public class AreMultiplesOf {
+
+
+    
+    public static void main(String[] args) {
+       System.out.println(areMultiplesOf(6,5,1)); //true
+       System.out.println(areMultiplesOf(6,5,2)); //false
+       System.out.println(areMultiplesOf(5,6,2)); //false
+       System.out.println(areMultiplesOf(6,8,2)); //true
+       System.out.println(areMultiplesOf(1,2,2)); //false
+    }
+
+    public static String areMultiplesOf(int a, int b, int c){
+        if (a%c == 0 && b%c ==0){
+            return "true";
+        }
+        else return "false";
+    }
+}

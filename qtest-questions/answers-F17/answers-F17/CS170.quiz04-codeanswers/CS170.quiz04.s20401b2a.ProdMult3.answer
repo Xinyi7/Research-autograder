@@ -1,0 +1,15 @@
+public class ProdMult3 {
+
+    public static int prodMult3(int a, int b) {
+     int k = 1;
+        for (int i = a; i <= b; i+=3) {
+            System.out.println(i * k);
+        }
+        return k;
+    }
+    
+    public static void main(String[] args) {
+        prodMult3(1, 12);
+    }
+
+}

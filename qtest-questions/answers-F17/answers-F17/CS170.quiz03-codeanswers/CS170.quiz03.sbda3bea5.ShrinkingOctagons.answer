@@ -1,0 +1,17 @@
+public class ShrinkingOctagons {
+
+    // Write your method here
+    
+    public static void main(String[] args) {
+        shrinkingoctagons(t,100,5);
+   
+        // Test your method here
+    }
+public static void shrinkingoctagons(Turtle t, double x, int n);
+    for (int j=0; j<n; j++) // creates 5 octagons
+    for (int i=0; i<8; i++){ // create octagon
+        t.forward(x);
+        t.left(x/n);
+    }
+    t.forward(x);
+}

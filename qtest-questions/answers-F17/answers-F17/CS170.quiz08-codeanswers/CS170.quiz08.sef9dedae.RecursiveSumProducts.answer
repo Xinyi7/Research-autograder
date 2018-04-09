@@ -1,0 +1,19 @@
+public class RecursiveSumProducts {
+
+    // write your method here
+    public static int sumProducts(int[] x, int[] y, int n) {
+        if(n==0){
+            return 0;
+            }
+        return x[n-1] * y[n-1] + sumProducts(x,  y, n-1);
+        }
+    public static void main(String[] args) {
+        // test your method here
+        int[] p= {1,2,3};
+        int[] q = {4,5,6};
+        System.out.println(sumProducts(p,q,3));
+        int[] j= {};
+        System.out.println(sumProducts(j,j,0));
+    }
+
+}

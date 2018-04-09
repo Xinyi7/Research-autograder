@@ -1,7 +1,8 @@
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.StreamTokenizer;
-import java.io.StringReader;
+import java.io.*;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +12,11 @@ import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.NodeList;
+import com.github.javaparser.ast.body.VariableDeclarator;
+import com.github.javaparser.ast.expr.Name;
+import com.github.javaparser.ast.expr.SimpleName;
+import com.github.javaparser.ast.expr.VariableDeclarationExpr;
+import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import com.github.javaparser.metamodel.NodeMetaModel;
 import com.github.javaparser.metamodel.PropertyMetaModel;
 
@@ -26,26 +32,23 @@ public class Tree2 {
     // list of the labels of the nodes used for node comparison
     ArrayList<String> labels = new ArrayList<String>();
     Map<Node, Integer> indexes = new HashMap<Node, Integer>();
-    Map<Node, Node> leftmosts = new HashMap<Node,Node>();
-
-
-
-
+    Map<Node, Node> leftmosts = new HashMap<Node, Node>();
 
 
     // the following constructor handles preorder notation. E.g., f(a b(c))
     public Tree2(String s) throws IOException {
-        root =JavaParser.parse(new FileInputStream(s));
+        Node tmp = JavaParser.parse(new FileInputStream(s));
+        root = replace(tmp);
     }
-    public Node getroot(){
+
+    public Node getroot() {
         return root;
     }
 
 
-
     public void traverse() {
         // put together an ordered list of node labels of the tree
-        traverse(root, "root",labels);
+        traverse(root, "root", labels);
     }
 
     private static ArrayList<String> traverse(Node node, String name, ArrayList<String> labels) {
@@ -59,12 +62,12 @@ public class Tree2 {
         List<PropertyMetaModel> subLists = allPropertyMetaModels.stream().filter(PropertyMetaModel::isNodeList)
                 .collect(toList());
 
-        for (PropertyMetaModel a : attributes){
+        for (PropertyMetaModel a : attributes) {
             name += a.getValue(node).toString();
         }
-        for (PropertyMetaModel sn :  subNodes) {
+        for (PropertyMetaModel sn : subNodes) {
             Node nd = (Node) sn.getValue(node);
-            if (nd != null){
+            if (nd != null) {
 
                 labels = traverse(nd, sn.getName(), labels);
 
@@ -76,9 +79,9 @@ public class Tree2 {
 
                 //builder.append(System.lineSeparator() + indent(level) + sl.getName() + ": ");
                 String slName = sl.getName().substring(0, sl.getName().length() - 1);
-                for (Node nd : nl){
+                for (Node nd : nl) {
 
-                    labels= traverse(nd, slName, labels);
+                    labels = traverse(nd, slName, labels);
 
                 }
             }
@@ -104,10 +107,10 @@ public class Tree2 {
                 .collect(toList());
 
 
-        for (PropertyMetaModel sn :  subNodes) {
+        for (PropertyMetaModel sn : subNodes) {
 
             Node nd = (Node) sn.getValue(node);
-            if (nd != null){
+            if (nd != null) {
 
                 index(nd, index);
 
@@ -121,18 +124,18 @@ public class Tree2 {
 
                 //builder.append(System.lineSeparator() + indent(level) + sl.getName() + ": ");
                 //String slName = sl.getName().substring(0, sl.getName().length() - 1);
-                for (Node nd : nl){
+                for (Node nd : nl) {
 
-                    index(nd,index);
+                    index(nd, index);
 
                 }
             }
         }
         //for (int i = 0; i < node.getChildNodes().size(); i++) {
-          //  index = index(node.getChildNodes().get(i), index);
+        //  index = index(node.getChildNodes().get(i), index);
         //}
         index++;
-        indexes.put(node,index);
+        indexes.put(node, index);
         return index;
     }
 
@@ -147,7 +150,9 @@ public class Tree2 {
             l = l(node.getChildNodes().get(i), l);
         }
         //l.add(node.leftmost.index);
-        l.add(indexes.get(leftmosts.get(node)));
+        if (indexes.get(leftmosts.get(node)) != null) {
+            l.add(indexes.get(leftmosts.get(node)));
+        }
         return l;
     }
 
@@ -165,7 +170,7 @@ public class Tree2 {
             leftmosts.put(node, node);
             //node.leftmost = node;
         } else {
-            leftmosts.put(node,leftmosts.get(node.getChildNodes().get(0)));
+            leftmosts.put(node, leftmosts.get(node.getChildNodes().get(0)));
             //node.leftmost = node.getChildNodes().get(0).leftmost;
         }
     }
@@ -258,19 +263,79 @@ public class Tree2 {
         }
         return forestdist[i][j];
     }
+
+
+    public static Node replace(Node cu) {
+        String[][] arrayOfIndex;
+        List<SimpleName> listOfVariable = cu.getChildNodesByType(SimpleName.class);
+       /* arrayOfIndex = new String[listOfVariable.size()][2];
+        for (int i = 0; i < listOfVariable.size(); i++) {
+            arrayOfIndex[i][0] = listOfVariable.get(i).getNameAsString();
+            listOfVariable.get(i).setName("v" + i);
+            arrayOfIndex[i][1] = "v" + i;
+        }
+        */
+        HashMap<String,String> map = new HashMap<>();
+        int i = 0;
+        for (SimpleName a: listOfVariable){
+            if (!map.containsKey(a.getIdentifier())){
+                map.put(a.getIdentifier(), "v"+i);
+                a.setIdentifier("v"+i);
+                i++;
+            }else{
+                a.setIdentifier(map.get(a.getIdentifier()));
+            }
+        }
+        return cu;
+    }
+
+    public static List<String> importfiles(Path dir, String s){
+        List<String> files = new ArrayList<>();
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir, "*"+s+"*")) {
+            for (Path entry: stream) {
+                files.add(entry.toFile().toString());
+            }
+            return files;
+        } catch (IOException x) {
+            throw new RuntimeException(String.format("error reading folder %s: %s",
+                    dir,
+                    x.getMessage()),
+                    x);
+        }
+
+    }
+
     public static void main(String[] args) throws IOException {
-        Tree2 tree1 = new Tree2("C:/Users/Elizabeth Jiang/workspace/newproject/src/newproject/Test1.java");
-        Tree2 tree2 = new Tree2("C:/Users/Elizabeth Jiang/workspace/newproject/src/newproject/Test2.java");
-        System.out.println(ZhangShasha(tree1,tree2));
-        PrintOutTree a = new PrintOutTree(false);
-        System.out.println(a.output(tree1.getroot()));
-        System.out.println(a.output(tree2.getroot()));
-        System.out.println("-------------*");
+        try {
+            List<String> filelist = importfiles(Paths.get("C:\\Users\\Elizabeth\\IdeaProjects\\Research-autograder\\qtest-questions\\answers-F17\\answers-F17\\CS170.quiz01-codeanswers"), "SquareDiag1");
+            Tree2 answer = new Tree2("C:\\Users\\Elizabeth\\IdeaProjects\\Research-autograder\\qtest-questions\\questions-F17\\quiz01-questions\\question6-a.txt");
+            for (String s : filelist) {
+                System.out.println(s);
+                Tree2 tree2 = new Tree2(s);
+                System.out.println(ZhangShasha(answer, tree2));
+
+            }
+
+            PrintOutTree a = new PrintOutTree(false);
+            //System.out.println(a.output(tree1.getroot()));
+            //System.out.println(a.output(tree2.getroot()));
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+
+
+
+
+
+
+
+        /*System.out.println("-------------*");
         List<PropertyMetaModel> attributes = tree1.getroot().getMetaModel().getAllPropertyMetaModels().stream().filter(PropertyMetaModel::isNode)
                 .filter(PropertyMetaModel::isSingular).collect(toList());
         for(PropertyMetaModel b:attributes) {
             System.out.println(b.getName());
         }
+        */
 
     }
 }

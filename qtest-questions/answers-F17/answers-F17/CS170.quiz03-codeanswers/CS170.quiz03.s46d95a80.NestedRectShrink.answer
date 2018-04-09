@@ -1,0 +1,23 @@
+public class NestedRectShrink {
+
+    // write your method here
+   //this will program for nestedRectShrink(t, number (n), width variable (x), height variable (y))
+    public static void nestedRectShrink(Turtle t, int n, double x, double y){
+        for(int i=1; i<=n; i++){
+            for(int j=0; j<3; j++){ //by repeating this 3 times a rectangle will be drawn and then half will be repeated to put us in place for the next rectangle
+                t.forward(x/i);
+                t.left(90);
+                t.forward(y/i);
+                t.left(90);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        nestedRectShrink(t, 5, 300, 200);
+        // test your method here
+        
+    }
+    
+
+}

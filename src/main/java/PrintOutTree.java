@@ -63,7 +63,7 @@ public class PrintOutTree {
             Node nd = (Node) sn.getValue(node);
             if (nd != null){
 
-                output(nd, "#"+sn.getName(), level, builder);
+                output(nd, "#"+sn.getType()+sn.getName(), level, builder);
 
             }
 

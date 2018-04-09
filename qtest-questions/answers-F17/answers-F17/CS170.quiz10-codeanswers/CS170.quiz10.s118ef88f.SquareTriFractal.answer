@@ -1,0 +1,32 @@
+//1 square is drawn
+//2 squares are drawn
+//level - 1 squares are drawn 
+
+public class SquareTriFractal {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.backward(x *0.5);
+            t.right(45);
+            for (int i = 0; i < 3; i++) { //change to 3
+                t.forward(x);
+                t.left(135); //change to 135    
+            }
+             
+            t.penup();
+            t.backward(x * 0.5);
+            t.left(90);
+            t.forward(x * 0.5);
+            t.pendown();
+            f(t, x * 0.4, level - 1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 200, 5);
+    }
+}

@@ -1,0 +1,77 @@
+<question>
+<title>StarSquares</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using turtle graphics, write a method starSquares(Turtle t, double x) that draws a 5-pointed star with 5 additional squares like the one in the figure. The parameter x is the length of a side of the star; the side of a square is one fifth of it.
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQMAAACyIsh+AAAABlBMVEX///8AAABVwtN+AAAE+0lE
+QVRo3u2ZP470NBTA7TjKpoiWVBB9Wu1nCQ4QQbNCFIGKI1C6pNyCA5hPCFFQUHIMSkqLioJD7AEo
+9gYfM7Gf/fzs+A2aqRCRdmd25zeO3/P7HyH+q9fEAd8xn6t3DPBF1/5cOga4F7INPDOAsgzwcPqx
+rS2+MMC9YIBnBpD7Z1sDEAzQ2YsAfQXQbxcB8xXAqC8CxiuAeeWA/fb9FYBeOGC/fXcFYCYG2PqL
+gIZjuIEBbHcR0LB7DpBhdRbYOMAdWr1f/U4wwBMDKHds9fvtH0QLOAnwwgDFFt++P12vIpizKbc4
+J2c6AVo6BngUDeD0e31hgI8EAyxNQFf98qbAVvXLmwK26na3BGTd7W4JdHW3uyXQ1x33lsAeJE0D
+GOsZ7V8Au0WvDWCuZ7RbAgcp75bAVs1oKwc8ccBjAmw1Yb39hQE+eOWA90fXawD+zqus5Bjfhj38
+eAT8FaSQKBlgu5dB4KeYgAgwhL/XaGQEmOLSS0oG2O5XaUktTwAT1+rqgIvvYKlgCWFLCnmAqwED
+8gBdAyZkvwsyrfiyIuubaoBBtqMqwDm3DXk1nW9FZaaxlcCQHexaAg9ZQFuwCvv0HScyJWeAyeKV
+KgCfoHUuhos6hq+kUGDQlrrYiKAsu1LgQeSePqJTV0nw5KdYLfvrnyL3MkUA+TM+pHB/DHQ9caKz
+GB2CJ+IC+6YwsChBqr4pB4xE+gExenT4TmQm4reDAAmLo7DrMDDA4gaLMSYvmGBxh8MpAmaUipMY
+CDDhnAYEDGlD83nlkcZtaROg4CCz9OQSMMBBZilSR6WMIxxklseXBKxBAJUPFRIAFjrkJXM8uR7a
+1pEMBeDdHRwZybEOG+iua1II/AZv3gR1SVKM/ApvPg1Oo0ji+AHefBVchWQvCV+Q3wenIeWtjJ4l
+g9OstDsB95fBaTbaW6wQbmy2YgIWcBH/ybuiO4nR3uKUhXoLBdHG3/ybsvmAxLqJWjnUBwOajvqw
+KZzeUivGggVDoaWPgCGceh1YQiCytWIMHDnU1fMhYHz2OQbm+FJr2r2o5nC8oL25uhoQQ3/oWAvg
+9xjxfGNOSyl5FwE/HCiAvcPcjicYMg3CJlMrpbrzKM0Dg6sD4jUAyh4AjyHi+RVkaUvKSjTJqQDi
+2f9zXY6A+w4NSWgTsqe8Pxrzh131n3t/9P5WAwaRTpPa/RyBJdhjDYDYvFSANVZC0G/q0pZ24LxD
+dQRAAN/FIICBUiG2UcSsNwBij1MDZpG8mwIOvuhAIcSsbQC8mtUBoHFVPFbmoiZWjYaadQRinKwC
+Gy72emqzXoKQcj6kZg0AxObP6oCNSVA7AvQhAEMFvxmSjACYUxKXFSDFVzsRYAwKdiD1QBJiAGTc
+syR2H0aSQ8q7LgdC2z/htGBJkD7/e00LLrnd33nApAUn4hgvO2AT0BHgHMJGhZxAWk2fBohxwCbs
+dDGsH0dswpoAjzBFBgtdiN0rJ2aD7WuaiwcCc9aVdXPxSOHjzHzkTzRau0/yVuProvl+yo6unA/e
+PefdTDmidNnZNkfaghmrb6Q1ObhXY/ZvRfv5gxTtWTD4lGuNctsD66J1qd+iMXb3TjcIRlENTQvu
+AYZXckORla6gJoYWjBibYMSwoi2GbAKLYJ7b9U1NezH6JoBi7qEYYxtYm5rexdCCEcMIRoxNMGLY
+NiC+ZD4/J6329YYDevH/VVz/AIEGyY3zIwdIAAAAAElFTkSuQmCC
+</figure>
+<init>
+public class StarSquares {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class StarSquares {
+
+    public static void starSquares(Turtle t, double x) {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 4; j++) {
+                t.forward(x / 5);
+                t.left(90);
+            }
+            t.forward(x);
+            t.right(144);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        starSquares(t, 200);
+    }
+
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

@@ -1,0 +1,24 @@
+public class MultiPoly {
+
+    public static void multiPoly(Turtle t, double x, int n, int m) {
+        for (int i = n; i <= m; i++) {
+            drawPoly(t, i, x);
+        }
+    }
+    static void drawPoly(Turtle t, int numSides, double x){
+        t.pendown();
+    for(int i = 0; i < numSides; i++){
+        t.forward(x);
+        t.left(360/numSides);
+        }
+    }
+    
+        
+    
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(20);
+        multiPoly(t, 100, 5, 8);
+    }
+}

@@ -1,0 +1,19 @@
+public class RecursiveIsThereEven {
+
+    // write your method here
+    public static boolean isThereEven(int[] a, int n) {
+        if (a.length == 0) {
+            return false;
+        } else {
+            return (a[0] % n == 0) &&
+                   (isThereEven(a, n-1) % n == 0)
+        }
+    }
+
+    
+    public static void main(String[] args) {
+        // test your method here
+        
+    }
+
+}

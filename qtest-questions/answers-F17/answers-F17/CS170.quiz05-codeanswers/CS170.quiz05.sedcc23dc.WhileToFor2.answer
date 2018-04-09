@@ -1,0 +1,14 @@
+public class WhileToFor {
+
+    public static void main(String[] args) {
+        int a = 8;
+        int b = 4;
+        for(int i = 8; i > 4; i-= 2) {
+           System.out.println("hi" + i);
+           int k = i - 4;
+           for(int j = k; j < 8; j += 3) {
+            System.out.println("bye" + j);
+           }
+        }
+    }
+}

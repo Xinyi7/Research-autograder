@@ -1,0 +1,33 @@
+public class SquareTriFractal {
+
+//f(t, 200, 2): 1 + 4 = 5 squares
+//f(t, 200, 3): 1 + 4 + 4**2 = 21 squares
+//f(t, 200, N): 1 + 4**1 + 4**2 + .. + 4**N
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.penup();
+            t.backward(x * 0.5);
+            t.right(30);
+            t.pendown();
+            for (int i = 0; i < 3; i++) {
+                t.forward(x);
+                t.left(60);
+                f(t, x * 0.4, level - 1);
+            }
+            t.penup();
+            t.left(30
+          );
+            t.backward(x * 0.5);
+            t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 200, 3);
+    }
+}

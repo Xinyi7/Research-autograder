@@ -1,0 +1,23 @@
+public class LengthProduct {
+
+    public static int lengthProduct(String[] x) {
+        int result = 1;
+        if(x.length == 1) {
+            return x[0].length();
+        } else {      
+            for(int i = 0; i < x.length; i++){ 
+                int j = 0;
+                j +=  x[i].length();
+                result = result * j;
+            }
+            
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(lengthProduct({"hello", "there"}));
+        System.out.println(lengthProduct({"hello"}));
+        
+    }
+}

@@ -1,0 +1,45 @@
+public class WordsAreGrowing {
+
+    public static boolean wordsAreGrowing (String [] x){
+        int result = 0;
+        int c = 0;
+        boolean result1 = true;
+        for (int i = 0; i < x.length; i++){
+            
+            if (x[i].length() > result){
+                result = x[i].length();
+                c++;
+            }
+            
+           if (c == x.length ){
+            result1 = true;
+           }
+            else  {
+                result1 = false;
+            }
+           
+            
+            
+        
+    }
+    return result1;
+    }
+    
+    // write your method here
+    
+    public static void main(String[] args) {
+        String[] x1 = {"list", "of", "words"};
+        String[] x2 = {"a"};
+        String[] x3 = {"a", "b"};
+        String[] x4 = {"a", "aa", "aaaa"};
+       
+       
+       System.out.println(wordsAreGrowing(x1));
+        System.out.println(wordsAreGrowing(x2));
+         System.out.println(wordsAreGrowing(x3));
+          System.out.println(wordsAreGrowing(x4));
+        // test your method here
+       
+    }
+
+}

@@ -1,0 +1,21 @@
+public class SplitAt {
+
+    public static String splitAt(String s, int n) {
+    String[] x = {" ", " "};
+    String result = "";
+
+    x[0] = s.substring(0, n);
+    x[1] = s.substring(n, s.length());
+
+    result += "{" + x[0] + ", " + x[1] + "}";
+
+    return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(splitAt("apple", 0));
+        System.out.println(splitAt("apple", 2));
+        System.out.println(splitAt("appple", 5));
+    }
+
+}

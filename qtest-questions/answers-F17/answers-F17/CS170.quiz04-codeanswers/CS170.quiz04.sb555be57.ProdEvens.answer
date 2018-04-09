@@ -1,0 +1,15 @@
+public class ProdEvens {
+
+    public static int prodevens(int a, int b) {
+        int result = 1;
+        for (int i = a; i <= b ; i+= 2){
+        result *= (i * 2);
+        }
+        return result;
+    }
+  
+    public static void main(String[] args) {
+        System.out.println(prodevens(2, 5));
+    }
+
+}

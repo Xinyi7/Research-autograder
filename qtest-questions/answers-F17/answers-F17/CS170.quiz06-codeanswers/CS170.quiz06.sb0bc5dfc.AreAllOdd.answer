@@ -1,0 +1,37 @@
+public class AreAllOdd {
+
+    // write your method here
+    public static boolean areallodd(String[] x){
+        int count = 0;
+        if(x.length%2==1){
+        for(int i=0; i<x.length; i++){
+            if((x[i].length()%2)==1){
+                count++;
+            }
+        }if (count%2==1){
+            return true;
+        }else {
+            return false;
+        }
+        } else{
+            for(int i=0; i<x.length; i++){
+            if((x[i].length()%2)==1){
+                count++;
+            }
+        }if (count%2==0){
+            return true;
+        }else {
+            return false;
+        }
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"apple", "bananas", "carrots"};
+        System.out.println(areallodd(x1));
+        String[] x2 = {"apple", "banana", "carrots"};
+        System.out.println(areallodd(x2));
+    }
+
+}

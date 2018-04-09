@@ -1,0 +1,17 @@
+public class AreFactorsOf {
+
+    public static boolean areFactorsOf(int a, int b, int c){
+        if(c % b == 0 && c % a == 0){
+            return (4 == 4);
+        }else {
+            return (5 == 3);
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(areFactorsOf(2 ,3 ,6));
+        System.out.println(areFactorsOf(9 ,3 ,27));
+        System.out.println(areFactorsOf(5 ,3 ,6));
+    }
+
+}

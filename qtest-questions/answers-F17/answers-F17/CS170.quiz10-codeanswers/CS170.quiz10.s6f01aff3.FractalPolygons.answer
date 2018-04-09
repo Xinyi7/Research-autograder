@@ -1,0 +1,26 @@
+//f(t, 120, 2) = 7.5
+//f(t, 120, 3) = 3.75
+//f(t, X, N) = x/2 ^N-1.. x/2^ N-2... x/2^ N-3
+
+public class FractalPolygons {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            int n = level;
+            for (int i = 0; i < n; i++) {
+                f(t, x / 2, level - 1);
+                t.forward(x);
+                t.left(360.0 / n);
+             }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 120, 5);
+        t.hideturtle();
+    }
+}

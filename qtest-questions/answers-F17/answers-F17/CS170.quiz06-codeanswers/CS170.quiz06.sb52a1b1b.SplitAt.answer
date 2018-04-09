@@ -1,0 +1,25 @@
+public class SplitAt {
+
+    public static String[] splitAt(String s, int n){
+        String[] result = {"a", "b"};
+        for(int i = 0; i < s.length(); i++){
+           if (i <= n){
+           result[0] += s.charAt(i);
+            
+        } else{
+            result[1] += s.charAt(i);
+        }
+
+        
+    }
+    return result;
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(splitAt("apple", 2));
+        System.out.println(splitAt("apple", 0));
+    }
+
+}

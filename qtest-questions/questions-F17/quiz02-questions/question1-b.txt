@@ -1,0 +1,36 @@
+<question>
+<title>LineLength1b</title>
+<type>MultipleChoice</type>
+<points>4</points>
+<text>
+What is the total length of the line drawn by the following program?
+
+    Turtle t = new Turtle();
+    for (int i = 0; i < 100; i++) {
+        t.forward(3);
+        t.left(1);
+    }
+    t.forward(50);
+    for (int j = 0; j < 2; j++) {
+        for (int k = 0; k < 5; k++) {
+            t.left(20);
+            for (int n = 0; n < 10; n++ ){
+                t.right(5);
+            }
+            t.forward(20);
+        }
+        t.forward(5);
+    }
+
+
+</text>
+<option>220</option>
+<option>440</option>
+<option>560</option>
+<option>630</option>
+<option>760</option>
+<option>890</option>
+<option>1005</option>
+<option>1010</option>
+<answer>560</answer>
+</question>

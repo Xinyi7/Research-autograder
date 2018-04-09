@@ -1,0 +1,60 @@
+<question>
+<title>GrowingStairs</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using Java and turtle graphics, write a method named stairs(Turtle t, int n, double s) that draws a growing stairway. The parameter n is the number of steps; s is the size of the first step. The second step is 2*s long, the third step is 3*s long, and so on. Move the turtle back to its original position. The example in the figure is the result of stairs(t, 7, 10).
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAT0AAAEmAQMAAAAqRNWGAAAABlBMVEX///8AAABVwtN+AAAAg0lE
+QVRo3u3ZMQqAMAwF0KKLm1fwJl7No3oMJxW1kyCNg1Dk/fnRQJckbUpyS7/lzAXYRU8EQRAEQRAE
+wd/APCwvRThFa4IgCIIgCIKvYXsNZWXYRGuCIAiCIFg1PJv/6mZAEATBD2CwxVjRQRCsGfaRh7Ij
+voBB8Mi4BOGQwDqhPGcHi71Uwu7/DOcAAAAASUVORK5CYII=
+</figure>
+<init>
+public class GrowingStairs {
+
+    // Write your method here
+    
+    public static void main(String[] args) {
+        // Test your method here
+    }
+
+}
+</init>
+<answer>
+public class GrowingStairs {
+
+    public static void stairs(Turtle t, int n, double s) {
+        for (int i = 0; i < n; i++) {
+            t.left(90);
+            t.forward(s * (i + 1));
+            t.right(90);
+            t.forward(s * (i + 1));
+        }
+        for (int i = 0; i < n; i++) {
+            t.backward(s * (n - i));
+            t.left(90);
+            t.backward(s * (n - i));
+            t.right(90);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        stairs(t, 7, 10);
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

@@ -1,0 +1,21 @@
+public class ShrinkingPentagons {
+
+    public static void shrinkingPentagons(Turtle t, double x, int n){
+        for(int i=1; i<=n; i++){
+            for(int j=0; j<5; j++){
+                t.forward(x);
+                t.left(360.0/5);
+            }
+            t.penup();
+            t.forward(2*x);
+            t.pendown();
+            x= x/(1+i);
+        }
+    }
+    
+    public static void main(String[] args) {
+     Turtle t= new Turtle();
+     shrinkingPentagons(t,100,5);
+    }
+
+}

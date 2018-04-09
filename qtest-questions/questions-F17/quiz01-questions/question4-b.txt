@@ -1,0 +1,36 @@
+<question>
+<title>Wander2</title>
+<type>MultipleChoice</type>
+<points>4</points>
+<text>
+In the following program, how many times is the instruction t.left(90) executed?
+
+ public static void wander(Turtle t) {
+     for (int i = 0; i < 3; i++) {
+         t.forward(20);
+         t.left(90);
+     }
+ }
+
+ public static void main(String[] args) {
+     Turtle t = new Turtle();
+ 
+     for (int i = 0; i < 2; i++) {
+         for (int j = 0; j < 4; j++) {
+             wander(t);
+         }
+         t.forward(20);
+         t.right(180);
+     }
+ }
+</text>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>12</option>
+<option>24</option>
+<option>36</option>
+<option>48</option>
+<option>60</option>
+<answer>24</answer>
+</question>

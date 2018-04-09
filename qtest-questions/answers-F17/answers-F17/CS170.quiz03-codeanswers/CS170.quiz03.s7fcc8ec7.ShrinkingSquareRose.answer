@@ -1,0 +1,21 @@
+public class ShrinkingSquareRose {
+
+    // Write your method here
+    public static void shrinkingSquareRose(Turtle t, double x, double delta, int n) {
+        for (int h = 0; h < n; h++) {
+            for (int i = 0; i < 4; i++) {
+                t.forward(x-delta*h);
+                t.left(90);
+                
+            }
+            t.right(360.0/n);
+        }
+    }
+    
+    public static void main(String[] args) {
+        // Test your method here
+        Turtle t = new Turtle();
+        shrinkingSquareRose(t, 100, 10, 7); 
+    }
+
+}

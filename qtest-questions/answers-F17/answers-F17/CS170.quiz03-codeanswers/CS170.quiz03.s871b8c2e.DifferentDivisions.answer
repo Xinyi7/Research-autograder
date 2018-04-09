@@ -1,0 +1,17 @@
+public class DifferentDivisions {
+
+    public static String divisions(int x, int y)
+    {
+        double x2 = x;
+        double y2 = y;
+        int result1 = x/y;
+        double result2 = x2/y2;
+        String result = "Look: " + x + "/" + y + " is " + result1 + ", but " + x2 + "/" + y2 + " is " + result2;
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(divisions(3,2));
+    }
+
+}

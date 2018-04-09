@@ -1,0 +1,14 @@
+public class NiceVacation {
+
+public static String vacation(String s, int n){
+String result= s.substring(0,n);
+result+= " nice " + s.charAt(n) + " vacation ";
+result += s.substring((n+1),s.length());
+    return result;
+}
+    
+    public static void main(String[] args) {
+System.out.println(vacation("hello there", 3));
+    }
+
+}

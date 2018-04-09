@@ -1,0 +1,14 @@
+public class SumMultX {
+
+    // write your method here
+    public static int sumMultiX (int x, int y) {
+        int result = 0;
+        for (int i = x; i < y; i = i + ) {
+            result = result + i
+        }
+    }
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

@@ -1,0 +1,71 @@
+<question>
+<title>ShrinkingPentagons</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Write a method shrinkingPentagons(Turtle t, double x, int n) that draws a line of n shrinking pentagons. The length of the side of the first pentagon is x; the second pentagon has side length x/2, the third pentagon x/3, etc. The space between a pentagon and the next one is equal to its side. Don't worry about getting the turtle back to its original position.
+The figure shows a call to shrinkingPentagons(t, 100, 5).
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAeUAAAClAQMAAABY0Xf5AAAABlBMVEX///8AAABVwtN+AAADRElE
+QVRo3u2ZTY7cIBCFAaMOC0dhaSmLcAQfgaP4KBwpR/Cxskqn3TYEuykKqpT0SAnSjPwzH4YHvCoY
+If75olj058ChrefQznHodWLAUmiW5BzRRyEZolshGKIvQsx0+tFsw5BcMES/PX4GMm2O1pMlZ4i+
+bL9mhuR00YckHaXoNGxkycmiz5l2/cVn40aUnCr6kM1XquRU0ZMhriQ3frkgSE4T/bcfjqwAqBiS
+00TPYtDKkJwkur84FFFyiuiKlX+MQDs63LigQbfkBNFXYOybA2Bp3lHSPMWQvF90C0685gD4Yu2d
+bnwJKyTJe0W/Ad7eFQDBnnRJ3in6AsRTkuR9og+ojG1uTHFl09AXNOeo6tjkxgRXDk2daZa8R3Td
+sG7+FK1Y+9l30rJRi49H8+baW2neGnsn7ZoefUTaNklBpDWL/sqKBi5waO8ZtAwzIwoqZMnUaY2I
+XqcnJAmq0w6Jx6r6ZEXicZWW2Hqt0grzKVlTYsTicZW2WESt0g7dmtayvRU1iwotcZOs0Dd8a+ph
+vzB4OK/QFk9jKvSCnwc4+EHAHRqmh4atKUzrBleG9yWmIYeC6blhawrT1wvftR8LZyXk9x56uJwH
+KNND68ua1brBVKUA6GnoodWlea5kzs30WjJnBd1faFn0CZCW5ylxK/pEK22KUxY8ObjQtugT8LlD
+ONFL0ScaaBfvXMeJyYke0pSVBFqndt3WJvq0Qqe0cIyrmKot0y59yU79tE9Xi26iXda3w502swqq
+YqquSKskynD2uU5a762VGG2z+STTo2lvfxw38GyvTLt9UOO4ddJ+j+vWIvQploSjW5tkW1XLWDTV
+UKfjTVAUetxX6xD7AtI6p+NcO5xCx8WO0rpAT3FoNWQWRdrsHXBR7R46RNpHhwVplavnTrRMk1fV
+8usX+vktp9J3OmgZu9FAy4udZ7RMfwme3RdpRadVnHgN9ClXNCd6e6ULlmxqtD6+xaU9Tud5ms5o
++XxmCpZsa7Q57JlLO5x22XuV0SqnHRQbXKaLilX7SFs6bem0zmnwv2v5nkjG6tyTNqnud9IGykNO
+e8FwVG3zSPooX+5Zyen9xc/9ZrvcLPzb/f5DiE/7zf/yt8svmm+AiKXXVxoAAAAASUVORK5CYII=
+
+</figure>
+<init>
+public class ShrinkingPentagons {
+
+    // Write your method here
+    
+    public static void main(String[] args) {
+        // Test your method here
+    }
+
+}
+</init>
+<answer>
+public class ShrinkingPentagons {
+
+    public static void shrinkingPentagons(Turtle t, double x, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 5; j++) {
+                t.forward(x / (i + 1));
+                t.left(72);
+            }
+        t.penup();
+        t.forward(2 * x / (i + 1));
+        t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        shrinkingPentagons(t, 100, 5);
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

@@ -1,0 +1,62 @@
+<question>
+<title>SquareDiag3</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using turtle graphics, write a method squareDiag(Turtle t, double x, int n) that draws a diagonal line of squares. The parameter x is the length of a side of each square; n is the number of squares. The example in the figure is the result of a call to squareDiag(t, 50, 4) with Turtle t. For full credit, make sure that the turtle goes back to its initial position.
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAPAAAADwAQMAAAAEm3vRAAAABlBMVEX///8AAABVwtN+AAAAhUlE
+QVRYw+3VMQoCMRCF4TGBxM4r7E28mkdbPMkeQawsJFkUYQeyeY3YxP8vpvmY+pkR/bRTfVV6fHzf
+AMMwDI/K57q1swaT+zYYhmF4PHYzUB8tX9y3wTAMw8Nx9DuwNBz8t8EwDMNfcNKcNcer5rvkQ9H8
+2YEeP00Vb5pnyVmqJaP/aQVNoXoMY71TigAAAABJRU5ErkJggg==
+</figure>
+<init>
+public class SquareDiag {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class SquareDiag {
+
+    public static void squareDiag(Turtle t, double x, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 6; j++) {
+                t.forward(x);
+                t.left(90);
+            }
+            t.left(180);
+        }
+        t.penup();
+        t.backward(x * n);
+        t.left(90);
+        t.backward(x * n);
+        t.right(90);
+        t.pendown();
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        squareDiag(t, 50, 4);
+    }
+
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

@@ -1,0 +1,17 @@
+public class RecursiveSumProducts {
+
+   public static int sumProducts(int[] x, int[] y, int n) {
+    if (n==0) {
+        return 0;
+    }
+   else {
+    return x[n] * y[n] + sumProducts(x, y, n-1);
+   }
+   }
+    
+    public static void main(String[] args) {
+     System.out.println(sumProducts({1, 2, 3}, {4, 5, 6}, 3));
+      
+    }
+
+}

@@ -1,0 +1,15 @@
+public class NoEvens {
+
+    // write your method here
+    public static boolean noEvens(String[] x, int n){
+        if (s[n].length()%2 ==0) {
+            return false;
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        
+    }
+
+}

@@ -1,0 +1,19 @@
+public class ProdMult5 {
+
+    public static int prodMulti5(int start, int end) {
+       int result = 0; 
+            for(int i = start; i < end; i++){
+                if ( i % 5 == 0) {
+                    result = result * i;
+                } else {
+                    i = 1;
+                }
+            }
+            return result;
+    }
+    
+    public static void main(String[] args) {
+        prodMulti5( 50, 42);
+    }
+
+}

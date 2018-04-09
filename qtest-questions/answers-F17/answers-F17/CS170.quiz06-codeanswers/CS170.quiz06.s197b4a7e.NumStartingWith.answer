@@ -1,0 +1,21 @@
+public class NumStartingWith {
+
+   public static int numStartingWith(String[] x, char c){
+    int counter = 0;
+    for (int i=0; i < x.length; i++){
+      if ( x[i].charAt(0) == c ){
+        counter ++;
+      }
+    } return counter;
+
+
+    
+   }
+    
+    public static void main(String[] args) {
+        
+       String[] x1 = {"hello", "", "wow", "hey"};
+       System.out.println(numStartingWith(x1 , 'h')); 
+    }
+
+}

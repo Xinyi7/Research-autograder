@@ -1,0 +1,44 @@
+public class ArrowWheel {
+
+    // write your method here
+    //I  made a code to create the arrow that brings the turtle back to its starting position for that arrow
+    //I wrote a code that makes n number of arrows spread apart 360/n (so they are equal distant appart)
+    //the turtle will turn left 360/n after every arrow so it will always end facing the same way the program begins 
+    //I tried various numbers to check for errors 
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle();
+        t.delay(10);
+        //arrow(t, 50);
+        //arrow(t,100);
+        arrowWheel(t, 70, 9);
+        //arrowWheel(t, 89, 23);
+        //arrowWheel(t, 89, 2);
+        //arrowWheel(t, 9, 3);
+        //arrowWheel(t, 89, 0);
+        //arrowWheel(t, 0, 0);
+        //arrowWheel(t, 89, 100);
+    }
+    public static void arrowWheel(Turtle t, double x, int n){
+        for(int i = 0; i < n; i++){
+            arrow(t, x);
+            t.left(360.0/n);  
+        }
+    }
+    public static void arrow(Turtle t, double x){
+        t.forward(x);
+        t.right(90);
+        t.forward(x / (5 * 2));
+        t.right(120);
+        t.forward(x/5.0);
+        t.right(120);
+        t.forward(x / 5);
+        t.right(120);
+        t.forward(x/10);
+        t.right(90);
+        t.forward(x);
+        t.right(180);
+    }
+
+}

@@ -1,0 +1,48 @@
+<question>
+<title>ChangeInitial</title>
+<type>JavaCode</type>
+<points>6</points>
+<text>
+Write a method named changeInitial(String name, String init) that takes two non-empty strings (name and init). The function returns the string name with its first letter replaced with the first letter of the string init.
+
+Examples:
+changeInitial("book", "c") returns "cook"
+changeInitial("root", "banana") returns "boot"
+</text>
+<init>
+public class ChangeInitial {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class ChangeInitial {
+
+    public static String changeInitial(String name, String init) {
+        return init.charAt(0) + name.substring(1);
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(changeInitial("book", "c")); // cook
+        System.out.println(changeInitial("root", "banana")); // boot
+    }
+
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

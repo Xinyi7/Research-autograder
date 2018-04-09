@@ -1,0 +1,54 @@
+<question>
+<title>ProdMult5</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Using a "for" loop, write a method named prodMult5(int start, int end) that takes
+two integers start and end, and returns the product of all multiples of 5 between
+start and end (extremes included).
+</text>
+<init>
+public class ProdMult5 {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class ProdMult5 {
+
+    public static int prodMult5(int start, int end) {
+        int result = 1;
+        for (int i = start; i <= end; i++) {
+            if (i % 5 == 0) {
+                result *= i;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(prodMult5(2, 8)); // 5
+        System.out.println(prodMult5(5, 10)); // 50
+        System.out.println(prodMult5(2, 10)); // 50
+        System.out.println(prodMult5(5, 8)); // 5
+        System.out.println(prodMult5(2, 3)); // 1
+    }
+
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>

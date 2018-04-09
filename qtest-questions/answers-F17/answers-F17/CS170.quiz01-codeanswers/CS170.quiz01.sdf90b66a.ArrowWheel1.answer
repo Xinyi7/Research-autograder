@@ -1,0 +1,17 @@
+public class ArrowWheel {
+    tu
+    for(int = 0; i < n; i++ {
+        t.forward(x);
+        t.right(360.0 / n);
+    }
+        
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        
+        arrowWheel(Turtle t, double x, int n)
+        // test your method here
+    }
+
+}

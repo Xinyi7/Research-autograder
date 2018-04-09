@@ -1,0 +1,17 @@
+public class AreFactorsOf {
+
+    public static boolean areFactors( int a , int b, int c) { 
+        String product;
+        if ( a/ c ) { 
+                product = "true";
+    } else { 
+        product = "false";
+    }
+    return product; 
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(areFactors(3,4));
+    }
+
+}

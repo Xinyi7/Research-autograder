@@ -1,0 +1,21 @@
+public class PickAndCount {
+
+    // write your method here
+    public static int pickAndCount(String s, int k){
+        char currchar = s.charAt(k);
+        int count = 0;
+        for(int a = 0; a < s.length(); a++){
+            if( s.charAt(a) == currchar){
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(pickAndCount("fluffy", 0));
+        System.out.println(pickAndCount("fluffy", 2));
+    }
+
+}

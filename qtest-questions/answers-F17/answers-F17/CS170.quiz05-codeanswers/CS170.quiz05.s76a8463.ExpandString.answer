@@ -1,0 +1,14 @@
+public class ExpandString {
+    // write your method here
+    public static String Expand(String s, int n) {
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Expand("hey", 3); //hhheeeyyy
+        Expand("nothing", 0); // returns nothing
+        Expand("hello", 2); //hheelllloo
+    }
+
+}

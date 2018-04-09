@@ -1,0 +1,29 @@
+public class ForToWhile {
+
+    public static void main(String[] args) {
+        String x = "ABCD";
+        int y = 5;
+//        for (int i = x.length() - 1; i >= 0 ; i -= 2) {
+//           System.out.println(y + " " + x.charAt(i));
+//           y--;
+//          for (int j = y; j > 0; j /= 2) {
+//               System.out.println("Z " + j);
+//           }
+//        }
+
+
+
+
+        int a = x.length() - 1;
+        while(a >= 0){
+         System.out.println(y + " " + x.charAt(a));
+           y--;
+           a -= 2;
+           int b = y;
+           while(b > 0){
+               System.out.println("Z " + b);
+                b /= 2;
+           }
+        }
+    }
+}

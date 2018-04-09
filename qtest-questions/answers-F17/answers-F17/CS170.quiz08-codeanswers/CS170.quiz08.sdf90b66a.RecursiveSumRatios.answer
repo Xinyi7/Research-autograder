@@ -1,0 +1,21 @@
+public class RecursiveSumRatios {
+
+    public static int sumProcuts(double[] x, double [] y, int n) {
+            return 0;
+
+
+        
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        
+        System.out.println(sumRatios({1.5, 2.8, 3.0}, {3.0, 2.0, 2.0},3));
+        System.out.println(sumRatios({}, {},0));
+        
+        
+        // test your method here
+    }
+
+}

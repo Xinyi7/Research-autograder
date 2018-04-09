@@ -1,0 +1,143 @@
+public class ArrowWheel {
+        public static void arrowWheel (Turtle t, double x, int n) {
+            t.forward(x);
+
+            //making a triangle from the base
+            t.right(90);
+            t.forward(x/10);
+            t.left(60);
+            t.forward(x/5);
+            t.left(60);
+            t.forward(x/5);
+            t.left (x/10);
+            t.forward(x/10);
+            t.right(90);
+
+            //
+
+            t.forward(x)
+            t.right((1.0* 360/9)
+            //
+            t.forward(x);
+            t.right(90);
+            t.forward(x/10);
+            t.left(60);
+            t.forward(x/5);
+            t.left(60);
+            t.forward(x/5);
+            t.left (x/10);
+            t.forward(x/10);
+            t.right(90);
+            //
+            t.forward(x);
+            t.right((1.0* 360/9);
+            //third triangle
+            t.forward (x);
+            t.right(90);
+            t.forward(x/10);
+            t.left(60);
+            t.forward(x/5);
+            t.left(60);
+            t.forward(x/5);
+            t.left (x/10);
+            t.forward(x/10);
+            t.right(90);
+            //
+            t.forward(x);
+            t.right((1.0* 360/9);
+            //fourth\
+            t.forward(x);
+            t.right(90);
+            t.forward(x/10);
+            t.left(60);
+            t.forward(x/5);
+            t.left(60);
+            t.forward(x/5);
+            t.left (x/10);
+            t.forward(x/10);
+            t.right(90);
+            //
+            t.forward(x);
+            t.right((1.0* 360/9);
+            // fifth 
+            t.forward(x);
+            t.right(90);
+            t.forward(x/10);
+            t.left(60);
+            t.forward(x/5);
+            t.left(60);
+            t.forward(x/5);
+            t.left (x/10);
+            t.forward(x/10);
+            t.right(90);
+            //
+            t.forward(x);
+            t.right((1.0* 360/9);
+            //six
+            t.forward(x);
+            t.right(90);
+            t.forward(x/10);
+            t.left(60);
+            t.forward(x/5);
+            t.left(60);
+            t.forward(x/5);
+            t.left (x/10);
+            t.forward(x/10);
+            t.right(90);
+            //
+            t.forward(x);
+            t.right((1.0* 360/9);
+            // seven
+            t.forward(x);
+            t.right(90);
+            t.forward(x/10);
+            t.left(60);
+            t.forward(x/5);
+            t.left(60);
+            t.forward(x/5);
+            t.left (x/10);
+            t.forward(x/10);
+            t.right(90);
+            //
+            t.forward(x);
+            t.right((1.0* 360/9);
+            // eigth
+            t.forward(x);
+            t.right(90);
+            t.forward(x/10);
+            t.left(60);
+            t.forward(x/5);
+            t.left(60);
+            t.forward(x/5);
+            t.left (x/10);
+            t.forward(x/10);
+            t.right(90);
+            //
+            t.forward(x);
+            t.right((1.0* 360/9);
+            // nine
+            t.forward(x);
+            t.right(90);
+            t.forward(x/10);
+            t.left(60);
+            t.forward(x/5);
+            t.left(60);
+            t.forward(x/5);
+            t.left (x/10);
+            t.forward(x/10);
+            t.right(90);
+            //
+            t.forward(x);
+            t.right((1.0* 360/9);
+
+          
+        }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        arrowWheel(t, 70, 9)
+        // test your method here
+    }
+
+}

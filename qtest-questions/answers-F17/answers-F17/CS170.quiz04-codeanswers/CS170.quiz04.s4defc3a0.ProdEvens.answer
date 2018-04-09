@@ -1,0 +1,23 @@
+public class ProdEvens {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        
+        System.out.println(prodEven(5,6)); //test case to invoke method
+        
+    }
+
+    public static int prodEven(int a, int b){
+
+        int result = 0; // initialization
+
+        for (int i= a; i <= b; i++){
+           if (i !=  i + b){
+                result = result + i;
+        }
+        }
+        return result;
+    }
+
+}

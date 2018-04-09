@@ -1,0 +1,23 @@
+public class SumMultX {
+    public static int sumMultX(int x, int y){
+        int result = 0;
+        
+        for(int i=x;i<=y;i++){
+            if( i %x = 0){
+            result = result + i;
+        
+        
+            }
+           
+            
+    } return result;
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(sumMultX(3,9));
+        // test your method here
+    }
+
+}

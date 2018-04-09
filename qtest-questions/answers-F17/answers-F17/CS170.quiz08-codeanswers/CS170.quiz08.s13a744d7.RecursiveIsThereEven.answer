@@ -1,0 +1,25 @@
+public class RecursiveIsThereEven {
+
+    // write your method here
+    public static boolean isThereEven {
+        if (n==o){
+        return 0;
+    }else if {
+        isThereEven(n%2==0,n)
+        return true;
+    }else{
+        return false;
+    }
+   
+    
+  }
+    public static void main(String[] args) {
+        // test your method here
+    int []a={1,3,5};
+    int []a1={1,3,5};
+    int []a2={1,3,5};
+    int []a3={1,3,5};
+    System.ln.printout(a1);
+    }
+
+}

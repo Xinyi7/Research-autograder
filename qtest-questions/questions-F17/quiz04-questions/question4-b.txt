@@ -1,0 +1,52 @@
+<question>
+<title>ProdEvens</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Using a "for" loop, write a method named prodEvens(int a, int b) that takes
+two integers a and b, and returns the product of all the integers between
+a and b (extremes included) that are even.
+</text>
+<init>
+public class ProdEvens {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class ProdEvens {
+
+    public static int prodEvens(int a, int b) {
+        int result = 1;
+        for (int i = a; i <= b; i++) {
+            if (i % 2 == 0) {
+                result *= i;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(prodEvens(2, 5)); // 8
+        System.out.println(prodEvens(2, 6)); // 48
+        System.out.println(prodEvens(3, 4)); // 4
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

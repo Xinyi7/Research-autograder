@@ -1,0 +1,20 @@
+public class AreMultiplesOf {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(areMultiplesOf(16, 8, 4));
+        System.out.println(areMultiplesOf(5, 3, 2));
+    }
+    
+   public static boolean areMultiplesOf(int a, int b, int c) {
+ 
+    if (a%c == 0) {
+    } if (b%c ==0) {
+         return true;
+        }  else {
+    return false;
+   }
+}
+}

@@ -1,0 +1,46 @@
+//1. The perimeter of the smallest diamond for f(t, 160, 2) would be 160 units because the first diamond would have sides = 160. The next level diamond would have 160/2 side lengths. Then the diamond after that would have 160/2/2 side length which is equal to 40.So 40 + 40 + 40 + 40 = 160. Similarly, for f(t, 160, 3), the smallest diamond would have a side length of 160/2/2/2 so the perimeter will be 20*4  which is equal to 80 units. The general formula for the perimter will be 4*(X/(2*N))
+
+
+public class FractalDiamonds {
+
+    public static void diamond(Turtle t, double x) {
+        t.penup();
+        t.backward(x / 2);
+        t.pendown();
+        t.left(60);
+        t.forward(x);
+        t.right(120);
+        t.forward(x);
+        t.right(60);
+        t.forward(x);
+        t.right(120);
+        t.forward(x);
+        t.right(120);
+        t.penup();
+        t.forward(x / 2);
+        t.pendown();
+    }
+    
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            diamond(t, x);
+        } else {
+            diamond(t, x);
+            t.penup();
+            t.left(90);
+            t.pendown();
+            f(t, x / 2, level - 1);
+            t.penup();
+            t.right(90);
+            t.backward(x);
+            t.pendown();
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(0);
+        f(t, 160, 4);
+        t.hideturtle();
+    }
+}

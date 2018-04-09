@@ -1,0 +1,16 @@
+public class NoEvens {
+
+    public static boolean noEvens(String[] x, int n) {
+        if ((s.length-1)/2 == 0) {
+        }return false;
+    } else {
+        return true;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(noEvens({"alpha", "beta", "lambda"}),3);
+        System.out.println(noEvens({"red", "green", "white"}),3);
+        System.out.println(noEvens({}),3);
+    }
+
+}

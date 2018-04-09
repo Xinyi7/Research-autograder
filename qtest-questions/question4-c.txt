@@ -1,0 +1,51 @@
+<question>
+<title>ProdMult3</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Using a "for" loop, write a method named prodMult3(int a, int b) that takes
+two integers a and b, and returns the product of all the integers between
+a and b (extremes included) that are multiples of 3.
+</text>
+<init>
+public class ProdMult3 {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class ProdMult3 {
+
+    public static int prodMult3(int a, int b) {
+        int result = 1;
+        for (int i = a; i <= b; i++) {
+            if (i % 3 == 0) {
+                result *= i;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(prodMult3(2, 5)); // 3
+        System.out.println(prodMult3(2, 6)); // 18
+        System.out.println(prodMult3(3, 10)); // 162
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>

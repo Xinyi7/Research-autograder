@@ -1,0 +1,13 @@
+public class AllCharsExcept {
+    // write your method here
+    public static void AllCharsExcept(String s, char c) {
+        return s without c;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        AllCharsExcept("bananas", 'a'); //returns "bnns"
+        AllCharsExcept("bananas", 'n'); //returns "baaas"
+    }
+
+}

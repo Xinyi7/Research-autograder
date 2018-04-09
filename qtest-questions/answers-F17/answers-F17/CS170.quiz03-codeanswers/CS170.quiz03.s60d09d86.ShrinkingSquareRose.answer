@@ -1,0 +1,37 @@
+public class ShrinkingRose {
+
+ // public static void ShrinkingOctagon (Turtle t, double x, int n) {
+          //  for (int i = 1; int i < n; i++){
+          //  for (int j = 0; int j < 8; j++){
+           // t.left(45);
+           // t.forward(x/i);
+           // }
+  //  }
+  //}
+
+
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        ShrinkingRose(t,100, 7);
+    }
+
+
+
+
+
+
+  public static void ShrinkingRose(Turtle t, double x,  int n) {
+        for(int i = 1; i < n ; i++) {
+           
+            for(int j = 0; j < 4 ; j++) { 
+                t.forward(x);
+                t.left(90);
+            }
+            t.left(15);
+          t.forward(x);
+         
+        }
+    }
+    
+}

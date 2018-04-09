@@ -1,0 +1,25 @@
+public class GrowPoly {
+    // write your method here
+    public static void GrowPoly(Turtle t, double x, int n, int m) {
+     for (int j = 0; j < m; j++) {
+        poly(t, x + (10*j), n, m); //repeats polygon with side length increasing by 10 each time
+    }
+    }
+   
+
+    public static void poly(Turtle t, double x, int n, int m) {
+        for (int i = 0; i < 5; i++) { //draws a polygon
+            t.forward(x); 
+            t.left(360.0 / n); 
+        }
+        t.forward(x); 
+        t.right(15); //rotates polyon
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle(); 
+        GrowPoly(t, 20, 5, 7); 
+    }
+    
+}

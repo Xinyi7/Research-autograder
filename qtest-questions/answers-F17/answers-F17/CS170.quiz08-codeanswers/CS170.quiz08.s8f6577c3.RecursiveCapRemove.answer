@@ -1,0 +1,28 @@
+public class RecursiveCapRemove {
+
+    // the method takes a string and two characters and return a string with given characters removed or capitalized
+    public static String capRemove(String s, char c, char r){
+        if(s.length()==0) return ""; 
+        else{
+            char n = s.charAt(0);
+            String ns = ""+n; 
+            if (n==c) return (ns.toUpperCase()+capRemove(s.substring(1),c,r)); 
+            
+            else if (n==r) return capRemove(s.substring(1),c,r); 
+            
+            else return (ns.toLowerCase()+capRemove(s.substring(1),c,r)); 
+        }
+        
+
+
+        
+    }
+    //test cases
+    public static void main(String[] args) {
+        System.out.println(capRemove("abcd",'a','b')); 
+        System.out.println(capRemove("",'a','b'));
+        System.out.println(capRemove("March",'a','b'));
+     
+    }
+
+}

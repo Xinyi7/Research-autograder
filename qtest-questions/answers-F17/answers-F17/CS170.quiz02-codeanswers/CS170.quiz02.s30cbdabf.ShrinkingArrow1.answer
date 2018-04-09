@@ -1,0 +1,41 @@
+public class Arrow {
+
+    public static void arrow(Turtle t, double length,int branches) {
+        t.left(120);
+        t.forward(length);
+        t.penup();
+       t.backward(length);
+        t.left(90);
+        t.pendown();
+        t.forward(length);
+        t.penup();
+       t.backward(length);
+       t.right(210);
+        t.pendown();
+            for(int i= 0; i< branches;i++){
+                t.forward(20);
+                t.left(120);
+                t.forward(length/(2 + i));
+                t.penup();
+                t.backward(length/ (2+ i));
+                 t.left(90);
+                 t.pendown();
+                 t.forward(length/(2 + i));
+                t.penup();
+                t.backward(length/ (2+ i));
+                t.right(210);
+                t.pendown();
+            }
+        t.penup();
+        t.backward(110);
+        t.pendown();
+    }
+    
+    
+    public static void main(String[] args) {
+        Turtle amy = new Turtle();
+        amy.delay(0);
+        arrow(amy , 150,5);
+    }
+    
+}

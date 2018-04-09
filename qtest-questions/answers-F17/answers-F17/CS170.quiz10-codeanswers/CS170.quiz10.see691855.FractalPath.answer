@@ -1,0 +1,28 @@
+// 
+// 6 sides are drawn
+// 9 sides are drawn
+// N* 3 sides are drawn
+public class FractalPath {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.forward(x);
+            t.right(90);
+            t.forward(x / 2);
+            t.right(90);
+            t.forward(x);
+            t.left(135);
+            f(t, x * 0.75, level - 1);
+            
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(20);
+        f(t, 180, 13);
+        t.hideturtle();
+    }
+}

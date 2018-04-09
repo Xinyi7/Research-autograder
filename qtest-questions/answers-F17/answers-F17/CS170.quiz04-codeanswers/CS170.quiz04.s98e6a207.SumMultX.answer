@@ -1,0 +1,18 @@
+public class SumMultX {
+
+    // write your method here
+    public static int sumMultX(int x, int y) {
+        int result = 0;
+        for (int i = x; i <= y; i += x) {
+            result = result + i;
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(sumMultX(1,5)); // expect 15
+        System.out.println(sumMultX(2,5)); // expect 6
+        System.out.println(sumMultX(2,6)); // expect 12
+    }
+
+}

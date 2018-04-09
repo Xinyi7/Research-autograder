@@ -1,0 +1,17 @@
+public class RecursiveIsThereEven {
+
+    public static boolean isThereEven(int []a, int n){ //method header takes a paramneter array and int and returns a boolean true or false
+        if (n == 0){
+            return false;
+        }else{
+            if (a[n-1] % n == 0) && isThereEven(a[n-1], n){
+                return true; 
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.print(isThereEven({1,3,5});
+    }
+
+}

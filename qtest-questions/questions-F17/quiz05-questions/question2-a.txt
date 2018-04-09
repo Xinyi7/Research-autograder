@@ -1,0 +1,52 @@
+<question>
+<title>StringBetweenEnd</title>
+<type>JavaCode</type>
+<points>7</points>
+<text>
+Write a method betweenEnd(String s, String between, String end) that takes three nonempty strings: s, between, and end. The method returns a string containing all the characters of s in the same order, but with the between string inbetween each consecutive pair of characters of s; the whole sequence is terminated by the end string.
+
+Examples:
+betweenEnd("abc", "--", "$") returns "a--b--c$"
+betweenEnd("a", "--", "$") returns "a$"
+betweenEnd("hello", ".", "@#!") returns "h.e.l.l.o@#!"
+</text>
+<init>
+public class StringBetweenEnd {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class StringBetweenEnd {
+
+    public static String betweenEnd(String s, String between, String end) {
+        String result = s.substring(0,1);
+        for (int i = 1; i < s.length(); i++) {
+            result += between + s.charAt(i);
+        }
+        return result + end;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(betweenEnd("abc", "--", "$"));
+        System.out.println(betweenEnd("a", "--", "$"));
+        System.out.println(betweenEnd("hello", ".", "@#!"));
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>

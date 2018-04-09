@@ -1,0 +1,22 @@
+public class PigLatin {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(pigLatin("hello"));
+        System.out.println(pigLatin("peaches"));
+        System.out.println(pigLatin("b"));
+    }
+
+
+    public static String pigLatin(String s){
+        int n=s.length();
+        String result="";
+        for (int i=1;i<n;i++){
+            result= result+s.charAt(i);
+        }
+        result=result+s.charAt(0)+"a";
+        return result;
+    }
+}

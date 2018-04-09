@@ -1,0 +1,21 @@
+public class PickAndReplace {
+
+   
+    
+    public static void main(String[] args) {
+        
+    }
+
+    public static String pickAndReplace(String s, int n){
+
+        char c = charAt(n);
+        int count = 0;
+        for(int i=0; i<s.length - 1; i++){
+            count+=count;
+            for(int j=0; j<count; j++){
+                return c + "";
+            }
+        }
+    }
+
+}

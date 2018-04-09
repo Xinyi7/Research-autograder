@@ -1,0 +1,32 @@
+<question>
+<title>BackHome2</title>
+<type>MultipleChoice</type>
+<points>4</points>
+<text>
+Look at the following code, and imagine what it draws without executing it. What number should you put instead of the question mark in the instruction t.backward(?) to make the turtle go back where it initially started from?
+
+ Turtle t = new Turtle();
+
+ for (int i = 0; i < 4; i++) {
+     for (int j = 0; j < 3; j++) {
+         for (int k = 0; k < 2; k++) {
+             t.forward(10);
+         }
+         t.forward(50);
+         t.right(120);
+     }
+     t.forward(20);
+ }
+ t.backward(?);
+</text>
+<figure></figure>
+<option>20</option>
+<option>50</option>
+<option>80</option>
+<option>100</option>
+<option>240</option>
+<option>600</option>
+<option>840</option>
+<option>920</option>
+<answer>80</answer>
+</question>

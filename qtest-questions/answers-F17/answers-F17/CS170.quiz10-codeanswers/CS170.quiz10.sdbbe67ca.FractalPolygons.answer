@@ -1,0 +1,35 @@
+//size of smallest side of polygon for f(t, 120, 2) is 60
+//size of smallest side of polygon for f(t, 120, 3) is 30
+//size of smallest side of polygon for f(t, X, N) is X/(2*(N-1))
+
+public class FractalPolygons {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            int n = level + 2;
+            for (int i = 0; i < n; i++) {
+                f(t, x / 2, level - 1);
+                t.forward(x);
+                t.left(360.0 / n);
+                t.forward(x); //added line
+                t.left(360.0 / n); //added line
+                
+            }
+        }
+    }
+    
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+       t.delay(1);
+       f(t, 120, 4); //changed 5 to 4
+      // f(t, 120, 2);
+      // f(t, 120, 3);
+      // t.hideturtle();
+ 
+
+        
+    }
+}

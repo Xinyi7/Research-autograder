@@ -1,0 +1,14 @@
+public class FeetAndInches {
+    // write your method here
+  public static String ftin(int x) {
+    return "" + (x) + " inches equals " + (x / 12) + " feet " + (x % 12) + " inches.";
+  }
+
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(ftin(68));
+        System.out.println(ftin(91));
+    }
+
+}

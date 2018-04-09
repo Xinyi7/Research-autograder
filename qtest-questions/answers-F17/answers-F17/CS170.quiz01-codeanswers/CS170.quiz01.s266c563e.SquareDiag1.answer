@@ -1,0 +1,34 @@
+public class SquareDiag {
+
+    // write your method here
+    public static void square(Turtle t, double size){
+        for (int i =0; i<4; i++){
+            t.forward(size);
+            t.left(90);
+            
+        }
+    }
+    public static void squareDiag(Turtle t, double size, int n){
+        for (int i=0; i<n; i++){
+            square(t,size);
+            t.penup();
+            t.forward(size/2.0);
+            t.left(90);
+            t.forward(size/2.0);
+            t.right(90);
+            t.pendown();   
+    }
+       t.penup();
+       t.backward(n*size/2.0);
+       t.right(90);
+       t.forward(n*size/2.0);
+       t.left(90);
+}
+    public static void main(String[] args) {
+        // test your method here
+        Turtle amy= new Turtle();
+        squareDiag(amy,50,5);
+       
+    }
+
+}

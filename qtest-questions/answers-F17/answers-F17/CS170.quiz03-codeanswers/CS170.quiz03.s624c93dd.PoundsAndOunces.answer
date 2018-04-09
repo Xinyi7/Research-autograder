@@ -1,0 +1,30 @@
+public class PoundsAndOunces {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+         System.out.println(pounds(100));
+    }
+    public static int whole(int x){
+        int thing = 0;
+        thing = x/16;
+        return thing;    
+    }
+    public static int remainder(int x){
+        int stuff = 0;
+        stuff = x%16;
+        return stuff;
+    }
+    public static String pounds(int x){
+        String line = "";
+        line += x;
+        line += " oz equals ";
+        line += whole(x);
+        line += " lb ";
+        line += remainder(x);
+        line += " oz";
+        return line;
+    }
+
+}

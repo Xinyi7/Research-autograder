@@ -1,0 +1,37 @@
+<question>
+<title>RockPaperScissors</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+        int rock = 4;
+        double paper = 3.0;
+        String scissors = "paper";
+        System.out.println(rock + "paper");
+        System.out.println(rock + paper);
+        System.out.println(rock + paper + scissors);
+        System.out.println(scissors + rock + paper);
+        System.out.println(paper * scissors.length() + "rock".length());
+        for (int i = 3; i < 5; i++) {
+            paper = paper * paper;
+            System.out.println(paper);
+        }
+        for (int i = 1; i < 10; i += 4) {
+            rock += i;
+            System.out.println(scissors + rock);
+        }
+</text>
+<answer>
+4paper
+7.0
+7.0paper
+paper43.0
+19.0
+9.0
+81.0
+paper5
+paper10
+paper19
+</answer>
+</question>

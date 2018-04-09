@@ -1,0 +1,35 @@
+//2 rectangles 
+
+
+//2 rectangles, 3 rectangles, N=number of rectangles that will be drawn
+
+public class FractalRectangles {
+
+    public static void rectangle(Turtle t, double x, double y) {
+        for (int i = 0; i < 2; i++) {
+            t.forward(x);
+            t.left(90);
+            t.forward(y);
+            t.left(90);
+        }
+    }
+    
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            rectangle(t, x * 4, x); //change to 4
+        } else {
+            rectangle(t, x * 4, x); //change to 4
+            t.left(90);
+            t.backward(x);
+            f(t, x * 3 / 5, level - 1);
+            t.forward(x);
+            t.right(90);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(5);
+        f(t, 50, 6);
+    }
+}

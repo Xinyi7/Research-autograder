@@ -1,0 +1,16 @@
+public class ChangeLastFirst {
+
+    public static String changeLastFirst(String s, String first) {
+        String result = "";
+        for (int i = 0; i = s.length()-1; i++) {
+            result += s.charAt(i);
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(changeLastFirst("book", "c"));
+        System.out.println(changeLastFirst("book", "c"));
+    }
+
+}

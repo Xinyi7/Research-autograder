@@ -1,0 +1,31 @@
+public class SquareTriFractal {
+// level 2 : 5 squares are drawn
+// level 3 : 1 + 4 + 4 * 4 = 21 squares
+// level N : 4 ** N-1 + 4 ** N-2 + ... + 1
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.penup();
+            t.backward(x * 0.5);
+            f(t, x*0.4, level-1);
+            t.right(30);
+            t.pendown();
+            for(int i = 0; i < 3; i++){
+                t.forward(x);
+                f(t, x*0.4, level-1);
+                t.left(120);
+            }
+            t.left(30);
+            t.forward(x*0
+            
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(100);
+        f(t, 200, 2);
+    }
+}

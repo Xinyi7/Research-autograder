@@ -1,0 +1,26 @@
+public class NoEvens {
+
+    // write your method here
+    public static boolean noEvens(String[] x, int n) {
+        if (n == 0) {
+            return true;
+        }
+        if (x[n - 1].length() % 2 == 0) {
+            return false;
+        } else {
+           return noEvens(x, n-1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] a = {"alpha", "beta", "lambda"};
+        String[] b = {"red", "green", "white"};
+        String[] c = {};
+
+        noEvens(a, 3);
+        noEvens(b, 3);
+        noEvens(c, 3);
+    }
+
+}

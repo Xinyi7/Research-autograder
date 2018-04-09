@@ -1,0 +1,35 @@
+<question>
+<title>PhoneTabletLaptop</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+String phone = "laptop";
+String tablet = "phone";
+double laptop = 5.1;
+System.out.println("tablet".charAt(3));
+System.out.println(tablet.charAt(3));
+System.out.println(phone + laptop);
+System.out.println(tablet + phone);
+System.out.println(phone.charAt((int)laptop));
+System.out.println(phone.substring(1, (int)laptop));
+System.out.println(("laptop" + phone).substring(3, 7));
+System.out.println(("" + tablet.charAt(1) + phone.substring(0,(int)laptop)).substring(3));
+System.out.println("laptop" + tablet.length() + phone.length());
+System.out.println(phone.substring(0, tablet.length()) + "-" + tablet.substring(1));
+</text>
+<answer>
+l
+n
+laptop5.1
+phonelaptop
+p
+apto
+topl
+pto
+laptop56
+lapto-hone
+</answer>
+</question>
+

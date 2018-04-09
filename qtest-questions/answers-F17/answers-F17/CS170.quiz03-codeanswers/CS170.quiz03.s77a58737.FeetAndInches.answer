@@ -1,0 +1,15 @@
+public class FeetAndInches {
+
+    public static String feet(int x){
+    int feet = x/12;
+    int leftOver = x%12;
+    String s = x + " in equals " + feet + " ft and " + leftOver + " in.";
+    return s;
+        
+    }
+    
+    public static void main(String[] args) {
+       System.out.println( feet(68));
+    }
+
+}

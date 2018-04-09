@@ -1,0 +1,27 @@
+public class ProdMult3 {
+
+    // write your method here
+
+    public static int prodMult3(int a, int b) {
+        int result = 1;
+        for (int i = a; i <= b;i++) {
+            
+            if (i % 3 == 0) {
+                result = i * result;
+            } 
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+
+        System.out.println(prodMult3(0, 0));// 0
+        System.out.println(prodMult3(3, 4));// 3
+        System.out.println(prodMult3(3, 6));// 18
+        System.out.println(prodMult3(3, 9));// 162
+        System.out.println(prodMult3(4, 6));// 6
+        
+    }
+
+}

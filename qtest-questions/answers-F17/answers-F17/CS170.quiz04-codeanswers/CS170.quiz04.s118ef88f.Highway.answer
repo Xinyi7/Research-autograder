@@ -1,0 +1,19 @@
+public class Highway {
+    
+    public static void main(String[] args) {
+        highway(45.0);
+    }
+
+    public static double highway(double speed){
+        if (speed<40.0){
+            System.out.println("annoying");
+            }
+        else if (40.0<speed<70.0){
+            System.out.println("ok");
+        }
+        else if (speed>70.0){
+            System.out.println("dangerous");
+            }
+        }
+    }
+

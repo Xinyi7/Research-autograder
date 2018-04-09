@@ -1,0 +1,20 @@
+public class SplitAt {
+    // write your method here
+  public static String splitAt(String s, int n) {
+    String result = "";
+     
+    for (int i = 0; i < n-1; i++) {
+        result += s.charAt(i); 
+    }
+    for (int i = n; n < s.length()-1; i++) {
+        result += s.charAt(i);
+    }
+   return result;     
+  }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(splitAt("apple", 2));
+    }
+
+}

@@ -1,0 +1,24 @@
+public class NoEvens {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] a = {"alpha", "beta", "lambda"};
+        String[] b = {"red", "green", "white"};
+        String[] c = {};
+        System.out.println(a, 3);
+        System.out.println(b, 3);
+        //System.out.println(c, 3);
+    }
+
+    public static boolean noEvans(String[] x, int n) {
+        if (n == 0) {
+            return true;
+        } else {
+            return (s[n-1].length() % 2 == 0) && noEvans(x, n-1);
+        }
+
+    }
+
+}

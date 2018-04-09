@@ -1,0 +1,47 @@
+public class FractalDiamonds {
+//for f(t, 160, 2) the perimeter of the smallest diamond is 160*0.5^(3)=20, for f(t, 160, 3) the smallest diamond's periemeter is 160*0.5^4 = 10
+//in general the perimeter of the smallest diamond is 160*0.5^(n+1) for n levels
+    public static void diamond(Turtle t, double x) {
+        t.penup();
+        t.backward(x / 2);
+        t.pendown();
+        t.left(60);
+        t.forward(x);
+        t.right(120);
+        t.forward(x);
+        t.right(60);
+        t.forward(x);
+        t.right(120);
+        t.forward(x);
+        t.right(120);
+        t.penup();
+        t.forward(x / 2);
+        t.pendown();
+    }
+    
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            diamond(t, x);
+        } else {
+            diamond(t, x);
+
+            t.penup();
+            
+            t.left(90);
+            t.pendown();
+            f(t, x / 2, level - 1);
+            t.penup();
+            t.right(90);
+            t.backward(x);
+            t.pendown();
+            
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(5);
+        f(t, 160, 1);
+       t.hideturtle();
+    }
+}

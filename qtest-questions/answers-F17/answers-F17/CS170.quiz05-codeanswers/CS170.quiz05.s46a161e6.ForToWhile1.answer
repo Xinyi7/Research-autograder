@@ -1,0 +1,18 @@
+public class ForToWhile {
+
+    public static void main(String[] args) {
+        String s = "ForWhile";
+        int a = 4;
+        int b = s.length() - 2;
+         int i = b;
+        while (b > 2) {
+            System.out.println("b=" + b + ": "+ s.charAt(b));
+            b -=2;
+            a++;
+            while (i > 1) {
+                System.out.println("i: " + i);
+                    i -= 3;
+            }
+        }
+    }
+}

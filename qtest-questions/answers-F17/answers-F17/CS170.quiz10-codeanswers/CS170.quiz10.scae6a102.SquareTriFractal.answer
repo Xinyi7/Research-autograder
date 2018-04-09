@@ -1,0 +1,31 @@
+//when level = 2, squares = 4*4 = 16; when level = 3, squares = 4*4*4 = 64; when level = N, squares = 4**N
+public class SquareTriFractal {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.penup();
+            t.backward(x * 0.5 * Math.sqrt(3) * 0.5);
+            t.right(30);
+
+            t.pendown();
+            for (int i = 0; i < 3; i++) {
+                t.forward(x);
+                t.left(120);
+                f(t, x * 0.4, level - 1);
+            }
+            t.penup();
+            t.left(30);
+            t.forward(x * 0.5 * Math.sqrt(3) * 0.5);
+
+            t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(10);
+        f(t, 200, 5);
+    }
+}

@@ -1,0 +1,12 @@
+public class ExpandString {
+    public static void expandString(String s, int n) {
+        If (s.charAt(i) 
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

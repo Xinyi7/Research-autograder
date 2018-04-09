@@ -1,0 +1,20 @@
+public class EvenStrings {
+
+    // write your method here
+    public static boolean evenStrings(String s1, String s2) {
+        if (s1.length() % 2 == 0 && s2.length() % 2 == 0 && s1.length() == s2.length()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(evenStrings("blue", "pink"));
+        System.out.println(evenStrings("hey", "you"));
+        System.out.println(evenStrings("banana", "pear"));
+        
+    }
+
+}

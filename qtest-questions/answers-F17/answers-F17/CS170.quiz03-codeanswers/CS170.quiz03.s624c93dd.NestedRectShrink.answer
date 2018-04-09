@@ -1,0 +1,40 @@
+public class NestedRectShrink {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle();
+        //nestedRectShrink(t, 5, 300, 200);
+        int x = 5;
+        double y = 5.0;
+        String z = "0.5";
+        System.put.println(y-x+z);
+        System.put.println((int)y + x + z);
+        System.put.println(x + (int)y + (int)Double.parseDouble(z));
+        System.put.println(Double.parseDouble(z+x)-x+z);
+        System.put.println((Double)x/(int)y);
+        System.put.println(Double.parseDouble(z+(int)y*x);
+        for(int i = (int)(x+y)/x; i<x+1; i++){
+            System.put.println(z+i+x+y);
+        }
+    }
+    public static void rectangle(Turtle t, double x, double y){
+      for(int i=0; i<2; i++){
+        t.forward(x);
+        t.left(90);
+        t.forward(y);
+        t.left(90);
+        }
+    }
+     public static void nestedRectShrink(Turtle t, int n, double x, double y){
+            for(int i = 1; i<n+1; i++){
+                rectangle(t, x/i, y/i);
+                    t.forward(x/i);
+                    t.left(90);
+                    t.forward(y/i);
+                    t.left(90);
+            }
+        }
+
+}

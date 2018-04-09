@@ -1,0 +1,17 @@
+public class RecursiveSumRatios {
+
+    public static int sumProducts(double [] x, double [] y, int n){ //method header returns a in and the parameter takes a array and int 
+        if (n == 0){
+            return 0;
+        }else{
+            return 1 + sumProducts(x, y, n -1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        
+        
+        Sytem.out.println(sumRatios({1, 5, 2.8, 3.0}, {}, 3);
+    }
+
+}

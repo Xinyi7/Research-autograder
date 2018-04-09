@@ -1,0 +1,21 @@
+public class BodyType {
+ public static String bodyType(double x){
+    if (x < 18.5){
+        return "underweight";
+    }
+    else if (x <= 25){
+        return "normal";
+    }
+    else{
+        return "overweight";
+    }
+ }
+    public static void main(String[] args) {
+        System.out.println(bodyType(18.5));
+        System.out.println(bodyType(25));
+        System.out.println(bodyType(3));
+        System.out.println(bodyType(20));
+        System.out.println(bodyType(27));
+    }
+
+}

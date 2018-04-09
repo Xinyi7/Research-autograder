@@ -1,0 +1,11 @@
+public class LengthProduct {
+
+    public static int lengthProduct(String[] x){
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

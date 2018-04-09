@@ -1,0 +1,15 @@
+public class MergeRepeat {
+    public static String mergeRepeat(String[] s, int k){
+        String result = "";
+        for (int i = 0; i < s.length; i ++){
+            for (int j = 0; j < k; j ++){
+                result += s[i];
+            }
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        System.out.println(mergeRepeat(new String[]{"A", "BC"}, 3));
+    }
+
+}

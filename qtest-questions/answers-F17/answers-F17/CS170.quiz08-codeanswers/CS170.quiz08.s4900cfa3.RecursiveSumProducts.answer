@@ -1,0 +1,18 @@
+public class RecursiveSumProducts {
+       public static int SumProduct(int[] x, int [] y, int n){
+            if (x[0] == 0 || y[0] == 0) {
+            return 0;
+        }else {
+            return SumProduct(x -1, y -1,n-1);
+        }
+       }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        int a = sumProduct({1, 2, 3}, {4,5,6},3);
+        System.out.println(a);
+    }
+
+}

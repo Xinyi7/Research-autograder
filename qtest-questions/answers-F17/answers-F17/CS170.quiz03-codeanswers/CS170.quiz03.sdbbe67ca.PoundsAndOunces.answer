@@ -1,0 +1,15 @@
+public class PoundsAndOunces {
+
+    // write your method here
+    public Int pounds(int x) {
+        int z = x/16;
+        int y = x % 16; 
+        return(x + " oz equals "+ z + " lb " + y + " oz " );
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        pounds(16);
+    }
+
+}

@@ -1,0 +1,17 @@
+public class AreMultiplesOf {
+
+    // write your method here
+    public static String areMultiplesof(int a, int b, int c){
+        if (a % c != 0 || a %c != 0){
+            return "false";     
+    }
+    else{ return "true";
+    }
+    }
+    
+    public static void main(String[] args){
+        // test your method here
+    System.out.println(areMultiplesof(5, 10, 15));
+    }
+
+}

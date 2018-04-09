@@ -1,0 +1,37 @@
+<question>
+<title>PenPencilMarker</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+        int pen = 3;
+        String pencil = "pen";
+        double marker = 3.0;
+        System.out.println(pencil + marker);
+        System.out.println(pencil + "pencil");
+        System.out.println(pen + pencil + marker);
+        System.out.println(marker + pen + pencil);
+        System.out.println(marker * pencil.length() + "pencil".length());
+        for (int i = 4; i < 7; i++) {
+            marker = pen + marker;
+            System.out.println(marker);
+        }
+        for (int i = 1; i <= 4; i += 3) {
+            pen += i;
+            System.out.println(pen + pencil + pen);
+        }
+</text>
+<answer>
+pen3.0
+penpencil
+3pen3.0
+6.0pen
+15.0
+6.0
+9.0
+12.0
+4pen4
+8pen8
+</answer>
+</question>

@@ -1,0 +1,17 @@
+public class SplitAt {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(splitAt("apple", 2));
+    }
+
+    public static String[] splitAt(String s, int n) {
+        String x[] = new String[2];
+        x[0] = s.substring(0, n);
+        x[1] = s.substring(n + 1);
+        return x;
+    }
+
+}

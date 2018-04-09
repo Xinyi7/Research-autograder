@@ -1,0 +1,22 @@
+public class AreAllEven {
+
+    public static boolean areAllEven(String[] x) {
+       boolean result = true;
+       int i = 0;
+       while(i < x.length) {
+            if(x[i].length() % 2 == 1) {
+                result = false;
+            }
+            i++;
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        String[] x1 = {"andy", "dave", "carl"};
+        String[] x2 = {"eric", "francis", "gary"};
+        System.out.println(areAllEven(x1));
+        System.out.println(areAllEven(x2));
+    }
+
+}

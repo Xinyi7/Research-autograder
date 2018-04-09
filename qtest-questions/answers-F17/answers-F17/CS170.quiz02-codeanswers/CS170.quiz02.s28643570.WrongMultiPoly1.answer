@@ -1,0 +1,17 @@
+public class MultiPoly {
+
+    public static void multiPoly(Turtle t, double x, int n, int m) {
+        for (int k = n; k <= m; k++) {
+            for (int j = 0; j < k; j++) {
+                t.forward(x);
+                t.left(360.0 / k); //swiched n to k
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(20);
+        multiPoly(t, 100, 5, 8);
+    }
+}

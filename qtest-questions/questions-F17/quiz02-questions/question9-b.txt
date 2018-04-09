@@ -1,0 +1,80 @@
+<question>
+<title>GrowPoly2</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using Java and turtle graphics, write a method named growPoly(Turtle t, double x, int n, int m) that draws a pattern of m growing polygons with n sides each. The side of the first polygon is x units long; each following polygon is 10 units longer than the previous one and rotated 15 degrees. The example in the figure is the result of growPoly(t, 20, 5, 7). For this problem you are not required to get the turtle back to its initial position. 
+</text>
+<figure>
+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
+</figure>
+<init>
+public class GrowPoly {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+    
+}
+</init>
+<answer>
+public class GrowPoly {
+
+    public static void growPoly(Turtle t, double x, int n, int m) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                t.forward(x + 10 * i);
+                t.left(360.0 / n);
+            }
+            t.forward(x + 10 * i);
+            t.right(15);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        growPoly(t, 20, 5, 7);
+    }
+    
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

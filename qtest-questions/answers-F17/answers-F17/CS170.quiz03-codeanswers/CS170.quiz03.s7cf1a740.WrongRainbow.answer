@@ -1,0 +1,25 @@
+public class Rainbow {
+
+    public static void rainbow(Turtle t, int n, double x, double y) {
+        for(int i = 0; i < n ; i++) {
+            t.penup();
+            t.forward(x+i*y);
+            t.left(90);
+            t.pendown();
+            for(int j = 0; j < 1000 ; j++) { 
+                t.forward((2 * (x + i * y)) * Math.sin(Math.PI/2000));
+                t.left(360.0/2000);
+            }
+            t.left(90);
+            t.penup();
+            t.forward(x+i*y);
+            t.pendown();
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        rainbow(t, 7, 40, 15);
+    }    
+}

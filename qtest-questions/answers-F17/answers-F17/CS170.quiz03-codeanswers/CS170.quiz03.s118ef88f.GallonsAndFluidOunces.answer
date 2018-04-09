@@ -1,0 +1,12 @@
+public class GallonsAndFluidOunces {
+
+    public static int gallons(int x){
+        for
+            return 
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

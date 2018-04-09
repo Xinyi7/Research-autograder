@@ -1,0 +1,22 @@
+public class EvenStrings {
+
+   public static boolean evenStrings (String s1, String s2){
+    if ((s1.length() == s2.length() )&&((s1.length() % 2 == 0) && (s2.length()%2 ==0))){
+        return true;
+
+    }
+    else { 
+        return false;
+    }
+   }
+    // write your method here
+    
+    public static void main(String[] args) {
+        
+       System.out.println(evenStrings ("apple" , "orange"));
+       System.out.println(evenStrings ("for" , "the"));
+       System.out.println(evenStrings ("four" , "five"));
+       // test your method here
+    }
+
+}

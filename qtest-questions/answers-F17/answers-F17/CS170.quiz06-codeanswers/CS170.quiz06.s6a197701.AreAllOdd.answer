@@ -1,0 +1,25 @@
+public class AreAllOdd {
+
+    // write your method here
+    public static boolean allAreOdd( String[] x)
+    {
+       boolean result =true;
+       int count=0;
+       for(int i=0;i<x.length;i++)
+       {
+        if(x[count].length()%2==0)
+         result=false;
+         count++;
+       }
+       return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"apple", "bananas", "carrots"};
+        String[] x2 = {"apple", "banana", "carrots"};
+        System.out.println(allAreOdd(x1));
+        System.out.println(allAreOdd(x2));
+    }
+
+}

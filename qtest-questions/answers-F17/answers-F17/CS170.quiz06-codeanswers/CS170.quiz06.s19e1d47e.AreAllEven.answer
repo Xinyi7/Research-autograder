@@ -1,0 +1,41 @@
+public class AreAllEven {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"andy", "dave", "carl"};
+        String[] x2 = {"eric", "francis", "gary"};
+        String[] x3 = {"eric", "francis"};
+     System.out.println(allAllEven(x1));
+      System.out.println(allAllEven(x2));
+        System.out.println(allAllEven(x3));
+    }
+
+public static boolean allAllEven(String[] x){
+
+int count = 0;
+for (int i = 0; i < x.length; i++){
+
+if (x[i].length()%2==0){
+    count= count +1;
+}
+}
+
+if (x.length==count){
+    return true;
+    
+}else {
+    return false;
+}
+    
+
+
+    
+}
+
+
+
+
+
+}

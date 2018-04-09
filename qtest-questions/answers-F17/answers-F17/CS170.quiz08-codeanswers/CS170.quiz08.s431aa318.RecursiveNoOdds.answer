@@ -1,0 +1,21 @@
+public class NoOdds {
+
+    // write your method here
+    public static boolean noOdds(String[] x, int n) {
+        if (n == 0) {
+            return false;
+        } else {
+            return (x[n-1].length() % 2 == 1) || (noOdds(x, n-1) );
+                
+            }
+        }
+        
+    
+    
+    public static void main(String[] args) {
+        // test your method here
+
+        System.out.println(noOdds(new String[]{"alpha", "beta", "lambda"}, 3));
+    }
+
+}

@@ -1,0 +1,49 @@
+/*
+ * for f(t, 160, 2) The perimeter of the smallest diamond is 4* 160/(2^(2)) which equals to 160. for f(t, 160, 3) it is 4* 160/(2^(3)) which is 4 * 160/8 which is 80. 
+ *  The formula for the perimeter of the smallest diamond with side length X and level N is 4* X/(2^(N))
+ */
+
+public class FractalDiamonds {
+
+    public static void diamond(Turtle t, double x) {
+        t.penup();
+        t.backward(x / 2);
+        t.pendown();
+        t.left(60);
+        t.forward(x);
+        t.right(120);
+        t.forward(x);
+        t.right(60);
+        t.forward(x);
+        t.right(120);
+        t.forward(x);
+        t.right(120);
+        t.penup();
+        t.forward(x / 2);
+        t.pendown();
+    }
+    
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            diamond(t, x);
+        } else {
+            diamond(t, x);
+            t.penup();
+            
+            t.left(90);
+            t.pendown();
+            f(t, x / 2, level - 1);
+            t.penup();
+            t.right(90);
+            
+            t.pendown();
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(2);
+        f(t, 160, 4);
+        t.hideturtle();
+    }
+}

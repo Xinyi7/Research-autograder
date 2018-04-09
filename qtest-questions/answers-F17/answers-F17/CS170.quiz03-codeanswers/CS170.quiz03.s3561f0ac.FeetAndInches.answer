@@ -1,0 +1,16 @@
+public class FeetAndInches {
+
+    public static void feet(int x){
+        int inches = x % 12;
+        int ft = x / 12;
+        System.out.println(x + " in equals " + ft + " ft " + inches + " in ");
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        feet(68);
+        
+    }
+
+}

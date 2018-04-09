@@ -1,0 +1,27 @@
+public class Arrow {
+    public static void arrow(Turtle t, double length, int branches){
+        for(int i=1;i<branches+1;i++){
+            RightAngle(t,length,i,branches);
+        }
+        t.backward(length);
+    }
+    public static void  RightAngle(Turtle t, double length, int i, int branches){
+        t.left(135);
+        t.forward(length/i);
+        t.backward(length/i);
+        t.left(90);
+        t.forward(length/i);
+        t.backward(length/i);
+        t.left(135);
+        t.forward(length/branches);
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        Turtle Francis = new Turtle();
+        Francis.delay(20);
+        arrow(Francis,150,5);
+         // test your method here
+    }
+    
+}

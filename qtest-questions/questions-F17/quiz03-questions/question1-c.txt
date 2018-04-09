@@ -1,0 +1,66 @@
+<question>
+<title>PolyRowGrow</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using Java and turtle graphics, write a method named polyRowGrow(Turtle t, int n,  int s, double x) that draws a row of n growing polygons. The first polygon has s sides each of length x. Each following polygons has 2 more sides than the previous one. The distance between the starting point of each polygon and the next one is (4*x) steps. Move the turtle back to its original position. The example in the figure is polyRowGrow(t, 4, 5, 20).
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAUoAAABuAQMAAAB7rcjSAAAABlBMVEX///8AAABVwtN+AAAB6klE
+QVRYw+2WMW7DMAxFJVtJPBiBxwwdfISMQdHBx+gxcgQNnXsmoXMP0WN0S1VFJCW6shgkQwcTiWAY
+zxJJfVJSarXV/r+dxWT7LkaftBOS+ku9CNG9d8HKg5IFpn9n7EVog0PVTJhahHZhtA9GhzBOEnRM
+xopIpmTuikhs4nHB+pB7SJNZXv+cJH9pD7xC9sl0S3vQx90XoKAniMfW9QRZmup6GrOduBNF6T0U
+RelNmcAyOzLpLaCfYrRtmUrLaK+cFD1GZ1HQZdTF7oCoLaFt+KXat1n2cukFZ0n7RfQY/wLUxZdU
+JkXU3o5SmZRQDaJCVGdSSyQmQV8Zir7OUP0mRptGjJprf6LiKyfrEOUhQMeYAkRpY7kIJz+vDPWe
+mrykCWXF3YBzddTEdvYXytrbAR7p5MMqYOgIC9yA0smHKGvFA3x1H8rOgmEeFvYBhnYwTTNH2bmV
+o40IRb1Se2MHp8E3ULHUX4voBGiPh5fDDZ2jQ+51dnXYEor7Rl4fsEN523xghJhh8jq7PJlnRDtE
+0ZXQb7eA7jLU5q6EtTEqfz81PEByZUzOQqNPgGLp4NXhOqNDdJeoouEfGZX2GOs6RA1/aikq/+py
++Y7Py08ePUlv6EY5MboT3/uNeH21Ea9PqVhttdVq9gPxpUk0FndkYAAAAABJRU5ErkJggg==
+</figure>
+<init>
+public class PolyRowGrow {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class PolyRowGrow {
+
+    public static void polyRowGrow(Turtle t, int n,  int s, double x) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < s + 2 * i; j++) {
+                t.forward(x);
+                t.left(360.0/(s + 2 * i));
+            }
+            t.penup();
+            t.forward(4 * x);
+            t.pendown();
+        }
+        t.penup();
+        t.backward(4 * x * n);
+        t.pendown();
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        polyRowGrow(t, 4, 5, 20);
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

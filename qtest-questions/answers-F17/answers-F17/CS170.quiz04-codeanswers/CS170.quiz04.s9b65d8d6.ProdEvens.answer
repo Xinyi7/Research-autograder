@@ -1,0 +1,10 @@
+public class ProdEvens {
+for int( int a, int b)
+if i % 2 == a and b 
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

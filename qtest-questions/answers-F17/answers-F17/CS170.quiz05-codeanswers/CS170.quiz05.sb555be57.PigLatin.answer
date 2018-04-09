@@ -1,0 +1,15 @@
+public class PigLatin {
+
+    public static String pigLatin(String s) {
+        int n = s.length();
+        String result = s.substring(0 , n);
+        result = s.substring(1, n) + s.charAt(0) + "a";
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(pigLatin("hello"));
+        System.out.println(pigLatin("peaches"));
+    }
+
+}

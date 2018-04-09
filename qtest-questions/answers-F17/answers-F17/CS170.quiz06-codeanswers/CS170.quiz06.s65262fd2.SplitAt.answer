@@ -1,0 +1,40 @@
+public class SplitAt {
+
+    // write your method here
+    public static String[] splitAt(String s, int n) {
+        String[] a = new String[2];
+        String x = "";
+        String y = "";
+        for (int i = 0; i < n; i++) {
+            x += s.charAt(i);
+        }
+        a[0] = x;
+        for (int j = n; j < s.length(); j++) {
+            y += s.charAt(j);
+        }
+        a[1] = y;
+        return a;
+    }
+
+    public static String arrayToString(String[] x) {
+        String result = "{";
+        for (int i = 0; i < x.length - 1; i++) {
+            result += x[i] +", ";
+        }
+        result += x[x.length - 1] + "}";
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = splitAt("apple", 2);
+        System.out.println(arrayToString(x1));
+        String[] x2 = splitAt("apple", 0);
+        System.out.println(arrayToString(x2));
+        String[] x3 = splitAt("apple", 4);
+        System.out.println(arrayToString(x3));
+        String[] x4 = splitAt("apple", 5);
+        System.out.println(arrayToString(x4));
+    }
+
+}

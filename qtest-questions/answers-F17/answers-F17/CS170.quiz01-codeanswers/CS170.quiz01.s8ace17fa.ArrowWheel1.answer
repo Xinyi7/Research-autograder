@@ -1,0 +1,35 @@
+public class ArrowWheel {
+
+    // write your method here
+    public static void arrowWheel(Turtle t, double x, int n){
+        for (int i = 0; i < n; i++){
+            t.forward(x);
+            tri(t, (x/5), 3);
+            t.backward(x);
+            t.right(n/360.0);
+        }
+        
+    }
+    public static void tri(Turtle t, double x, int numSides) {
+       
+            t.right(90);
+            t.backward(x/2);
+            t.forward(x);
+            t.left(numSides/360.0);
+            t.forward(x);
+            t.left(numSides/360.0);
+            t.forward(x);
+            t.left(numSides/360.0);
+            t.forward(x);
+            t.backward(x/2);
+            t.left(90);
+        
+    }
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle();
+        arrowWheel(t, 70, 9);
+     
+    }
+
+}

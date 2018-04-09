@@ -1,0 +1,20 @@
+public class AreAllOdd {
+    public static boolean areAllOdd(String [] x) {
+   
+        if(s.length[n] = s.length[n] -1)
+            return true;
+    }
+}
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"apple", "bananas", "carrots"};
+        String[] x2 = {"apple", "banana", "carrots"};
+        System.out.println(areAllOdd(x1)); 
+        System.out.println(areAllOdd(x2)); 
+
+    }
+
+}

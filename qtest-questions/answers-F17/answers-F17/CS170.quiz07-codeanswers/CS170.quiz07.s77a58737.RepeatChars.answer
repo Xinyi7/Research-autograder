@@ -1,0 +1,26 @@
+public class RepeatChars {
+
+    public static String repeatChars(String s, int[] k){
+
+    String result="";
+
+    for(int i=0; i<k.length; i++){//for every number in the array
+
+    for(int a=0; a<k[i]; a++){//loops the number of times the integer is
+        result+=s.charAt(i);
+    }
+
+        
+    }
+return result;
+        
+    }
+    
+    public static void main(String[] args) {
+    int[] array = {2, 1, 3};
+    System.out.println(repeatChars("hey", array));
+    int[] array2 = {2, 3,};
+    System.out.println(repeatChars("hey", array2));
+    }
+
+}

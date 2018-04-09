@@ -1,0 +1,18 @@
+public class EvenStrings {
+    // write your method here
+    public static void EvenStrings(String s1, String s2) {
+        System.out.println("true"); {
+            if (s1.length()=s2.length());
+            if (s1.length() is even); 
+    } else {System.out.print("false"); 
+    }
+}
+    
+    public static void main(String[] args) {
+        // test your method here
+        EvenStrings("blue", "pink"); //true
+        EvenStrings("hey", "you"); //false
+        EvenStrings("banana", "pear"); //false
+    }
+
+}

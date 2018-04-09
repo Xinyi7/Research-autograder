@@ -1,0 +1,18 @@
+public class SumMultX {
+        
+    public static void main(String[] args) {
+        sumMultX(3,7);
+    }
+
+    public static int sumMultX(int x, int y){
+        for(int i=x; i<=y; i++){
+            if((y/x)%==0){
+            System.out.println(x+y);
+            }
+            else{
+                return false;
+            }
+        }
+    }
+
+}

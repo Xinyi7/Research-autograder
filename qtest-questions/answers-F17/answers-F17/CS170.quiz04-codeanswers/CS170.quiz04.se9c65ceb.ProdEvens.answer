@@ -1,0 +1,17 @@
+public class ProdEvens {
+    public static void main(String[] args) {
+       System.out.println (prodEvens (1,5)); 
+       System.out.println (prodEvens (2,7)); 
+       System.out.println (prodEvens (2,9));
+    }
+    public static int prodEvens (int a, int b){
+        int prod = 1;
+        for (int i = a; i <= b; i++){
+            if (i%2 == 0){
+                prod *= i;
+            }
+        }
+        return prod;
+    }
+
+}

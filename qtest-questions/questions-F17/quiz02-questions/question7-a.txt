@@ -1,0 +1,81 @@
+<question>
+<title>WrongMultiPoly1</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+The method multiPoly should draw a seqence of nested polygons with variable number of sides between n and m (included). For example, the figure below is drawn with a correct implementation of multiPoly(t, 100, 5, 8). However the implementation below contains a mistake. Can you fix it?
+</text>
+<figure>
+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
+</figure>
+<init>
+public class MultiPoly {
+
+    public static void multiPoly(Turtle t, double x, int n, int m) {
+        for (int k = n; k <= m; k++) {
+            for (int j = 0; j < k; j++) {
+                t.forward(x);
+                t.left(360.0 / n);
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(20);
+        multiPoly(t, 100, 5, 8);
+    }
+}
+</init>
+<answer>
+public class MultiPoly {
+
+    public static void multiPoly(Turtle t, double x, int n, int m) {
+        for (int k = n; k <= m; k++) {
+            for (int j = 0; j < k; j++) {
+                t.forward(x);
+                t.left(360.0 / k); // change n to k
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(20);
+        multiPoly(t, 100, 5, 8);
+    }
+}
+</answer>
+<rubric>
+5 points: mistake fixed
+No credit if any new mistake is introduced
+</rubric>
+</question>
+

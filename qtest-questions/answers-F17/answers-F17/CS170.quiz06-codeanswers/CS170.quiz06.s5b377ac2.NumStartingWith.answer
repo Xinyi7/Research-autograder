@@ -1,0 +1,24 @@
+public class NumStartingWith {
+
+    public static int numStartingWith(String[] x, char c) {
+        int counter = 0;
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[i].length(); j++) {
+                if (x[i].charAt(j) == c){
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] test = {"hello", "", "wow", "hey"};
+        System.out.println(numStartingWith(test, 'h'));
+        System.out.println(numStartingWith(test, 'w'));
+        System.out.println(numStartingWith(test, 'a'));
+    }
+
+}

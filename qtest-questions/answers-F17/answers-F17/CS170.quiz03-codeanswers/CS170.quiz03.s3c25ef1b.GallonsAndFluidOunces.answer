@@ -1,0 +1,12 @@
+public class GallonsAndFluidOunces {
+public static String gallonsAndFluidOunces(int volume){
+    return volume+ " floz equals "+ (volume/128)+" gal "+ (volume%128)+ " fl oz";
+}
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(gallonsAndFluidOunces(300));
+        // test your method here
+    }
+
+}

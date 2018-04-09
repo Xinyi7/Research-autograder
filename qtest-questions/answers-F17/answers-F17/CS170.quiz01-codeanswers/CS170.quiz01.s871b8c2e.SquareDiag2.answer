@@ -1,0 +1,34 @@
+public class SquareDiag {
+
+    public static void squareDiag(Turtle t, double x, int n)
+    {
+        for(int i= 0; i<n;i++)//overlaps the squares
+        {
+            for(int j =0;j<4;j++)//draws square
+            {
+                t.forward(x);
+                t.right(90);
+            }
+            t.penup();
+            t.forward(x);
+            t.right(90);
+            t.forward(x/2.0);
+            t.left(90);
+            t.backward(x/2.0);
+            t.pendown();
+        }
+        t.penup();//moving turtle back to initial position
+        t.left(90);
+        t.forward(2.5*x);
+        t.right(90);
+        t.backward(2.5*x);
+        t.pendown();
+    }
+    
+    public static void main(String[] args)
+    {
+        Turtle x = new Turtle();
+        squareDiag(x,50,5);//calls method
+    }    
+
+}

@@ -1,0 +1,43 @@
+<question>
+<title>GallonsAndFluidOunces</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Write a method named gallons that takes an integer x representing a volume in fluid ounces. The method returns a String containing a message explaining the conversion between fluid ounces and gallons plus fluid ounces. For example, gallons(300) will return "300 fl oz equals 2 gal 44 fl oz". Reminder: 1 gal = 128 fl oz.
+</text>
+<init>
+public class GallonsAndFluidOunces {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class GallonsAndFluidOunces {
+
+    public static String gallons(int x) {
+        return x + " fl oz equals " + x / 128 + " gal " + x % 128 + " fl oz";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(gallons(300));
+    }
+
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

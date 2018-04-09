@@ -1,0 +1,18 @@
+public class SplitAt {
+
+    // write your method here
+    public static String[] splitAt(String s, int n){
+        String[] = new String[2];
+        String[1] = 
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(splitAt("apple", 2));
+        System.out.println(splitAt("apple", 0));
+        System.out.println(splitAt("apple", 4));
+        System.out.println(splitAt("apple", 5));
+        
+    }
+
+}

@@ -1,0 +1,23 @@
+public class FractalPolygons {
+// 1) 120 / 2 = 60, 120 / 4 = 30, X / 2 ^ (N-1)
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            int n = level + 2;
+            for (int i = 0; i < n; i++) {
+                f(t, x / 2, level - 1);
+                t.forward(x);
+                t.left(360.0 / n);
+                f(t, x / 2, level - 1);
+             }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 120, 5);
+        t.hideturtle();
+    }
+}

@@ -1,0 +1,20 @@
+public class StringIndices {
+
+    // write your method here
+    public static String indices(String s, String pre, String post) {
+        String result = ""; 
+        int i = 0;
+        while (i<s.length()) {
+            result = pre + i;  
+            i++;
+        }
+        return result + post;
+ 
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(indices("abc", "--", "$"));
+    }
+
+}

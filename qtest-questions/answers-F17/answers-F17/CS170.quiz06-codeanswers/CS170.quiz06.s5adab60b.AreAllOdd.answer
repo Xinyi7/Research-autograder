@@ -1,0 +1,24 @@
+public class AreAllOdd {
+
+    public static boolean areAllOdd(String[] x) {
+        int i = 0;
+        
+        for (i=0; i<x.length; i++) {
+        if (x.length % 2 != 0) {
+            return true;
+        }
+    else {
+        return false;
+    }
+        }
+    
+    }
+    
+    public static void main(String[] args) {
+        
+        String[] x1 = {"apple", "bananas", "carrots"};
+        String[] x2 = {"apple", "banana", "carrots"};
+   System.out.println(areAllOdd(x1));
+    }
+
+}

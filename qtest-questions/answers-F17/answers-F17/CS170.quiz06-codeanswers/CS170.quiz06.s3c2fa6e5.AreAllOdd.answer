@@ -1,0 +1,23 @@
+public class AreAllOdd {
+
+    // write your method here
+    public static String areAllOdd(String[] x) {
+       String result = "true";
+        for (int i = 0; i < x.length; i++) {
+           if (x[i].length() != 0) {
+            return "true";
+           } else {
+            return "false";
+           }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"apple", "bananas", "carrots"};
+        String[] x2 = {"apple", "banana", "carrots"};
+        System.out.println(areAllOdd({"apple", "bananas", "carrots"});
+    }
+
+}

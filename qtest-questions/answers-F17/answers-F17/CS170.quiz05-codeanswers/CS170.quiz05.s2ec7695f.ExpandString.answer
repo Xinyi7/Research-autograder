@@ -1,0 +1,22 @@
+public class ExpandString {
+
+public static String expand(String s, int n){
+    String result = "";
+    for (int i = 0; i < s.length()-1; i++){
+        result += repeat(s.charAt(i), n);
+       }
+return result;
+}
+   
+    public static String repeat(char s, int n){
+       String result = "";
+        for(int j = 0; j < n; j++){
+          result += s;
+    }return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(expand("hello",2));
+    }
+
+}

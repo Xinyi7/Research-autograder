@@ -1,0 +1,15 @@
+public class PoundsAndOunces {
+
+    // write your method here
+    public static String(pounds(int a)){
+        return " " + a + "oz equals 3 lb 12 oz";
+       
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t=new Turtle();
+        pounds(60);
+    }
+
+}

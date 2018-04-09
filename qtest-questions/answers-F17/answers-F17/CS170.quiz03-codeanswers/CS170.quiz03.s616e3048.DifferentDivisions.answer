@@ -1,0 +1,12 @@
+public class DifferentDivisions {
+    public static String divisions(int x, int y){
+      double a = x * 1.0;
+      double b = y * 1.0;
+      String alpha = "Look: " + x " / " y + " is " + (x / y); + ", but " + a + " / " + b + " is " + (a / b);
+      return String alpha; 
+    }
+    public static void main(String[] args) {
+        System.out.println(divisions(3,2));
+    }
+
+}

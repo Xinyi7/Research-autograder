@@ -1,0 +1,16 @@
+public class AreMultiplesOf {
+
+    // return a boolean true if a and b are multiples of c, false otherwise
+    public static boolean areMultiplesOf(int a, int b, int c){
+        if (a%c==0&&b%c==0) return true; 
+        else return false; 
+    }
+    public static void main(String[] args) {
+        // test cases
+        System.out.println(areMultiplesOf(10,6,2));
+        System.out.println(areMultiplesOf(10,6,3));
+        System.out.println(areMultiplesOf(10,3,2));
+        System.out.println(areMultiplesOf(4,3,6));
+    }
+
+}

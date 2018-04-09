@@ -1,0 +1,28 @@
+public class Highway {
+
+    // write your method here
+    public static String highway(double speed){
+        String judgment="";
+        if(speed<40){
+            judgment+="annoying";
+            
+        }else if (speed<=70){
+             judgment+="ok";
+        }else{
+             judgment+="dangerous";
+        }
+        return judgment;
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(highway(30));
+        System.out.println(highway(39.9));
+        System.out.println(highway(40));
+        System.out.println(highway(40.1));
+        System.out.println(highway(50));
+        System.out.println(highway(70));
+        System.out.println(highway(70.4));
+        System.out.println(highway(80));
+    }
+
+}

@@ -1,0 +1,19 @@
+public class ProdMult5 {
+
+public static int prodMult5(int start, int end){
+    for (int i=start; i<= end; i++){
+        if (start%5.0 =0 ){
+        
+       return result*= i; 
+    }
+    
+}
+}
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(prodMult5(5,10));
+    }
+
+}

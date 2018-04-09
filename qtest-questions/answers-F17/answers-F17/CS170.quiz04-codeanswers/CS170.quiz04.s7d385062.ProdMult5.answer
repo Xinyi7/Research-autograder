@@ -1,0 +1,17 @@
+public class ProdMult5 {
+
+    public static String prodMult5 (int start, int end){
+        String mult5="";
+        for(int i=start; i<=end; i++){
+            if(i%5==0){
+                mult5 +=i+" ";
+            }
+        }
+        return mult5;
+    }
+    
+    public static void main(String[] args) {
+       System.out.println(prodMult5(0,10));
+    }
+
+}

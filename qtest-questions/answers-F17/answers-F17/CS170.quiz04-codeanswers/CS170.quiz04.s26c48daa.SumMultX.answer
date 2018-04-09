@@ -1,0 +1,32 @@
+public class SumMultX {
+
+    // write your method here
+    public static int sumMultX(int x, int y){
+        int sum = 0;
+        if (x < y){   
+            for(int i = y; i >= x; i--){
+                if ( i % x == 0)
+                sum += i;
+            }
+           
+        }
+        else if (x >= y){   
+            
+                sum += x;
+          
+            
+        }  
+        return sum;   
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(sumMultX(3,9)); // 18
+        System.out.println(sumMultX(2,10)); // 30
+        System.out.println(sumMultX(2,9)); // 20
+        System.out.println(sumMultX(2,2)); // 2
+        System.out.println(sumMultX(9,2)); // 9
+
+    }
+
+}

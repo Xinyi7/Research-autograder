@@ -1,0 +1,20 @@
+public class RecursiveCapRemove {
+
+    // write your method here
+    public static String capRemove(String s, char c, char r) {
+        String lower  = s.toLowerCase();
+        if (s == "") {
+            return "";
+        } else {
+            return lower.charAt(0) + capRemove(s.substring(0, 1), c, r) + lower.substring(1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(capRemove("abcd", 'a', 'b'));
+        capRemove("", 'a', 'b');
+        capRemove("March", 'a', 'b');
+    }
+
+}

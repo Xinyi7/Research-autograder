@@ -1,0 +1,20 @@
+public class ChangeInitial {
+
+    // this method takes two string, replaces the first string "name"'s initial with the later one "init"'s initial and returns the result as a string "s"
+    public static String changeInitial(String name, String init){
+        
+        String s=""; 
+        s = s + init.charAt(0); 
+        
+        if(name.length()>1){
+            s=s+name.substring(1); 
+        }
+        return s; 
+    }
+    public static void main(String[] args) {
+        // test cases
+        System.out.println(changeInitial("book","c")); //#expect "cook"
+        System.out.println(changeInitial("root","banana")); //#expect "boot"
+    }
+
+}

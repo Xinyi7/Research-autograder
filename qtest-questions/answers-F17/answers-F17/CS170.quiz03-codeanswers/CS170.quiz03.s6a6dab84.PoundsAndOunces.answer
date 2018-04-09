@@ -1,0 +1,14 @@
+public class PoundsAndOunces {
+
+public static void pounds(int x){
+int pound = 16 / x;   
+return pound; 
+System.out.println(x + " oz equals " + pound + " lb ");
+}
+
+    
+    public static void main(String[] args) {
+     pounds(60);
+    }
+
+}

@@ -1,0 +1,13 @@
+public class EvenStrings {
+
+    public static Boolean evenStrings(String s1, String s2) {
+     boolean a = s1;
+     boolean b = s2;
+     System.out.println((length.b() % 2 0!) && (length.b() == length.a ()));
+     
+    
+    public static void main(String[] args) {
+       System.out.println(evenStrings ("blue", "pink"));
+    }
+
+}

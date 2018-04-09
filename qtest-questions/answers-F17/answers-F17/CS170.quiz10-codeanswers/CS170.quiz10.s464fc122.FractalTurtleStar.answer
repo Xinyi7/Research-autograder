@@ -1,0 +1,25 @@
+//1. If f(t, 150, 3) is called, then the function f(t, x, level) will only be called in 3 of the 5 total loops. Therefore, for f(t, 150, 3), the function will be called a total of 40 times. A similar logic would be employed for f(t, 150, 4). The function will only be called in 3 of the 5 loops. So, the function will initially be called (+1), then for i=0, the function will be called 4 times, then for i=2, the function will be called 16 times, and then for i=4, the function will be called 64 times. Therefore, for f(t, 150, 4), the function will be called a total of 85 times.  A general f(t, 150, n) is then 
+
+public class FractalTurtleStar {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            for (int i = 0; i < 9; i++) {
+                t.forward(x);
+                if (i % 3 == 0) {
+                    f(t, x * 0.4, level - 1);
+                }
+                t.backward(x);
+                t.left(360.0 / 9);
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 150, 5 );
+    }
+}

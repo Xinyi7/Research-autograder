@@ -1,0 +1,26 @@
+public class ShrinkingHexagons {
+
+    // Write your method here
+    
+    public static void main(String[] args) {
+        // Test your method here
+        Turtle amy = new Turtle ();
+        amy.delay(10);
+        shrinkingHex(amy,100,5);
+    }
+
+    public static void shrinkingHex(Turtle t, double x, int n){
+        for (int a=1; a<=n;a++){
+        for(int i=0;i<6;i++){
+        t.forward(x/a);
+        t.left(360.0/6);
+        }
+        t.penup();
+        t.forward(2*x/a);
+        t.pendown();
+    }
+    }
+
+    
+
+}

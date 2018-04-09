@@ -1,0 +1,15 @@
+public class ChangeLastFirst {
+
+    public static String changeLastFirst(String s, String first){
+     String result= s.substring(0,s.length()-1) + first.charAt(0);
+     return result;
+     
+        
+        }
+    
+    public static void main(String[] args) {
+      System.out.println(changeLastFirst("book", "c"));
+      System.out.println(changeLastFirst("root", "palm"));
+    }
+
+}

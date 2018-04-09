@@ -1,0 +1,23 @@
+public class PickAndReplace {
+
+    public static String pickAndReplace(String s, int n){
+        String result = new String();
+        int j = 0;
+        for(int i= 0; i<s.length(); i++){
+            result+=s.charAt(n);
+            j++;
+        }
+        return result;
+    }
+    
+    
+    public static void main(String[] args) {
+   
+        System.out.println(pickAndReplace("cart", 0));
+                System.out.println(pickAndReplace("cart", 1));
+                        System.out.println(pickAndReplace("hey", 2));
+                        
+        // test your method here
+    }
+
+}

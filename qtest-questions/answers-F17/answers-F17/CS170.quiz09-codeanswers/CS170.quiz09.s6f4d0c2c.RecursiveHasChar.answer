@@ -1,0 +1,22 @@
+public class RecursiveHasChar {
+
+    // write your method here
+    public static boolean hasChar(String s, char c) {
+        if (s.length() == 0) {
+            return false;
+        } else if (s.length() == 1) {
+            return s.charAt(0) == c;
+        } else {
+            return (s.charAt(0) == c) || (hasChar(s.substring(1), c));
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(hasChar("abcd", 'a')); //true
+        System.out.println(hasChar("abcd", 'c')); //true
+        System.out.println(hasChar("abcd", 'e')); //false
+        System.out.println(hasChar("a", 'a')); //true
+        System.out.println(hasChar("", 'a')); //false
+    }
+
+}

@@ -1,0 +1,20 @@
+public class SplitAt {
+
+    public static String[] splitAt(String s, int n) { 
+        String[] result = new String[2];
+        for(int i = 0; i < n; i++) {
+            result[0] += s.charAt(i);
+            for(int j = n; j < s.length()-1; j ++) {
+                result[1] += s.charAt(j);
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(splitAt("apple", 2));
+        System.out.println(splitAt("apple", 4));
+        System.out.println(splitAt("apple", 5));
+    }
+
+}

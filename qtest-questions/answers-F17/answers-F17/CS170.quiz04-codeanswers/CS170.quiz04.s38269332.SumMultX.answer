@@ -1,0 +1,19 @@
+public class SumMultX {
+    public static int sumMultX(int x, int y) {
+        int sum=0;
+        for (int i=x; i<=y; i+=x) {
+            sum=sum+i;
+            
+        }
+        
+        return sum;
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(sumMultX(2, 6));
+        System.out.println(sumMultX(5, 20));
+    }
+
+}

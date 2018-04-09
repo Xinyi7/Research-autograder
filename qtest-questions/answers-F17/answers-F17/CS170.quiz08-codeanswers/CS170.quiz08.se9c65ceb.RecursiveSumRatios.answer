@@ -1,0 +1,18 @@
+public class RecursiveSumRatios {
+    
+    public static void main(String[] args) {
+
+      double [] x1 = {1.5, 2.8,3.0};
+      double [] y1 = {3.0, 2.0, 2.0}; 
+      System.out.println(sumProducts(x1, y1, 3)); // 3.4
+    }
+
+    public static double sumProducts(double [] x, double [] y, int n){
+        if (x.length == 0){
+            return 0.0; 
+        }else{
+            return (x[n-1]/y[n-1]) + sumProducts (x, y, n);
+        }
+    }
+
+}

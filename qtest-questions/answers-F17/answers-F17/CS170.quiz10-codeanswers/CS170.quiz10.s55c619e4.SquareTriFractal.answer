@@ -1,0 +1,30 @@
+public class SquareTriFractal {
+
+    //for f with level = 2, there will be 4 + 1 = 5 squares drawn. For f with level = 3, there will be 1 + 4 + 16 = 21 squares drawns. For f with general level = N, there will be 4^0 + 4^1 + 4^2 + ... + 4^(N-1) squares drawn.
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.penup();
+            t.backward(x * 0.5);
+            t.right(30);
+            t.pendown();
+            for (int i = 0; i < 3; i++) {
+                t.forward(x);
+                t.left(120);
+                f(t, x * 0.4, level - 1);
+            }
+            t.penup();
+            t.left(30);
+            t.forward(x * 0.5);
+            t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 200, 5);
+    }
+}

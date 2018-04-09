@@ -1,0 +1,11 @@
+public class AreAllOdd {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"apple", "bananas", "carrots"};
+        String[] x2 = {"apple", "banana", "carrots"};
+    }
+
+}

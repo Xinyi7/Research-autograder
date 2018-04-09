@@ -1,0 +1,33 @@
+public class DivingBoard {
+
+    // write your method here
+    public static String divingBoard(double height)
+    {
+        if (height<=1.5)
+        {
+            return"boring" ;
+        }
+        else if (height>1.5 && height <5.0)
+        {
+            return"weee" ;
+        }
+        else 
+        {
+            return"no way" ;
+        }
+       
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(divingBoard(1.0)); //expeciting boring
+        System.out.println(divingBoard(1.4)); //expeciting boring
+        System.out.println(divingBoard(1.5)); //expeciting boring
+        System.out.println(divingBoard(1.6)); //expeciting weee
+        System.out.println(divingBoard(4.9)); //expeciting weee
+        System.out.println(divingBoard(5.0)); //expeciting no way
+        System.out.println(divingBoard(5.1)); //expeciting no way
+        System.out.println(divingBoard(100.0)); //expeciting no way
+    } 
+
+}

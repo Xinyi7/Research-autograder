@@ -1,0 +1,22 @@
+public class AreMultiplesOf {
+
+    // write your method here
+    public static Boolean areMultiplesOf(int a, int b, int c){
+        int mod_a = a%c;
+        int mod_b = b%c;
+        if ( (mod_a==0)&&(mod_b==0)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(areMultiplesOf(10,6,2));
+        System.out.println(areMultiplesOf(10,6,3));
+        System.out.println(areMultiplesOf(10,6,5));
+        
+    }
+        
+
+}

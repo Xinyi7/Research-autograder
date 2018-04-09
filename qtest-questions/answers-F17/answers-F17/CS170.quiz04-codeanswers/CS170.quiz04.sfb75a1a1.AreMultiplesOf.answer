@@ -1,0 +1,17 @@
+public class AreMultiplesOf {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        areMultiplesOf(10, 6, 2);
+        areMultiplesOf(10, 6, 3);
+        areMultiplesOf(10, 6, 5);
+       
+    }
+    public static boolean areMultiplesof (int a, int b, int c) {
+        boolean the = true
+        
+    }
+
+}

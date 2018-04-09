@@ -1,0 +1,24 @@
+public class SumMultX {
+
+    // write your method here
+    public static int sumMultX( int x, int y){
+        int result = 0;
+        for (int i = x; i <= y; i++){
+            if ( i % x == 0){
+                result += i;
+                
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(sumMultX(3, 12));
+        System.out.println(sumMultX(3, 4));
+        System.out.println(sumMultX(3, 6));
+
+        
+    }
+
+}

@@ -1,0 +1,16 @@
+public class ChangeInitial {
+
+    // write your method here
+
+    public static String changeInitial(String n, String init) {
+        return init.charAt(0) + "ook";
+    }
+
+
+        
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(changeInitial("book" , "c")); // cook
+        System.out.println(changeInitial("root", "banana")); // boot
+    }
+}

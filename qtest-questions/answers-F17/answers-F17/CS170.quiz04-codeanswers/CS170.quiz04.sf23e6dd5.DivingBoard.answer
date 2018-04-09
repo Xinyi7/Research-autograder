@@ -1,0 +1,25 @@
+public class DivingBoard {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(divingBoard(15.5));
+        System.out.println(divingBoard(5));
+        System.out.println(divingBoard(3));
+        System.out.println(divingBoard(1));// test your method here
+    }
+
+    public static String divingBoard(double height) {
+
+        if (height < 1.5) {
+            return "boring";
+        } else if (5.0 < height) {
+            return "no way";  
+        } else {
+            return "weee";
+        }
+
+        
+    }
+
+}

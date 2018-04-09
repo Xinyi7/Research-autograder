@@ -1,0 +1,55 @@
+<question>
+<title>ExpandString</title>
+<type>JavaCode</type>
+<points>7</points>
+<text>
+Write a method expand(String s, int n) that takes a string s and and integer n. The method returns a string where every character from s is repeated n times.
+
+Examples:
+expand("hey", 3) returns "hhheeeyyy"
+expand("nothing", 0) returns ""
+expand("hello", 2) returns "hheelllloo"
+</text>
+<init>
+public class ExpandString {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class ExpandString {
+
+    public static String expand(String s, int n) {
+        String result = "";
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < n; j++) {
+                result += s.charAt(i);
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(expand("hey", 3));
+        System.out.println(expand("nothing", 0));
+        System.out.println(expand("hello", 2));
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

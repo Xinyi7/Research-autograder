@@ -1,0 +1,18 @@
+public class StarSquares {Turtle t, double x)
+    
+
+    // 
+    
+    public static void main(String[] args) {
+        Turtle test=new turtle
+        for(i=0, i<3, i++);
+        t.right(40);
+        t.forward(25);
+        t.left(40);
+        t.forward(15);
+        t.left(100);
+        t.forward(15);
+        // test your method here
+    }
+
+}

@@ -1,0 +1,18 @@
+public class ExpandString {
+
+    public static String expand(String s, int n) {
+       return s;
+    }
+
+        
+
+    // write your method here
+    
+    public static void main(String[] args) {
+          System.out.println(expand("hey" , 3));
+        System.out.println(expand("nothing", 0));
+       System.out.println(expand("hello" , 2));
+        // test your method here
+    }
+
+}

@@ -1,0 +1,17 @@
+public class DifferentDivisions {
+
+    // write your method here
+    public static void divisions(int x, int y){
+    double a=x+0.0;
+    double b=y+0.0;
+    String t = "Look: ";
+    String r = "/";
+    String p = " is ";
+    String q = ", but ";
+     System.out.println(t + x + r + y + p + x/y + q + a + r + b + p + a/b);
+    }
+    public static void main(String[] args) {
+        divisions(3,2);
+    }
+
+}

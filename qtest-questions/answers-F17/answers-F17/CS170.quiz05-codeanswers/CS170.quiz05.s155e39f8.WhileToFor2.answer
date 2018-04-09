@@ -1,0 +1,31 @@
+public class WhileToFor {
+
+    public static void main(String[] args) {
+        int a = 8;
+        int b = 4;
+        int i = a;
+           for ( i = a; i > b; i--) {
+           int c = i - b;
+           System.out.println("hi " + i);
+           int j = c;
+           for (int u = j; u > a; u++) {
+               System.out.println("bye " + j);
+               j += 3;
+           }
+           i -= 2;
+            
+     
+    }
+}
+}
+
+
+           // while (i > b) {
+          // int c = i - b;
+          // System.out.println("hi " + i);
+          // int j = c;
+           //while (j < a) {
+          //     System.out.println("bye " + j);
+          //     j += 3;
+        //   }
+        //   i -= 2;

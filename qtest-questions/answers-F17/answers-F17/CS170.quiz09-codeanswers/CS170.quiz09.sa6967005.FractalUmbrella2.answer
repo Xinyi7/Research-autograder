@@ -1,0 +1,28 @@
+public class FractalUmbrella {
+
+    //f(t,200,2) = 3, f(t,200,3) = 4 , f(t,200,N) = N+1
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(60);
+            for (int i = 0; i < 4; i++) {
+                t.forward(x);
+                t.left(180);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(36);
+            }
+            t.left(120);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 4);
+    }
+}

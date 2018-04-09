@@ -1,0 +1,47 @@
+<question>
+<title>ChangeLast</title>
+<type>JavaCode</type>
+<points>6</points>
+<text>
+Write a method named changeLast(String s, String last) that takes two non-empty strings (s and last). The method returns the string s with its last letter replaced with the last letter of the string last.
+
+Examples:
+changeLast("book", "c") returns "booc"
+changeLast("root", "palm") returns "room"
+</text>
+<init>
+public class ChangeLast {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class ChangeLast {
+
+    public static String changeLast(String s, String last) {
+        return  s.substring(0,s.length() - 1) + last.charAt(last.length() - 1);
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(changeLast("book", "c")); // booc
+        System.out.println(changeLast("root", "palm")); // room
+    }
+
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>

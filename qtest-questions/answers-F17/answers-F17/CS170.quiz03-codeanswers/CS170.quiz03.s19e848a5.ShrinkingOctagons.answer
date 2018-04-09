@@ -1,0 +1,23 @@
+public class ShrinkingOctagons {
+    public static void shrinkingOctagons(Turtle t, double x, int n){
+        for(int i = 0; i < n; i++){
+            for(int o = 0; o < 8; o++){
+                t.forward(x / (i + 1));
+               t.left(45);
+            }
+            t.penup();
+            t.forward(2 * x);
+            t.pendown();
+        }
+    }
+
+    // Write your method here
+    
+    public static void main(String[] args) {
+        Turtle t=new Turtle();
+        shrinkingOctagons(t, 100, 5);
+        
+        // Test your method here
+    }
+
+}

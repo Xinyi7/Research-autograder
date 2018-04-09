@@ -1,0 +1,30 @@
+public class ShrinkingSquareRose {
+
+    public static void shrinkingSquareRose(Turtle t, double x, double delta, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 4; j++) {
+                t.forward(x);
+                t.left(90);
+            }
+            t.right(360.0 / n);
+            x = x - delta;
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle Tom = new Turtle();
+        Tom.delay(10);
+        
+        shrinkingSquareRose(Tom, 100, 10, 7);
+        Tom.penup();
+        Tom.forward(150);
+        Tom.pendown();
+        shrinkingSquareRose(Tom, 40, 3, 9);
+        Tom.penup();
+        Tom.forward(200);
+        Tom.pendown();
+        shrinkingSquareRose(Tom, 160, 20, 6);
+
+    }
+
+}

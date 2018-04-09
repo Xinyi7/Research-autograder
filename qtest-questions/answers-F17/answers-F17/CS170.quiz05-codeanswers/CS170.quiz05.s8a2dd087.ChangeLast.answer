@@ -1,0 +1,12 @@
+public class ChangeLast {
+ public static String changeLast (String s, String last) {
+    String results = ""; 
+  
+ }
+    
+    public static void main(String[] args) {
+  System.out.println(changeLast("book", "c");
+  System.out.println(changeLast("root", "palm"); 
+    }
+
+}

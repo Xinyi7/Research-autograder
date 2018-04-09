@@ -1,0 +1,13 @@
+public class PoundsAndOunces {
+
+    public static String PoundsAndOunces (int Pounds, int Ounces) {
+        return "I have" + Pounds + "Pounds. I can give"
+        + (Pounds/Ounces) + "Pounds to each Ounce and have"
+        + (Pounds % Ounces) + "left.";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println (PoundsAndOunces (3,60));
+    }
+
+}

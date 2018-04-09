@@ -1,0 +1,15 @@
+public class DifferentDivisions {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        divisions(3,2);
+    }
+
+    public static void divisions(int x, int y){
+       ystem.out.println("Look: " + x + "/" + y + "is" + (x/y) + ",but " + double(x) + "/" + double(y) + "is" + double(x/y));
+ 
+ }
+
+}

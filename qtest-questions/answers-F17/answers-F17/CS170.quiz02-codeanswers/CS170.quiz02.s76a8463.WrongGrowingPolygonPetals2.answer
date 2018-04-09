@@ -1,0 +1,22 @@
+public class GrowingPolygonPetals {
+
+    public static void f(Turtle t, int a) {
+        for (int i = 0; i < a; i++) {
+            t.forward(50);
+            t.right(360.0/a);
+        }
+    }
+
+    public static void g(Turtle t, int a){
+        for (int i = 0; i < a; i++) {
+            f(t, 3 + i); // command should be (t, 3 + i), not (t, 6 plus i)
+            t.forward(50); //forward 50, not forward 100
+            t.left(360.0/a); 
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        g(t, 6); //command is (t, 6), not (t, 4)
+    }
+}

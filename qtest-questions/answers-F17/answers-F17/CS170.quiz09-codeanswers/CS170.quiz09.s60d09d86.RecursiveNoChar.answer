@@ -1,0 +1,13 @@
+public class RecursiveNoChar {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(noChar("abcd", 'a'));
+        System.out.println(noChar("abcd", 'c'));
+        System.out.println(noChar("abcd", 'e'));
+        System.out.println(noChar("a", 'a'));
+        System.out.println(noChar("", 'a'));
+    }
+
+}

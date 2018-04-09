@@ -1,0 +1,12 @@
+public class RecursiveSumRatios {
+
+    public static double[ sumProducts(double[] x,.
+    
+    public static void main(String[] args) {
+    double [] w = {1.5, 2.8, 3.0};
+    double [] x = {3.0, 2.0, 2.0};
+    System.out.println(isThereEven(w, x, 3));
+    }
+    
+
+}

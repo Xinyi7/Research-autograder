@@ -1,0 +1,19 @@
+public class ChangeLastFirst {
+
+    // write your method here
+    public static String changeLastFirst(String s, String first) {
+        String result="" ;
+        for(i=0;i<s.length(s);i++) {
+            s.chartAt(s.String()-2)=first.charAt(0);
+            result=result+first.charAt(0);
+        }
+        return result;    
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    System.out.println(changeLastFirst("book", "c"));
+    System.out.println(changeLastFirst("root", "palm"));
+    }
+
+}

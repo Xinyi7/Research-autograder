@@ -1,0 +1,33 @@
+public class UpperCaseDiagonals {
+    // write your method here
+    
+    public static void main(String[] args) {
+        //test your method here
+        printArray(upperCaseDiagnols("DAYS"));
+    }
+
+    public static String[][] upperCaseDiagnols(String s){
+        String[][]k = new String[s.length()][s.length()];
+        for(int row=0; row<x.length; row++){
+            for(int col=0; col<x[row].length; col++){
+                if(row = col){
+                   String[row][col] = s.charAt(row).upcase;
+                }
+                else{
+                    String[row][col] = s.charAt(row).downcase;
+                }
+            }
+        }
+    }
+    // prints a 2D array
+    public static void printArray(String[][] x) {
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[i].length; j++) {
+                System.out.print(x[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+}

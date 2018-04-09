@@ -1,0 +1,25 @@
+public class SplitAt {
+
+    // write your method here
+    public static String[] splitAt(String s, int n){
+      //  String[] x = new String[2];
+        String x1="";
+        for(int i=0;i<n;i++){
+            x1+=s.charAt(i);
+        }String x2=s.substring(n);
+       String[] x={x1,x2};
+       return x;
+      //  String result="{"+x[0]+","+x[1]+"}";
+       // return result;
+    }
+    public static String print(String[]x){
+        String result="{"+x[0]+","+x[1]+"}";
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(print(splitAt("apple",2)));
+    }
+
+}

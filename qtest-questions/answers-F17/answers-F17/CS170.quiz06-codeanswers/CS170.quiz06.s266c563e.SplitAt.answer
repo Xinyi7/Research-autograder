@@ -1,0 +1,15 @@
+public class SplitAt {
+
+    // write your method here
+    public static String[] splitAt(String s, int n){
+        String[] result = new String[2];
+        result[0]= s.substring(0,n);
+        result[1]= s.substring(n);
+        return result;
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(splitAt("banana",2));
+    }
+
+}

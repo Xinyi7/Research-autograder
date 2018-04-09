@@ -1,0 +1,62 @@
+<question>
+<title>LightDark</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print? Hint: it prints exactly 10 lines.
+
+        int light = 5;
+        int dark = 4;
+        if (light < dark) {
+            System.out.println("A");
+        } else if (light == dark) {
+            System.out.println("B");
+        } else {
+            System.out.println("C");
+        }
+        System.out.println("D");
+        if (light - dark == light + dark) {
+            System.out.println("E");
+            if (light == dark + 1) {
+                System.out.println("F");
+            }
+        } else if (light / dark == light % dark) {
+            System.out.println("G");
+            if (light/2 == dark/2) {
+                System.out.println("H");
+            } else {
+                System.out.println("I");
+            }
+            System.out.println("J");
+            if (light - dark > 0) {
+                System.out.println("K");
+            } else {
+                System.out.println("L");
+            }
+            System.out.println("M");
+        } else {
+            System.out.println("N");
+        }
+        System.out.println("O");
+        if (light + dark < light * dark) {
+            System.out.println("P");
+        }
+        if (light == dark){
+            System.out.println("Q");
+        } else {
+            System.out.println("R");
+        }
+</text>
+<answer>
+C
+D
+G
+H
+J
+K
+M
+O
+P
+R
+</answer>
+</question>

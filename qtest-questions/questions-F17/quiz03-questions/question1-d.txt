@@ -1,0 +1,57 @@
+<question>
+<title>NestedRectShrink</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using Java and turtle graphics, write a method named nestedRectShrink(Turtle t, int n, double x, double y) that draws nested rectangles. The parameter n is the number of rectangles, x is the width of the first rectangle, is the height of the first rectangle. The second rectangle is x/2 in width and y/2 in height, the  third rectangle is x/3 in width and y/3 in height, and so on. The second rectangle is placed in the upper-right corner of the first rectangle, the third is placed in the lower-left corner of the second, the fourth is in the upper-right corner of the third, and so on (alternating upper-right and lower-left). Don't worry about returning the turtle to its initial position. The example in the figure is the result of nestedRectShrink(t, 5, 300, 200).
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAVQAAADmAQMAAACwKe88AAAABlBMVEX///8AAABVwtN+AAAAqklE
+QVRo3u3aUQpFQBTG8WPGo2QH7MRdkmyAZNnCg9QtD/d8Qlf9vydNP9M0c5pOYkbI6ZSLJ5stjq9/
+DiMJFovFYh+w3dclPf2et9qf03tsMvptLtjGb2Pvt5n5beO3sffYeju1WZh3ENbbCja3e/Y3COcW
+hHoIQp0FoX6xWCwWe4Gthb7EhF4Di/0r2wnfS0zo7bFYLBaLxWKxWCwWi8ViX2GV/0sIeW1WZpGx
+xOk2zL8AAAAASUVORK5CYII=
+</figure>
+<init>
+public class NestedRectShrink {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class NestedRectShrink {
+
+    public static void nestedRectShrink(Turtle t, int n, double x, double y) {
+        for(int i = 0; i < n ; i++) {
+            for(int j = 0; j < 3 ; j++) {
+                t.forward(x/(i+1));
+                t.left(90);
+                t.forward(y/(i+1));
+                t.left(90);
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        nestedRectShrink(t, 5, 300, 200);
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

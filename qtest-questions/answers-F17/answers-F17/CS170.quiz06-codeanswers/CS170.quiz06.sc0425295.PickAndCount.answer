@@ -1,0 +1,25 @@
+public class PickAndCount {
+
+    // write your method here
+    public static int pickAndCount(String s, int k)
+    {
+        String choice = "" + s.charAt(k);
+        int counter = 0;
+
+        for (int i = 0; i < s.length(); i++)
+        {
+            if (s.substring(i, i + 1).equals(choice))
+            {
+                counter ++;
+            }
+        }
+        return counter;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(pickAndCount("fluffy", 0));
+        System.out.println(pickAndCount("fluffy", 2));
+    }
+
+}

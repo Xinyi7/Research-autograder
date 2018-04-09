@@ -1,0 +1,16 @@
+<question>
+<title>Integrity2</title>
+<type>TrueFalse</type>
+<points>5</points>
+<text>
+Amy and Bob are two students in CS 170. They are not part of a team. The following are examples of violation of academic integrity. True or false?
+</text>
+<item>Bob does 90% of the homework by itself and 10% with a partner. Then he submits the whole work as his own</item>
+<item>Amy asks for a deadline extension inventing the false excuse that she had to assist her sick mother</item>
+<item>Amy and Bob do the entire homework on their own. Then they decide to compare and merge their solutions, and they submit it as a team</item>
+<item>Amy does homework 1 on her own, but never submits it. She drops out of the course and gives her solution to Bob who submits it as his own</item>
+<item>Bob reviews Amy's previous homework solutions to study for the final exam</item>
+<answer>T T F T F</answer>
+<rubric>1 point for each correct answer</rubric>
+</question>
+

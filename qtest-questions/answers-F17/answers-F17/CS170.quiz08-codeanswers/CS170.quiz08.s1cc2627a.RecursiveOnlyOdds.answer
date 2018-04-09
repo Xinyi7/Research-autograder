@@ -1,0 +1,18 @@
+public class RecursiveOnlyOdds {
+
+    // write your method here
+    public static boolean onlyOdds(int [] a, int n){
+        if(a.length < n){
+            return false;
+        }else{
+            return a[n]%2 == 1 || onlyOdds(a, n -1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        int[]a  = {4, 5, 6};
+        System.out.println(onlyOdds(a, 2));
+    }
+
+}

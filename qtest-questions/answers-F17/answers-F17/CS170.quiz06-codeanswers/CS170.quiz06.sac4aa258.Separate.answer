@@ -1,0 +1,18 @@
+public class Separate {
+
+    // write your method here
+    public static String seperate(String s, int n){
+        String result=s.substring(0,n)+"-"+s.charAt(n)+"-"+s.substring(n+1);
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(seperate("orange",2));
+        System.out.println(seperate("whatever",5));
+        System.out.println(seperate("hey",0));
+        System.out.println(seperate("hey",2));
+        
+    }
+
+}

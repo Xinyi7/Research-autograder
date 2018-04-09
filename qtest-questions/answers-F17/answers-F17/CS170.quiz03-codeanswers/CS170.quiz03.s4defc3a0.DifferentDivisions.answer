@@ -1,0 +1,15 @@
+public class DifferentDivisions {
+
+    // 1. what are my inputs(parameters)? output? (return type) 2. check if method header is syntax is correct 3. incremental development. 4. scaffolding
+    
+    public static void main(String[] args){
+
+        System.out.println(divisions (3,2));
+    }
+
+    public static String divisions (int integer, int floating){
+
+        return "Look: 3 / 2 is " + (integer / floating) + ", but 3.0 / 2.0 is " + (double)(integer / floating);
+    }
+
+}

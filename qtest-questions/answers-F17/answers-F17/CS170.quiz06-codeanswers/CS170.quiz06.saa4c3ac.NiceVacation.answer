@@ -1,0 +1,16 @@
+public class NiceVacation {
+    
+    public static String vacation(String s, int n){
+        s=""+ s.substring(0,n) +" nice " +s.charAt(n)+" vacation "+ s.substring(n+1);
+        return s;
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(vacation("beach", 2));
+        System.out.println(vacation("mountains", 5));
+        // test your method here
+    }
+
+}

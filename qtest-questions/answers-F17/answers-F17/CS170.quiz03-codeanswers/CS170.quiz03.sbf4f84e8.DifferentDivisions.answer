@@ -1,0 +1,18 @@
+public class DifferentDivisions {
+
+    // write your method here
+    public static void int divisions( int x, int y){
+        string itn = it;
+        itn = ((int)x / (int)y));
+        string dbl = db;
+        db + ((double)x / (double y)))
+        
+        system.out.println( "look:" + x + "/" y + "is" dbl); 
+    }
+    
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

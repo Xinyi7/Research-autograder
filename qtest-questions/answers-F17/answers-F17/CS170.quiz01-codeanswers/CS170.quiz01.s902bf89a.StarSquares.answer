@@ -1,0 +1,18 @@
+public class StarSquares {
+
+    // write your method here
+    public static void starSquares(Turtle t, double x)
+        double squareside = x / 5
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle();
+        for int(int i=0; i<5; i++){
+            for int(j=0; j<4; j++){
+                t.forward(squareside);
+                t.left(90);           
+            }
+            t.forward(x);
+            t.left(360.0/5);   
+    }
+
+}

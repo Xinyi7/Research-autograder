@@ -1,0 +1,21 @@
+public class NoOdds {
+    public static boolean noOdds(String[]x, int n){
+        if(x.length==0){
+            return true;
+        }else if(x[n-1].length()%2!= 0){
+            return false && noOdds(x, n-1);
+        }else{
+            return true;
+        }
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        String[] a = {"blue","purple","orange"};
+        
+        System.out.println(noOdds(a, 3));
+        // test your method here
+    }
+
+}

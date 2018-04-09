@@ -1,0 +1,15 @@
+public class GrowingStairs {
+
+    // Write your method here
+    public static void stairs(Turtle t, int n, double s){
+        for (int i = 1; i <= n; i++)
+        
+    }
+    
+    public static void main(String[] args) {
+        // Test your method here
+        Turtle t = new Turtle
+        stairs(t, 7, 10);
+    }
+
+}

@@ -1,0 +1,20 @@
+public class PigLatin {
+
+    public static String pigLatin(String s) {
+        return s + "a";
+            
+    
+    }
+ 
+
+
+    // write your method here
+    
+    public static void main(String[] args) {
+         System.out.println(pigLatin("hello"));
+          System.out.println(pigLatin("peaches"));
+           System.out.println(pigLatin("ba"));
+        // test your method here
+    }
+
+}

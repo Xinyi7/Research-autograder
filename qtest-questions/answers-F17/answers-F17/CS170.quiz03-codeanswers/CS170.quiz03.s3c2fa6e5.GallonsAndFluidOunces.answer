@@ -1,0 +1,18 @@
+public class GallonsAndFluidOunces {
+
+    // write your method here
+    public static String gallons(int x) {
+        String g;
+        String o;
+        return (x + " fl oz equals" +  
+        if (gallons > 128) {
+            return "
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(gallons(300));
+    }
+
+}

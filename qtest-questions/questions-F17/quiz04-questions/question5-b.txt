@@ -1,0 +1,52 @@
+<question>
+<title>SpeedWalking</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Write a Java method named speedWalking(double speed) that takes a positive floating point number representing the speed (in kilometers per hour) at which a person is moving. The method returns the category of exercise for the given speed: "walking" if the person's speed is at or below 5 kilometers per hour, "running" if the average rating is between 5 and 15 kilometers per hour (extremes excluded), and "sprinting" if the average rating is greater than or equal to 15 kilometers per hour.
+</text>
+<init>
+public class SpeedWalking {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class SpeedWalking {
+
+    public static String speedWalking(double speed) {
+        if (speed <= 5) {
+            return "walking";
+        } else if (speed >= 15) {
+            return "sprinting";
+        } else {
+            return "running";
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(speedWalking(1)); // walking
+        System.out.println(speedWalking(5)); // walking
+        System.out.println(speedWalking(5.001)); // running
+        System.out.println(speedWalking(14.999)); // running
+        System.out.println(speedWalking(15)); // sprinting
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

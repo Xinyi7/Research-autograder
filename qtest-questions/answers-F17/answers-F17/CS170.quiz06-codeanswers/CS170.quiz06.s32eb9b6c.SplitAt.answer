@@ -1,0 +1,14 @@
+public class SplitAt {
+
+    // write your method here
+    public static String splitAt(String s, int n) {
+        return "{" + s.substring(0, n) + ", " + s.substring(n) + "}";
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(splitAt("apple", 2));
+        System.out.println(splitAt("apple", 4));
+    }
+
+}

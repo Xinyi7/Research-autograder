@@ -1,0 +1,31 @@
+public class FractalUmbrella {
+    /*
+     *f(t,200,2) = 1+ 2*3= 7 times
+     *f(t,200,4) = 1+ 4*3= 13 times
+     *f(t,200,n) = 1+ n*3 times
+     */
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(45);
+            for (int i = 0; i < 4; i++) {
+                t.forward(x);
+                t.left(180);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(45);
+            }
+            t.left(135);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(105);
+        f(t, 200, 4);
+    }
+}

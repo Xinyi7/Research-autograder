@@ -1,0 +1,24 @@
+public class DivingBoard {
+    
+    public static String divingBoard(double height){
+    String a;
+    if(height<=1.5){
+        a = "boring";
+    }else if(height<5){
+        a = "weee";
+    }else{
+        a = "no way";
+    }
+    return a;
+    }
+    public static void main(String[] args) {
+        System.out.println(divingBoard(1.4));
+        System.out.println(divingBoard(1.5));
+        System.out.println(divingBoard(1.6));
+        System.out.println(divingBoard(4.9));
+        System.out.println(divingBoard(5.0));
+        System.out.println(divingBoard(5.1));
+        // test your method here
+    }
+
+}

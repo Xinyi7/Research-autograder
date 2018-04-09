@@ -1,0 +1,89 @@
+<question>
+<title>WrongGrowingPolygonPetals2</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+The following program is supposed to draw a flower with with six polygon petals that increase in the number of sides, from a triangle, then square, then pentagon, ..., and finally an octagon. However this program contains three mistakes. Can you fix them?
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEBAQMAAACzKdkzAAAABlBMVEX///8AAABVwtN+AAAFDklE
+QVRo3t2Zva4jNRSAbY83sdgo10hbBAmtzFaUKShugZCFENtQUFLmESIqkJDwFVtsgXgGHoFHmIIH
+ubxByi0Q7EzGE/v82M6dVDDSvZNkvvH4/Pic4zNC/LcP+e/56CuImk7uNkRPJ3sbYsBpKWLB89jD
+AcGWIj4q+TYkoDNjRTTaMkQhyZYhGml5GWLIh5IVa3a8AnFEtCWIJ2pOxwpbj9rxo76JuHs0PLVj
+vw4NZLh2hHI4ZrbbBjKYRPZAp5ZT/D0wHrHjYfgbJlxDzlo45qNjO3bn/9saMn2XvWO8OB676XTv
+meUClbDuy8h86cQsXXTHr0VkNaNalOw4q0mqIrKfBVWiZMf5BilLo8jQRNLwDyWJkhwhFJBdGjwU
+tJvm7n2G7Bn1D7DPJvgNazDrswn+QtU/IumZWmaj5w6bEKOyyRSRLYfo5LxWJ63niEqIM9PSIUj6
+7Gym0wyR6bN3mawFxGcukC/wN9Cixypy9osNg3wpgBt3DPJKQDfua4jOHT9HPrzo2cRgUUFs7vk5
+YgIy6IEgOiDn2lWQkPtbjqjZMz8By5BFXoHllK9vOX/56hZE/B7Pb8vIt3E0CxYZi7gyskeSMcin
+EQllJDr9M1FGoit+0EY2FSQGtRcVZIViG4MoGKwj4ml+wxWIr1Xwqhim3W0ILs+XIbg8X4bgCp5B
+cHl+BaIpgstzTdPXFQiu4BchpIKnCCnPFyGkPKd6KSCuVsEbGlR5xNQqeEOKPMcjXa2CN6QMIRW8
+IfVOCXFcXRMAYtuI4eoUD67pCmJxRUYreHu5tyOlsoXzDGJzaiBe7O9ItTOdjpeo3otHFllf0ukw
+m5dIQ9Mz312+DqFUPjLIXZJ1DLMfQ1OM8stUi8sxYXc9MOioxZd4DX6OkfOz53h8vjQME8BtX+Tp
+Y5rDPUS6vMOynyRZP4Aw8hPYTESV/Zj/+BqGg2ibXAJxD3PQZOi7v/Jfv0Mpcxx0fQL19tdoozZI
+3b2DQeIBamDQvPwbxZHgYSKz4h+0okAFPyZc87MgyAaWCdF1gKUVuz8B/pLqahkKSKqrV4LdlZos
+n++KiOY2XHAddRyCFmzPbLgQ4hgERYZdG1lxOzsYpWaVhTIy3x4qbZE9g6DQvGkjitkfojQxzbeK
+TMaW1abTjjYLNFeB1BFDEZyEr0As7W1ILgXUEcd0SFDlwSGoxPFMtwYhgUFQudVGJNMW2sDSTzL9
+p+dvgRUVg5gfmMSKkC1TasIeinkWiKExoo7E0ATZ0iyNEFjkW64rJH87n//IFYkQdcq7T55Dpjwl
+uwqy9ZPiQ+Y1sIllvneT4g9F5PmbiOwyr4HIRkeH1qVVP+/pzRRQ68g5oGoWMTpqdd9GzMWKuIto
+VFT8qohYGfU5BihbR8Y/xyNnRYUpoDq26ZmQzWw/TTqaPorZzYgqIsNQoYC4+ceDLLVO7fz0XQHx
+CdGKb4H7UaWxsm8j4k++BR7Gp8Tl+hnf3w6jOA4mhApSaIGHUUZfQ6RgEEOid8BS6iWIxxqnycap
+pyOSIFY/HaENY0NeBZA2g7YLEId1rdwCxGJEeoyYJyKWcWdkR/5d2RWIeiLiWES2ESBA30Q6nsjt
+uGkjpVeIDmxg2CPdKkMTKb77M83ZZsi+hOiW4jKk/K644zYw6DgxGxh03NXNnA/TV5Bt1cyTKI9V
+xaX9rRXNYQ6iNUzRzPMwffVtvpjaA5sW0vV70RymbyKd+H8c7wGbIrrd5djSRAAAAABJRU5ErkJg
+gg==
+</figure>
+<init>
+public class GrowingPolygonPetals {
+
+    public static void f(Turtle t, int a) {
+        for (int i = 0; i < a; i++) {
+            t.forward(50);
+            t.right(360.0/a);
+        }
+    }
+
+    public static void g(Turtle t, int a){
+        for (int i = 0; i < a; i++) {
+            f(t, 6 + i);
+            t.forward(100);
+            t.left(360.0/a); 
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        g(t, 4);
+    }
+}
+</init>
+<answer>
+public class GrowingPolygonPetals {
+
+    public static void f(Turtle t, int a) {
+        for (int i = 0; i < a; i++) {
+            t.forward(50);
+            t.right(360.0/a);
+        }
+    }
+
+    public static void g(Turtle t, int a){
+        for (int i = 0; i < a; i++) {
+            f(t, 3 + i); // should be 3 + i instead of 6 + i
+            t.forward(50); // should go forward 50 instead of 100
+            t.left(360.0/a); 
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        g(t, 6); // should be 6 instead of 4
+    }
+}
+</answer>
+<rubric>
+5 points: all three mistakes are fixed
+3 points: two mistakes are fixed
+1 point: only one mistake is fixed
+-2 points for each new mistake introduced
+</rubric>
+</question>

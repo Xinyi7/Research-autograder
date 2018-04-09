@@ -1,0 +1,49 @@
+public class ProdMult5 {
+    public static int prodMult5(int start, int end){
+        int a=1;
+        if(start/5=start/5.0){
+        for( int i=start; i<=end; i=i+5){
+            a=a*i;
+        }
+        
+         if else  ((start+1)/5=(start+1)/5.0){
+             for( int i=start+1; i<=end; i=i+5){
+            a=a*i;}
+        }
+        if  ((start+2)/5=(start+2)/5.0){
+             for( int i=start+2; i<=end; i=i+5){
+            a=a*i;}
+           
+        
+        }
+        if  ((start+3)/5=(start+3)/5.0){
+             for( int i=start+3; i<=end; i=i+5){
+            a=a*i;}
+           
+        
+        }
+        else{
+             for( int i=start+4; i<=end; i=i+5){
+            a=a*i;}
+           
+        
+        }
+        return a;
+        
+        
+
+            
+        }
+
+
+        
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(prodMult5(1,5));
+        // test your method here
+    }
+
+}

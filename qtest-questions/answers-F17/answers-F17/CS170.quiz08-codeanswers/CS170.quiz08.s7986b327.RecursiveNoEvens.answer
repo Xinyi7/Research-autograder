@@ -1,0 +1,21 @@
+public class NoEvens {
+  public static boolean noEvens(String[]x, int n){
+    if (n == 0){
+        return true;
+    }else{
+        return (x[n-1].length() % 2 == 1) && noEvens(x,n-1);
+    }
+  }
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] a = {"alpha", "beta", "lambda"};
+        String[] b = {"red", "green", "white"};
+        String[] c = {};
+        System.out.println(noEvens(a,3));
+        System.out.println(noEvens(b,3));
+        System.out.println(noEvens(c,0)); //I think in this case, n should be 0 because there the number of element in this string is 0. Therefore, when putting in 3 doesn't make sense as it means if any of the first 3 strings in the array have even length given that the string has no element.
+    }
+
+}

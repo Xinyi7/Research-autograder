@@ -1,0 +1,14 @@
+public class RecursiveOnlyOdds {
+    public static Boolean onlyOdds(int[] a, int n){
+        if (n == 0){
+            return true;
+        }
+        else {
+            return (a[n - 1] % 2 == 0) && onlyOdds(a, n - 1);
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println(onlyOdds(new int[]{1, 2, 3}, 3));
+    }
+
+}

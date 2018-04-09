@@ -1,0 +1,26 @@
+public class NiceVacation {
+
+    // write your method here
+    public static String vacation(String s, int n){
+        String result = "";
+        String fir = "";
+        String sec = "";
+        for (int i=0; i < n; i++){
+            fir += s.charAt(i);
+        }
+        for (int j=(n+1); j < s.length(); j++){
+            sec += s.charAt(j);
+        }
+        result = fir + " nice " + s.charAt(n) + " " + "vacation " + sec;
+        return result;
+            
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(vacation("beach", 2));
+        System.out.println(vacation("mountains", 5));
+    }
+
+}

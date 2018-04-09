@@ -1,0 +1,20 @@
+public class AreMultiplesOf {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(areMultiplesof(10, 6, 2));
+    }
+    public static boolean areMultiplesof(int a, int b, int c){
+        boolean the = true;
+        if(a%c==0 && b%c ==0){
+            the = true;
+        }
+        else{
+            the = false;
+        }
+        return the;
+    }
+
+}

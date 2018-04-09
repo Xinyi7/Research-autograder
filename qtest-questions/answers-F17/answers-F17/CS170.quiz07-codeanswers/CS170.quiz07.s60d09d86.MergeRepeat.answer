@@ -1,0 +1,25 @@
+public class MergeRepeat {
+
+public static String mergeRepeat(String []s, int k){
+String result = " ";
+
+    for (int i=0; i<s.length;i++){
+ result = result+= s[i] + s[i];   //"hey" + "hi"; //[i];
+    }
+    
+    for (int j=0; j<s.length; j++){
+
+    //result += s[j];
+}
+
+    return result;
+}
+    // write your method here
+    
+    public static void main(String[] args) {
+
+        String [] s = {"hey", "hi"};
+System.out.println(mergeRepeat(s, 2));
+    }
+
+}

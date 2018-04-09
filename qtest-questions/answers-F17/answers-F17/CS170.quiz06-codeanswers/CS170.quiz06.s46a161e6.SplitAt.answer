@@ -1,0 +1,11 @@
+public class SplitAt {
+
+   public static String[] splitAt(String s, int n) {
+    
+   }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

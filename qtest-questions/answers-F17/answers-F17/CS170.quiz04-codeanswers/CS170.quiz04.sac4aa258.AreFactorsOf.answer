@@ -1,0 +1,21 @@
+public class AreFactorsOf {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(areFactorsOf(3,2,6));//t
+        System.out.println(areFactorsOf(3,1,27));//t
+        System.out.println(areFactorsOf(3,2,5));//f
+    }
+    public static boolean areFactorsOf(int a, int b, int c){
+        Boolean x;
+        if (c%a==0 && c%b==0){
+           x=true;
+        }else{
+            x=false;
+        }
+        return x;
+    }
+
+}

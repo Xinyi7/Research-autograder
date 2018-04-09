@@ -1,0 +1,17 @@
+public class ExpandString {
+
+    // write your method here
+    public static String expand(String s, int n){
+        String result="";
+        for (int i=0; i<n; i++){
+            result=result+s.charAt(i);
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+    System.out.println(expand("hey",3));
+
+}

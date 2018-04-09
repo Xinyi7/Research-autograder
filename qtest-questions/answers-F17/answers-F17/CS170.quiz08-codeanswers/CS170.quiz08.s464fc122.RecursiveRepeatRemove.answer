@@ -1,0 +1,17 @@
+public class RecursiveRepeatRemove {
+
+    // write your method here
+    public static String repeatRemove (String s, char c, char r)  {
+        if (s.equals("")) {
+            return "";
+        } else if s.charAt(0) == c {
+            return 
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        ("abcd", 'a', 'b')
+    }
+
+}

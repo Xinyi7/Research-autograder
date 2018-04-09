@@ -1,0 +1,26 @@
+public class Dot {
+
+    // write your method here
+    public static String dot(String s, int k)
+    {
+    int stringL = s.length();
+    String newString = new String();
+    if(k > s.length() || k < 0){
+    return s;
+    }
+    for(int i = 0; i < stringL; i++){
+       if(i == k){ newString = newString + ".";}
+       if(i != k){newString = newString + s.charAt(i);} 
+    }
+    return newString;
+    
+        
+        
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(dot("orange", 2));
+        System.out.println(dot("whatever", 5));
+    }
+
+}

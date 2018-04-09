@@ -1,0 +1,21 @@
+public class SquareDiag {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        turtle t= new turtle ();
+        for (j=0, j<5, int j++); {  // creates a row of squares
+            for (i=0, i<4, int i++);{   /// creates a square
+            t.forward (5);
+            t.left(90);  
+    }
+        t.penup();
+        t.forward(5);
+        t.left(90):
+        t.forward(2.5);
+        t.right(90);
+        t.backward(2.5);
+        t.pendown();
+}
+}
+}

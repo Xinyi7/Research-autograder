@@ -1,0 +1,23 @@
+public class AreAllOdd {
+    public static String areallodd( String[] x) {
+        String result = "false";
+        if (x.length % 2 == 0) {
+            result = "true";
+        }
+        else {
+            result = "false";
+        }   
+        return result;
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"apple", "bananas", "carrots"};
+        String[] x2 = {"apple", "banana", "carrots"};
+        System.out.println(areallodd(x1));
+        System.out.println(areallodd(x2));
+    }
+
+}

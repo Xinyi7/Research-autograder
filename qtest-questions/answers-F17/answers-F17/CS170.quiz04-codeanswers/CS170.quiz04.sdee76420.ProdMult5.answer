@@ -1,0 +1,21 @@
+public class ProdMult5 {
+
+    
+    public static int prodMult5(int start, int end){
+        int a = 1;
+        for(int i = start; i<= end; i++){
+            if(i% 5 == 0){
+            a = a * i;
+            }
+        }
+        return a;
+    }
+    
+    public static void main(String[] args) {
+         System.out.println(prodMult5(3,6));
+         System.out.println(prodMult5(5,10));
+         System.out.println(prodMult5(1,20));
+        // test your method here
+    }
+
+}

@@ -1,0 +1,30 @@
+public class FractalUmbrella {
+//In f(t,200,3) f is called 4 times
+//In f(t,200,4) f is called 5 times
+// f is called N+1 times
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(90);
+            t.right(180.0/6);
+            for (int i = 0; i < 5; i++) {
+                t.forward(x);
+                t.left(180);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(180.0/6);
+            }
+            t.left(90);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 5);
+    }
+}

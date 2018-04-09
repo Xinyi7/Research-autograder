@@ -1,0 +1,19 @@
+public class NoOdds {
+    public static boolean noOdds(String[] x, int n) {
+        if (n==0) {
+        return true;
+        } else {
+          return noOdds(x, n-1);
+        
+        }
+    }
+    }
+    public static void main(String[] args) {
+        String[] a = {"alpha", "beta", "lambda"};
+        String[] b = {"blue", "purple", "orange"};
+        String[] c = {};
+        System.out.println(noOdds(a,3));
+        System.out.println(noOdds(b,3));
+        System.out.println(noOdds(c,3));
+    }
+}

@@ -1,0 +1,17 @@
+public class ChangeLast {
+
+    // write your method here
+    public static String changeLast(String s, String last)
+    {
+        String newS = s.substring(0, s.length() - 1);
+        newS += last.charAt(last.length() - 1);
+        return newS;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(changeLast("book","c"));
+        System.out.println(changeLast("root","palm"));
+    }
+
+}

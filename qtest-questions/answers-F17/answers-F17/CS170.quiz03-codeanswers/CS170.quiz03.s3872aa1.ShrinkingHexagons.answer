@@ -1,0 +1,28 @@
+public class ShrinkingHexagons {
+
+    // Write your method here
+
+    public static void hexagon(Turtle t, double size){
+        for ( int i = 0; i < 6; i ++){
+            t.forward(size);
+            t.left(60);
+        }
+    }
+
+    public static void shrinkingHexagons(Turtle t, double x, int n){
+        for (int i = 0; i < n ; i ++){
+            hexagon(t,x/(i+1));
+            t.penup();
+            t.forward(2*x/(i+1));
+            t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        // Test your method here
+        Turtle diane = new Turtle();
+        shrinkingHexagons(diane, 100, 5);
+        //hexagon(diane, 50);
+    }
+
+}

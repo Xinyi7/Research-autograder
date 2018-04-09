@@ -1,0 +1,22 @@
+public class SumMultX {
+
+    // write your method here
+    public static int sumMultx(int x, int y) {
+        int result = 0;
+        for (int i = x; i<=y; i++) {
+            if (((x+i) % x) ==0 ) {
+                result += i;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(sumMultx(2,6));
+        System.out.println(sumMultx(2,7));
+        System.out.println(sumMultx(2,8));
+        System.out.println(sumMultx(3,17));
+    }
+
+}

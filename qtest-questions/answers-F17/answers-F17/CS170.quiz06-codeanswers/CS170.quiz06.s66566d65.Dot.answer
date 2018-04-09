@@ -1,0 +1,30 @@
+public class Dot {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(dot("orange", 2));
+        // test your method here
+    }
+    public static String dot (String s, int k) {
+
+        String result = s.substring(0, k);
+        if (k > s.length() || k < 0) {
+            result = s;
+        } else {
+            result = result + "." + s.substring(k + 1, s.length());
+            
+            
+        
+       
+        } return result;
+        
+            
+       
+
+        
+
+      
+    }
+
+}

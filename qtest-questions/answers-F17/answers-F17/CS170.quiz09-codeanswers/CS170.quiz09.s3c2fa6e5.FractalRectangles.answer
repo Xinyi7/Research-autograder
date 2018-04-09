@@ -1,0 +1,34 @@
+// 1) 5 rectangles    (1 + 2 * 2 = 5)
+// 2) 7 rectangles    (1 + 2 * 3 = 7)
+// 3) 1 + 2 * N
+public class FractalRectangles {
+
+    public static void rectangle(Turtle t, double x, double y) {
+        for (int i = 0; i < 2; i++) {
+            t.forward(x);
+            t.left(90);
+            t.forward(y);
+            t.left(90);
+        }
+    }
+    
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            rectangle(t, x * 5, x);
+        } else {
+            rectangle(t, x * 5, x);
+            t.left(90);
+            t.backward(x);
+            f(t, x * 3 / 5, level - 1);
+            t.forward(x);
+            t.right(90);
+        }
+        
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(5);
+        f(t, 50, 6);
+    }
+}

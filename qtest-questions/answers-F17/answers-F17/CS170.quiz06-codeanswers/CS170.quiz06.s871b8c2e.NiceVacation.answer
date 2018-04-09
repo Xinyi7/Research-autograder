@@ -1,0 +1,23 @@
+public class NiceVacation {
+
+    public static String vacation(String s, int n)
+    {
+        int length = s.length();
+        String result = "";
+        result = result + s.substring(0,n);
+        result = result + " nice ";
+        result = result + s.charAt(n);
+        result = result + " vacation ";
+        result = result + s.substring(n+1,length);
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(vacation("beach",2));
+        System.out.println(vacation("mountains",5));
+        System.out.println(vacation("sleep",0));
+        System.out.println(vacation("yay",2));
+        
+    }
+
+}

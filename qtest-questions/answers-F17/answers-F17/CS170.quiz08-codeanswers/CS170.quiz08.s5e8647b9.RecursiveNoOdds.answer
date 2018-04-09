@@ -1,0 +1,31 @@
+public class NoOdds {
+
+    // write your method here
+    public static boolean noOdds(String[] x,int n){
+        if(n==0){
+            return true;
+        }else{
+            return x[x.length-1].length()%2==0 && noOdds(x,n-1);
+        }
+
+
+        
+    }
+
+
+
+    
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] a={};
+        System.out.println(noOdds(a,3));
+
+         String[] b={"bl","a","abbb"};
+        System.out.println(noOdds(b,3));
+
+         String[] c={"ag","agg","agag"};
+        System.out.println(noOdds(c,3));
+    }
+
+}

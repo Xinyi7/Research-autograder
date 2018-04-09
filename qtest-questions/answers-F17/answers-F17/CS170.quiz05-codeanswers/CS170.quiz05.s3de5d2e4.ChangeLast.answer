@@ -1,0 +1,19 @@
+public class ChangeLast {
+
+    // write your method here
+    public static String changeLast(String s, String last) {
+        char bob = "a";
+        int c = s.length - 2;
+        for(int i = 0; i = c; i++) {
+            bob = s.char(i);
+            result = "\"" + bob + result;
+        }
+        return bob + " last";
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(changeLast("book", "c"));
+        changeLast("book", "c");
+    }
+
+}

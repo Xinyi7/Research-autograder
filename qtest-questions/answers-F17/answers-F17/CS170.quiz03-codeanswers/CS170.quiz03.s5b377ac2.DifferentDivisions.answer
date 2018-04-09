@@ -1,0 +1,13 @@
+public class DifferentDivisions {
+    public static String divisions(int x, int y){
+
+        "Look: " + x " / " y + " is " + int x/y + " , but " x + ".0" " / " y + ".0 is"  + ".";
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        divisions(3,2);
+    }
+
+}

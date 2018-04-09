@@ -1,0 +1,20 @@
+public class RepeatChars {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        int []x1= {2,1,3};
+        System.out.println(repeatChars("hey",x1));
+    }
+    public static String repeatChars( String s, int []k){
+        String result="";
+        for( int i=0;i<s.length();i++){
+            for (int j=0;j<k[i];j++){
+                result=result+ s.charAt(i);
+            }
+           
+        }
+        return result;
+    }
+}

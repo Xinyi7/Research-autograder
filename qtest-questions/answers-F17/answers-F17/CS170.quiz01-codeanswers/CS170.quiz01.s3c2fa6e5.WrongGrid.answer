@@ -1,0 +1,25 @@
+public class Grid {
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        for (int i = 0; i < 3; i++) { //needs to be repeated 3 times so 2 becomes 3
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 4; k++) {
+                    t.forward(50);
+                    t.left(90); //should be t.left(90);
+                }
+                t.penup();
+                t.forward(50);
+                t.pendown();
+            }
+       
+            t.penup();
+            t.backward(150);;
+            t.left(90);
+            t.forward(50);
+            t.right(90); //turtle needs to turn right to start next row
+            t.pendown();
+        }
+    }
+
+}

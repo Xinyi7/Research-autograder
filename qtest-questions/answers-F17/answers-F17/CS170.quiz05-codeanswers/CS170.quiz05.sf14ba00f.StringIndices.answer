@@ -1,0 +1,17 @@
+public class StringIndices {
+    
+
+    // write your method here
+    public static String indices(String s, String pre, String post){
+        String s = " ";
+        
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(indices("hello", " .". "@#!");
+        System.out.println(indices("abc", "--", "$");
+    }
+
+}

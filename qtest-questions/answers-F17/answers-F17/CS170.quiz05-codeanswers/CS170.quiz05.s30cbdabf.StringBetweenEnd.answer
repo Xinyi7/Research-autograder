@@ -1,0 +1,15 @@
+public class StringBetweenEnd {
+
+    public static String betweenEnd(String s, String between, String end) {
+        result = "";
+        for(int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) 
+           result += (s.charAt(i) + between + s.charAt(i + 1));
+        }
+    }
+    
+    public static void main(String[] args) {
+        betweenEnd("abc", "--", "$");
+    }
+
+}

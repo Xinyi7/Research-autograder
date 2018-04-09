@@ -1,0 +1,21 @@
+public class NoOdds {
+
+    public static boolean noOdds(String[] x, int n){
+       while(n>0){
+        if(x[n-1].length() %2!=0){
+            return false;
+        }else {
+            return true && noOdds(x,n-1);
+        }
+       }
+       return true;
+    }
+    
+    public static void main(String[] args) {
+        String [] word= {};
+        String [] story= {"alpha","beta","lambda"};
+        System.out.println(noOdds(word,3));
+        System.out.println(noOdds(story,3));
+    }
+
+}

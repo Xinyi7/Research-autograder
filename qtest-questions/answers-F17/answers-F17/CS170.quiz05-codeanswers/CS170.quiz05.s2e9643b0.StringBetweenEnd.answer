@@ -1,0 +1,22 @@
+public class StringBetweenEnd {
+
+    // write your method here
+    public static String betweenEnd(String s, String between, String end) {
+        String a= "";
+        if(s.length()==1) {
+            a= s + end;
+        } else {
+            for(int i=0; i<=s.length()-1;i++) {
+                a=a+s.charAt(i)+ between;
+            }
+        }
+        a=a+end;
+        return a;
+    }   
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(betweenEnd("abc", "--","$"));
+    }
+
+}

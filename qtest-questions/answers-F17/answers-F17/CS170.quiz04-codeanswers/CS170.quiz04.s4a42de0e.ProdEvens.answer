@@ -1,0 +1,28 @@
+public class ProdEvens {
+
+    // write your method here
+    public static int prodEvens(int a, int b) {
+        int product = 1;
+        if(a % 2 == 0) {
+            for(int i=a; i<=b; i+=2) {
+                product*= i;           
+            }
+        }
+           
+        else {
+            for (int i=a; i<b; i+=2) {
+                product*=(i+1);
+            }         
+        }
+        return product;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(prodEvens(2,8)); //384
+        System.out.println(prodEvens(1,9)); //384
+        System.out.println(prodEvens(2,7)); //48
+        System.out.println(prodEvens(1,8)); //384
+    }
+
+}

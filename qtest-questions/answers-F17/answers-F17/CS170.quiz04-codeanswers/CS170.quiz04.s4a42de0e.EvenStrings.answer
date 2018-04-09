@@ -1,0 +1,22 @@
+public class EvenStrings {
+
+    // write your method here
+    public static boolean evenStrings(String s1, String s2) {
+        int x = s1.length();
+        int y = s2.length();
+        if (x==y && x%2==0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(evenStrings("blue", "pink")); //true
+        System.out.println(evenStrings("hey", "you")); //false
+        System.out.println(evenStrings("banana", "pear"));//false
+    }
+
+}

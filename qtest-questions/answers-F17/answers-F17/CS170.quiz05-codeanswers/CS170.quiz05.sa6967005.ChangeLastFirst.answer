@@ -1,0 +1,13 @@
+public class ChangeLastFirst {
+
+    public static String changeLastFirst(String s, String first){
+        return s.substring(0, s.length()-1)+first.charAt(0);
+    }
+    
+    public static void main(String[] args) {
+
+     System.out.println(changeLastFirst("book","c")); //booc
+     System.out.println(changeLastFirst("root","palm")); //roop
+    }
+
+}

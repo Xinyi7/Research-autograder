@@ -1,0 +1,24 @@
+public class RecursiveIsThereEven {
+
+    // write your method here
+    public static boolean isThereEven (int[] a, int n){
+        if (n == 0){
+            return 0;
+        }else if{
+            isThereEven(a[n-1].length() %2 == 0)
+                return true;    
+        }else {
+        return false;
+    }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(isThereEven(w,3));
+        System.out.println(isThereEven(x,1));
+        System.out.println(isThereEven(y,1));
+        System.out.println(isThereEven(z,3));
+        
+    }
+
+}

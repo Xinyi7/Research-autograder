@@ -1,0 +1,19 @@
+public class RecursiveCapRemove {
+
+    // write your method here
+    public static String capRemove(String s, char c, char r){
+        if(s == ""){
+            return "";
+        }
+        else{
+            
+            return s.charAt(0) + capRemove(s, c, r) + c.Uppercase + - s.charAt(r) + s.charAt(1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(capRemove("abcd", 'a', 'b'));
+    }
+
+}

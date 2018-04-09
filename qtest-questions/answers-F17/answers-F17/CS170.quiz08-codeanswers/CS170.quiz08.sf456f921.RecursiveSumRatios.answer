@@ -1,0 +1,20 @@
+public class RecursiveSumRatios {
+
+    public static double sumProducts(double[] x, double[] y, int n) {
+        if (n == 0) {
+            return 0;
+        } else {
+            return x[n-1]/y[n-1] + sumProducts(x, y, n-1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        double[] a = {1.5, 2.8, 3.0};
+        double[] b = {3.0, 2.0, 2.0};
+        double[] c = {};
+        double[] d = {};
+        System.out.println(sumProducts(a, b, 3));
+        System.out.println(sumProducts(c, d, 0));
+    }
+
+}

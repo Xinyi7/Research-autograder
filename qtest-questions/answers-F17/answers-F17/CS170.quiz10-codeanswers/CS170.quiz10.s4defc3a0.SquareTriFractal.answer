@@ -1,0 +1,37 @@
+public class SquareTriFractal {
+
+    //f(t, x * 0.4, level - 1) and f(t, 200, 5) this is used in the method 
+    //f(t, x * 0.4, 2) = 200 * 0.4 = 80
+    //f(t, x * 0.4, 3) = 200 * 0.4 * 0.8 = 64
+    //f(t, x * 0.4, N) = 200 * (0.4 ** (N -1))
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.penup();
+            t.backward(x * 0.5);
+            t.right(120); //change the angle degree from 90 to 120 
+            t.forward(x * 0.5);
+            t.left(120);
+            t.pendown();
+            for (int i = 0; i < 3; i++) { // change the for loop to match the number of sides a triangle has 
+                t.forward(x);
+                t.left(120);
+                f(t, x * 0.4, level - 1);
+            }
+            t.penup();
+            t.right(120);
+            t.backward(x * 0.5);
+            t.left(120);
+            t.forward(x * 0.5);
+            t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 200, 5);
+    }
+}

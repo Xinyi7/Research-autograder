@@ -1,0 +1,14 @@
+public class ArrowWheel {
+    // write your method here
+    ublic static void main(String[] args) {
+   ArrowWheel(t, 70, 9)
+   t.forward(180)
+   t.right(90)
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle = t (double x, int n)
+        for int 0; to x>5;  
+    }
+
+}

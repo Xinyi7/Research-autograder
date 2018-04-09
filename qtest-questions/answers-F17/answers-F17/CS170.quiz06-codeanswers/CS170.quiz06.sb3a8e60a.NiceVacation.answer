@@ -1,0 +1,18 @@
+public class NiceVacation {
+
+    // write your method here
+    public static String niceVacation(String s, int n) {
+        String result = "" + s.substring(0, n) + " nice " + s.charAt(n) + " vacation " + s.substring(n + 1);
+        return result;
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+
+        System.out.println(niceVacation("beach", 2));
+        System.out.println(niceVacation("yay", 2));
+        
+    }
+
+}

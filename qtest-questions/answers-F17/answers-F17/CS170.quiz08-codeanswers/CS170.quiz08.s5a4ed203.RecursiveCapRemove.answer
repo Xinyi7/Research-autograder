@@ -1,0 +1,14 @@
+public class RecursiveCapRemove {
+
+    // write your method here
+    public static String capRemove(String s, char c, char r) {
+    
+
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

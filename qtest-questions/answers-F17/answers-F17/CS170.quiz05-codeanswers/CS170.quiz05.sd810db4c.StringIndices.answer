@@ -1,0 +1,13 @@
+public class String StringIndices(String s, String pre, String post) {
+
+    String result = "" ;
+
+    result = substring
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

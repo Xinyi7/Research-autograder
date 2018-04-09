@@ -1,0 +1,32 @@
+public class Arrowwheel {
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        arrowwheel(t, 25, 3, 9);
+    }
+
+    public static void arrowwheel(Turtle t, double x, int s, int f){
+        for(int i = 0 ; i < f ; i++) {
+            t.forward(x*2);
+            triangle(t, x, s);
+            t.backward(x*2);
+            t.right(360.0/f);
+        }
+    }
+
+    public static void triangle(Turtle t, double length, int numsides) {
+        for(int i = 0 ; i < numsides; i++) {
+            t.forward(length);
+            t.left(360.0/numsides);
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+

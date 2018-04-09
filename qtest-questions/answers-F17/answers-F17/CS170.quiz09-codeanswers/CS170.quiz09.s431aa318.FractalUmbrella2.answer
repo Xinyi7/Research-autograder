@@ -1,0 +1,29 @@
+//level 2, f called 7 times
+//level 4, f called 13 times
+//level n, f called  times 3*(n) +1
+public class FractalUmbrella {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(360.0/8);
+            for (int i = 0; i < 4; i++) {
+                t.forward(x);
+                t.left(180);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(360.0/8);
+            }
+            t.left(120);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 4);
+    }
+}

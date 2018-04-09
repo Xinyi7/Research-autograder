@@ -1,0 +1,22 @@
+public class RecursiveSumRatios {
+
+    // write your method here
+    public static double sumProducts(double[] x, double[] y, int n) {
+        double result = 0.0;
+        for (int i = 0; i < n; i++) {
+            result += x[i]/y[i];
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        double[] x1 = {1.5, 2.8, 3.0};
+        double[] y1 = {3.0, 2.0, 2.0};
+         double[] x2 = {};
+         double[] y2 = {};
+        System.out.println((sumProducts(x1, y1, 3)));
+        System.out.println((sumProducts(x2, y2, 0)));
+    }
+
+}

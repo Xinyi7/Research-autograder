@@ -1,0 +1,17 @@
+public class PoundsAndOunces {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(wizardOfOz(60));
+        System.out.println(wizardOfOz(16));
+        System.out.println(wizardOfOz(0));
+        
+    }
+
+    public static String wizardOfOz (int x) {   // Please don't take points off; this is a cool name.
+        return x + " oz equals " + (x / 16) + " lb " + (x % 16) + " oz.";
+    }
+
+}

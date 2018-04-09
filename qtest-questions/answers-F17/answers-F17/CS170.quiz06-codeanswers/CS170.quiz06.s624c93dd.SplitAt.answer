@@ -1,0 +1,28 @@
+public class SplitAt {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(splitAt("apple", 2));
+        //method reutnrs an array with two strings, but cannot put directly onto system.out.println
+    }
+    public static String[] splitAt(String s, int n){
+        int length = s.length();
+        String one = "";
+        String two = "";
+        for(int i =0; i<n; i++){
+            one += "" + s.charAt(i);
+        }
+        for(int i =n; i<length; i++){
+            two += "" + s.charAt(i);
+        }
+        System.out.println(one);
+        System.out.println(two);
+        String[] result = {"", ""};
+        result[0] = one;
+        result[1] = two;
+        return result;
+    }
+
+}

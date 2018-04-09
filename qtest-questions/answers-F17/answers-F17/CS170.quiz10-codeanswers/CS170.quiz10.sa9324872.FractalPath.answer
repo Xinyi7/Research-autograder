@@ -1,0 +1,25 @@
+// f(t, 180, 2) draws 6 sides, f(t, 180, 3) draws 9 sides, f(t, 180, N) draws 3*N sides
+
+public class FractalPath {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.forward(x);
+            t.right(90);
+            t.forward(x / 2);
+            t.right(90);
+            t.forward(x);
+            t.left(135); // instead of turning 90 degrees, it should be turning 90 + 45 degreees
+            f(t, x * 0.75, level - 1); // all following commands after this should be ereased, so that the turtle does not return
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(20);
+        f(t, 180, 13); // initialized level is the number of "rectangles"
+        t.hideturtle();
+    }
+}

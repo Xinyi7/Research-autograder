@@ -1,0 +1,20 @@
+public class NiceVacation {
+
+    public static String vacation(String s, int n) {
+     String result = "";
+     for (int i = 0; i < s.length(); i++) {
+     while (i < n){
+        result += s.charAt(i);
+        }
+     result += " nice " + s.charAt(n) + " vacation ";
+     while (i > n ){
+        result += s.charAt(i);
+     }
+    }
+      return result;
+    }
+    
+    public static void main(String[] args) {
+     System.out.println(vacation("beach", 2));
+    }
+}

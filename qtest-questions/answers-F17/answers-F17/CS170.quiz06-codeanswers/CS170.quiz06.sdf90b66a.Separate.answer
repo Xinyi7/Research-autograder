@@ -1,0 +1,20 @@
+public class Separate {
+
+    public static String separate(String s, int n) {
+        int count = 0;
+        String result = "";
+        
+        
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(Seperate("orange", 2));
+        System.out.println(seperate("whatever", 5));
+        System.out.println(seperate("hey", 0));
+        System.out.println(seperate("hey", 2));
+    }
+        // test your method here
+    }
+
+

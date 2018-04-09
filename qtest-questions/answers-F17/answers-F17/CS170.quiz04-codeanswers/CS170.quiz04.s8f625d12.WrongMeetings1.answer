@@ -1,0 +1,24 @@
+public class WrongMeetings {
+
+    public static String meetings(int students, int minimum, int minutes) {
+        String answer = "";
+        if (students < 0 || minutes < 0) {
+            answer = "There's no such thing as negative students or negative minutes!";
+        } else if (students * minimum > minutes) {
+            answer = "There is not enough time for all student meetings. "; 
+            answer += "Professor must find at least " + (students*minimum - minutes) + " more minutes!";
+        } else {
+            answer = "Each student will have a " + (minutes / students) + " minute meeting with the professor, "
+                    + "and the professor will have " + (minutes % students) + " minutes of extra time.";
+        }
+        return answer;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(meetings(-2, 20, 50));
+        System.out.println(meetings(2, 20, 50));
+        System.out.println(meetings(2, 20, 30));
+        System.out.println(meetings(2, -1, 35));
+        System.out.println(meetings(5, 0, 4));
+    }
+}

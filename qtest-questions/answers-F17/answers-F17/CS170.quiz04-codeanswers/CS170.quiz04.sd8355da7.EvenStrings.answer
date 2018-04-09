@@ -1,0 +1,30 @@
+public class EvenStrings {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(evenStrings("blue", "pink")); // true
+        System.out.println(evenStrings("hey", "you")); // false
+        System.out.println(evenStrings("banana", "pear")); // false
+        System.out.println(evenStrings("oh", "hi")); // true
+        
+    }
+
+    public static boolean evenStrings(String s1, String s2){
+        int m = s1.length();
+        int n = s2.length();
+        if (m == n){
+            if ( m % 2 == 0 && n % 2 == 0){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return false;
+        }
+    }
+
+}

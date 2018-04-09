@@ -1,0 +1,34 @@
+public class NumStartingWith {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] test = {"hello", "", "wow", "hey"};
+   
+     
+     System.out.println(numStartingWith(test, 'h'));
+    
+        System.out.println(numStartingWith(test, 'w'));
+         
+          
+            System.out.println(numStartingWith(test, 'a'));
+   
+    
+    
+    
+    }
+public static int numStartingWith(String[] x, char c) {
+
+
+
+for (int i = 0; i < x.length; i++){
+
+String word = test[i];
+
+    
+}
+    
+}
+}
+}

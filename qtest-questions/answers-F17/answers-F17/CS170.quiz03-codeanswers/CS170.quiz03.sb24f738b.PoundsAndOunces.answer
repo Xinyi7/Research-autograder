@@ -1,0 +1,24 @@
+public class PoundsAndOunces {
+
+    public static String pounds(int x) {
+        int y;
+        int z;
+        String a;
+        String b;
+        y = x/16;
+        z = x%16;
+
+        a = y + "";
+        b = z + "";
+
+        return (x) + " ounces equals " + (a) + " lb " + (b) + " oz";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(pounds(60));
+        System.out.println(pounds(64));
+        System.out.println(pounds(2000));
+        System.out.println(pounds(0));
+    }
+
+}

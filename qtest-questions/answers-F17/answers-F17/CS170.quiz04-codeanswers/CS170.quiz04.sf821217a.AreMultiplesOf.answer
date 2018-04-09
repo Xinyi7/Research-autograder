@@ -1,0 +1,19 @@
+public class AreMultiplesOf {
+    public static void areMultiplesOf(int a, int b, int c) {
+        if(a%c==0 && b%c==0) {
+            System.out.println(true);
+        }else {
+            System.out.println(false);
+        }
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        areMultiplesOf(10, 6, 2);
+        areMultiplesOf(10, 6, 3);
+        areMultiplesOf(10, 6, 5);
+        // test your method here
+    }
+
+}

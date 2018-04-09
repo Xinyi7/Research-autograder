@@ -1,0 +1,27 @@
+public class ColumnSums {
+    public static void main(String[] args) {
+        int[][] a = { {1, 1, 1}, {2, 3, 4} }; 
+        int[][] b = { {1, 1, 1}, {2, 3, 4}, {5, 5, 5} };
+        printArray(columnSums(a)); // should print 3 4 5
+        printArray(columnSums(b)); // should print 8 9 10
+    }
+
+    public static int[] columnSums(int[][] x) {
+        int[] result = new int[x.length];
+        int colsum = 0;
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x.length; j++) {
+                colsum += x[i][j]; 
+            }
+        }
+        return result;
+    }
+
+    // prints an array
+    public static void printArray(int[] x) {
+        for(int i = 0; i < x.length; i++) {
+            System.out.print(x[i] + " ");
+        }
+        System.out.println();
+    }
+}

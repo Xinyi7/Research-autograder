@@ -1,0 +1,19 @@
+
+public class ProdMult3 {
+
+    public static int prodMult3(int a, int b) {
+        int result = 1;
+        for (int i = a; i <= b; i++) {
+            if (i % 3 == 0) {
+                result *= i;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(prodMult3(2, 5)); // 3
+        System.out.println(prodMult3(2, 6)); // 18
+        System.out.println(prodMult3(3, 10)); // 162
+    }
+}

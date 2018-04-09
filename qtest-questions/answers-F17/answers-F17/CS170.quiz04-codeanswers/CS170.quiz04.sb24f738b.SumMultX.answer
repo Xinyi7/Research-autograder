@@ -1,0 +1,20 @@
+public class SumMultX {
+
+    public static int sumMultx(int x, int y) {
+        int sum = 0;
+        
+        for (int i = x; i <= y; i += x) {
+           sum += i; 
+        }
+
+        return sum;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(sumMultx(1, 2));
+        System.out.println(sumMultx(1, 4));
+        System.out.println(sumMultx(2, 8));
+        System.out.println(sumMultx(2, 9));
+    }
+
+}

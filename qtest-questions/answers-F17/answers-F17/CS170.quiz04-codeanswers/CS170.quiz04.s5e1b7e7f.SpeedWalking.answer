@@ -1,0 +1,14 @@
+public class SpeedWalking {
+    public static void speedWalking(double speed) {
+        (walking <= 5);
+        (sprinting >= 15);
+        (running); else
+        
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

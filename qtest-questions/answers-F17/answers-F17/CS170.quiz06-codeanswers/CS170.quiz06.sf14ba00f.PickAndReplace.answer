@@ -1,0 +1,16 @@
+public class PickAndReplace {
+
+    // write your method here
+    public static String pickAndReplace(String s, int n){
+        char c = s.charAt(i);
+        for (i = 0; i < s.length(); i++){
+            if (i == n)
+            String replace =  
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

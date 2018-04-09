@@ -1,0 +1,27 @@
+// 1) f(t, 200 ,3) calls f 4 times, while f(t, 200, 4) calls f 13 times. For level = n, f is called 1 + 3 + 3^2 + ... 3^n-2 + 3^n-1 times.
+public class FractalUmbrella {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(30);
+            for (int i = 0; i < 5; i++) {
+                t.forward(x);
+                t.left(180);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(30);
+            }
+            t.left(120);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 4);
+    }
+}

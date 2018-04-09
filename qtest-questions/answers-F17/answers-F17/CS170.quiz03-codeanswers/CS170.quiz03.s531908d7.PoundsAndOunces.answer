@@ -1,0 +1,14 @@
+public class PoundsAndOunces {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        pounds(60);
+        
+    }
+
+    public static void pounds(String[] args) {
+        
+    }
+
+}

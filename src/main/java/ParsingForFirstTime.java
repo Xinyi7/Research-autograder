@@ -111,7 +111,7 @@ public class ParsingForFirstTime {
         // the CompilationUnit contains only this class but in general it could contains
         // a package declaration, imports and several type declarations
         //store varibles in an array
-        /*ClassOrInterfaceDeclaration classDeclaration = cu.getClassByName("ForToWhile").get();
+        ClassOrInterfaceDeclaration classDeclaration = cu.getClassByName("ForToWhile").get();
         System.out.println(String.format("Class declaration: name=%s, nMembers=%s",
                 classDeclaration.getName(), classDeclaration.getMembers().size()));
         classDeclaration.setName("NewForToWhile");
@@ -123,19 +123,19 @@ public class ParsingForFirstTime {
         	listOfVariable.get(i).setName("v"+i);
         	arrayOfIndex[i][1]="v"+i;
         }
-        */
+
         //replace all variables
 
 
 
-      /* for (SimpleName v:cu.getChildNodesByType(SimpleName.class)){
+       for (SimpleName v:cu.getChildNodesByType(SimpleName.class)){
     	   System.out.println(v);
     	   for (int i = 0 ; i < arrayOfIndex.length;i++){
 
     		   v.setIdentifier(v.getIdentifier().replaceAll("\\b"+arrayOfIndex[i][0]+"\\b",arrayOfIndex[i][1]));
     	   }
 
-       }*/
+       }
         //ModifierVisitor<?> variableModifier = new VariableModifier();
 
         //variableModifier.visit(cu, null);*/

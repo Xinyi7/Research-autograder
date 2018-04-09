@@ -1,0 +1,20 @@
+public class NestedRectShrink {
+
+   public static void rectangle(Turtle t, double x, double y){
+    for (i=0; i<2;i++) {
+        t.forward(x);
+        t.left(90);
+        t.forward(y);
+        t.left(90);
+    }
+   }
+   
+
+ 
+    
+    public static void main(String[] args) {
+       Turtle t = new Turtle();
+       rectangle(t,80,90);
+    }
+
+}

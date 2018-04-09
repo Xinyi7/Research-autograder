@@ -1,0 +1,20 @@
+public class SplitAtChar {
+    // write your method here
+    public static String SplitAtChar(String s, char c) {
+        return s.length(c), s.length(n-c); 
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x;
+        x = splitAtChar("apple", 'p'); //returns {"a", "pple"}
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'a'); //returns {"", "apple"}
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'e'); //returns {"appl", "e"}
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'q'); //returns {"apple", ""}
+        System.out.println(x[0] + ", " + x[1]);
+    }
+
+}

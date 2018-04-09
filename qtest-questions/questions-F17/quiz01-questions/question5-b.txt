@@ -1,0 +1,86 @@
+<question>
+<title>WrongPinwheel2</title>
+<type>JavaCode</type>
+<points>12</points>
+<text>
+The following program is supposed to draw a pinwheel with polygon-shaped flags like the one in the figure, but it contains three mistakes. Can you fix them?
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAABlBMVEX///8AAABVwtN+AAAEP0lE
+QVRo3u3aPa7cNhDAcZJL6LFYwEqTLFIYPIJKFwFCICnS5QqLnMBlCheM6/S+ikv5Ju8Ir0yX7Gdg
+kjOav4MFUiQqHuB9P6+lIWdIjuXc/xe5dhWx7xB7+oS+7FdP1KuK2IsL5MscYf4FsdeOsN3z6Ue0
+I+sI8yti7jJMyWSFsczY/PePzSsxFr+AZZMFxjxjl/gWh+ILWGZsZizdx98OHGCBMX+LnR24R7KC
+kv4UX8RmxhLIv0t8EQuMeZB/l8AxVhjLjM3zI1liLGbEAmOeMbcyVh7K6r/AvPvnrDD2Vq7S/fUT
+Yz8y9oO8ggxBqowVxhZxEbSTV2YTY15coMfpUBk7AubHj7PM9owFxjxILD+mr8YyYzNjezv/wjhd
+NeYrYu3deLYn0tmBsWjmXxh+o7PmUXXWjGpUN4m7BbF9QmyJVv5dwLoj7KkZR5UdmlGdNXZK1MVm
+5+Amg51+f64103b+ndmbdlpobG2nrMKuMTtuL5PpllezxZYuqAq7TqJpe5lMT30GVCkx5kO/XWhY
+uP1pPnZxaBPrzr6q3Ri1LN4e6Ov7B/tNdugTqk2slJWl22D3Rw3Gli9LiTXuMw+MRYmVqOwEksFu
+9aZlNSj7m9RGycvH5jaxJHYYWRCmX2QsjIkVhTl/fVSTXT/JXRaPabsMbJZKShryT2RxYFmqijvG
+LjGq3UNFeddau78nLDoLY6nLPy+vmxNj/RYnKBWqCkurwI4ti0pZ7A7ESSnZ3YFYY1PLtG6RZ8yt
+CbWoPqZhOkuL+gfGfn8Z9l7SvuT9AbHfvhnqrLS1qs/PiH3/53BV49v0q7k3/WqfVL3auKnXB9Zv
++MjYiphnDZiJMdgcgq2mI2MVMdiimxhLjC2s4VAYq4jtWGslMpYYW9T9rLGeikNVEQsOsahv8I19
+iHRlxop+lLF2XNqDmixuHNqsvaX2oCZbN46n1i5abVkZbM+adDNjmbF182Q09gaqUWUIM05t4+G1
+bJdTxIzz6RitjB50k1kn8c+rjM0KY1bP4bNyarPImNldGR50ixXE/Gr1ka6/KYhFxg7F6phdJwVj
+JRPma1bGt6syiO0Zm1tW1CqD2IqYd4iFjmW1nBLWn1WzWmVmuTj1yQfY0Gae1SozOzMDE2MLY6Vn
+Ua0yNts5xOJwO0GtMjZbGDsK7R5tX2GzibHL1ig5MwOPjB0Ym8Y2mVZR2/F5q82klv2sJWDX6ftD
+mSMde6pyDemYeyffXOzye7eKN9ez68s6/c3Vge2kk/YxDjP1tTReI/PCIXoK47x/JYzXe2ERFu7u
+F2FJFybAtwKrm3ufO7PPjAHsf5303006s/sA/gvYzJh9FqRvEbFT75mQE3lB77YpPVKJJcbIWx0Z
+he1syuPYzF6JmNkrEY99iSix134Siu7pn8yMFcZI2Fxgb5KE8FCGous8ayR69kaSR9HF7xBV9x+9
+/gLvQpHvnK1T/AAAAABJRU5ErkJggg==
+</figure>
+<init>
+public class Pinwheel {
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        pinwheel(t, 100, 3, 3);
+    }
+
+    public static void pinwheel(Turtle t, double x, int s, int f){
+        for(int i = 0 ; i < f ; i++) {
+            t.forward(x);
+            polygon(t, x/2, s);
+            t.backward(2*x);
+            t.right(180.0/f);
+        }
+    }
+
+    public static void polygon(Turtle t, double length, int numsides) {
+        for(int i = 0 ; i < numsides; i++) {
+            t.forward(length);
+            t.left(360.0/numsides);
+        }
+    }
+}
+</init>
+<answer>
+public class Pinwheel {
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        pinwheel(t, 100, 3, 5); // Change the fourth argument
+    }
+
+    public static void pinwheel(Turtle t, double x, int s, int f){
+        for(int i = 0 ; i < f ; i++) {
+            t.forward(x);
+            polygon(t, x/2, s);
+            t.backward(x); // backward(x) instead of backward(2x)
+            t.right(360.0/f); // 360.0 instead of 180.0
+        }
+    }
+
+    public static void polygon(Turtle t, double length, int numsides) {
+        for(int i = 0 ; i < numsides; i++) {
+            t.forward(length);
+            t.left(360.0/numsides);
+        }
+    }
+}
+</answer>
+<rubric>
+4 points for each mistake fixed correctly
+-4 points for each new mistake introduced
+</rubric>
+</question>
+

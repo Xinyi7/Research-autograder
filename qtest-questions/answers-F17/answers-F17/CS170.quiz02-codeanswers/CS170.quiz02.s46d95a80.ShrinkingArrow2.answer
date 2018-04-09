@@ -1,0 +1,30 @@
+public class Arrow {
+
+    // write your method here
+    // I wrote a code that uses a repeating pattern for an arrow with stem length "length" and by defining variable i as equal to zero and less than branches it will reapeat its self "branches" times with each branch being
+    //comprised of lines of length "length"/the nunmber of branch being made - this is written as length/(i+1) so it is never length divided by zero
+    
+    
+    public static void main(String[] args) {
+        Turtle t= new Turtle();
+        arrow(t, 150, 5);
+        //t.right(90);
+        //t.forward(30);
+        // test your method here
+    }
+    public static void arrow(Turtle t, double length, int branches){
+        for(int i=0; i< branches; i++){
+            t.left(45);
+            line(t, length/(i+1));
+            t.right(90);
+            line(t, length/(i+1));
+            t.left(45);
+            t.forward(length/branches);
+        }
+        t.backward(length);
+    }
+    public static void line(Turtle t, double dist){
+        t.forward(dist);
+        t.backward(dist);
+    }
+}

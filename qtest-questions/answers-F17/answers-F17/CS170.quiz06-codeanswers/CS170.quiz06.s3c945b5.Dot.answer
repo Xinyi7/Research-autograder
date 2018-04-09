@@ -1,0 +1,17 @@
+public class Dot {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(dot("orange", 2));
+    }
+
+    public static String dot(String s, int k) {
+        String f = s.substring(0, k);
+        f = f + ".";
+        f = f + s.substring(k + 1);
+        return f;
+    }
+
+}

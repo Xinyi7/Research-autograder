@@ -1,0 +1,15 @@
+public class RecursiveSumRatios {
+
+    public static double sumProducts (double[] x, double[] y, int n){
+        if(x.length == 0 || y.length == 0){
+            return 0;
+        } else{
+            
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(sumProducts({1.5, 2.8, 3.0}, {3.0, 2.0, 2.0}, 3)); //3.4
+    }
+
+}

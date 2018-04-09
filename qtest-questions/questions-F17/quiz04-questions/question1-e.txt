@@ -1,0 +1,37 @@
+<question>
+<title>BlueYellowGreen</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+        int blue = 3;
+        String yellow = "green";
+        double green = 3.0;
+        System.out.println(blue + yellow);
+        System.out.println("green" + yellow);
+        System.out.println(blue + green + yellow);
+        System.out.println(blue + yellow + green );
+        System.out.println(yellow.length() * "blue".length() + yellow);
+        for (int i = 2; i < yellow.length(); i++) {
+            green *= blue ;
+            System.out.println(green);
+        }
+        for (int i = "yellow".length(); i >= 3; i -= 3) {
+            green += i;
+            System.out.println(yellow + green);
+        }
+</text>
+<answer>
+3green
+greengreen
+6.0green
+3green3.0
+20green
+9.0
+27.0
+81.0
+green87.0
+green90.0
+</answer>
+</question>

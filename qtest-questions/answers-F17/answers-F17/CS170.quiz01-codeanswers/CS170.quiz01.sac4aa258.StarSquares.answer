@@ -1,0 +1,28 @@
+public class StarSquares {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle ohno=new Turtle();
+        starSquares(ohno,500);
+        
+    }
+   
+    public static void starSquares(Turtle t, double x){
+      for (int i=0;i<5;i++){
+            t.forward(x);
+            t.right(360.0*2/5);
+            square(t,0.2*x);
+      }
+       
+    }
+
+    public static void square(Turtle t, double length){
+        for(int i=0;i<4;i++){
+            t.forward(length);
+            t.left(90);
+        }
+    }
+
+}

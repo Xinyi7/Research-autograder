@@ -1,0 +1,17 @@
+public class GallonsAndFluidOunces {
+
+    // write your method here
+int =x;
+
+    public static int gallons(int x) {
+        return x;
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+
+        System.out.println("
+    }
+
+}

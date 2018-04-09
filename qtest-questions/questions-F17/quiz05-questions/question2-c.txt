@@ -1,0 +1,51 @@
+<question>
+<title>StringIndices</title>
+<type>JavaCode</type>
+<points>7</points>
+<text>
+Write a method indices(String s, String pre, String post) that takes three strings: s, pre, and post. The method returns a string representing all the indices of s. Each index is preceded by the pre string; the whole sequence is terminated by the post string.
+
+Examples:
+indices("abc", "--", "$") returns "--0--1--2$"
+indices("hello", ".", "@#!") returns ".0.1.2.3.4@#!"
+</text>
+<init>
+public class StringIndices {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class StringIndices {
+
+    public static String indices(String s, String pre, String post) {
+        String result = "";
+        for (int i = 0; i < s.length(); i++) {
+            result += pre + i;
+        }
+        return result + post;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(indices("abc", "--", "$"));
+        System.out.println(indices("hello", ".", "@#!"));
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

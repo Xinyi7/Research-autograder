@@ -1,0 +1,19 @@
+public class DifferentDivisions {
+
+    // write your method here
+    public static String divisions(int x, int y){
+        int inteNum = x / y;
+        double doubNum = ((double)x) / ((double)y);
+        double doubX = (double)x;
+        double doubY = (double)y;
+        return "Look: " + x + " / " + y + " is " + inteNum + ", but " + doubX + " / " + doubY + " is " + doubNum;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(divisions(3,2));
+        System.out.println(divisions(4,5));
+        System.out.println(divisions(6,6));
+    }
+
+}

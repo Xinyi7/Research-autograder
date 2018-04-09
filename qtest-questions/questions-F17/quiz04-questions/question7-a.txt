@@ -1,0 +1,63 @@
+<question>
+<title>WrongCandies1</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+The following method is supposed to take a number of candies and a number of students, and return a message explaining the division of candies among students. Unfortunately it contains two mistakes. Identify the mistakes and fix them. Enough test cases to discover the mistakes are already written for you.
+</text>
+<init>
+public class WrongCandies {
+
+    public static String candies(int candies, int students) {
+        String answer = "";
+        if (candies < 0 && students < 0) {
+            answer = "There's no such thing as negative candies or negative students!";
+        } elsif (students == 0) {
+            answer = "There are no students. I keep all the " + candies + " candies.";
+        } else {
+            answer = "I give " + (candies / students) + " candies to each student, "
+                    + "and I keep " + (candies % students) + " candies.";
+        }
+        return answer;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(candies(-1, 19));
+        System.out.println(candies(19, -1));
+        System.out.println(candies(19, 0));
+        System.out.println(candies(-19, 0));
+        System.out.println(candies(19, 4));
+    }
+}
+</init>
+<answer>
+public class WrongCandies {
+
+    public static String candies(int candies, int students) {
+        String answer = "";
+        if (candies < 0 || students < 0) { // || instead of &&
+            answer = "There's no such thing as negative candies or negative students!";
+        } else if (students == 0) { // else if instead of elsif
+            answer = "There are no students. I keep all the " + candies + " candies.";
+        } else {
+            answer = "I give " + (candies / students) + " candies to each student, "
+                    + "and I keep " + (candies % students) + " candies.";
+        }
+        return answer;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(candies(-1, 19));
+        System.out.println(candies(19, -1));
+        System.out.println(candies(19, 0));
+        System.out.println(candies(-19, 0));
+        System.out.println(candies(19, 4));
+    }
+}
+</answer>
+<rubric>
+5 points: both mistakes are fixed
+3 points: only one mistake is fixed
+-3 points for each new mistake introduced
+</rubric>
+</question>

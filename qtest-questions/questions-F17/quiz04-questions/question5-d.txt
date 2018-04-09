@@ -1,0 +1,51 @@
+<question>
+<title>Highway</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Write a Java method named highway(double speed) that takes a positive floating point number representing the driving speed on a highway. The method returns a judgment for that speed: "annoying" if the speed is below 40 mph, "ok" if the speed is between 40 mph and 70 mph (extremes included), and "dangerous" if the speed is greater than 70 mph.
+</text>
+<init>
+public class Highway {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class Highway {
+
+    public static String highway(double speed) {
+        if (speed < 40) {
+            return "annoying";
+        } else if (speed > 70) {
+            return "dangerous";
+        } else {
+            return "ok";
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(highway(30)); // annoying
+        System.out.println(highway(40)); // ok
+        System.out.println(highway(55)); // ok
+        System.out.println(highway(70)); // ok
+        System.out.println(highway(90)); // dangerous
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>

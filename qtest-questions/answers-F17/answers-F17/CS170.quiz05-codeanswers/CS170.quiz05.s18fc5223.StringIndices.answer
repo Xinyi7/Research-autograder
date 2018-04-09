@@ -1,0 +1,19 @@
+public class StringIndices {
+    public static String indeces(String s, String pre, String post){
+        String result=pre;
+        for(int i=0; i<s.length()-1; i++){
+            result+=i+pre;
+        }
+        result+= (s.length()-1)+post;
+        return result;
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(indeces("abc", "--", "$"));
+        System.out.println(indeces("hello", ".", "@#!"));
+    }
+
+}

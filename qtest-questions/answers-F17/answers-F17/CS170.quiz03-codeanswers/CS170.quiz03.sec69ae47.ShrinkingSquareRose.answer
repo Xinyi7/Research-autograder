@@ -1,0 +1,11 @@
+public class ShrinkingSquareRose {
+
+    // Write your method here
+    public static void shrinkingSquarePose(Turtle t, double x, double delta, int n {
+        
+    }
+    public static void main(String[] args) {
+        // Test your method here
+    }
+
+}

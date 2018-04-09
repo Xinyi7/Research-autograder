@@ -1,0 +1,13 @@
+public class FeetAndInches {
+
+    public static String feet(int inch){
+        return inch + " is equals to " + inch/12 + " ft " +  inch%12 + " in";
+    }
+    
+    public static void main(String[] args) {
+       System.out.println(feet(68));
+       System.out.println(feet(36));
+       System.out.println(feet(7));
+    }
+
+}

@@ -1,0 +1,70 @@
+<question>
+<title>ArrowWheel2</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using turtle graphics, write a method arrowWheel(Turtle t, double x, int n) that draws a wheel of arrows like those in the figure. The parameter x is the length of the line of the arrows; the side of the small triangles is x / 5; n is the number of arrows. The example in the figure is the result of a call to arrowWheel(t, 70, 9) with Turtle t.
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAKAAAACgAQMAAACxAfVuAAAABlBMVEX///8AAABVwtN+AAACV0lE
+QVRIx92Wu07cQBSGz9iOd8Ja4IhmCwsmUYqU5FJsheZRWEHNMwxopfAYPAIlpdOlzCO43DIPECVh
+Lh6f8fwkWzMFEh8z+Jz/XIlexjlCUP4GsHozANjqHBbK7AGVhW9nt+wnxLuUlfameJ/CxsEPKfxi
+If1I4RWA4tbBi9TCwsHUIXEDIG0QXN3bnzMvqwsASwSd7xlUEbK/tPH3PoXCmaxYJCNsmU0jLCSC
+FZMkwiaFhXvyiekU4QZBw6w3Ab4WzHod4MEJ5fB0SBVxFnYEoOKwDVAjmAgtPSzT0HlYM7sdkUFX
+igEoPBgl9gEIUCVQeDg6HqJiLBSjRSEqDhZR9CooMtpvT11MMFr06ltQ5AmexXL5OMGY9fLQeEVa
+Jof0UZFPd8Wkz8l6hNEiOh5qr4iiKTs6cu8tXHEx104RlQZoEWBaSL2VSc8qwb43Og2Qe290ndeR
+1nIGVxa2lL1XWlH2Xpl+DrumvTFTpYQ6Xn6/jX7Hs1tvx9bD3i/uQsi3E1xufybR9VpfXoeYcXga
+vn7GYfknnF/85iPlNy+H/H8uvz4ENxjsumAnMTt3u9yjcilz36FKSE+oPIwRiiaMO8wQlEsw6/L8
+hJl83IOcl+egOnAdoYqrUG3CKob1XqPOAHtIiboN7kuog8Feh7si7J/Pd1rYk2H3hn0eToQ4O3oA
+D87p3/MITi4446Zp+BnNzUM0YZv/zGI4teF8h5sA3BmGffeQBsEW7TabffclvFmhHQxua9QhCDfA
+BdoVBdoq3Yez/XP/9fXZ7RfuyXCjPqKXe/4CTuB3X52KKNsAAAAASUVORK5CYII=
+</figure>
+<init>
+public class ArrowWheel {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class ArrowWheel {
+
+    public static void arrowWheel(Turtle t, double x, int n) {
+        for (int i = 0; i < n; i++) {
+            t.forward(x);
+            t.right(90);
+            t.backward(x / 10);
+            for (int j = 0; j < 3; j++) {
+                t.forward(x / 5);
+                t.right(120);
+            }
+            t.forward(x / 10);
+            t.left(90);
+            t.backward(x);
+            t.left(360.0 / n);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        arrowWheel(t, 70, 9);
+    }
+
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

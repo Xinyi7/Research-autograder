@@ -1,0 +1,29 @@
+public class Arrow {
+
+    // write your method here
+    public static void arrow(Turtle t, double length, int branches){
+        t.forward(length);
+        t.backward(length);
+        // draw the main stem and back to starting poiint
+        
+        for(int i=1; i<= branches; i++){
+            t.right(45);
+            t.backward(length/i);
+            t.forward(length/i);
+            t.left(90);
+            t.backward(length/i);
+            t.forward(length/i);
+            t.right(45); // facing forward
+            t.forward(length/branches); // not sure what is the distance between branches... this will be break if length % branches > 0
+        }
+        t.backward(length);
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle();
+        arrow(t, 150, 5);
+    }
+    
+}

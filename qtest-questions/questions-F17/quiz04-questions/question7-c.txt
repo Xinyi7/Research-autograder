@@ -1,0 +1,65 @@
+<question>
+<title>WrongMeetings1</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+The following method is supposed to take a number of students, a minimum length of a meeting, and a number of minutes available for student meetings, and return a message explaining the division of meeting time among students. Unfortunately it contains two mistakes. Identify the mistakes and fix them. Enough test cases to discover the mistakes are already written for you.
+</text>
+<init>
+public class WrongMeetings {
+
+    public static String meetings(int students, int minimum, int minutes) {
+        String answer = "";
+        if (students < 0 && minutes < 0) {
+            answer = "There's no such thing as negative students or negative minutes!";
+        } else if (students * minimum > minutes) {
+            answer = "There is not enough time for all student meetings. "; 
+            answer += "Professor must find at least " + (students * minimum + minutes) + " more minutes!";
+        } else {
+            answer = "Each student will have a " + (minutes / students) + " minute meeting with the professor, "
+                    + "and the professor will have " + (minutes % students) + " minutes of extra time.";
+        }
+        return answer;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(meetings(-2, 20, 50));
+        System.out.println(meetings(2, 20, 50));
+        System.out.println(meetings(2, 20, 30));
+        System.out.println(meetings(2, -1, 35));
+        System.out.println(meetings(5, 0, 4));
+    }
+}
+</init>
+<answer>
+public class WrongMeetings {
+
+    public static String meetings(int students, int minimum, int minutes) {
+        String answer = "";
+        if (students < 0 || minutes < 0) { // change && to ||
+            answer = "There's no such thing as negative students or negative minutes!";
+        } else if (students * minimum > minutes) {
+            answer = "There is not enough time for all student meetings. "; 
+            answer += "Professor must find at least " + (students * minimum - minutes) + " more minutes!"; // change + to -
+        } else {
+            answer = "Each student will have a " + (minutes / students) + " minute meeting with the professor, "
+                    + "and the professor will have " + (minutes % students) + " minutes of extra time.";
+        }
+        return answer;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(meetings(-2, 20, 50));
+        System.out.println(meetings(2, 20, 50));
+        System.out.println(meetings(2, 20, 30));
+        System.out.println(meetings(2, -1, 35));
+        System.out.println(meetings(5, 0, 4));
+    }
+}
+</answer>
+<rubric>
+5 points: both mistakes are fixed
+3 points: only one mistake is fixed
+-3 points for each new mistake introduced
+</rubric>
+</question>

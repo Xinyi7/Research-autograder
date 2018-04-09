@@ -1,0 +1,43 @@
+<question>
+<title>FeetAndInches</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Write a method named feet that takes an integer x representing a length in inches. The method returns a String containing a message explaining the conversion between inches and feet plus inches. For example, feet(68) will return "68 in equals 5 ft 8 in". Reminder: 1 ft = 12 in.
+</text>
+<init>
+public class FeetAndInches {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class FeetAndInches {
+
+    public static String feet(int x) {
+        return x + " inches equals " + x / 12 + " feet " + x % 12 + " inches";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(feet(68));
+    }
+
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

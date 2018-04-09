@@ -1,0 +1,15 @@
+public class ExpandString {
+
+       public static String expand(String s, int n){
+   String result = "";   
+for (int i = 1; i <= s.length() - 1; i++){
+  result = s.substring(i , i + 1);
+ }
+   return result;
+       }
+     
+    public static void main(String[] args) {
+        System.out.println(expand("hey", 3));
+    }
+
+}

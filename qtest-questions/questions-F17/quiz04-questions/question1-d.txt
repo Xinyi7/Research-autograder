@@ -1,0 +1,37 @@
+<question>
+<title>CupBottleGlass</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+        int cup = 2;
+        double bottle = 5.0;
+        String glass = "cup";
+        System.out.println(glass + "cup");
+        System.out.println(glass + cup);
+        System.out.println(glass + cup + cup);
+        System.out.println(bottle + cup + glass);
+        System.out.println(bottle * glass.length() + "glass".length());
+        for (int i = 8; i < 10; i++) {
+            cup = cup * cup;
+            System.out.println(cup);
+        }
+        for (int i = 0; i < 15; i += 5) {
+            cup += i;
+            System.out.println(glass + cup);
+        }
+</text>
+<answer>
+cupcup
+cup2
+cup22
+7.0cup
+20.0
+4
+16
+cup16
+cup21
+cup31
+</answer>
+</question>

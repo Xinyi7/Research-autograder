@@ -1,0 +1,15 @@
+public class DifferentDivisions {
+
+  public static String differentDivisions(int x, int y) {
+    String message;
+    message = ("Look: " + "x / y" + " is " + (x / y) + ", but " + (double)x + "/" + (double)y + " is " + (double)x / (double) y);
+    return message;
+    
+  }
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(differentDivisions(1, 2));
+    }
+
+}

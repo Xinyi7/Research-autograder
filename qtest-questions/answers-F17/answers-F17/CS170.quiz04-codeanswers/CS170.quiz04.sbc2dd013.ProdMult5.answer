@@ -1,0 +1,22 @@
+public class ProdMult5 {
+
+    public static int prodMult5(int start, int end){
+       int results = 1;
+       int i = start;
+       if(start%5!=0){
+          i+=(5-start%5);
+       }
+       for(int j=i;j<=end;j+=5){
+        results=results*j;
+       }
+       return results;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(prodMult5(5,15));
+        System.out.println(prodMult5(2,15));
+        System.out.println(prodMult5(0,15));
+        System.out.println(prodMult5(5,16));
+    }
+
+}

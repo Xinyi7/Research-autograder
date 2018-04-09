@@ -1,0 +1,22 @@
+public class FeetAndInches {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+
+    
+
+    }
+public static String feet(int x) {
+int foot = 12;
+return  x + "in equals"+ (x/foot) + "ft" + (x % foot)+ "in";
+
+
+
+    
+}
+
+
+
+}

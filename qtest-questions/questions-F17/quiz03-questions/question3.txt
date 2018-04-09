@@ -1,0 +1,85 @@
+<question>
+<title>WrongRainbow</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+The following program is supposed to n arcs to form a rainbow. The first arc has radius x, the second arc has raduis (x+y), the third arc has radius (x+2y), and so on. The current program is creating the correct sized arcs but not getting them to form a rainbow. Can you fix it?
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAU8AAACqAQMAAAAX/V80AAAABlBMVEX///8AAABVwtN+AAAEjUlE
+QVRYw+2YzW4bIRDHFxYlSI0cjjlUDY/gow9RwqP4EfwG4dH8KH6EHnOo6oaZgYVhWG/VU6XgZuXs
+/hbm4z8DzTR9ja/xf4+36/W8kTzjz+0xA/WyBX2pXtgy6aZpX9grtyfdMO2L8JI8VPX8sI7eDb4L
+4zBYQRjN0/2q/81vD2vow8qLbOxXzBFNVdePm8biio+/p/vrLWMNXH+myyVd9Bh9Spd3+PqcbFFx
+iB6TEbESw3EogFiLMOZlpKGbAJ2K8QOv5iYdes2r703k1Aj1OUg40tc4zlWd9u/jECiWn/SaGweg
+efS5uh0H4MgyMoiWXVJVIjIPxUqmPsdSh7JkAwl0vl7eP3KivYhGoDFI9/llN4gV6OUesvCLTLKD
+WOmlFYCDdhACg17lRnFCv/QgVsmwHf26I5sk1GECTnUbOsuCOcLtJQkH1FoQYzU3ernDfHkxVqbp
+EilyRgysxhieG4u0GFicYG7VosTAWjDLsK4dpcA6cPaJtYUwQCOTdkgLKalcs16m5+s1C9hJOQhF
+L8+f0rqS+VbKQUgumdLTLuiXkXIQ0wzJq0c0Av2ahRworpcL+hX7HGhYKS7t9wn9Cj1q0l1V6fV+
+IqeMkKwI+dlXHQyc0j2qmF48WOV61JFjM1OL7dPlyTHD1GL6dIWk/0YvRS092uklqyV0yar0MjVq
+8V2yfNHLssVACF2HhtxfPjfj35RAQ5axvMbcX9RH+gevQ1Rsl1dYKdn1mibG3qJEFO5O55yv/UT6
+cVwENq2FennE80OuTCuiWMn7ohaLy2suAUNpzHrZk7AMF4Er0pqXqJKwFFeLxSelFc4krE4EAU3w
+rbQjLs9RTzVfS5uEFTq1QMJV3Zn2MppMmGu9WCqBwKQVYV7DqsDgco4Ji0xoqkCLqKLucFyOjwGT
+7Vq9aJyXWuQrCivg+x2qFzRtbgdILaiNoQbn9ZDWH0sbigAaAcUGdaGTqcnLM9SUmplzVKlaTIva
+jLoc2TtqufSkRm2pmUPZuLFatITqWi8+VwsTrMvmL3p5whLQmJ4WdWjCXb3nIqjaIsB5q51aYwko
+rm0PH1vv/yqiBiN8OAo1c6z3PAENZd7lts9oYGig8gIX3uJEgoj0iKMBN4/p8fyO0YqAeoZGmlfj
+1nmmakHLAisthB/wqHWYMHeePhVaXHXlUErFmgLOUJXLFh/EXAL4Yaiq2jEe+7BaGlSB0qhs1XJA
+ciA5EdV5+55wb0TU1nWYIJPL1i5HCawWETW0fU9VtTBUwy2qRb8ce/JdAbVY0JRASy8P0bwh7wnr
+UEs2LYcKB25qjpoSlGWXshQ+DRMx1DVdx1SokVBXlSHmT0BRQTWaddGgOGeuxarnxySkIeoFVNeo
+61Cqi8/rAA01GhBVEhrqrS8MUU9PQt1G4JaINk3H/x3q19B6515F1SSiqka9hApLAdp5kBPYohQq
+1AZHg4DGHnVjVP8Najq5pQcP66ip0G9xM2pP29HddrSc7G+j5X/tG9DddnTlD2b8fL2bNqOnzejm
+9Se7ef3Jbl5/+rZ5/fU/r36Nr/Fv4w9fOODiu42YkwAAAABJRU5ErkJggg==
+</figure>
+<init>
+public class Rainbow {
+
+    public static void rainbow(Turtle t, int n, double x, double y) {
+        for(int i = 0; i < n ; i++) {
+            t.left(90);
+            for(int j = 0; j < 100 ; j++) { 
+                t.forward((2 * (x + i * y)) * Math.sin(Math.PI/200));
+                t.left(360.0/200);
+            }
+            t.forward((2 * (x + i * y)) * Math.sin(Math.PI/200));
+            t.left(90);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        rainbow(t, 7, 40, 15);
+    }    
+}
+</init>
+<answer>
+public class Rainbow {
+
+    public static void rainbow(Turtle t, int n, double x, double y) {
+        for(int i = 0; i < n ; i++) {
+            t.left(90);
+            for(int j = 0; j < 100 ; j++) { 
+                t.forward((2 * (x + i * y)) * Math.sin(Math.PI/200));
+                t.left(360.0/200);
+            }
+            t.forward((2 * (x + i * y)) * Math.sin(Math.PI/200));
+            t.left(90);
+            t.penup();
+            t.forward(2 * (x + i * y) + y);
+            t.pendown();
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        rainbow(t, 7, 40, 15);
+    }    
+}
+</answer>
+<rubric>
+-3 not completely correct but the output is more correct than the original one
+No credit if the program doesn't compile or crashes
+No credit if the output is the same or worse than the original one
+</rubric>
+</question>
+

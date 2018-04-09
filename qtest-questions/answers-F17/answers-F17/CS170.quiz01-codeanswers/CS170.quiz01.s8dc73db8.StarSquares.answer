@@ -1,0 +1,29 @@
+public class StarSquares {
+
+    // write your method here
+    public static void starSquares(Turtle t, double x) {
+        //to draw a line with a square at the end of it
+        for (int i = 0; i < 5; i++) {
+            t.forward(x);
+            t.right(74);
+
+            //to draw a square
+            for (int j = 0; i < 4; i++) {
+                t.forward(x / 5);
+                t.right(90);
+            }
+            
+
+            t.backward(x);
+            t.right(254);
+            
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle bob = new Turtle();
+        starSquares(bob, 100);
+    }
+
+}

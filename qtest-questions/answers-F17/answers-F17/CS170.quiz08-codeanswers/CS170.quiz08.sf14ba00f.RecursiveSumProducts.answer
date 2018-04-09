@@ -1,0 +1,12 @@
+public class RecursiveSumProducts {
+
+    // write your method here
+    public static int sumProducts(int[] x, int[] y, int n){
+        if (
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

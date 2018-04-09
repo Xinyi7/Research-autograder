@@ -1,0 +1,23 @@
+public class Dot {
+
+    // write your method here
+    public static String dot(String s, int n){
+       String result= "";
+       for (int i=0; i<s.length(); i++){
+        result += s.charAt(i);
+        for (int j=0; j<s.length(); j++){
+        if (s.charAt(i)== s.charAt(n))
+         { return ".";
+       }
+       }
+    }
+    return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+
+       System.out.println(dot("orange",2));
+    }
+
+}

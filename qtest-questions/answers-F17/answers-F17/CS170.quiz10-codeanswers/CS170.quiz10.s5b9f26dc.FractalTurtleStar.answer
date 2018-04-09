@@ -1,0 +1,27 @@
+public class FractalTurtleStar {
+
+    //f(t,150,3): 1 + 3 + 9 + 27 = 40
+    //f(t, 150, 4): 1 + 3 + 9 + 27 + 81 = 121
+    //f(t, 150, N): summation[1 + 3^n]   or    (1 + 3 + 3^2 + 3 ^ 3 . . . + 3^n)
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            for (int i = 0; i < 9; i++) { //repeat 9 times
+                t.forward(x);
+                if (i % 3 == 0) { // changed from 2 to 3
+                    f(t, x * 0.4, level - 1);
+                }
+                t.backward(x);
+                t.left(360.0 / 9); //changed angle
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 150, 4); //Changed to level 4
+    }
+}

@@ -1,0 +1,23 @@
+public class NiceVacation {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(vacation("beach", 2));
+        System.out.println(vacation("mountains", 5));
+        System.out.println(vacation("sleep", 0));
+        System.out.println(vacation("yay", 2));
+    }
+
+    public static String vacation(String s, int n) {
+        String result = "";
+        for (int pos = 0; pos < n; pos++) {
+            result += s.charAt(pos);
+        }
+        result += " nice " + s.charAt(n) + " vacation ";
+        for (int pos = n + 1; pos < s.length(); pos++) {
+            result += s.charAt(pos);
+        }
+        return result;
+    }
+}

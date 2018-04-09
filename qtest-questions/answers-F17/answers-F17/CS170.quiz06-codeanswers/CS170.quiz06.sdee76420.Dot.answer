@@ -1,0 +1,21 @@
+public class Dot {
+    public static String dot(String s, int k){
+        if(k<0){
+            return s;
+        }else if(k<= s.length()){
+        return s.substring(0,k)+"."+s.substring(k);
+        
+    }else{
+        return s;
+    }
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println( dot("orange",2));
+    }
+        // test your method here
+   
+
+}

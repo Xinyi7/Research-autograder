@@ -1,0 +1,28 @@
+public class FractalUmbrella {
+    // for levels of 2 it is called 10 times
+    // for a level of 4 it is called 82 times
+    // general is calles= 1+3**(n)
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(45+45/2.0);
+            for (int i = 0; i < 4; i++) {
+                t.forward(x);
+                t.left(180);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(45);
+            }
+            t.left(90+45/2.0);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 4);
+    }
+}

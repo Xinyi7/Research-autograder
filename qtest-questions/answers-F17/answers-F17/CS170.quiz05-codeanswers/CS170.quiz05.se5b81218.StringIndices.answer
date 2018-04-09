@@ -1,0 +1,25 @@
+public class StringIndices {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+System.out.println(indices("abc","--","$"));
+    System.out.println(indices("hello",".","@#!"));    
+    }
+
+
+    public static String indices(String s, String pre, String post){
+        String rts = "";
+        for(int i =0;i<s.length();i++){
+            
+           rts += pre + i; 
+            
+            
+            }
+        rts+=post;
+        return rts;
+        }
+
+
+}

@@ -1,0 +1,71 @@
+<question>
+<title>ArrowWheel1</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using turtle graphics, write a method arrowWheel(Turtle t, double x, int n) that draws a wheel of arrows like those in the figure. The parameter x is the length of the line of the arrows; the side of the small triangles is x / 5; n is the number of arrows. The example in the figure is the result of a call to arrowWheel(t, 70, 9) with Turtle t.
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAKoAAACqAQMAAAAHuEbBAAAABlBMVEX///8AAABVwtN+AAACmUlE
+QVRIx62XvW7UQBSFZ+zRrpFWwnRbLMFIPMCWWyA0EESVh1gk+mxLA06CQgNS6Kh4CCpKC+VB/Aib
+BtEFezy2x9fnJFjaKSzvJ+vuzJ1z/5Q69Moh1RhHdgo2GcQJxinGWQqx/U/c7CxPBN65Q5YSn7jn
+k2uBj5tTPpe2nZOi0R627vAjvMTYTPoa236ZQ/zGYXlIdYLxzkJsMVbZJJx2j6EWeqwLiI8CbZkO
+x2WO8CqUc9ThRCuB3S5NiHWHIy3jw2EdQazOpdyar0fYnWP2WvrK4cUziNOldKHDWSJdaHupSywi
+2fi9xwpiIaHI4wRjcZ/a4+04xdS4GEZfxXTrd7fmV95XehBVf7MAd/ube+9nDi/7nWXeVzVe9zuz
+AbYSJ92J/IaLHgdisL+8ryo86/HTyx4vevyoEXRU48BRD9Sm+WvTCsjjeYeDi5x5t+VmcJGVyY3H
+4iLnPqfIXFA2WAbmspGTDMzaSpqMLrK2UuFC4lXlq0GMNSuucTRO0qUyiRnjlboeCt5byX+ma1Cs
+tl9TGxyus3Jx1X71fWDlpn29DK3vf7RvZyH+ciq00Ogl3re/8nWo+4+3foWFRsc38OvFB2h796d9
+vQj3/flb+/opwI/fp+iUb8+QT+I8Qh5cKYP8jW+H3CW5eawToiqiQaxYpG8SDSR2SKSRuCRRnOGY
+JxkC5xOtCpR9SK6KvN9EZiN5UO1h1lQPcY4lGZnl77uyPakNpJKQukOqFKlppAKSekmqK6nFfeV+
+h+v8b9wsnN/fQ5COg/QnpJshvU/QKRU57Kte2Hu7MNKzTWr8SPdIek3SmR5jTLpeW2K8wXhxsP57
+lB5f4bmBTBlkJiETzLQx6M5ZKp00p5GpbtpoSOZLMo0eev0D/viExVhjumAAAAAASUVORK5CYII=
+</figure>
+<init>
+public class ArrowWheel {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class ArrowWheel {
+
+    public static void arrowWheel(Turtle t, double x, int n) {
+        for (int i = 0; i < n; i++) {
+            t.forward(x);
+            t.right(90);
+            t.backward(x / 10);
+            for (int j = 0; j < 3; j++) {
+                t.forward(x / 5);
+                t.left(120);
+            }
+            t.forward(x / 10);
+            t.left(90);
+            t.backward(x);
+            t.left(360.0 / n);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        arrowWheel(t, 70, 9);
+    }
+
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

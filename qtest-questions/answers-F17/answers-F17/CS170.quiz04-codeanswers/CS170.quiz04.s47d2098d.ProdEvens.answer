@@ -1,0 +1,23 @@
+public class ProdEvens {
+
+    // write your method here
+    public static int prodEvens(int a, int b) {
+        int result = 1;
+        
+        for (int i = a; i <= b; i++) {
+            if (i % 2 == 0) {
+                result *= i;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(prodEvens(1, 5));
+        System.out.println(prodEvens(2, 5));
+        System.out.println(prodEvens(2, 6));
+        System.out.println(prodEvens(0, 4));
+    }
+
+}

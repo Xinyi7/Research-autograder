@@ -1,0 +1,34 @@
+public class Arrow {
+
+    public static void arrow(Turtle t, double length, int branches){
+int x=1;
+    for(int i=1; i<branches + 1; i++){
+        x++;
+
+        t.left(135);
+        t.forward(length/x);
+        t.backward(length/x);
+        t.left(90);
+        t.forward(length/x);
+        t.backward(length/x);
+        t.left(135);
+        t.forward(length/x); //yes I know I should've used i, instead of x. my bad
+      
+       
+    }
+
+  for(int c = x; x > 0; x--){
+    x--;
+    t.backward(length/x);
+  }
+
+System.out.print(length);
+        
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+    arrow(t, 150, 5);
+    }
+    
+}

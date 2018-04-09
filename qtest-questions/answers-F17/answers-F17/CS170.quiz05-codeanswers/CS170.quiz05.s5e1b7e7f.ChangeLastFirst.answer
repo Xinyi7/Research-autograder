@@ -1,0 +1,14 @@
+public class ChangeLastFirst {
+    public static String (String s, String first) {
+        for (int i=0; i<n; i++) {
+            
+        }
+    }
+    
+    public static void main(String[] args) {
+        changeLastFirst("book", "c");
+        changeLastFirst("root", "palm");
+    }
+    return.result();
+
+}

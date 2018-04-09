@@ -1,0 +1,19 @@
+public class PigLatin {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(pigLatin("bhtaq"));
+    }
+    public static String pigLatin(String s){
+        String result = "";
+        for(int i = 1; i<s.length(); i++){
+            result += s.charAt(i);
+        }
+        result += s.charAt(0);
+        result += "a";
+        return result;
+    }
+
+}

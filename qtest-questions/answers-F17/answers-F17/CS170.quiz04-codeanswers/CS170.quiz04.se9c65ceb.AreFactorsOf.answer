@@ -1,0 +1,15 @@
+public class AreFactorsOf {
+    public static void main(String[] args) {
+       System.out.println(areFactorsOf (3,2,6)); // true 
+       System.out.println(areFactorsOf (5,7,9)); // false 
+       System.out.println(areFactorsOf (9,3,27)); // true 
+    }
+    public static boolean areFactorsOf (int a, int b, int c){
+        if (c%b == 0 && c%a ==0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+}

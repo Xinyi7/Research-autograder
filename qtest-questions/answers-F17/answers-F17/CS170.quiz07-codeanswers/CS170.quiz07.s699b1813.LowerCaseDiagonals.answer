@@ -1,0 +1,30 @@
+public class LowerCaseDiagonals {
+    // write your method here
+    public static String [][] lowerCaseDiagonals(String s){
+        int n = s.length();
+         String [][] result = new String [n][n];
+         for (int i = 0; i < n; i++) {
+            for (int j = 0; j < s[i].length; j++) {
+                result[i][j] = s.charAt(j);
+                
+    }
+         } return result;
+    }
+    public static void main(String[] args) {
+        //test your method here
+
+        printArray(lowerCaseDiagonals("DAYS"));
+    }
+
+    // prints a 2D array
+    public static void printArray(String[][] x) {
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[i].length; j++) {
+                System.out.print(x[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+}

@@ -1,0 +1,27 @@
+public class NoEvens {
+
+    // write your method here
+    public static Boolean noEvens(String[] x, int n)
+    {
+        if(n==0 || x.length<n) //TThe second part of the or statment takes care of third example where length of array does not match n
+        {
+            return true;
+        }
+        else
+        {
+            return (x[n-1].length()%2==1) && noEvens(x, n-1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+       String[] a= {"alpha", "beta", "lambda"};
+       String[] b= {"red", "green", "white"};
+       String[] c= {};
+
+       System.out.println(noEvens(a,3));
+       System.out.println(noEvens(b,3));
+       System.out.println(noEvens(c,3)); 
+    }
+
+}

@@ -1,0 +1,21 @@
+public class AllCharsExcept {
+    public static String allCharsExcept(String s, char c){
+        String a = "";
+        for(int i= 0; i < s.length(); i++){
+            if(s.charAt(i)!=c){
+                a += ""+s.charAt(i);
+            }
+        }
+        return a;
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        
+        System.out.println(allCharsExcept("bananas",'a'));
+        
+        // test your method here
+    }
+
+}

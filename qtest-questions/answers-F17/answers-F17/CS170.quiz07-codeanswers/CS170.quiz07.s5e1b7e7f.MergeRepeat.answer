@@ -1,0 +1,14 @@
+public class MergeRepeat {
+
+    public static String [] mergeRepeat(String[] s, int k) {
+        String result = '';
+        for (int i=0; i<s.length; i++){
+            return (s[i]*k);
+        }
+    }
+    
+    public static void main(String[] args) {
+        String [] x(mergeRepeat({"A", "BC"}, 3));
+    }
+
+}

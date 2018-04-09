@@ -1,0 +1,23 @@
+public class WrongCandies {
+
+    public static String candies(int candies, int students) {
+        String answer = "";
+        if (candies < 0 || students < 0) {
+            answer = "There's no such thing as negative candies or negative students!";
+        } else if (students == 0) {
+            answer = "There are no students. I keep all the " + candies + " candies.";
+        }else {
+        answer = "I give " + (candies / students) + " candies to each student, "
+                    + "and I keep " + (candies % students) + " candies.";
+        }
+        return answer;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(candies(-1, 19));
+        System.out.println(candies(19, -1));
+        System.out.println(candies(19, 0));
+        System.out.println(candies(-19, 0));
+        System.out.println(candies(19, 4));
+    }
+}

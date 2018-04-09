@@ -1,0 +1,63 @@
+<question>
+<title>ShrinkingArrow1</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using Java and turtle graphics, write a method named arrow(Turtle t, double length, int branches) that draws an arrow with shrinking branches like that in the figure. The parameter length is the size of the stem of the arrow; the parameter branches is the number of branch pairs. The first branch has the same length as the stem, the second pair length/2, the third length/3, and so on. The branches are rotated 45 degrees from the stem. The example in the figure is the result of arrow(t, 150, 5). Make sure you bring the turtle back to its initial position. 
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAQsAAADfAQMAAADbQ2ScAAAABlBMVEX///8AAABVwtN+AAABMUlE
+QVRYw+3YwW0CMRBG4bU1gG9xCXujhT26rBxd2pZCIZGSOwi9J0ikgMbnkRd9eDS/vSyvtYJLKpcU
+8aXJJYNLVi7pXNISJmESJmESJmF+CWYyzGCYlWE6wzSGCYapDFMS5j/ATIYZDLMyTGeYxjDBMJVh
+ioOpDFMEzGSYwTArw3SGubdT553a7U4AEwxTGaYImMkw4/VhTgxz2BEmPhEmzggTfSeYaBvBRJwI
+JuqyA0yU75v1db3LRrwRO/6WD/yrY8MDc7ig7lEcXm4B0Uji1ImzKzpA9JHoxmQxLI9NEjGPxFQT
+s1FMWDGnxbQXmYGTh8gvIgWJLCUSmch1Ih2KjMlJVeRdkZpF9hYJPln+luX5m7C4T4tbubjbixcC
+8c4gXiuSJVmSJVmSJVneYP0Amc1UWYl+NjYAAAAASUVORK5CYII=
+</figure>
+<init>
+public class Arrow {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+    
+}
+</init>
+<answer>
+public class Arrow {
+
+    public static void arrow(Turtle t, double length, int branches) {
+        for (int i = 0; i < branches; i++) {
+            t.left(45);
+            t.backward(length / (i + 1));
+            t.forward(length / (i + 1));
+            t.right(90);
+            t.backward(length / (i + 1));
+            t.forward(length / (i + 1));
+            t.left(45);
+            t.forward(length / branches);
+        }
+        t.backward(length);
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        arrow(t, 150, 5);
+    }
+    
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

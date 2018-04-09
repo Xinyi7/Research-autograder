@@ -1,0 +1,24 @@
+public class Dot {
+
+    // write your method here
+    public static String dot(String s, int k) {
+        String result = "";
+        if (k < s.length() && k > 0) {
+            result += s.substring(0, k) + "." + s.substring(k + 1);
+        } else {
+            result = s;
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(dot("orange", 2));
+        System.out.println(dot("whatever", 5));
+        System.out.println(dot("hey", 2));
+        System.out.println(dot("hey", -1));
+        System.out.println(dot("hey", 3));
+        System.out.println(dot("gabryelle", 4));
+    }
+
+}

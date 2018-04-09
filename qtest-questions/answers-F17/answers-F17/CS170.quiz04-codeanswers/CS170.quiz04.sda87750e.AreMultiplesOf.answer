@@ -1,0 +1,17 @@
+public class AreMultiplesOf {
+
+    public static boolean areMultiplesOf(int a, int b, int c) {
+        if(a % c == 0 && b % c == 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println(areMultiplesOf(10, 6, 2));
+        System.out.println(areMultiplesOf(10, 6, 3));
+        System.out.println(areMultiplesOf(9, 6, 3));
+        System.out.println(areMultiplesOf(20, 4, 4));
+    }
+
+}

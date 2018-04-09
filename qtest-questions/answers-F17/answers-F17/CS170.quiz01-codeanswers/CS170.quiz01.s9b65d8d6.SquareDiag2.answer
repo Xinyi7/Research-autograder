@@ -1,0 +1,16 @@
+public class SquareDiag {
+
+    // write your method here
+    SquareDiag(t, 50, 5)
+    t.forward(60)
+    t.right(90)
+    t.backward(120)
+    t.left(90)
+    
+    public static void main(String[] args) {
+        // test your method here
+    Turtle t = (double x, int n) 
+    
+    }
+
+}

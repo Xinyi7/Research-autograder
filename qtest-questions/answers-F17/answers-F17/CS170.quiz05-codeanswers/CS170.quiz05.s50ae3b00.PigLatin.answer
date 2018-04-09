@@ -1,0 +1,12 @@
+public class PigLatin {
+
+    public static String pigLatin(String s){
+        return s.substring(1) + s.charAt(0) + 'a';
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(pigLatin("hello"));
+        System.out.println(pigLatin("peaches"));
+    }
+
+}

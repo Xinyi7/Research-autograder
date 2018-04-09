@@ -1,0 +1,16 @@
+public class MergeRepeat {
+
+    
+    public static void main(String[] args) {
+        
+    }
+
+
+    public static String mergeRepeat(String[] s, int k){
+
+        int count = 0;
+        for(int i = 0; i<s.length - 1; i++){
+            count *= k;
+        }
+    } return count;
+}

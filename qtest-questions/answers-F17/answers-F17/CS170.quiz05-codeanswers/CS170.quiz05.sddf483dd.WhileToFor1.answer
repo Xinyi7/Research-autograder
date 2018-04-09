@@ -1,0 +1,15 @@
+public class WhileToFor {
+
+    public static void main(String[] args) {
+        String s = "WhileFor";
+        int a = 4;
+        int b = s.length() - 2;
+        for (int j=b; j>2; j-=2) {
+            System.out.println("b=" + j + ": "+ s.charAt(j));
+            a++;
+            for (int i=j; i>1; i-=3) {
+                System.out.println("i: " + i);
+            }
+        }
+    }
+}

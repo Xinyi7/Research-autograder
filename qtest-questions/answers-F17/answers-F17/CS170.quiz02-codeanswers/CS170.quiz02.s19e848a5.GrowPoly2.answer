@@ -1,0 +1,18 @@
+public class GrowPoly {
+  public static void GrowPoly(Turtle t, double x, int n, int m){
+   for(int i = 0; i < m; i++){
+    for(int o = 0; o < n + 1; n++){
+        t.forward(x + 10 * i);
+        t.left(180 - (n-2) * 180 / n);
+        }
+        t.right(15 + (180 - (n-2) * 180 / n));
+    } 
+  }
+  
+    // write your method here
+    
+    public static void main(String[] args) {
+        Turtle t=new Turtle();
+        GrowPoly(t, 20, 5, 7);// test your method here
+    }
+}  

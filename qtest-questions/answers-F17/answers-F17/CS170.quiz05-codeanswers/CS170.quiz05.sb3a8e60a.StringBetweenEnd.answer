@@ -1,0 +1,31 @@
+public class StringBetweenEnd {
+
+    // write your method here
+
+    public static String betweenEnd(String s, String between, String end) {
+        String result = "";
+        int length = s.length() - 1;
+        String s1 = "" + s.charAt(length); 
+        for (int i = 0; i < s.length() - 1; i++) {
+        if(s.length() == 1) {
+            result = "" + s.charAt(0);
+        } else {
+            result += "" + s.charAt(i) + between;
+        }
+        
+        }
+        return result + s1 + end;
+       
+
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(betweenEnd("abc", "--", "$"));
+        System.out.println(betweenEnd("a", "--", "$"));
+        System.out.println(betweenEnd("hello", ",", "@#!"));
+        
+    }
+
+}

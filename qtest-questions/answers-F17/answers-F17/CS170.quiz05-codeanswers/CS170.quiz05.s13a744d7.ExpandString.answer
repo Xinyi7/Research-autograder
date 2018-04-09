@@ -1,0 +1,22 @@
+public class ExpandString {
+
+    // write your method here
+    public static String ExpandString(String s, int n) {
+        String result = "";
+        for (int i=0; i<n;i++) {
+            char c=s.charAt(i);
+            result+=c;
+            
+            }
+            result=result+s.substring(s.length()-1);
+            return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    System.out.println(ExpandString("hey",3));
+    System.out.println(ExpandString("nothing",0));
+    System.out.println(ExpandString("hello",2));
+    }
+
+}

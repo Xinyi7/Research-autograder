@@ -1,0 +1,19 @@
+public class RecursiveHasChar {
+
+    public static boolean hasChar(String s, char c) {
+        if (s == "") {
+            return false;
+        } else {
+            return s.charAt(s.length() -1) == c || hasChar(s.substring(0, s.length() - 1), c);
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(hasChar("abcd", 'a'));
+        System.out.println(hasChar("abcd", 'c'));
+        System.out.println(hasChar("abcd", 'e'));
+        System.out.println(hasChar("a", 'a'));
+        System.out.println(hasChar("", 'a'));
+    }
+
+}

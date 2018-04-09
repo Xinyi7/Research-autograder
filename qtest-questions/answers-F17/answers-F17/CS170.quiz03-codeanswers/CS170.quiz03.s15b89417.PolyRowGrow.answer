@@ -1,0 +1,22 @@
+public class PolyRowGrow {
+
+    // write your method here
+    public static void polyRowGrow(Turtle y, int n, int s, double x) {
+       for (int i = 0; i < n; i++) {
+         for (int j = 0; j < (s+(2*i)); j++) {
+           y. forward(x);
+           y. left(360.0/(s+(2*i)));
+         }
+       y.penup();
+       y.forward(4*x);
+       y.pendown();  
+       }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle();
+        polyRowGrow(t, 4, 5, 20);
+    }
+
+}

@@ -1,0 +1,35 @@
+public class SquareTriFractal {
+/*
+ *  1 + 4^1 + 4^2 == 21
+ *  1 + 4^1 + 4^2 + 4^3 == 85
+ *  4^0 + ....4^n
+ * 
+ * 
+ */
+
+
+    public static void f(Turtle t, double x, int level) {
+        
+        if (level < 1) {
+            return;
+        } else {
+            t.penup();
+            t.backward(x * 0.5);
+            t.right(60);
+            t.pendown();
+            for (int i = 0; i < 3; i++) {
+                t.forward(x);
+                t.left(120);
+                f(t, x * 0.4, level - 1);
+            }
+            //t.penup();
+            
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 200, 5);
+    }
+}

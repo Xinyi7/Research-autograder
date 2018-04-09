@@ -1,0 +1,24 @@
+public class Grid {
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        for (int i = 0; i < 3; i++) { // i is the number of rows of squares. We want 3, not 2
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 4; k++) {
+                    t.forward(50);
+                    t.left(90); // Must turn 90 deg, not 80 deg.
+                }
+                t.penup();
+                t.forward(50);
+                t.pendown();
+            }
+            t.penup();
+            t.backward(150);
+            t.left(90);
+            t.forward(100);
+            t.right(180);
+            t.pendown();
+        }
+    }
+
+}

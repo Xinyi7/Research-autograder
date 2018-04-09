@@ -1,0 +1,52 @@
+<question>
+<title>EvenStrings</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Write a Java method evenStrings(String s1, String s2) that takes two strings s1 and s2 and returns the boolean true if s1 and s2 both contain an even number of characters, and s1 and s2 have the same length; false otherwise.
+
+Examples:
+evenStrings("blue", "pink") returns true
+evenStrings("hey", "you") returns false
+evenStrings("banana", "pear") returns false
+</text>
+<init>
+public class EvenStrings {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class EvenStrings {
+
+    public static boolean evenStrings(String s1, String s2) {
+        if (s1.length() == s2.length() && s1.length() % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(evenStrings("blue", "pink")); // true
+        System.out.println(evenStrings("hey", "you")); // false
+        System.out.println(evenStrings("banana", "pear")); // false
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>

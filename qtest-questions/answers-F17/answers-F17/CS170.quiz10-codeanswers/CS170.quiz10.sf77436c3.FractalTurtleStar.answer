@@ -1,0 +1,25 @@
+public class FractalTurtleStar {
+//When you call f(t,150,3) there are 13 calls to f(...) made. 
+//for f(t,150,4) there are 16 calls made. 
+//for f(t,140, N) there are 1+3*(N+1) calls to f(...) made. 
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            for (int i = 0; i < 18; i++) {
+                t.forward(x);
+                if (i % 6 == 0) {
+                    f(t, x * 0.4, level - 1);
+                }
+                t.backward(x);
+                t.left(360.0 / 9);
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 150, 2);
+    }
+}

@@ -1,0 +1,30 @@
+public class FractalUmbrella {
+//9 calls + 1 
+//3*3*3*3 + 1
+//the general function is 3^N (not counting the original call) + 1 (the original call)
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(180/4);
+            for (int i = 0; i < 4; i++) {
+                t.forward(x);
+                t.left(180);
+                //calls again each time, each level >0 generates another call 3 times
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(180/4);
+            }
+            t.left(90);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 4);
+    }
+}

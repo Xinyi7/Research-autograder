@@ -1,0 +1,20 @@
+public class ProdEvens {
+
+    // write your method here
+    public static int proEvens(int a, int b){
+        int sum=0;
+        for (int i=a; i<=b; i++){
+            if (i%2==0){
+                sum+= i
+            }
+        }
+        return sum;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(proEvens(int 5, int 10));
+     
+    }
+
+}

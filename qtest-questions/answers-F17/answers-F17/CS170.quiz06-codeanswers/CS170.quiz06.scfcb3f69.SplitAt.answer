@@ -1,0 +1,33 @@
+public class SplitAt {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(splitAt("apple", 2));
+        System.out.println(splitAt("apple", 0));
+        System.out.println(splitAt("apple", 4));
+        System.out.println(splitAt("apple", 5));
+        printArray(splitAt("apple", 5));
+        
+    }
+
+    public static String[] splitAt(String s, int n) {
+        String[] result = new String[2];
+        for (int pos = 0; pos < n; pos++) {
+            result[0] += s.charAt(pos);
+        }
+        for (int pos = n; pos < s.length(); pos++) {
+            result[1] += s.charAt(pos);
+        }
+        return result;
+    }
+
+    public static void printArray(String[] x) {
+        String result = "{";
+        for (int i = 0; i < x.length - 1; i++) {
+            result += "\"" + x[i] + "\", ";
+        }
+        result += x[x.length - 1] + "\'}";
+        System.out.println(result);
+    }
+}

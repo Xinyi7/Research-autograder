@@ -1,0 +1,15 @@
+public class StringStartBetween {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+    public static String startBetween(String s, String start, String between){
+        int n= 0;
+        int i = 0;
+        System.out.print(start);
+        for(i = s.charAt(n))
+    }
+}

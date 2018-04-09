@@ -1,0 +1,25 @@
+public class NoEvens {
+
+    // write your method here
+    public static boolean noEvens(String[] x, int n) {
+        if (n == 0 || x.length == 0) {
+            return false;
+        } else {
+            if (x[n-1].length() % 2 == 0) {
+                return true && noEvens(x, (n-1));
+            }
+            else {
+                return noEvens(x, (n-1));
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] a = {"alpha", "beta", "lambda"};
+        String[] b = {"red", "green", "white"};
+        System.out.println(noEvens(a, 3)); // false
+        System.out.println(noEvens(b, 3)); // true
+    }
+
+}

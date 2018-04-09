@@ -1,0 +1,128 @@
+/* first class*/
+public class Main {
+    public static void main(String[] args){
+        Player p1 = new Player("Poome");
+        Player p2 = new Player("Pat");
+        Game g = new Game(); 
+        g.play(p1,p2,10);
+
+        if (p1.getWins() > p2.getWins()) {
+            System.out.println(p1.getName() + " wins!");
+        } else if (p2.getWins() > p1.getWins()) {
+            System.out.println(p2.getName() + " wins!");
+        } else {
+            System.out.println("Tie game!");
+        }
+    }
+}
+
+/* second class*/
+class Die {
+
+    /**
+     * @return a random number between 1 and 6 inclusive   
+     */ 
+    public int roll() {
+        int n = Math.random(1,6);
+        return n;
+    }
+}
+
+/* third class*/
+class Player {
+    private String name;
+    private int wins;
+
+    /**
+     * creates a new player. 
+     * @param name - the name of the player
+     * and initializes wins to zero.    
+     */
+    public Player(String name){
+        // to be implemented
+        String n = name;
+        this.win = 0;
+    }
+
+    /**
+     * increases wins by one.   
+     */ 
+    public void recordWin(){
+        // to be implemented
+        Player.win += 1;
+        return win;
+    }
+
+    /**
+     * sets win to zero.   
+     */ 
+    public void resetWins() {
+        // to be implemented 
+        Player.win = 0;
+        return win;
+    }
+
+
+    /**
+     * @return the player's name   
+     */ 
+    public String getName() {
+        // to be implemented
+        return n;
+    }
+
+    /**
+     * @return the number of wins the player has   
+     */ 
+    public int getWins() {
+        // to be implemented
+        return wins;
+    }
+}
+
+/* fourth class*/
+class Game {
+    private Die die;
+
+    /**
+     * creates a new game. 
+     * initializes die with a new Die.    
+     */
+    Game g = new Game;
+    die = new Die;
+     
+    public Game() {
+        // to be implemented
+        }
+    }
+
+    /**
+     * Plays a game. 
+     * @param player1 - the first player
+     * @param player2 - the second player
+     * @param rounds - the number of rounds in this game
+     * Note: the game begins by resetting each player's wins;
+     * in each round, 
+     *      the roll of a die for player1 is recorded,
+     *      the roll of a die for player2 is recorded,
+     *      if the result of player1's roll is higher than player2's result
+     *          player1 records a win,
+     *      if the result of player2's roll is higher than player1's result
+     *          player2 records a win,
+     *      otherwise, nothing happens.
+     */
+    public void play(Player player1, Player player2, int rounds) {
+        // to be implemented
+                player1.resetwins;
+                player2.resetwins;
+                for (int i = 0; i < rounds; i++){
+                    if ( player1.die > player2.die){
+                        player1.recordwin;
+                    }else if ( player2.die > player1.die){
+                        player2.recordwin;
+                    }else{
+                    }
+                }
+    }
+    }
+}

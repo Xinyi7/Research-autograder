@@ -1,0 +1,22 @@
+public class FeetAndInches {
+
+    // write your method here
+    public static String feet(int inches){
+        int feet;
+        int in;
+        if(inches/12 > 0){
+            feet = inches/12;
+            in = inches - feet*12;
+            return inches + " in equals " + feet + " ft " + in + " in";
+        }
+        else{
+        return inches + "in " + "is" + inches + " in";    
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(feet(68));
+    }
+
+}

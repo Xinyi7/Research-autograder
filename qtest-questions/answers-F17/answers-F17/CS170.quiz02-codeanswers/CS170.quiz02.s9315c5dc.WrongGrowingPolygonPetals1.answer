@@ -1,0 +1,22 @@
+public class GrowingPolygonPetals {
+
+    public static void f(Turtle t, int a) {//draws a polygon with "a" sides
+        for (int i = 0; i < a; i++) {
+            t.forward(50);
+            t.right(360.0/a);
+        }
+    }
+
+    public static void g(Turtle t, int a){
+        for (int i = 0; i < a; i++) {
+            f(t, 3 + i);//add 3 not 4 because you want to start with triangle
+            t.forward(50);
+            t.left(360.0/a);//supposed to turn left not right
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        g(t, 6); //call 6 because thats how many polygons are in the flower
+    }
+}

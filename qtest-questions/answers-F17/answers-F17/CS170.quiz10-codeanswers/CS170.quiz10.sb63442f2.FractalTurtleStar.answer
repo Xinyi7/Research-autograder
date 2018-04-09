@@ -1,0 +1,28 @@
+// f(t, 150, 3) calls the method 1 + 15 + 15 + 15 times = 46
+// f(t, 150, 4) calls the method 1 + 15 + 15 + 15 + 15 times = 61
+// f(t, 150, N) calls the method 1 + 15 * N times
+public class FractalTurtleStar {
+
+    public static void f(Turtle t, double x, int level) {
+        int k = 0;
+        if (level == 0) {
+            return;
+        } else {
+            for (int i = 0; i < 9; i++) {
+                t.forward(x);
+                if (i== (3 * k)) { // I know this is supposed to draw every time i = 0, 3, or 6
+                    f(t, x * 0.4, level - 1);
+                    k++;
+                }
+                t.backward(x);
+                t.left(360.0 / 9);
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 150, 3);
+    }
+}

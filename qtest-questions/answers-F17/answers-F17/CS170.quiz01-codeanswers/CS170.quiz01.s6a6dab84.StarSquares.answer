@@ -1,0 +1,33 @@
+public class StarSquares {
+
+public static void starSquares( Turtle t, double x){
+Square(x/5);
+t.forward(x);
+t.right(144);
+Square(x/5);
+t.forward(x);
+t.right(144);
+Square(x/5);
+
+    
+}
+
+public static void Square(Turtle t, double x){
+
+t.forward(x/5);
+t.left(90);
+t.forward(x/5);
+t.left(90);
+t.forward(x/5);
+t.left(90);
+t.forward(x/5);
+t.left(90);
+
+
+}
+
+    public static void main(String[] args) {
+        Square(t,50);
+    }
+
+}

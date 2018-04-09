@@ -1,0 +1,22 @@
+public class NumStartingWith {
+    public static int numStartingWith(String[] x, char c){
+        int count = 0;
+         int j = 0;
+        for(int i=0;i<x.length;i++){
+            String y = x[j];
+            if(y.charAt(0)==c){count++;}
+            j++;
+        }
+        return count;
+    }
+
+   
+    
+    public static void main(String[] args) {
+        String[] test = {"hello", "", "wow", "hey"};
+        System.out.println(numStartingWith(test, 'h'));
+        System.out.println(numStartingWith(test, 'w'));
+        System.out.println(numStartingWith(test, 'a'));
+    }
+
+}

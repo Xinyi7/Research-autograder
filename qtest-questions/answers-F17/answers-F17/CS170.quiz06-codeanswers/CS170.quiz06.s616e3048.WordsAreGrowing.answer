@@ -1,0 +1,23 @@
+public class WordsAreGrowing {
+    public static Boolean wordsAreGrowing(String[] x){
+        String a = x[0];
+        Boolean result = true;
+        for (int i = 1; i < x.length; i ++){
+            if (x[i - 1].length() >= x[i].length()){
+                a = x[i];
+            }
+        }
+        if (a != x[0]){
+            result = false;
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        String[] x1 = {"list", "of", "words"};
+        String[] x2 = {"a"};
+        String[] x3 = {"a", "b"};
+        String[] x4 = {"a", "aa", "aaaa"};
+        System.out.println(wordsAreGrowing(x3));
+    }
+
+}

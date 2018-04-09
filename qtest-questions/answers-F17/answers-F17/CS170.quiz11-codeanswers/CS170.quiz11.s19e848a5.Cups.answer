@@ -1,0 +1,197 @@
+public class Main {
+    public static void main (String[] args){
+     Cup c1 = new CoffeeCup(300, 250, 30);
+     System.out.println(c1.takeOneSip());
+     System.out.println(c1.toString());
+     Cup c2 = new TeaCup(300, 20, 30);
+     System.out.println(c2.takeOneSip());
+     System.out.println(c2.toString());
+     c2.addLiquid(200);
+     System.out.println(c2.takeOneSip());
+     System.out.println(c2.toString());
+     Cup c3 = new EspressoCup(20, 10, 20);
+     System.out.println(c3.toString());
+     System.out.println(c3.takeOneSip());
+     System.out.println(c3.toString());
+     Cup c4 = new EspressoCup(20, 10, 5);
+     System.out.println(c4.toString());
+     System.out.println(c4.takeOneSip());
+     System.out.println(c4.toString());
+     
+     
+     // Test your classes and methods here
+        // Example of object creation:
+        // Cup c1 = new CoffeeCup(300, 250, 30);
+
+    }
+}
+
+// Cup abstract class: add what is missing based on the given diagram
+abstract class Cup {
+    // attributes
+    protected double cap; //add visibility modifier here
+    protected double volume; //add visibility modifier here
+
+    /**
+     * @param amount is the amount of liquid to be added
+     * increases volume by amount and 
+     * @return true if there is room in the cup
+     * @return false otherwise
+     */
+    public boolean addLiquid(double amount) {
+        if (volume + amount <= cap) {
+            volume += amount;
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    /**
+     * @return the amount of liquid released
+     */
+    public abstract double takeOneSip();
+
+}
+
+
+// CoffeeCup class: add what is missing based on the diagram given
+class CoffeeCup extends Cup{
+    // attributes
+    private double sipsize; //add visibility modifier here
+
+    // Constructor
+    /**
+     * creates a new coffee cup.
+     * @param c - the capacity of the cup
+     * @param v - the volume of liquid in the cup
+     * @param s - the size (volume) of a sip
+     */
+    public CoffeeCup(double c, double v, double s) {
+     //super.cap = c;
+     super.cap = c;
+     super.volume = v;
+     sipsize = s;// to be implemented
+    }
+
+    /**
+     * If there is not enough liquid in the cup to release a sip,
+     * @return zero. (No one wants to drink coffee grounds!)
+     * If volume is at least sipsize, reduce the volume by sipsize, and
+     * @return the amount of liquid released
+     */
+    public double takeOneSip() {
+        // to be implemented
+       if(sipsize > volume){ 
+         return 0;
+       } else {
+         volume -= sipsize;
+         return sipsize;
+       }
+      
+    }
+
+    /**
+     * 
+     * @return current cup volume information in the following format:
+     * This cup contains volume ml of coffee.
+     */
+    public String toString() {
+        // to be implemented
+        return "This cup contains " + volume + " ml of coffee";
+    }
+}
+
+// TeaCup class: add what is missing based on the diagram given
+class TeaCup extends Cup{
+    // attributes
+    private double sipsize; //add visibility modifier here
+
+    // Constructor
+    /**
+     * creates a new tea cup.
+     * @param c - the capacity of the cup
+     * @param v - the volume of liquid in the cup
+     * @param s - the size (volume) of a sip
+     */
+    public TeaCup(double c, double v, double s) {
+     super.cap = c;
+     super.volume = v;
+     sipsize = s;// to be implemented
+    }
+
+    /**
+     * If there is not enough liquid in the cup to release a sip,
+     * @return zero. (No one wants to drink tea leaves!)
+     * If volume is at least sipsize, reduce the volume by sipsize, and
+     * @return the amount of liquid released.
+     */
+    public double takeOneSip() {
+        if(sipsize > volume){ 
+         return 0;
+       } else {
+         volume -= sipsize;
+         return sipsize;
+       }
+       // to be implemented
+    }
+
+    /**
+     * 
+     * @return current cup volume information in the following format:
+     * This cup contains volume ml of tea.
+     */
+    public String toString() {
+        // to be implemented
+        return "This cup contains " + volume + " ml of tea."; 
+    }
+}
+
+// EspressoCup class: add what is missing based on the diagram given
+class EspressoCup extends Cup{
+    // attributes
+    private double sipsize; //add visibility modifier here
+
+    // Constructor
+    /**
+     * creates a new espresso cup. 
+     * @param c - the capacity of the cup
+     * @param v - the volume of liquid in the cup
+     * @param s - the size (volume) of a sip
+     */
+    public EspressoCup(double c, double v, double s) {
+       super.cap = c;
+       super.volume = v;
+       sipsize = s;// to be implemented
+    }
+
+    /**
+     * If there is not enough liquid in the cup to release a sip of sipsize,
+     * set the volume to zero and release the available liquid.
+     * If volume is at least sipsize, reduce the volume by sipsize
+     * and release sipsize. 
+     * @return the amount of liquid released.
+     */
+    public double takeOneSip() {
+        double drinkamount = 0; // to be implemented
+        if(sipsize > volume){ 
+         drinkamount = volume;
+         volume = 0;
+       } else {
+         drinkamount = sipsize;
+         volume -= sipsize;
+       }
+      return drinkamount;
+    }
+
+    /**
+     * 
+     * @return current cup volume information in the following format:
+     * This cup contains volume ml of espresso.
+     */
+    public String toString() {
+        // to be implemented
+        return "This cup contains " + volume + " ml of espresso"; 
+    }
+}

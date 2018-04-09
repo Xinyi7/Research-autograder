@@ -1,0 +1,39 @@
+public class LowerCaseDiagonals {
+    // write your method here
+    public static char[][] lowerCaseDiagonals (String s) {
+        char[][] result = new char[s.length()][s.length()];
+        for(int row = 0; row < s.length(); row++) {
+            for(int col = 0; col < s.length(); col++) {
+                if(row == col) {
+                    String s1 = s.toLowerCase();
+                    result[row][col] = s1.charAt(col);
+                } else if(row+col==s.length()-1) {
+                    String s1 = s.toLowerCase();
+                    result[row][col] = s1.charAt(col);
+                } else {
+                     String s1 = s.toUpperCase();
+                    result[row][col] = s1.charAt(col);
+                }
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        //test your method here
+        printArray(lowerCaseDiagonals("DAYS"));
+        printArray(lowerCaseDiagonals("weeks"));
+    }
+
+    // prints a 2D array
+    public static void printArray(char[][] x) {
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[i].length; j++) {
+                System.out.print(x[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+}

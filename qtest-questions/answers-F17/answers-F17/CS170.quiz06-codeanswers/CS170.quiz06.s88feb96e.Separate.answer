@@ -1,0 +1,15 @@
+public class Separate {
+    // write your method here
+    public static String separate (String s, int n) {
+        return s.substring(0, n) + "-" + s.substring(n, n + 1) + "-" + s.substring(n + 1);
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(separate("orange", 2)); //or-a-nge
+        System.out.println(separate("whatever", 5)); //whate-v-er
+        System.out.println(separate("hey", 0)); //-h-ey
+        System.out.println(separate("hey", 2)); //he-y-
+    }
+
+}

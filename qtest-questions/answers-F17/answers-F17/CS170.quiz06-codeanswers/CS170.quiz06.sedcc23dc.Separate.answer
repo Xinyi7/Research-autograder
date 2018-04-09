@@ -1,0 +1,19 @@
+public class Separate {
+
+    public static String separate(String s, int n) {
+        String result = "";
+        for(int i = 0; i < n; i++) {
+            result += s.charAt(i);
+        }
+        result += "-" + s.charAt(n) + "-";
+        for(int k = n + 1; k < s.length(); k++) {
+            result += s.charAt(k);
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(separate("orange", 2));
+    }
+
+}

@@ -1,0 +1,19 @@
+public class StringStartBetween {
+
+    public static String startBetween(String s, String start, String between) {
+        String whoop = s.substring(0);
+        for (int i = 1; i < 1; i++) {
+            whoop += between + s.substring(i);
+        }
+        String result = start + whoop;
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(startBetween("abc", "$", "--"));
+     //   System.out.pringln(startBetween());
+     //   System.out.pringln(startBetween());
+     //   System.out.pringln(startBetween());
+    }
+
+}

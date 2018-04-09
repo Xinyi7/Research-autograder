@@ -1,0 +1,16 @@
+public class WordsAreShrinking {
+
+    // write your method here
+    public static boolean wordsAreShrinking(String[] x){
+        boolean
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"list", "of", "words"};
+        String[] x2 = {"a"};
+        String[] x3 = {"a", "b"};
+        String[] x4 = {"aaaa", "aa", "a"};
+    }
+
+}

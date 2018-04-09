@@ -1,0 +1,15 @@
+public class DifferentDivisions {
+
+    // write your method here
+    public static String divisions(int x, int y){
+        int a = x/y;
+        double b=1.0*x/y;
+        String result = "Look : "+x+" / "+y+" is "+a+", but "+(double)x+" / "+(double)y+" is "+b;
+        return result;
+    }
+    public static void main(String[] args) {
+        System.out.println(divisions(3,2));
+        // test your method here
+    }
+
+}

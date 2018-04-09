@@ -1,0 +1,31 @@
+// 6, 9, (6 + 3*level - 2)
+public class FractalPath {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.forward(x / 2);
+            t.right(90);
+            t.forward(x / 2);
+            t.right(90);
+            t.forward(x);
+            t.left(90);
+            f(t, x * 0.75, level - 1);
+            t.p
+            t.right(90);
+            t.backward(x);
+            t.left(90);
+            t. backward(x / 2);
+            t.left(90);
+            t.backward(x / 2);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(20);
+        f(t, 180, 13);
+        t.hideturtle();
+    }
+}

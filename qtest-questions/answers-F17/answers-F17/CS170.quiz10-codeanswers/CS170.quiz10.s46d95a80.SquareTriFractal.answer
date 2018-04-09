@@ -1,0 +1,30 @@
+public class SquareTriFractal {
+// call to f  with level 2 would draw (1 (4^0) + 4(4^1))5 squares
+//call to f with level 3 would draw (1 + 4 + 16) 21 squares
+// call to f with level N would draw (1 + 4 + 16(4^3-1) + .... + 4^level N-2 + 4^levl N-1)
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.penup();
+            t.backward(x * 0.5);
+            t.pendown();
+            t.left(30);
+            for (int i = 0; i < 3; i++) {
+                t.forward(x);
+                t.right(120);
+                f(t, x * 0.4, level - 1);
+            }
+            t.penup();
+            t.right(30);
+            t.forward(x * 0.5);
+            t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 200, 5);
+    }
+}

@@ -1,0 +1,25 @@
+public class ShrinkingOctagons {
+
+    // Write your method here
+    //this writes the directions for command shrinkingOctagons( turtle, length variable (x), number (n))
+    public static void shrinkingOctagons(Turtle t, double x, int n){
+        for(int i=1; i<=n; i++){ //this repeats the drawing of the octagons n number of times
+            for(int j=0; j<8; j++){ //this will draw an octagon of length x/(number of rectangle or integer i)
+                t.forward(x/i);
+                t.left(360.0/8);
+            }
+            t.penup();
+            t.forward(2 * (x/i)); //this will make a space between the 2 octagons of equal length to the octagon just completed
+            t.pendown();
+        }
+    }
+    public static void main(String[] args) {
+        // Test your method here
+        Turtle t = new Turtle();
+        t.delay(10);
+        shrinkingOctagons(t, 100, 5);
+        //shrinkingOctagons(t, 100, 10);
+        //shrinkingOctagons(t, 135, 7);
+    }
+
+}

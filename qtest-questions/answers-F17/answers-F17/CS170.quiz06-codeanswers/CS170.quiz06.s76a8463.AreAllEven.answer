@@ -1,0 +1,17 @@
+public class AreAllEven {
+    // write your method here
+    public static boolean AreAllEven(String[] x) {
+        if (x.length()%2=0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"andy", "dave", "carl"}; //returns true
+        String[] x2 = {"eric", "francis", "gary"}; //returns false
+    }
+
+}

@@ -1,0 +1,52 @@
+<question>
+<title>StringStartBetween</title>
+<type>JavaCode</type>
+<points>7</points>
+<text>
+Write a method startBetween(String s, String start, String between) that takes three nonempty strings: s, start, and between. The method returns a string starting with start followed by all the characters of s in the same order, but with the between string inbetween each consecutive pair of characters of s.
+
+Examples:
+startBetween("abc", "$", "--") returns "$a--b--c"
+startBetween("a", "$", "--") returns "$a"
+startBetween("hello", "@#!", ".") returns "@#!h.e.l.l.o"
+</text>
+<init>
+public class StringStartBetween {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class StringStartBetween {
+
+    public static String startBetween(String s, String start, String between) {
+        String result = s.substring(0,1);
+        for (int i = 1; i < s.length(); i++) {
+            result += between + s.charAt(i);
+        }
+        return start + result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(startBetween("abc", "$", "--"));
+        System.out.println(startBetween("a", "$", "--"));
+        System.out.println(startBetween("hello", "@#!", "."));
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>

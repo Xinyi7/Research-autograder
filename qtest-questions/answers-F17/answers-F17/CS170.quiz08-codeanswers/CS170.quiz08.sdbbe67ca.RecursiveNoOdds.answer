@@ -1,0 +1,27 @@
+public class NoOdds {
+
+    // write your method here
+    public static Boolean noOdds(String[] x, int n){
+       boolean isEven = true; 
+        if(n==0) {
+            return true; 
+        } else if (x[n-1].length() % 2 != 0) {
+            return false;
+
+        } else {
+            return noOdds(x, n-2);
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+
+        String[] x1= new String[3];
+        x1[0] = "alpha"; 
+        x1[1] = "beta";
+        x1[2] = "lambda";
+        
+        System.out.println(noOdds(x1, 1));
+    }
+
+}

@@ -1,0 +1,77 @@
+<question>
+<title>ShrinkingSquareRose</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using Java and turtle graphics, write a method named shrinkingSquareRose(Turtle t, double x, double delta, int n) that draws a rose of shrinking squares. The parameter x is the length of the side of the first square; delta is the difference in length between a square and the previous one; n is the number of squares. The example in the figure is the result of shrinkingSquareRose(t, 100, 10, 7).
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAPAAAADwAQMAAAAEm3vRAAAABlBMVEX///8AAABVwtN+AAAFUElE
+QVRYw+2Zv24cRRjAv9md7G3MEo+QhRbJsheUIuWWLqxoIBHiESg3b5DSRaSMbYgsQUHBC/AGKSkX
+0big4QXQ8Qamc5EA3zd/v5nbuxYJ3Up3npvf3sw33/89A+yv/fUfXP+w634TGzZu93iP93iP93gn
+HgKuFvHXAX+4iH8L+BOzgMWbgMd5CYuAtV7AVZBcmGEBS1i7QQ1qAR/DWzdooN/E4h3cBI10m/jp
+EXzjBcd9SlzPn8G1G06ktgK/gi/g0ok+gyjxaoYrMNoKQUcr8D0IxIMTnBbI8KFBpYHpadyR3nJ8
+h0pDTIQODUOGT0lpiCtrdnwpjgVps0UsnOC0AsOP7JqICVm7dRzboQJjUCNoEGueEg+EFRFr3Jab
+0p7FWGX0TjUlNoQbMoj1iAKjRNrQxpPTe4mBMN7kzKJb7mX2hRh07UOiwNJh07gpVWD8ONHinZvq
+C9zbGLNOas1W4NHiygsOkptktHZCLK1B6BscvyKlEW5DIAmOn9nFFeq8ClM3DOuZREM8dmHulmeN
+kTwM8dCHqa847kh6xHoMU0/Y4qYmnffGe3pwyIjxPOjaJmUAjqsZBZ8Q13Wc6xjW+Al911TNEpYa
+ld0iZqo8yDDMDUjTRsHhIfNUxGc1YjUlnDJoO1AoGGnGOc2loUJcGy3Np/mKDMM0VuZLyFYMqZiG
+fV+Z7xlWCZPAjawumaraNNZ0p7iqrgeGuxzDi6urmWGZ7Glx/8u3rFq0VYFXP33Ha4mI9nTRKn7/
+McMmx/D+56wSzTEKHP77LsO6wK/XGQ6nbFx6gNf5s4GK0e/xH1ma7aPfWLx6/ydfPbpT6/DFXy9P
+89LD8eHlryPcQR7WLh/S6H51/QQOee3h+BT6B0eU9nlwOHMjFncwNR+jfMwqc8InePPBByRgwjr8
+EfUaXfXgoas50YkiPkdHh48krXyePDS0DAK/soYjihasd4XajCu78LiyQfI0V5sI48fVGCtLUpvw
+dRWeC7fbSaa2KhzyuU9m4o4vXvmtsXz7Cn3IRZPhzht4k4oi+LLh8Gjz5DNe2LzWaEM6OOLPuVDe
+JIRXNKco4efieN0dOzxoduImYVKXVDBODLfRMHYbxGqETFqPG58ulGJ4ilbvPW5bVnPniO2N/RBj
+vmWeOPsTYn6STcJNxG40Iq4TDkHyEv3Iiqip+4hnTSE2Rezrr0qOiMqbQgsovBlUEhwHQ8JTwKls
+jA4bYyuWx6xsqIRVUGTKerVyHmliTzBkleg2YRlwKhvu3PbMQxPwVGQRh+tgBhbIK3ANGYosPK55
+FllH7L6loeH4LKTg3qlN8yII4lFI4K0TyYAqW2/bF3TuQIYLjh8nj6X7moE5w9TUVKnLM4I/ZIBG
+QQdpw8P1blWWfDV1aw43Vr9d/kSComjXtdX2vS9wjwXYAmHfxwyPuKbrDm23J0BnWIG49DITqXLB
+aasXDmtSSFXnrX1LCdtj3LZqNnATel2VN2sxYBWExlyO27CisZzKx6GEcV85b8Mtqe1B+cATk39L
+42YrlqSZbukZMmBdGITjhgLgSYl1yLC2f7/dio8pFH7YeEINGBXS1mobJktKuYGVx3Tipl/Exmer
+ehxK3HpMthDTNuycyGzgzuEmK72ZwUXIIgu4cXid1fXM4IK6zZ24gy1Y2DvG3Xhe+AUhzNSmhh0Y
+LrrtGLdbvd2J4V3RLOUGX4WWZBkfh45mASsqWPV6OyZjnmzDrctYa97mZbgPT9pLWPoke7cF+2R0
+uIxjtrnnJSzhEJUrs4Tr2OBeLOGUB1ez3Pkb/Hm7E9e3u3/CP9v/F2N//c+ufwG5owiXY8JOWwAA
+AABJRU5ErkJggg==
+</figure>
+<init>
+public class ShrinkingSquareRose {
+
+    // Write your method here
+    
+    public static void main(String[] args) {
+        // Test your method here
+    }
+
+}
+</init>
+<answer>
+public class ShrinkingSquareRose {
+
+    public static void shrinkingSquareRose(Turtle t, double x, double delta, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 4; j++) {
+                t.forward(x - (i * delta));
+                t.left(90);
+            }
+            t.right(360.0 / n);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        shrinkingSquareRose(t, 100, 10, 7);
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

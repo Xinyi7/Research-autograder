@@ -1,0 +1,17 @@
+public class NoEvens {
+
+    public static boolean noEvens( String[] x, int n) { 
+        if  (x[n].length()%2 != 0)) { 
+            return true;        
+        } else if (x[n].length()%2 ==0) {
+            return noEvens( x[n-1], n);
+        }
+        
+    }
+    
+    public static void main(String[] args) {
+        String [] a = { "alpha","beta", "lambda"}
+       System.out.print(noEvens(a, 3)); 
+    }
+
+}

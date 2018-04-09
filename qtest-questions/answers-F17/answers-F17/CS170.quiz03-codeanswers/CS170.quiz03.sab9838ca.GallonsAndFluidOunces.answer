@@ -1,0 +1,20 @@
+public class GallonsAndFluidOunces {
+    public static String gallons(int x){
+    String gallons;
+    int y= x/128;
+    int z=x-(y*128);
+   
+   gallons= x+" fl oz equals "+y+" gal "+z+" fl oz";
+   return gallons;
+    
+        
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(gallons(300));
+    }
+
+}

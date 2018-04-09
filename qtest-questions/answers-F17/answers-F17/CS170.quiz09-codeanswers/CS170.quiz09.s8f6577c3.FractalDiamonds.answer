@@ -1,0 +1,50 @@
+// for f(t,160,2), the perimeter of the smallest diamond is 4*(160/2/2)=160 pixles
+// for f(t,160,3), the perimeter of the smallest diamond is 4*(160/2/2/2) = 80 pixles
+// for f(t,160,N), the perimeter of the smallest diamond is 4*160*2^(-N) pixles
+
+
+public class FractalDiamonds {
+
+    public static void diamond(Turtle t, double x) {
+        t.penup();
+        t.backward(x / 2);
+        t.pendown();
+        t.left(60);
+        t.forward(x);
+        t.right(120);
+        t.forward(x);
+        t.right(60);
+        t.forward(x);
+        t.right(120);
+        t.forward(x);
+        t.right(120);
+        t.penup();
+        t.forward(x / 2);
+        t.pendown();
+    }
+    
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            diamond(t, x);
+        } else {
+            diamond(t, x);
+
+            t.penup();
+            t.forward(x);
+            t.left(90);
+            t.pendown();
+            f(t, x / 2, level - 1);
+            t.penup();
+            t.right(90);
+            t.backward(x);
+            t.pendown();
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(5);
+        f(t, 160, 4);
+        t.hideturtle();
+    }
+}

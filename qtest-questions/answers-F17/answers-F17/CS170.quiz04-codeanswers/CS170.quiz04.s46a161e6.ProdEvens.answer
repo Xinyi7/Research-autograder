@@ -1,0 +1,24 @@
+public class ProdEvens {
+    public static int prodEvens(int a, int b) {
+       int result = a;
+       int next = 0;
+        for(int i=a; i<=b; i++){
+            if(a%2==0){
+                next = a + 2;
+                result = a*next;
+                
+            }
+            else if(a%2==1){
+                next = a + 1;
+                result += a*next;
+            }
+        }
+     return result;   
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(prodEvens(4,11));
+        System.out.println(prodEvens(5, 9));
+    }
+
+}

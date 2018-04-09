@@ -1,0 +1,23 @@
+public class RepeatChars {
+
+    // write your method here
+    public static String repeatingChars(String s, int[] k) {
+        newstring = "";
+        
+        int i=0;
+        while(i<s.length-1){
+            for(j=0; j< k.length;j++){
+            newstring = newstring + s.charAt(i);
+            }
+        i++;
+        }
+        return newstring;
+    }
+    
+    
+    public static void main(String[] args) {
+        // test your method here
+    System.out.println(repeatingChars("hey",{2,1,3}));
+    }
+
+}

@@ -1,0 +1,23 @@
+public class EvenStrings {
+    public static Boolean evenStrings(String s1, String s2){
+        if ((s1.length()%2==0 && s2.length()%2==0)){
+            if (s1.length()==s2.length()){
+                return true;
+            }else {
+                return false;
+        }
+        } else{
+            return false;
+        } 
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(evenStrings("hey", "hey"));
+        System.out.println(evenStrings("yooo", "hey"));
+        System.out.println(evenStrings("heyo", "heyo"));
+        // test your method here
+    }
+
+}

@@ -1,0 +1,25 @@
+public class GrowingStairs {
+
+    // Write your method here
+    public static void stair (Turtle t, double s) {
+        t.left(90);
+        t.forward(s);
+        t.right(90);   
+        t.forward(s); 
+    }
+    public static void stairs (Turtle t, int n, double s){
+        for (int j=0; j<n; j++){
+            stair(t,s*(j+1));
+            t.left(90);  
+            t.right(90);   
+        }     
+    }
+    
+    public static void main(String[] args) {
+        // Test your method here
+        Turtle t= new Turtle();
+        t.delay(2);
+        stairs(t,7,10);
+    }
+
+}

@@ -1,0 +1,216 @@
+public class Main {
+
+    public static void main(String[] args) {
+        // Uncomment the following lines to activate the test cases
+
+        System.out.println("--- Test GroceryList ---");
+        GroceryList g = new GroceryList();
+        System.out.println(g);
+        g.write("bread");
+        System.out.println(g);
+        g.write("milk");
+        System.out.println(g);
+        g.write("eggs");
+        System.out.println(g);
+        
+        System.out.println("--- Test Essay ---");
+        Essay e = new Essay("Amazing Poem");
+        System.out.println(e);
+        e.write("Roses are red.");
+        System.out.println(e);
+        System.out.println("Grade: " + e.letterGrade());
+        e.write("Roses are red, lemons are yellow.");
+        System.out.println(e);
+        System.out.println("Grade: " + e.letterGrade());
+        e.write("Roses are red, lemons are yellow, oranges are orange.");
+        System.out.println(e);
+        System.out.println("Grade: " + e.letterGrade());
+        
+        System.out.println("--- Test Quiz ---");
+        Quiz q1 = new Quiz(20, 15);
+        System.out.println(q1);
+        System.out.println("Grade: " + q1.letterGrade());
+        Quiz q2 = new Quiz(10, 8);
+        System.out.println(q2);
+        System.out.println("Grade: " + q2.letterGrade());
+        Quiz q3 = new Quiz(50, 45);
+        System.out.println(q3);
+        System.out.println("Grade: " + q3.letterGrade());
+
+        System.out.println("--- Test polymorphism ---");
+        Writable w1 = new GroceryList();
+        System.out.println(w1);
+        Writable w2 = new Essay("Wonerful Song");
+        System.out.println(w2);
+        Gradable g1 = new Essay("Delightful Lyrics");
+        System.out.println(g1);
+        Gradable g2 = new Quiz(30, 27);
+        System.out.println(g2);
+        
+        /* Expected output:
+        --- Test GroceryList ---
+        Grocery list: 
+        Grocery list: bread 
+        Grocery list: bread milk 
+        Grocery list: bread milk eggs 
+        --- Test Essay ---
+        Essay 'Amazing Poem': 
+        Essay 'Amazing Poem': Roses are red.
+        Grade: D
+        Essay 'Amazing Poem': Roses are red, lemons are yellow.
+        Grade: B
+        Essay 'Amazing Poem': Roses are red, lemons are yellow, oranges are orange.
+        Grade: A
+        --- Test Quiz ---
+        Quiz: 20 questions, 15 correct answers
+        Grade: C
+        Quiz: 10 questions, 8 correct answers
+        Grade: B
+        Quiz: 50 questions, 45 correct answers
+        Grade: A
+        --- Test polymorphism ---
+        Grocery list: 
+        Essay 'Wonerful Song': 
+        Essay 'Delightful Lyrics': 
+        Quiz: 30 questions, 27 correct answers
+        */
+    }
+}
+
+interface Writable {
+
+    // Records some text
+    public void write(String s);
+
+}
+
+interface Gradable {
+    
+    // Returns a letter grade: A, B, C, D, or R
+    public String letterGrade();
+    
+}
+
+class GroceryList implements Writable{
+    
+    // List of grocery items.
+    // There can be no more than 100 items in the list.
+    private String[] items;
+    
+    // Number of items currently in the list
+    private int numItems;
+    
+    // Constructor
+    // Creates an empty list with enough space for 100 items
+    public GroceryList() {
+        items = new String[100];
+        numItems = 0;
+    }
+    
+    // Returns a String with the following format:
+    //   Grocery list: item1 item2 ... itemN 
+    public String toString() {
+        String result = "Grocery list: ";
+        for (int i=0; i<numItems; i++){
+            result += items[i] + " ";
+        }
+        return result;
+    }
+    
+    // The write method adds one item (s) to this grocery list.
+    // If the list is already full (100 items) the method does nothing. 
+    public void write(String s) {
+        if (numItems<100){
+            items[numItems] = s;
+            numItems++;
+        }
+    }
+}
+
+class Essay implements Writable, Gradable{
+    
+    // Title of the essay
+    private String title;
+    
+    // Content of the essay
+    private String text;
+    
+    // Constructor
+    // Initializes this essay with the given title and an empty text
+    public Essay(String title) {
+        this.title = title;
+        text = "";
+    }
+    
+    // Returns a String with the following format:
+    //   Essay "title": text
+    public String toString() {
+        return "Eassy '"+ title + "': " + text;
+    }
+    
+    // The write method sets the text of this essay to s.
+    public void write(String s) {
+        text = s;
+    }
+    
+    // Grading rubric for an essay:
+    // "A" if the text of the essay is at least 40 characters long
+    // "B" if the text of the essay is 30 to 39 characters long
+    // "C" if the text of the essay is 20 to 29 characters long
+    // "D" if the text of the essay is 10 to 19 characters long
+    // "R" if the text of the essay is shorter than 10 characters
+    public String letterGrade() {
+        if(text.length()>=40){
+            return "A";
+        } else if(text.length()>=30){
+            return "B";
+        } else if(text.length()>=20){
+            return "C";
+        } else if(text.length()>=10){
+            return "D";
+        } else{
+            return "R";
+        }
+    }
+}
+
+class Quiz implements Gradable{
+    
+    // Number of questions in the quiz
+    private int numQuestions;
+    
+    // Number of correct answers
+    private int numCorrectAnswers;
+    
+    // Constructor
+    public Quiz(int numQuestions, int numCorrectAnswers) {
+        this.numQuestions = numQuestions;
+        this.numCorrectAnswers = numCorrectAnswers;
+    }
+    
+    // Returns a String with the following format:
+    //   Quiz: X questions, Y correct answers
+    public String toString() {
+        return "Quiz: " + numQuestions + " questions, " + numCorrectAnswers  + " correct answers";
+    }
+          
+    // Grading rubric for a quiz:
+    // "A" for at least 90% correct answers
+    // "B" for at least 80% correct answers
+    // "C" for at least 70% correct answers
+    // "D" for at least 60% correct answers
+    // "R" for less than 60% correct answers
+    public String letterGrade() {
+        if((double)numCorrectAnswers/numQuestions >= 0.9){
+            return "A";
+        } else if((double)numCorrectAnswers/numQuestions >= 0.8){
+            return "B";
+        } else if((double)numCorrectAnswers/numQuestions >= 0.7){
+            return "C";
+        } else if((double)numCorrectAnswers/numQuestions >= 0.6){
+            return "D";
+        } else{
+            return "R";
+        }
+    }
+}

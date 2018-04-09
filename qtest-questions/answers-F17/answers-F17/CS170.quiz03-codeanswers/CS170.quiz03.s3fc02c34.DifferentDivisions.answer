@@ -1,0 +1,16 @@
+public class DifferentDivisions {
+
+    // write your method here
+    public static String divisions(int x, int y){
+        String s= "Look: " + x + "/ " + y + " is " + x/y + " but " + x*1.0 " + " / " + y*1.0 + " is " + x*1.0/y*1.0;
+
+        return s;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(divisions(3,2));
+
+    }
+
+}

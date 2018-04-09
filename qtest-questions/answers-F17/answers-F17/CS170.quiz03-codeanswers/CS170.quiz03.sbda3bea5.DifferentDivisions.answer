@@ -1,0 +1,12 @@
+public class DifferentDivisions {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    
+system.print.outln(3%2);
+system.print.outln(3.0/2.0);
+
+    }
+}

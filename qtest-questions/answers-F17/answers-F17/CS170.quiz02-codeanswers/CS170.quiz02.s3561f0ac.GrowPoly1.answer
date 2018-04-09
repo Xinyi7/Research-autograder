@@ -1,0 +1,36 @@
+public class GrowPoly {
+
+    public static void growPoly(Turtle t, double x, int n, int m){
+        for(int i = 1; i < m; i++){
+            for(int j = 0; j < n; j++){
+                if (i == 1){
+                    t.forward(x);
+                    t.left(360 / n);
+                }
+                else 
+                if(i > 1){
+                t.forward(x*(i-1) + 10);
+                t.left(360 / n);
+                }
+            }
+            if(i ==1){
+            t.forward(x);
+            t.left(15);
+            }
+            else
+            if(i >1){
+                t.forward(x * (i-1) + 10);
+                t.left(360 / n);
+            }
+        }
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        Turtle c = new Turtle();
+        growPoly(c, 20, 5, 7);
+        // test your method here
+    }
+    
+}

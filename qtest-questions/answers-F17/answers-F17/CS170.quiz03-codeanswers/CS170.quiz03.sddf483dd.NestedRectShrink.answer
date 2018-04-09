@@ -1,0 +1,21 @@
+public class NestedRectShrink {
+
+    // write your method here
+    public static void nestedRectShrink(Turtle t, int n, double x, double y) {
+        for (int i=0; i<n; i++) {
+            for (int j=0; j<3; j++) {
+                t.forward(x/(i+1));
+                t.left(90);
+                t.forward(y/(i+1));
+                t.left(90);
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle sonny=new Turtle();
+        nestedRectShrink(sonny,5,300,200);
+    }
+
+}

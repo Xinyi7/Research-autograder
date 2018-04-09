@@ -1,0 +1,26 @@
+public class ExpandString {
+    public static String expand(String s, int n){
+        String a ="";
+        if(n == 0){
+            a = "";
+        }else{
+            
+        for(int i = 1; i <= n ;i++){
+            for(int j = 0; j< s.length()-1; j++){
+                a = "" + s.charAt(j) ;
+            }
+            
+        }
+       }
+        return a;
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(expand("hey",3));
+        System.out.println(expand("hey",0));
+        // test your method here
+    }
+
+}

@@ -1,0 +1,19 @@
+public class StringBetweenEnd {
+
+
+    
+    public static void main(String[] args) {
+    System.out.println(StringBetweenEnd("abc", "--", "$"));
+        System.out.println(StringBetweenEnd("a", "--", "$"));
+            System.out.println(StringBetweenEnd("abc", "--", "$"));
+    }
+    public static String StringBetweenEnd(String s, String between, String end){
+        String S ="";
+        for (int i=0; i<=s.length()-1; i++){
+            S = s.substring(0,i) + between + s.substring(i);
+        }
+        S+=end;
+        return S;
+    }
+
+}

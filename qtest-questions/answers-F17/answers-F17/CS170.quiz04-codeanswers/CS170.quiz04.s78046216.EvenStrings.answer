@@ -1,0 +1,18 @@
+public class EvenStrings {
+
+    public static boolean evenString(String s1, String s2){
+        if(s1.length()%2 ==0 && s2.length()%2 ==0 && s1.length()==s2.length()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public static void main(String[] args) {
+       System.out.println(evenString("shaun", "emory"));
+         System.out.println(evenString("ssss", "qqqq"));
+           System.out.println(evenString("shaunlim", "emory"));
+    }
+
+}

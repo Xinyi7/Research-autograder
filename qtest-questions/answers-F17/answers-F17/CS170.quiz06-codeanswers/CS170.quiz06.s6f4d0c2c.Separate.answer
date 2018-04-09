@@ -1,0 +1,23 @@
+public class Separate {
+
+    // write your method here
+    public static String separate(String s, int n) {
+        String result = "";
+        for (int i = 0; i < s.length(); i++) {
+            if (i == n) result += "-";
+            result += s.charAt(i);
+            if (i == n) result += "-";
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(separate("orange", 2)); //"or-a-nge"
+        System.out.println(separate("whatever", 5)); //"whate-v-er"
+        System.out.println(separate("hey", 0)); //"-h-ey"
+        System.out.println(separate("hey", 2)); //"he-y-"
+        
+    }
+
+}

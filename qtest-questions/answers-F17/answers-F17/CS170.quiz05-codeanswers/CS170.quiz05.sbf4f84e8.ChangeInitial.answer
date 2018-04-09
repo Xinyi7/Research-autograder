@@ -1,0 +1,16 @@
+public class ChangeInitial {
+
+    // write your method here
+    public static String changeInitial(String name, String init){
+        String result = "";
+        result = init.charAt(0) + name.substring(1) ;
+        return result;
+    }
+        
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(changeInitial("root","bananna "));
+        System.out.println(changeInitial("book","c"));
+    }
+
+}

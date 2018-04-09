@@ -1,0 +1,79 @@
+<question>
+<title>WrongStarLine</title>
+<type>JavaCode</type>
+<points>12</points>
+<text>
+The following program is supposed to draw four stars on a straight diagonal line like the figure, but it contains three mistakes. Can you fix them?
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAABlBMVEX///8AAABVwtN+AAACCklE
+QVRYw+3XMW4UQRCF4eraYrZWIG1ZSGbshLZAFgGBQwJLNJIDQkLCMScgJIICERByBB9luAlHICCw
+kGUxF3gv6Ajh6fSTtndmeurfFfmXVmU4MbwiVirZUBvEF2IYD8UxHmRg9KkSHBtGGzIxFoKqE0Eb
+MRYfCEZJ9kx+YpzLyHDAe7aCN9Va8DmxBeGmHkXOEUaU/QzPkG9/wW/bdn/wZeat4st8aRg3syo5
+8BSL9aJ87caLbnzK8BnDsRtd1nUHVmM4s7ekkc8kQXkvhsflc3GMTyQwxlwJnjWM/oA0wzcF3wLT
+HwTthAwnPyIYW9ZxUpslC+QHQip+4Usqro02xZtaU1wbr4qnTCwIa1PDcG1akNrk/Rt8mXKDh7t+
+MozbNJYFpchmaelG+daNrxm+YXjWjbEO2zUofUERFpRkQZlYUN6yoJwKCcpJkqDERIISRyQoPjC8
+95nUxi8JBqtN3bLbzmqTOpFJS2qjrDaWpDbOahMLfoBBqfo4cVD2+G9aPvyNL7OwoHz07qBYd1DW
+2qy1uTMr2XFmqAxJUFJ2QmpzIKQ25A/BqbwSUhsy+eOSNCOOldWG4e4LC8o7gvWYBWVgz2RDaiOG
+a7MRG8nTNLypp+FzEs1wbeqCsDatOq5NVlybIo+u8Q0q13hE261j3Iuz4W4U2SzVbizdKN8ZXjGc
+urH+HwPzLwzfVn6Ai6P8AAAAAElFTkSuQmCC
+</figure>
+<init>
+public class StarLine {
+
+    public static void star(Turtle t) {
+        for (int i = 0; i < 5; i++) {
+            t.forward(40);
+            t.right(134);
+        }
+    }
+    
+    public static void starLine(Turtle t) {
+        for (int j = 0; j < 4; j++) {
+            star(t);
+            t.penup();
+            t.left(45);
+            t.forward(80);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        starLine(t);
+    }
+
+}
+</init>
+<answer>
+public class StarLine {
+
+    public static void star(Turtle t) {
+        for (int i = 0; i < 5; i++) {
+            t.forward(40);
+            t.right(144); // 144 instead of 134
+        }
+    }
+    
+    public static void starLine(Turtle t) {
+        t.left(45); // this command should be here, not inside the loop
+        for (int j = 0; j < 4; j++) {
+            star(t);
+            t.penup();
+            t.forward(80);
+            t.pendown(); // add pendown() here
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        starLine(t);
+    }
+
+}
+</answer>
+<rubric>
+4 points for each mistake fixed correctly
+-4 points for each new mistake introduced
+</rubric>
+</question>
+

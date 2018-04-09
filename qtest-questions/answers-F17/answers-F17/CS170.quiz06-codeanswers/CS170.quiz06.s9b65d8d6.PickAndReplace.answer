@@ -1,0 +1,11 @@
+public class PickAndReplace {
+
+    String pickandreplace[]=new String[3] {cccc, aaaa, yyy};
+    
+    public static void main(String[] args) {
+    System.out.println(pickandreplace[0]);
+    System.out.println(pickandreplace[1]);
+    System.out.println(pickandreplace[2]);      
+    }
+
+}

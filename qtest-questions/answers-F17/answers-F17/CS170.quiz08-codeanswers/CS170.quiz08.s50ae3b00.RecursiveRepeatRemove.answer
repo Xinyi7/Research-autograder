@@ -1,0 +1,19 @@
+public class RecursiveRepeatRemove {
+
+    public static String repeatRemove(String s, char c, char r){
+        if (s.equals("")){
+            return "";
+        }else if (s.charAt(s.length() - 1) == c){
+            return "" + c + c + repeatRemove(s.substring(0, s.length()), c, r);
+        }else if (s.charAt(s.length() - 1) == r){
+            return repeatRemove(s.substring(0, s.length()), c, r);
+        }else{
+            return repeatRemove(s.substring(0, s.length()), c, r);
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(repeatRemove("abcd", 'a', 'b'));
+    }
+
+}

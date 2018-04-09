@@ -1,0 +1,21 @@
+public class PigLatin {
+
+public static String pigLatin (String s){
+String result = s;
+for  (int i =0; i < s.length()-1; i++){
+result += s.charAt(0);
+
+   
+}
+
+return result;
+}
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(pigLatin("hi"));
+        System.out.println(pigLatin("hoi"));
+        System.out.println(pigLatin("hifriend"));
+    }
+
+}

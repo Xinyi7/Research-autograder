@@ -1,0 +1,27 @@
+public class FractalUmbrella {
+
+    //9 and 27  
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(30);
+            for (int i = 0; i < 5; i++) {
+                t.forward(x);
+                t.left(30);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(60);
+            }
+            t.left(120);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 1);
+    }
+}

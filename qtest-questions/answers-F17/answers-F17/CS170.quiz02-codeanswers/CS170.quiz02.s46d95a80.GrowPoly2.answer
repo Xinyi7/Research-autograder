@@ -1,0 +1,33 @@
+public class GrowPoly {
+
+    // write your method here
+    //I will make a turtle to run the program
+    //I will write a code for the polygons with n sides each of length x 
+    // m is the number of total polygons
+    //n is the number of sides
+    //x is the length of the first polygon
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        growpoly(t, 20, 5, 7);
+        //growpoly(t, 300, 2, 2); - does not work for n values of <=2
+        //growpoly(t, 230, 10, 17);
+        
+        // test your method here
+    }
+    public static void growpoly(Turtle t, double x, int n, int m){
+        for(int h=0; h < m; h++){
+            poly(t, (x + 10*h) , n);
+            t.forward(x + 10*h);
+            t.right(15);
+             
+        }
+        t.
+    }
+    public static void poly(Turtle t, double length, int n){
+        for(int i=0; i< n; i++){
+            t.forward(length);
+            t.left(360.0/n);
+        }
+    }
+    
+}

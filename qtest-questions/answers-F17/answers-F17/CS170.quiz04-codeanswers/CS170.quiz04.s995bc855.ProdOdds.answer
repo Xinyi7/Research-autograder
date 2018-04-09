@@ -1,0 +1,14 @@
+public class ProdOdds {
+
+    public static int prodOdds(int a, int b) {
+        for (i = 0; i < b; i2+) {
+            
+        }
+        return result
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

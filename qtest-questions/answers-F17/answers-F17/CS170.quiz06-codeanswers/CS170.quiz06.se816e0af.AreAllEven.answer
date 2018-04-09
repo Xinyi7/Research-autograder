@@ -1,0 +1,22 @@
+public class AreAllEven {
+
+    // write your method here
+    public static boolean areAllEvan(String[] x){
+        int count = 0;
+        
+        for (int i = 0; i < x.length; i++){
+            count = x[i].length();
+            
+        }
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"andy", "dave", "carl"};
+        System.out.println(areAllEvan(x1));
+        String[] x2 = {"eric", "francis", "gary"};
+        System.out.println(areAllEvan(x2));
+    }
+
+}

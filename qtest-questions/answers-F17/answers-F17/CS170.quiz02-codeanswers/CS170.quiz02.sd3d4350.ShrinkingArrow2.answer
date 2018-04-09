@@ -1,0 +1,23 @@
+public class Arrow {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t=new Turtle();
+        t.left(135);
+        branch(t, 45);
+    }
+    public static void arrow(Turtle t, double length, int branches){
+        for 
+        
+    }
+    public static void branch(Turtle t, int branches){
+        t.forward(branches);
+        t.right(90);
+        t.forward(branches);
+        t.backward(branches);
+        t.right(45);
+    }
+    
+}

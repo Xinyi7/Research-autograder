@@ -1,0 +1,10 @@
+public class RecursiveSumRatios {
+    public static int sumProducts(double[] x, double[] y, int n) {
+        if (
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

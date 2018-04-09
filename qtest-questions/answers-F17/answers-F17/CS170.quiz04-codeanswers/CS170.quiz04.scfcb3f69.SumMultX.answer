@@ -1,0 +1,21 @@
+public class SumMultX {
+
+    public static int sumMultX(int x, int y) {
+        int result = 0;
+        for( int i = x; i <= y; i++) {
+            if (i % x == 0) {
+                result += i;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(sumMultX(1, 4)); // 1 + 2 + 3 + 4 = 10
+        System.out.println(sumMultX(2, 10)); // 2 + 4 + 6 + 8 + 10 = 30
+        System.out.println(sumMultX(3, 9)); // 3 + 6 + 9 = 18
+        System.out.println(sumMultX(3, 10)); // 3 + 6 + 9 = 18
+        System.out.println(sumMultX(3, 8)); // 3 + 6 = 9
+    }
+
+}

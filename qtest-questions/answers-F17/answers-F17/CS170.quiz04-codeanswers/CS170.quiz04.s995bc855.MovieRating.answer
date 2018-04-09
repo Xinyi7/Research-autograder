@@ -1,0 +1,26 @@
+public class MovieRating {
+
+    public static String movieRating(double stars) {
+        String result = "";
+        if (stars >=0) {
+        if (stars <= 2.5) {
+            result = "bad";
+        } else if (stars < 4.2) {
+            result = "ok";
+        } else if (stars >= 4.2) {
+            result = "mustsee";
+        }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(movieRating(-4));
+        System.out.println(movieRating(2.5));
+        System.out.println(movieRating(3));
+        System.out.println(movieRating(4.2));
+        System.out.println(movieRating(5));
+        
+    }
+
+}

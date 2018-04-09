@@ -1,0 +1,27 @@
+public class RepeatChars {
+
+    // write your method here
+    public static String repeatingChars(String s, int[] k)
+    {
+        String result ="";
+        for(int i=0;i<k.length;i++) //tells which position of the array it is in
+        {
+            for(int j=0;j<k[i];j++) //repeats the character based on the number in the array
+            {
+                result+= "" + s.charAt(i);
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        int[] x1 = {2, 1, 3};
+        int[] x2 = {2, 0, 1};
+        int[] x3 = {2, 3};
+        System.out.println(repeatingChars("hey", x1));
+        System.out.println(repeatingChars("hey", x2));
+        System.out.println(repeatingChars("hey", x3)); 
+    }
+
+}

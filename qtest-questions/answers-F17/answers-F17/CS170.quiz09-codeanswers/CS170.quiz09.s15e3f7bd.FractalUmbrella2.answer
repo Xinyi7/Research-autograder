@@ -1,0 +1,30 @@
+public class FractalUmbrella {
+// if level is 2, its called 13 times, for level 4 its 121
+// general is 1+ 3^1 +3^2...3^n
+    public static void f(Turtle t, double x, int level) {
+       
+        System.out.println("1");
+        if (level == 0) {
+            return;
+        } else {
+            t.left(60);
+            for (int i = 0; i < 3; i++) {
+                t.forward(x);
+                t.left(180);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                f(t, x * 0.25, level - 1);
+                t.backward(x);
+                t.right(60);
+            }
+            t.left(120);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 5);
+    }
+}

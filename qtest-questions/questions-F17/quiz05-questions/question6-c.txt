@@ -1,0 +1,35 @@
+<question>
+<title>AppleBananaCarrot</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+String apple = "carrot";
+String banana = "apple";
+double carrot = 4.7;
+System.out.println("banana".charAt(4));
+System.out.println(banana.charAt(4));
+System.out.println(apple + carrot);
+System.out.println(banana + apple);
+System.out.println(apple.charAt((int)carrot));
+System.out.println(apple.substring(1, (int)carrot));
+System.out.println(("carrot" + apple).substring(3, 7));
+System.out.println(("" + banana.charAt(1) + apple.substring(0,(int)carrot)).substring(3));
+System.out.println("carrot" + banana.length() + apple.length());
+System.out.println(apple.substring(0, banana.length()) + "-" + banana.substring(1));
+</text>
+<answer>
+n
+e
+carrot4.7
+applecarrot
+o
+arr
+rotc
+rr
+carrot56
+carro-pple
+</answer>
+</question>
+

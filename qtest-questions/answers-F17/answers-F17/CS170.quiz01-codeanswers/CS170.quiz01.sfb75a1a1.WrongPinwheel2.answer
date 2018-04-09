@@ -1,0 +1,23 @@
+public class Pinwheel {
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        pinwheel(t, 180, 3, 3);
+    }
+
+    public static void pinwheel(Turtle t, double x, int s, int f){
+        for(int i = 0 ; i < 5 ; i++) {
+            t.forward(1*x);
+            polygon(t, x/2, s);
+            t.backward(1*x);
+            t.right(220.0/f);
+        }
+    }
+
+    public static void polygon(Turtle t, double length, int numsides) {
+        for(int i = 0 ; i < numsides; i++) {
+            t.forward(length);
+            t.left(360.0/numsides);
+        }
+    }
+}

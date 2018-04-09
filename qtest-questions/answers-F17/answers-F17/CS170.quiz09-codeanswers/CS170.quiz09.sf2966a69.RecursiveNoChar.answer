@@ -1,0 +1,23 @@
+public class RecursiveNoChar {
+
+    // write your method here
+    public static boolean noChar(String s,char c){
+        if (s.length()==0){
+            return true;
+        }else if {
+            char(s.length())==char c;
+            noChar(s,c);
+            return false
+            
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(noChar("abcd", 'a'));
+        System.out.println(noChar("abcd", 'c'));
+        System.out.println(noChar("abcd", 'e'));
+        System.out.println(noChar("a", 'a'));
+        System.out.println(noChar("", 'a'));
+    }
+
+}

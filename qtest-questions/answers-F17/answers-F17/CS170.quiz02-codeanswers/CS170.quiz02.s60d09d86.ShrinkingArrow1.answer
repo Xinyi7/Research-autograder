@@ -1,0 +1,41 @@
+public class shrinkarrow {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.left(135);
+        arrow(t, 60);
+        
+        
+    }
+
+
+
+ public static void arrow(Turtle t, double length){
+        //for (int i = 0; i < m; i++) {
+            t.forward(length);
+            t.left(180);
+            t.forward(length);
+            t.left(90);
+            t.forward(length);
+            t.left(180);
+            t.forward(length);  
+        }
+    
+
+
+}
+
+// public static void arrowline(Turtle t, double length, int branches){
+        //for (int i = 0; i < m; i++) {
+          //  t.forward(n+i);
+           // t.left(360.0/m);  
+       // }
+//}
+
+
+
+    
+    
+   

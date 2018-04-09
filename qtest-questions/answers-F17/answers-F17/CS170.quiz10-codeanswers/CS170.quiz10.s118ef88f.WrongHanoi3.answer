@@ -1,0 +1,16 @@
+public class Hanoi {
+
+    public static void hanoi(int n, String source, String target, String temp) {
+        if (n < 1) {
+            return;
+        } else {
+            hanoi(n - 1, source, temp, target);
+            System.out.println("Move from " + source + " to " + target);
+            hanoi(n - 1, temp, target, source); //change to n-1
+        }
+    }
+
+    public static void main(String[] args) {
+        hanoi(3, "A", "C", "B");
+    }
+}

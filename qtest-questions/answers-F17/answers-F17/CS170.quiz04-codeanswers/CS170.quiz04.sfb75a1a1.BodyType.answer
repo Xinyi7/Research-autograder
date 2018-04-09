@@ -1,0 +1,17 @@
+public class BodyType {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+    public static bodyType(double bmi) {
+        for (int i = 0; i <= 18.5; i++){
+        }
+            for (int j = 0;  
+        "underweight" = <18.5;
+        "normal" = 18.5 and 25;
+        "overweight" = >25
+    }
+
+}

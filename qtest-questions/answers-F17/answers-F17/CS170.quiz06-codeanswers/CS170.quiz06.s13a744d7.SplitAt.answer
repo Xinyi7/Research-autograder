@@ -1,0 +1,20 @@
+public class SplitAt {
+
+    // write your method here
+    public static String[] splitAt(String s, int n) {
+        String result= "";
+        for(int i=0; i<x.length; i++) {
+            if (x==n) {
+                for(int j=0;j<n;j++) {
+                    result +=
+                }
+            }
+        }
+    
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

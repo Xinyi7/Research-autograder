@@ -1,0 +1,23 @@
+public class ShrinkingHexagons {
+
+    // Write your method here
+    public static void shrinkingHexagons (Turtle t, double x, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 6; j++) {
+                t.forward(x / (i + 1));
+                t.left(60);
+            }
+            t.penup();
+            t.forward((x / (i + 1)) * 2);
+            t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        // Test your method here
+        Turtle t = new Turtle();
+        t.delay(15);
+        shrinkingHexagons(t, 100, 5);
+    }
+
+}

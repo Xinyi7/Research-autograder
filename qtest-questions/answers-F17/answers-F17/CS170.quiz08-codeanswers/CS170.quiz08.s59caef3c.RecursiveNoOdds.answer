@@ -1,0 +1,20 @@
+public class NoOdds {
+
+    // write your method here
+    public static boolean noOdds(String[] x,int n) {
+        if (x.length==0){
+           return true;
+        } else if (x[n-1].length()%2==1) {
+            return false;
+        } else {
+            return noOdds(x,n-1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] ken={"abc","sd","cdde"};
+        System.out.println(noOdds(ken,3));
+    }
+
+}

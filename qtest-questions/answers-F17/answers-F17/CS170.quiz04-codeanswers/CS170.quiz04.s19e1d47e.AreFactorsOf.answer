@@ -1,0 +1,24 @@
+public class AreFactorsOf {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+ System.out.println(areFactorsOf(3, 2, 6));
+    System.out.println(areFactorsOf(3, 1, 27));
+        System.out.println(areFactorsOf(3, 2, 5));
+    }
+public static boolean areFactorsOf(int a, int b, int c){
+    
+  
+ boolean first = (c % a ==0 );
+ boolean second = (c % b ==0);
+ 
+ 
+
+return ((first)&& (second));
+
+}
+
+
+}

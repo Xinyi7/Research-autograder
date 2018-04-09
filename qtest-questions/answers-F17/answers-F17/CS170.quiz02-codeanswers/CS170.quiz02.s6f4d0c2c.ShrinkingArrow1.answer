@@ -1,0 +1,35 @@
+public class Arrow {
+
+    // write your method here
+    public static void arrow(Turtle t, double length, int branches) {
+        t.left(180);
+        double spacing = length / branches;
+        for (int i = 1; i <= branches; i++) {
+            double branchlength = length / i;
+            t.left(45);
+            t.forward(branchlength);
+            t.backward(branchlength);
+            t.right(90);
+            t.forward(branchlength);
+            t.backward(branchlength);
+            t.left(45);
+            t.backward(spacing);
+        }
+        t.left(180);
+        t.backward(length);
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle Alan = new Turtle();
+        arrow(Alan, 150, 5);
+        Alan.penup();
+        Alan.forward(200);
+        Alan.pendown();
+        arrow(Alan, 50, 2);
+        Alan.penup();
+        Alan.forward(-200);
+        Alan.pendown();
+    }
+    
+}

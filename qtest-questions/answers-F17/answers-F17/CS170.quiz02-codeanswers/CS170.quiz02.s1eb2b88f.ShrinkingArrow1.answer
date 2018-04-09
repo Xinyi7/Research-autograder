@@ -1,0 +1,17 @@
+public class Arrow {
+
+    public static void arrow(Turtle t, double length, int branches) {
+        
+    }
+        for (int j = 0; j < ; j--) {
+
+        
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        arrow(t, 150, 5);
+        
+    }
+    
+}

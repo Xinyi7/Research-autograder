@@ -1,0 +1,24 @@
+public class RepeatChars {
+
+    // write your method here
+    public static String repeatChars(String s, int[] k) {
+        String result ="";
+        for (int i = 0; i < k.length; i++) {
+            for (int j = 0; j < k[i]; j++) {
+                result += s.charAt(i);
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        int[] a = {2, 1, 3};
+        int[] b = {2, 0, 1};
+        int[] c = {2, 3};
+        System.out.println(repeatChars("hey", a));
+        System.out.println(repeatChars("hey", b));
+        System.out.println(repeatChars("hey", c));
+    }
+
+}

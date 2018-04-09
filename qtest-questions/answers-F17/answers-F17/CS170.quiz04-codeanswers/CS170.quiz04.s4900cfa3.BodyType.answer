@@ -1,0 +1,22 @@
+public class BodyType {
+    public static void bodytype(double bmi){
+    String result = "";
+    if (bmi < 18.5) {
+    result = "underweight";
+    }else if (bmi >= 18.5 && bmi <= 25 ){
+    result = "normal";
+    }else {
+    result = "overweight";
+    }
+    return result;
+    }
+}
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        system.out.println(bodytype(16.0));
+  
+
+}

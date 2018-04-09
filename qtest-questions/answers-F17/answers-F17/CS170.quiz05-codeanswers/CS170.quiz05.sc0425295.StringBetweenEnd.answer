@@ -1,0 +1,29 @@
+public class StringBetweenEnd {
+
+    // write your method here
+    public static String betweenEnd(String s, String between, String end)
+    {
+        String newS = "";
+        
+        for (int i = 0; i < s.length(); i++)
+        {
+            
+            newS += s.charAt(i);
+
+            if (i < s.length() - 1)
+            {
+                newS += between;
+            }    
+        }
+        newS += end;
+
+        return newS;
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(betweenEnd("anna","--","X"));
+    }
+
+}

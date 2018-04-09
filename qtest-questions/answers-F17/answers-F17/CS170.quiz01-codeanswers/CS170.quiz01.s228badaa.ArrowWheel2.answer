@@ -1,0 +1,27 @@
+public class ArrowWheel {
+
+    // write your method here
+    public static void Polygon (Turtle t, double x, int n){
+        for(i = 0; i <3; i++){
+            t.forward(x);
+            t.left(360.0/n);
+        }
+    }
+     public static void arrowWheel (Turtle t, double x, int n){
+        for(i = 0; i <n; i++){
+            t.forward(x);
+            Polygon(t, x/2, n);
+            t.backward(x);
+            t.right(360.0/n);
+        }
+    }
+    
+       
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle();
+        arrowWheel(t, 70, 9);
+    }
+
+}

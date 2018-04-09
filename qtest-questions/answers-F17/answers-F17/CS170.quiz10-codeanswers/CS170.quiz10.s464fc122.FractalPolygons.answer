@@ -1,0 +1,25 @@
+//1. The size of the side of the smallest polygon drawn by f(t, 120, 2) will be 30. The size of the side of the smallest polygon drawn by f(t, 120, 3) will be 15. By a general f(t, X, N) 
+//the smallest polygon's side will be ((0.5)^N)*(X). A general formula will be ((0.5)^N)*(X). 
+
+public class FractalPolygons {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            int n = level + 2;
+            for (int i = 0; i < n; i++) {
+                f(t, x / 2, level - 1);
+                t.forward(x);
+                t.left(360.0 / n);
+             }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 120, 4);
+        t.hideturtle();
+    }
+}

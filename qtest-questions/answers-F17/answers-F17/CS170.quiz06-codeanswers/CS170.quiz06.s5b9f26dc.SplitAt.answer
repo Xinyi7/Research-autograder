@@ -1,0 +1,19 @@
+public class SplitAt {
+
+    public static SplitAt(String s, int n){
+        String[] x = new String[2];
+        result1 = s.substring(0, n); //first word
+        result1 = x[0];
+        result2 = s.substring(n); //second split
+        result2 = x[1];
+
+        return String[] x;
+        
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(splitAt("apple", 2));
+        System.out.println(splitAt("apple", 0));
+    }
+
+}

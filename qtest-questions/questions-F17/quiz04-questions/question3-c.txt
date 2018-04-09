@@ -1,0 +1,59 @@
+<question>
+<title>AlphaBeta</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print? Hint: it prints exactly 10 lines.
+
+        int alpha = 2;
+        int beta = 5;
+        if (alpha < beta) {
+            System.out.println("01");
+            if (alpha + beta == alpha - beta) {
+                System.out.println("02");
+            } else {
+                System.out.println("03");
+            }
+            System.out.println("04");
+            if (beta / 2 == alpha) {
+                System.out.println("05");
+            } else if (beta < alpha) {
+                System.out.println("06");
+            } else {
+                System.out.println("07");
+            }
+            System.out.println("08");
+            if (alpha % beta != 0) {
+                System.out.println("09");
+                if (beta - alpha < beta) {
+                    System.out.println("10");
+                }
+            }
+        } else {
+            System.out.println("11");
+            if (alpha / beta < beta) {
+                System.out.println("12");
+            }
+            System.out.println("13");
+        }
+        System.out.println("14");
+        if (alpha - beta < beta) {
+            System.out.println("15");            
+        } else {
+            System.out.println("16");
+        }
+        System.out.println("17");
+</text>
+<answer>
+01
+03
+04
+05
+08
+09
+10
+14
+15
+17
+</answer>
+</question>

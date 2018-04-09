@@ -1,0 +1,16 @@
+public class NumStartingWith {
+    // write your method here
+    public static String numStartingwith(String[] x, char c) {
+        if (x.charAt(0) = c) {
+            return 1
+        } else {
+            return 0
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] test = {"hello", "", "wow", "hey"};
+    }
+
+}

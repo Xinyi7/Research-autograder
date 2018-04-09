@@ -1,0 +1,21 @@
+public class ChangeInitial {
+
+    // write your method here
+    public static String changeInitial(String name, String init){
+        String result = "";
+        result= result + init.charAt(0); //this starts us off with the first letter of the String init
+        for(int i=1; i<name.length(); i++){ //this adds all but the first letter of String name 
+            result = result + name.charAt(i);
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(changeInitial("book" , "c")); //returns cook
+        System.out.println(changeInitial("root" , "banana")); //returns boot
+        System.out.println(changeInitial("loot" , "banana")); //returns boot
+        System.out.println(changeInitial("arch" , "apple")); //returns arch   
+
+    }
+    
+}

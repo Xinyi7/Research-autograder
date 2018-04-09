@@ -1,0 +1,24 @@
+public class ProdMult5 {
+
+    public static int prodMult5(int start, int end) {
+        int result = 1;
+        if (start == 0) {
+            start = 0 +1;
+        }
+        for (int i = start; i <= end; i++) {
+            if (i%5==0) {
+                result = result * i;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(prodMult5(0, 10));
+        System.out.println(prodMult5(1, 11));
+        System.out.println(prodMult5(5, 10));
+        System.out.println(prodMult5(1, 16));
+        System.out.println(prodMult5(11, 21));
+    }
+
+}

@@ -1,0 +1,30 @@
+public class RecursiveCapRemove {
+
+    // write your method here
+    public static String capRemove(String s, char c, char r) {
+        if (s.length() == 0) {
+            return "";
+        } else if (s.length() == 1) {
+            String nextChar; //should have thought of a better name for a variable of type String
+            if (s.charAt(0) == c) {
+                nextChar = ("" + s.charAt(0)).toUpperCase();
+            } else if (s.charAt(0) == r) {
+                nextChar = "";
+            } else {
+                nextChar = ("" + s.charAt(0)).toLowerCase();
+            }
+            return nextChar;
+        } else {
+            return capRemove(s.substring(0, 1), c, r) + capRemove(s.substring(1), c, r);
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(capRemove("abcd", 'a', 'b')); //"Acd"
+        System.out.println(capRemove("", 'a', 'b')); //""
+        System.out.println(capRemove("March", 'a', 'b')); //"mArch"
+        
+    }
+
+}

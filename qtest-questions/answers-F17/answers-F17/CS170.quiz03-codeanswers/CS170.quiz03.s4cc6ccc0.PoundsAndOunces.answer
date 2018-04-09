@@ -1,0 +1,13 @@
+public class PoundsAndOunces {
+    public static string pounds{
+     system.out.println ();
+     return string ();
+        
+    }
+    
+    public static void main(String[] args) {
+        pounds(60);
+        
+    }
+
+}

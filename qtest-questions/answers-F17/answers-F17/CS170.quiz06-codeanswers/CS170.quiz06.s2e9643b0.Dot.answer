@@ -1,0 +1,20 @@
+public class Dot {
+
+    // write your method here
+    public static String dot(String s, int k) {
+        String result="";
+       
+            result=result+s.substring(0,k)+".";
+        
+        result=result+s.substring(k+1);
+       
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(dot("orange",2));
+      
+    }
+
+}

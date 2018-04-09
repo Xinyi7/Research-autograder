@@ -1,0 +1,25 @@
+public class WordsAreShrinking {
+
+    // write your method here
+    public static boolean wordsAreShrinking(String[] x) {
+        boolean result = true;
+        for (int i = 1; i < x.length; i++) {
+            if (x[i].length() >= x[i-1].length()) result = false;
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"list", "of", "words"};
+        String[] x2 = {"a"};
+        String[] x3 = {"a", "b"};
+        String[] x4 = {"aaaa", "aa", "a"};
+        System.out.println(wordsAreShrinking(x1)); //false
+        System.out.println(wordsAreShrinking(x2)); //true
+        System.out.println(wordsAreShrinking(x3)); //false
+        System.out.println(wordsAreShrinking(x4)); //true
+        
+    }
+
+}

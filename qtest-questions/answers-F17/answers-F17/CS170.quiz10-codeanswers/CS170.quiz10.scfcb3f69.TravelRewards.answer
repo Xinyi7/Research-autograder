@@ -1,0 +1,128 @@
+public class Main {
+    
+    public static void main (String[] args) {
+ 
+        HotelStay h = new HotelStay("DoubleTree", "Austin", 3, 500);
+        System.out.println(h);              
+
+        RewardsMember member = new RewardsMember("Willie Nelson");
+        System.out.println("Random city: " + member.getRandomCity());
+        
+        member.addHotelStay("DoubleTree", "Austin", 3, 500);
+        member.addHotelStay("Hilton", "Dallas", 2, 400);
+        member.addHotelStay("Marriott", "Houston", 1, 200);
+        
+        System.out.println(member);
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Random city: " + member.getRandomCity());
+        }
+    }
+}
+
+/* first class*/
+class HotelStay {
+
+    String hotel; 
+    String city; 
+    int nights;
+    int points;
+    
+    /**
+     * creates a new hotel stay. 
+     * @param h - the name of the hotel chain
+     * @param c - the city of the stay
+     * @param n - the number of nights at the hotel
+     * @param p - points earned per night    
+     */
+    public HotelStay(String h, String c, int n, int p){
+        // to be implemented
+        hotel = h;
+        city = c;
+        nights = n;
+        points = p;
+    }
+
+    /**
+     * 
+     * @return the hotel stay information in the following example format:
+     * 5 night stay at the Marriott hotel in Atlanta (300 points per night)
+     */
+    public String toString(){
+        // to be implemented
+        return nights + " night stay at the " + hotel + " hotel in " + city + " (" + points + " points per night)";
+    }
+    
+}
+ 
+/*  Second class */ 
+class RewardsMember {
+
+    private String name;
+    private HotelStay[] stays;
+    private int numStays;
+    
+    /**
+     * Creates a new member with an empty list of hotel stays.
+     * Note: a member will never have more than 1000 hotel stays.
+     * @param n - the member's name
+     */
+    public RewardsMember(String name){
+        // to be implemented
+        this.name = name;
+        HotelStay[] stays = new HotelStay[1000];
+        numStays = 0;
+    }
+    
+    /**
+     * creats a new HotelStay, and adds it to stays, and updates numStays
+     * @param hotel - the name of the hotel chain
+     * @param city - the city of the stay
+     * @param nights - the number of nights at the hotel
+     * @param points - points earned per night    
+     */
+    public void addHotelStay(String hotel, String city, int nights, int points){
+        // to be implemented
+        HotelStay hotelStay = new HotelStay(hotel, city, nights, points);
+        stays[numStays] = hotelStay;
+        numStays++;
+    }
+
+    /**
+     * 
+     * @return the total number of points accumulated
+     * based on the hotel stays recorded.
+     */
+    public int getTotalPoints() {
+        // to be implemented
+        int result = 0;
+        for (int i = 0; i < numStays; i++) {
+            result += stays[i].points * stays[i].nights;
+        }
+        return result;
+    }
+
+    /**
+     * @return a random city chosen from those where this RewardMember ever stayed.
+     *         If the number of stays is 0, return an empty String.
+     */
+    public String getRandomCity() {
+        // to be implemented
+        if (numStays == 0) {
+            return "";
+        } else {
+            int i = (int)(Math.random() * (numStays - 1));
+            return stays[i].hotel;
+        }
+    }
+
+    /**
+     * 
+     * @return a string reporting the member name and total points earned 
+     * (should call the getTotalPoints() method).
+     */
+    public String toString() {
+        // to be implemented
+        return "Name: " + name + " Total Points: " + getTotalPoints();
+    }
+}

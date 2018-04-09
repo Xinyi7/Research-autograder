@@ -1,0 +1,21 @@
+public class ExpandString {
+
+    // write your method here
+    public static String expand(String s, int n) {
+        String sNew = "";
+        for (int i = 0; i < s.length(); i++){
+            sNew = sNew + s.charAt(i);
+            for (int j = 0; i < n; i++) {
+                sNew = sNew + s.charAt(i);
+            }
+        }
+        return sNew;
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(expand("hey", 3));
+        expand("nothing", 0);        
+        expand("hello", 2);        
+    }
+
+}

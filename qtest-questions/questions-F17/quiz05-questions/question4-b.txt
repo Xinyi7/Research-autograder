@@ -1,0 +1,52 @@
+<question>
+<title>WhileToFor1</title>
+<type>JavaCode</type>
+<points>6</points>
+<text>
+The following program uses "while" loops. Change it into an equivalent program that uses "for" loops.
+</text>
+<init>
+public class WhileToFor {
+
+    public static void main(String[] args) {
+        String s = "WhileFor";
+        int a = 4;
+        int b = s.length() - 2;
+        while (b > 2) {
+        	System.out.println("b=" + b + ": "+ s.charAt(b));
+        	a++;
+        	int i = b;
+        	while (i > 1) {
+        		System.out.println("i: " + i);
+        		i -= 3;
+        	}
+        	b -= 2;
+        }
+    }
+}
+</init>
+<answer>
+public class WhileToFor {
+
+    public static void main(String[] args) {
+        String s = "WhileFor";
+        int a = 4;
+        for (int b = s.length() - 2; b > 2; b -=2) {
+        	System.out.println("b=" + b + ": "+ s.charAt(b));
+        	a++;
+        	for (int i = b; i > 1; i -= 3) {
+        		System.out.println("i: " + i);
+        	}
+        }
+    }
+}
+</answer>
+<rubric>
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>

@@ -1,0 +1,28 @@
+public class AreAllEven {
+
+    // write your method here
+    public static boolean areAllEven (String [] x) { 
+        int count=0; 
+        for  (int i=0; i<x.length; i++) { 
+            //if the string has odd number, increase the count
+            if (x[i].length()%2==1) { 
+               count+=1; 
+            }
+        }
+        if (count>0) { 
+            return false; 
+        }
+        else { 
+            return true; 
+        }
+    }
+    public static void main(String[] args) {
+        // test your method here
+        
+        String[] x1 = {"andy", "dave", "carl"};
+        String[] x2 = {"eric", "francis", "gary"};
+        System.out.println (areAllEven (x1));
+        System.out.println (areAllEven (x2));
+    }
+
+}

@@ -1,0 +1,32 @@
+<question>
+<title>Arithmetic3</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print? No calculator allowed.
+
+System.out.println(-4 - 2 * 3);
+System.out.println(5 / 3 * 3 % 4 - 2 + 5 / 2);
+System.out.println(9 % 7 % 5 % 4);
+System.out.println(25 / 7 % 3);
+System.out.println((3.0 - 3) * 5 - 1);
+System.out.println((4 - 3) % 8 * 3 * (-2.0));
+System.out.println(9 / 4 / 2.0 + 6);
+System.out.println(6 % 30 - 2.0 * 3);
+System.out.println(1 - 2 + 3 / 4 * 5 + 6.0);
+System.out.println(1 / 2 * 3 - 4 - 5 * 6.0);
+</text>
+<answer>
+-10
+3
+2
+0
+-1.0
+-6.0
+7.0
+0.0
+5.0
+-34.0
+</answer>
+</question>
+

@@ -1,0 +1,16 @@
+public class DifferentDivisions {
+
+    // write your method here
+    public static String divisions(int x, int y)
+    {
+        String statement = "Look: " + x + " / " + y + " is " + (x / y) + " , but " + (double) x + " / " + (double) y + " is " + ((double) x / y);
+        return statement;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(divisions(3, 2));
+        
+    }
+
+}

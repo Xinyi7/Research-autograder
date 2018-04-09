@@ -1,0 +1,22 @@
+public class WordsAreGrowing {
+
+    // write your method here
+
+    public static boolean wordsAreGrowing(String [] x) {
+        int count = 0; 
+        for ( int i = 0; i < s.length(); i ++) {
+            if (s.length() 
+        }
+    }
+    
+    
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"list", "of", "words"}; // false
+        String[] x2 = {"a"}; // true
+        String[] x3 = {"a", "b"}; // false
+        String[] x4 = {"a", "aa", "aaaa"}; //true
+    }
+
+}

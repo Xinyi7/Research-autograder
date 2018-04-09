@@ -1,0 +1,18 @@
+public class LengthProduct {
+
+    // write your method here
+    public static int lengthProduct(String[] s) {
+        int product=1;
+        for (int i=0; i<s.length; i++) {
+            product=product*s[i].length();
+        }
+        return product;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] sonny={"hey", ""};
+        System.out.println(lengthProduct(sonny));
+    }
+
+}

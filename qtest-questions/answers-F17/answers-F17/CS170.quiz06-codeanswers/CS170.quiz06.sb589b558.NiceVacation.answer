@@ -1,0 +1,14 @@
+public class NiceVacation {
+
+    // write your method here
+    public static String vacation(String s, int n){
+        String result ="";
+        result = s.substring(0,k)+ "nice"+ s.charAt(k)+"vacation"+s.substring;
+        
+        }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

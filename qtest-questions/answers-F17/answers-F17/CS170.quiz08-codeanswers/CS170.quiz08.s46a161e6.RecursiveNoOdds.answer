@@ -1,0 +1,15 @@
+public class NoOdds {
+    public static boolean noOdds(String[]x, int n){
+        if(x.equals("")){return true;}
+        
+        else( noOdds(x,n-1);}
+    }
+   
+    
+    public static void main(String[] args) {
+      String[]a = {"alpha", "beta", "lambda"};
+      String[]b = {"blue", "purple", "orange"};
+      System.out.println(noOdds(a,3));
+    }
+
+}

@@ -1,0 +1,21 @@
+public class RecursiveSumRatios {
+
+    public static double sumRatio(double[] x, double[] y, int n){
+        if(n==0){
+            return 0;
+        }
+        else{
+            return x[x.length-n]/y[y.length-n]+sumRatio(x,y,n-1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        double[] x1 = {1.5,2.8,3.0};
+        double[] x2 = {};
+        double[] y1 = {3.0,2.0,2.0};
+        double[] y2 = {};
+        System.out.println(sumRatio(x1,y1,3));
+        System.out.println(sumRatio(x2,y2,0));
+    }
+
+}

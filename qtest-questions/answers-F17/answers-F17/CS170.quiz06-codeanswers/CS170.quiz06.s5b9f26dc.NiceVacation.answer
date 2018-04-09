@@ -1,0 +1,21 @@
+public class NiceVacation {
+
+    public static String vacation(String s, int n){
+        String result = "";
+       if(n == 0){
+            result += " nice " + s.charAt(0) + " vacation " + s.substring(n);
+       }else{
+            result += " nice " + s.substring(0, n) + " vacation ";
+            result += s.substring(n);
+       }
+            
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(vacation("sleep", 0));
+        System.out.println(vacation("yay", 2));
+        
+    }
+
+}

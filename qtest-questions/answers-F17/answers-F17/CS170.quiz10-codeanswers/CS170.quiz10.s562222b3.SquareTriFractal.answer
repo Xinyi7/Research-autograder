@@ -1,0 +1,33 @@
+//In the original fractal:
+//level =2, 1+4=5 squares are drawn
+//level =3, 1+4+4^2=21 squares are drawn
+//level =n, 1+4+4^2+4^3...4^(n-1)squares are drawn
+
+public class SquareTriFractal {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.penup();
+            t.backward(x * 0.5);
+            t.left(30);
+            t.pendown();
+            for (int i = 0; i < 3; i++) {
+                t.forward(x);
+                t.right(120);
+                f(t, x * 0.4, level - 1);
+            }
+            t.penup();
+            t.right(30);
+            t.forward(x * 0.5);
+            t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(200);
+        f(t, 200, 2);
+    }
+}

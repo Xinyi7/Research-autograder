@@ -1,0 +1,89 @@
+public class StarSquares {
+
+    // write your method here
+    public static void starsquares(Turtle t, int n, double x){
+    t.forward(100);
+    t.right(30);
+    t.forward(100);
+    t.right(30);
+    t.forard(100);
+    t.right(30);
+    t.forward(100);
+    t.right(30);
+    t.forward(100);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.penup();
+    t.forward(100);
+    t.pendown();
+    t.right(30);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.penup();
+    t.forward(100);
+    t.pendown();
+    t.right(30);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.penup();
+    t.forward(100);
+    t.pendown();
+    t.right(30);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.penup();
+    t.forward(100);
+    t.pendown();
+    t.right(30);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.penup();
+    t.forward(100);
+    t.pendown();
+    t.right(30);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.left(90);
+    t.forward(20);
+    t.penup();
+    t.forward(100);
+    t.pendown();
+    t.right(30);
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    } for (int i = 0; i < 2; i++) {
+        starsquare(t, n, x);
+        
+    }
+
+}

@@ -1,0 +1,27 @@
+public class ArrowWheel {
+
+    
+    
+    public static void main(String[] args) {
+        turtle t= turtle ():
+      
+        public static void arrowWheel(Turtle T, double x, int n){
+          for (int l=0, l<9, l++){             // this for loop cause it to do the loop below 9 times
+          
+            for (int i=0, i<1, i++) {       // this loop creates the line and the triangle
+                t.forward(double x);
+                t.right(45);
+                t.forward(14);
+                t.left(90);
+                t.forward(14);
+                t.left(45);
+                t.forward(14);
+                t.left(45);
+                t.foward(double x);
+            }'
+       t.right(40);
+    }
+
+}
+}
+}

@@ -1,0 +1,40 @@
+public class StarSquares {
+
+    // write your method here
+
+    //draws a triangle
+    public static void star(Turtle t, double x) {
+            t.forward(x);
+            t.right(120);
+            t.forward(x);
+            t.right(120);
+            t.forward(x);
+            t.right(120);
+    }
+            //draws a square
+           
+                    t.forward(x/5);
+                    left(90);
+                    t.forward(x/5);
+                    left(90);
+                    t.forward(x/5);
+                    left(90);
+                    t.forward(x/5);
+                    left(90);
+            
+
+            
+            
+                
+            }
+    
+    public static void main(String[] args) {
+        Turtle bob = new Turtle();
+
+        // test your method here
+
+       star(bob, 100);
+      
+    }
+
+}

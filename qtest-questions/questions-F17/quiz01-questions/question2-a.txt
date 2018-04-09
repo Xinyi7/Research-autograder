@@ -1,0 +1,52 @@
+<question>
+<title>UnixDirectories1</title>
+<type>FreeResponse</type>
+<points>5</points>
+<text>
+Consider the directory hierarchy in the figure. Give the answers to each of the following questions.  If a solution is not possible or a command would give an error, you may just answer "error".
+
+1. What is the absolute path to the directory named "staff"?
+
+2. If you are in the directory named "jon", give a single command using a relative path to change to the directory named "student".
+
+3. Give the output you will see if you are in the "student" directory and type pwd.
+
+4. What will the output be if you type ls in the "admin" directory?
+
+5. You are currently in the "jon" directory.  What directory will you be in after the command cd ../bin executes?
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAXgAAAERAQMAAABLqC53AAAABlBMVEX///8AAABVwtN+AAAEsElE
+QVRo3u2aXWvUShjHZ5Kw3Ys9bkCQLS7twLn1YkGQii7NF/A75ByxvTi7nF6pxQsH/BJCQf0IhQVR
+bxooeKPeKxUtCAcOiAiCCtWuybzkZZPJPE+lqGum2/Yh/JKd+c/MM/MfQshcluXpPopnxEfxAWmj
+eE48DE4JcRB49zC+ZRqB+bZqQ8PPLc+OmQ+RfHDMfITk+U/GN+N5fnm3O03KYyjfUYsAB/ID9T8E
+Li56oejD+FbaDhjfSxYvHi9hBLYixSu1F8+XuLUrIDVFB/BE/hZUTT/mGVDRDbEd4GJDsAFQk4uh
+wMWg6ADV5GpDAFB0RW4HuNwQ2Hc1ieZOwlPVF3Y1k6pw8bEr2i/mN2rrYjEmfcGz/FitUzMhOZE7
+MouiJ/RM5GpWuhwwVWRjPcCkidRuLOEdYlV0Qfx1JE9zl8xTRcovxOfZV9apKRrK0wRUo6gSw1c8
+y0lWl3iY4n1bGhqQNBHyNC2aFdWDRbfVs6ShVroZlrxjSUOqaxzN03wnViceLb/UnmdTzjRVsmZm
+K0CrVs2cs2C1iX2jSOXu3DBPlcI61J755uo0nn27V5fYV0hO/pyypjQUzUK5W3tmNQvGiBOjon1S
+kj9reiENSe8X6sjP+UGmo0HOIwrvR3nBBc5Gndw14f1OFF3gbOTy7JpI9YOiCyxFYRpJ7xcVXGA5
+6ulIer/dggusiFo6yvYusKjhfzV+JYTx9LXke1W8X3FtT/FVTx1UXNuV/NJUX7mwGqqou7kvo4X1
+Oy/2FX8QCf70mCvq9JV7KlqcMBm5o8k/TNcnnOU3dbQ8Ud/p/rt6OTLyQx31zmp+ffuvfRO/fElH
+/Ymqmfv/w7/DIn/qa6SoPw501F1UEd1Z+qDqQw+jZjzPPS+9n8jFwGiui1PYUNiLJ7wbvLRjPkDw
+fvzDkAfFmKPiIKYxR8WJ70QcFdOkBQ5Kfh/TAZ42b/CTER9zkuKLD0PIr24By5/AbYT8Ce8h5E94
+ByG/2Gwi5E/dG/RgykccTfnql8HlT+8Byi/YNlx+wXtw+QXvwOUXPIXLL9vKwfJLPgDLP+v5bPLP
+3mmTv2ya6uUvm7J6+UumzyJ/6VaL/KWq2Y5lCeRw1uwMzWnfHFUp366JqpT3aqIq5R1zVCq1zrD2
+fLsqavhfn6dRJ6Xe6ahf8/yU9+gjFfEO8cy8rkWH3lbOJ+Y7Bp6++fhaui56eOOL5FcPLn56ZeDd
+c3vjbem/zjxTz7+yNd4amerzMeWfDhW/uTU+GFmfT9/q5w+3xrfsvDPS/KW74ycmnu7duPlA1ufx
+NdXe68/uf7rajM/fkZ8DP0hxOM7U4XmGMoF4PkCZRjzPke8jIXlKcO8vYXmH4N53wvIe7v0oNN9G
+Dmgsj/F0R+EZIagBjeUDQlADGstzQlADGslTuCU6Eu+ALdTReA9sufC8O/2SNnU6hTzbycnEAVOF
+5podQIY+z5rBIEM5KBxG1fdsssKufhbxzffSFdmXudxa7jT8fPHud/AMWZ8QwC8M32u+++HlK3t9
+1p5rfnFtNMHwS+v/7WD47trCNoY/uf7neTs/fJnW5+zu0rH2F4RvNfPlR/LCBan8nISHpClN+XHl
+G7T9iED80YstAAAAAElFTkSuQmCC
+</figure>
+<answer>
+1. /users/staff
+2. cd ../../student
+3. /users/student
+4. jon steve
+5. error
+</answer>
+<rubric>1 point for each correct answer</rubric>
+</question>
+

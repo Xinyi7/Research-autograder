@@ -1,0 +1,26 @@
+public class Dot {
+
+    public static String dot(String s, int k) {
+        String result = "";
+        boolean a = k >= 0;
+        boolean b = k < s.length();
+
+        if (a && b) {
+        result += s.substring(0, k);
+        result += ".";
+        result += s.substring(k + 1, s.length());
+        } else {
+            result = s;
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        
+    System.out.println(dot("orange", 2));
+    System.out.println(dot("hey", 1));
+    System.out.println(dot("hey", -1));
+    }
+
+}

@@ -1,0 +1,15 @@
+public class Dot {
+
+ public static String dot(String s, int k) {
+    String result = s.substring(0, k) + "." + s.substring(k+1); 
+    return result;
+    
+    
+ }
+    
+    public static void main(String[] args) {
+ System.out.println(dot("orange", 2));
+ 
+    }
+
+}

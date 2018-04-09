@@ -1,0 +1,13 @@
+public class ChangeLast {
+    
+    public static void main(String[] args) {
+        changeLast("book", "c");
+    }
+
+    public static String changeLast (String s, String last){
+
+        return s - charAt(s.length()) + (charAt(last.length));
+ 
+    }
+
+}

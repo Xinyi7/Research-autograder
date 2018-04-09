@@ -1,0 +1,15 @@
+public class ProdMult5 {
+
+    // write your method here
+    public static int prodMult5(int start, int end){
+        int result =0;
+        for (int i= start, int <end, i++){
+            if 
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

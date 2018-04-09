@@ -1,0 +1,40 @@
+<question>
+<title>HowManySquares1</title>
+<type>MultipleChoice</type>
+<points>4</points>
+<text>
+How many squares are drawn by the following program?
+
+    public static void f(Turtle t) {
+        for (int i = 0; i < 4; i++) {
+            g(t);
+            t.forward(10);
+            t.right(90);
+        }
+    }
+
+    public static void g(Turtle t) {
+        for (int i = 0; i < 4; i++) {
+            t.forward(10);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        for (int i = 0; i < 3; i++) {
+            f(t);
+            t.forward(200);
+            t.right(90);
+        }
+    }
+</text>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>6</option>
+<option>8</option>
+<option>9</option>
+<option>12</option>
+<answer>3</answer>
+</question>

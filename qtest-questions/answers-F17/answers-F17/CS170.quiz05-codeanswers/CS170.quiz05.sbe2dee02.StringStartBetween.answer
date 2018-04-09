@@ -1,0 +1,22 @@
+public class StringStartBetween {
+
+    // write your method here
+    public static String startBetween(String s, String start, String between)
+    {
+        String result = start;
+        for (int i=0; i< s.length(); i++)
+      {
+            result = start + s.substring(0,i)+ between.substring(0,i);
+      }
+        result += s.charAt(s.length()-1);
+        return result; 
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(startBetween("abc", "$", "--"));
+        System.out.println(startBetween("a", "$", "--"));
+        System.out.println(startBetween("hello", "@#!", "."));
+    }
+
+}

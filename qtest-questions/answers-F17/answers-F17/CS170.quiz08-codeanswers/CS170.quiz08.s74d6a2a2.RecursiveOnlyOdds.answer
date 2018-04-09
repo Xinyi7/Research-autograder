@@ -1,0 +1,29 @@
+public class RecursiveOnlyOdds {
+
+    // write your method here
+    public static boolean onlyOdds(int[] a, int n) {
+        if (n < 1) {
+        return true;
+      }else {
+        if (a[n - 1] % 2 != 0) {
+            return true && onlyOdds(a, n - 1);
+        }else {
+            return false;
+        }
+      }
+    }
+    public static void main(String[] args) {
+        // test your method here
+        int[] w = {1, 3, 5};
+        int[] x = {1};
+        int[] y = {2};
+        int[] z = {1, 2, 3};
+        int[] m = {1, 3, 2};
+        System.out.println(onlyOdds(w, 3));
+        System.out.println(onlyOdds(x, 1));
+        System.out.println(onlyOdds(y, 1));
+        System.out.println(onlyOdds(z, 3));
+        System.out.println(onlyOdds(m, 2));
+    }
+
+}

@@ -1,0 +1,12 @@
+public class NestedRectShrink {
+
+    // write your method here
+    public static void rectangle(Turtle t, double x, )
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t=new Turtle();
+        nestedRectShrink(t, 5, 300, 200);
+    }
+
+}

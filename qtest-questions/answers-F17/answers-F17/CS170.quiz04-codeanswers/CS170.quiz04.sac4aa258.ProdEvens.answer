@@ -1,0 +1,39 @@
+public class ProdEvens {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(prodEvens(2,4));//8
+        System.out.println(prodEvens(2,2));//2
+        System.out.println(prodEvens(2,5));//8
+        System.out.println(prodEvens(5,1));//8
+        System.out.println(prodEvens(0,5));//8
+    }
+    public static int prodEvens(int a, int b){
+        int start;
+        int end;
+        //the question ask to get the product of the even numbers between a and b but does not states that a always is smaller than b
+        //so I used the if statement to make sure I can get correct answers when a us bigger than b
+        if (a<=b){
+            start=a;
+            end=b;
+        }else{
+            start=b;
+            end=a;
+        }
+        //avoid geting 0 when one of the number is 0
+        if(start==0){
+            start=1;
+        }
+        int result=1;
+        for (int i=start;i<=end;i++){
+            if (i%2==0){
+                result*=i;
+            }
+        }
+        return result;
+        
+    }
+
+}

@@ -1,0 +1,28 @@
+public class AreAllEven {
+
+    // write your method here
+    public static boolean (areAllEven(String[] x) {
+        String count=0;
+        for(int i=0; i<x.lengthl;i++){
+            if (x[i]%2==1) {
+                count++;
+            }
+        }
+        String [] = new String [count];
+        String count=j;
+        for(int i=0; i<s.count; i++){
+            if(x[i]%2==1) {
+                count++
+            }
+        return j;
+        }
+        return count;  
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"andy", "dave", "carl"};
+        String[] x2 = {"eric", "francis", "gary"};
+    }
+
+}

@@ -1,0 +1,26 @@
+public class RecursiveOnlyOdds {
+
+    // write your method here
+    public static boolean onlyOdds(int[]a, int n){
+        int result = 0;
+        if (a[n].equals("")){
+            result=  0;
+        }
+        if(a[0]%2==1){
+            result = 1 + onlyOdds(a, n-1);
+        }
+        else{
+            onlyOdds(a,n-1);
+        }
+      if(result==n){
+        return true;
+      }
+      
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        
+    }
+
+}

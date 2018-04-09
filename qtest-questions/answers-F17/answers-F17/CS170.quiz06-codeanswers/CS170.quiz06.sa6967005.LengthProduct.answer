@@ -1,0 +1,22 @@
+public class LengthProduct {
+
+    public static int (String[] x){
+      result int = 0;
+      x.length
+      
+    }
+    
+    public static void main(String[] args) {
+        String[] x1 = {"hello", ""};
+         String[] x1 = {"hey","you"};
+          String[] x1 = {"hey",""};
+           String[] x1 = {"list","of","words"};
+        System.out.println(lengthProduct(x1));
+         System.out.println(lengthProduct(x2));
+          System.out.println(lengthProduct(x3));
+           System.out.println(lengthProduct(x4));
+           
+        
+    }
+
+}

@@ -1,0 +1,45 @@
+// When you call f(t, 150,3) there are 27 total calls 
+// For f(t, 150, 4) there are 81 total calls 
+// For n number there are 3^N total calls 
+
+public class FractalTurtleStar {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            for (int i = 0; i < 9; i++) {
+                t.forward(x);
+                if (i % 3 == 1) {
+                    f(t, x * 0.4, level - 1);
+                }
+                t.backward(x);
+                t.left(360.0 / 9);
+
+
+                
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        f(t, 150, 3);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

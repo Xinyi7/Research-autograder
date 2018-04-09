@@ -1,0 +1,24 @@
+public class SpeedWalking {
+
+    // write your method here
+    public static String speedWalking(double speed) {
+        if (speed < 6) {
+            return "walking"; 
+        } else if (speed <= 15) {
+            return "running"; 
+        } else {
+            return "sprinting";
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(speedWalking(0)); // walking
+        System.out.println(speedWalking(5)); // walking
+        System.out.println(speedWalking(15)); // running
+        System.out.println(speedWalking(16)); // sprinting
+        System.out.println(speedWalking(14)); // running
+        System.out.println(speedWalking(100)); // sprinting
+    }
+
+}

@@ -1,0 +1,24 @@
+public class ProdOdds {
+
+    // write your method here
+    public static int prodOdds (int a, int b) {
+        int result = 1;
+        if (a % 2 == 1) {
+            for (int i = a; i <= b; i+=2) {
+                result *= i;
+            }
+            return result;
+        } else {
+            for (int j = a + 1; j <= b; j+=2) {
+                result *= j;
+            }
+            return result;
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.print(prodOdds(4,8));
+    }
+
+}

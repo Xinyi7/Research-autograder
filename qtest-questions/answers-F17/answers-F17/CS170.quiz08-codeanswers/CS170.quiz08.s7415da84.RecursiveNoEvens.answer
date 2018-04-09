@@ -1,0 +1,28 @@
+public class NoEvens {
+
+    // write your method here
+    public static boolean noEvens(String[] x, int n) {
+        boolean result = true;
+        for (int i = 0; i < x.length; i++) {
+            while ()
+            if (x[i].length() % n == 0) {
+                result = false;
+            } else {
+                result= true;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] a = {"alpha", "beta", "lambda"};
+     
+        String[] b = {"red", "green", "white"};
+        String[] c = {};
+        System.out.println(noEvens(a, 3 ));
+        System.out.println(noEvens(b, 3 ));
+        System.out.println(noEvens(c, 3 ));
+    }
+
+}

@@ -1,0 +1,16 @@
+public class NumStartingWith {
+
+    public static int numStartingWith(String[] x, char c) {
+        int result = 0;
+        
+    }
+    
+    public static void main(String[] args) {
+        String[] x = new String[];
+        System.out.println(numStartingWith({"hello", "", "wow", "hey"}, 'h');
+        System.out.println(numStartingWith({"hello", "", "wow", "hey"}, 'w');
+        System.out.println(numStartingWith({"hello", "", "wow", "hey"}, 'a');
+        String[] test = {"hello", "", "wow", "hey"};
+    }
+
+}

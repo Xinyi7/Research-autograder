@@ -1,0 +1,52 @@
+<question>
+<title>MovieRating</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Write a Java method named movieRating(double stars) that takes a positive floating point number representing the average number of stars a particular movie recieves. The method returns the rating category of that movie: "bad" if the average rating is at or below 2.5 stars, "ok" if the average rating is between 2.5 and 4.2 (extremes excluded), and "mustsee" if the average rating is greater than or equal to 4.2.
+</text>
+<init>
+public class MovieRating {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class MovieRating {
+
+    public static String movieRating(double stars) {
+        if (stars <= 2) {
+            return "bad";
+        } else if (stars >= 4.2) {
+            return "mustsee";
+        } else {
+            return "ok";
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(movieRating(1)); // bad
+        System.out.println(movieRating(2.5)); // bad
+        System.out.println(movieRating(3.2)); // ok
+        System.out.println(movieRating(4.2)); // mustsee
+        System.out.println(movieRating(4.21)); // mustsee
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

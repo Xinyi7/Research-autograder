@@ -1,0 +1,30 @@
+public class AreAllEven {
+
+    // write your method here
+    public static boolean areAllEven(String[] x)
+    {
+        //this creates a boolean "result" which starts as true
+            //a for loop checks if the length of each string is even
+            //if the length is even, nothing happens to "result"
+            //if odd, "result" becomes false
+        boolean result= true;
+        for(int i=0; i<x.length; i++)
+        {
+            if(x[i].length()%2==1)
+                result=false;
+        }
+
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"andy", "dave", "carl"};
+        String[] x2 = {"eric", "francis", "gary"};
+
+        System.out.println(areAllEven(x1));
+        System.out.println(areAllEven(x2));
+        
+    }
+
+}

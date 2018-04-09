@@ -1,0 +1,11 @@
+public class RecursiveIsThereEven {
+
+    public static boolean isThereEven(int[] a, int n){
+        if a
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

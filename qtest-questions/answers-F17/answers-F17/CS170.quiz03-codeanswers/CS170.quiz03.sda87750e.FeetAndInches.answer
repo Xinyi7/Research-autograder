@@ -1,0 +1,16 @@
+public class FeetAndInches {
+    public static int feet(int x) {
+        int f = 0;
+            for(int j = 0; j < x; j++) {
+                f = f + j;
+            }
+        return f;     
+        System.out.println(x + " in equals " + );    
+    }
+   
+    public static void main(String[] args) {
+        // test your method here
+
+    }
+
+}

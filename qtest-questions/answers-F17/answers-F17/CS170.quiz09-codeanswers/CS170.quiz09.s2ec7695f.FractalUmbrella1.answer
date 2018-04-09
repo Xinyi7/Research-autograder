@@ -1,0 +1,31 @@
+//if you call f(t, 200, 3), it calls f(level 2), and f(2) calls f(level 1), and f(1) calls f(level 0)
+//f(3) + f(2) + f(1) + f(0) = 4 calls
+//f(t, 200, 4) = f(4) + f(3) + f(2) + f(1) + f(0) = 5 calls
+//f(t, 200, N) calls f (n+1) times
+
+public class FractalUmbrella {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(90);
+            for (int i = 0; i < 6; i++) {
+                t.forward(x);
+                t.left(180);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(30);
+            }
+            t.left(90);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 4);
+    }
+}

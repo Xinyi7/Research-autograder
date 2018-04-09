@@ -1,0 +1,33 @@
+public class RecursiveCapRemove {
+
+    public static String capRemove(String s, char c, char r) {
+        if (s.length() == 0) {
+            return "";
+        } else {
+            if (s.charAt(0) == c) {
+                return ""+ uppercase(s.charAt(0)) + capRemove(s.substring(1), c, r);
+            } else if (s.charAt(0) == r) {
+                return capRemove(s.substring(1), c, r);
+            } else {
+                return "" + lowercase(s.charAt(0)) + capRemove(s.substring(1), c, r);
+            }
+        }
+    }
+
+    public static String uppercase(char c) {
+        String b = "";
+        return (b+c).toUpperCase();
+    }
+
+    public static String lowercase(char c) {
+        String b = "";
+        return (b+c).toLowerCase();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(capRemove("abcd", 'a', 'b'));
+        System.out.println(capRemove("", 'a', 'b'));
+        System.out.println(capRemove("March", 'a', 'b'));
+    }
+
+}

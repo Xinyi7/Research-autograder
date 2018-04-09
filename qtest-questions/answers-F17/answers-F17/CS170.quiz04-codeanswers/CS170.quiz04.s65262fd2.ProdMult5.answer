@@ -1,0 +1,23 @@
+public class ProdMult5 {
+
+    // write your method here
+    public static int prodMult5(int start, int end) {
+        int product = 1;
+        if (start < 5 && end < 5) {
+            product = product - 1; //1 - 4 has no multiples of 5 so product should be zero
+        }
+        for (int i = 5; i <= end; i = i + 5) {
+            product = product * i;
+        }
+        return product;
+    }
+    
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(prodMult5(4, 10));
+        System.out.println(prodMult5(1, 4));
+        System.out.println(prodMult5(1, 6));
+    }
+
+}

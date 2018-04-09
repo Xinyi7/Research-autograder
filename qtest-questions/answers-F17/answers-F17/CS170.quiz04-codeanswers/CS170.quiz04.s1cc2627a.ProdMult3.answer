@@ -1,0 +1,21 @@
+public class ProdMult3 {
+
+    // write your method here
+    public static int prodMult3(int a, int b){
+        int result = 1; 
+        for (int i = a; i < b; i++){
+            if (i%3==0){
+              result *=i;
+            } else {
+                result +=0;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        
+        System.out.println(prodMult3(1, 10));//answer should be 
+    }
+
+}

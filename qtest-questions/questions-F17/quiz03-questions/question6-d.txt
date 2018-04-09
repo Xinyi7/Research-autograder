@@ -1,0 +1,44 @@
+<question>
+<title>DifferentDivisions</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Write a method named divisions that takes two integers x and y. The method returns a String containing a message explaining the integer division and the floating point division between those two numbers. For example, divisions(3, 2) will return "Look: 3 / 2 is 1, but 3.0 / 2.0 is 1.5"
+</text>
+<init>
+public class DifferentDivisions {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class DifferentDivisions {
+
+    public static String divisions(int x, int y) {
+        return "Look: " + x + " / " + y + " is " + (x / y)
+               + ", but " + (double)x + " / " + (double)y + " is "
+               + ((double) x / y);
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(divisions(3, 2));
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

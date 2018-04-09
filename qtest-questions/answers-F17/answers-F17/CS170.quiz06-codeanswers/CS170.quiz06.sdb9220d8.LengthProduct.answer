@@ -1,0 +1,20 @@
+public class LengthProduct {
+
+    // write your method here
+    public static int lengthProduct(String[] x){
+        int result = 1;
+        for(int i=0; i<x.length; i++){
+            result = result * x[i].length();
+        }
+        return result; 
+    }
+    public static void main(String[] args) {
+        // test your method here
+        String[] s={"hello"};
+        System.out.println(lengthProduct(s));
+        String[] w={"hello",""};
+        System.out.println(lengthProduct(w));
+        
+    }
+
+}

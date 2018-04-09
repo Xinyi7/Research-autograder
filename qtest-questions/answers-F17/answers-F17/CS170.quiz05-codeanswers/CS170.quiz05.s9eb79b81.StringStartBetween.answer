@@ -1,0 +1,18 @@
+public class StringStartBetween {
+
+    // write your method here
+    public static String betweenEnd (String s, String start, String between) {
+        for (i = 0; i < s.length(); i++) {
+            //char c = s.charAt(i);
+               return start + s.charAt(0) + between + s.charAt;
+        }
+        
+     
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(startBetween("abc", "$", "--"));
+    }
+
+}

@@ -1,0 +1,36 @@
+public class ProdOdds {
+
+    
+    public static void main(String[] args) {
+        System.out.println(prodOdds(2, 6)); //15
+        System.out.println(prodOdds(-2, 6)); //15
+        System.out.println(prodOdds(0, 7)); //105
+        System.out.println(prodOdds(7, 7)); //7
+        System.out.println(prodOdds(6,1)); //15
+    }
+
+    public static int prodOdds(int start, int end){
+        int product = 1;
+        if (start-end ==0){ //in case the numbers are the same
+            product-=1;
+        }
+
+        if (start <=end){ //assuming the smallest number is first, OR if the numbers are equal (if they're equal it returns zero)
+        for (int i = start; i <=end; i++){
+            if (i%2 == 1){
+                product *= i;
+            }
+        }
+            
+        }
+        else { //assuming the bigger number is the first
+            for (int i = end; i<=start; i++){
+                if (i%2==1){
+                    product*=i;
+                }
+            }
+        }
+        return product;
+    }
+
+}

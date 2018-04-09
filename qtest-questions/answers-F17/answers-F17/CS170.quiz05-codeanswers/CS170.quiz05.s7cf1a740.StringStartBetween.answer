@@ -1,0 +1,17 @@
+public class StringStartBetween {
+
+    public static String startBetween (String s, String start, String between) {
+        String p = start + "";
+        for (int i = 0; i < s.length(); i ++) {
+            p = p + s.charAt(i) + between;
+        }
+        return p;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(startBetween("abc", "$", "--"));
+        System.out.println(startBetween("a", "$", "--"));
+        System.out.println(startBetween("hello", "@!", "."));
+    }
+
+}

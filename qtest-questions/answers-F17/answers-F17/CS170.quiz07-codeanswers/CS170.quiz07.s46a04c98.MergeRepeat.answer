@@ -1,0 +1,18 @@
+public class MergeRepeat {
+
+    public static String mergeRepeat(String[] s, int k){
+        String result= "";
+        for (int i=0; i< s.length; i++){
+            for (int a=0; a<k; k++){
+                result+= s[i]; 
+            }
+        }  
+        return result;   
+    }
+    
+    public static void main(String[] args) {
+        System.out.print(mergeRepeat({"hey", "you", "hi"}, 2));
+        System.out.print(mergeRepeat({"A", "BC"}, 3));
+    }
+
+}

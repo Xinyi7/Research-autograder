@@ -1,0 +1,40 @@
+public class ArrowWheel {
+
+    // write your method here
+    public static void arrowWheel(Turtle t, double x, int n)
+    {
+       //draw the star
+       for(int k=0; k<n; k++)
+       {
+            //draws the spoke, to triangle starting point
+            t.forward(x);
+            t.penup();
+            t.right(90);
+            t.backward(x/10);
+            t.pendown();
+            //draws triangle
+            for(int i=0; i<3; i++)
+            {
+                t.forward(x/5);
+                t.left(120.0);
+            }
+           //get to next spoke starting point
+           t.penup();
+           t.forward(x/10);
+           t.right(90);
+           t.forward(x);
+           t.right(180);
+           t.left(360.0/n);
+           t.pendown();
+           
+           
+       }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle amy= new Turtle();
+        arrowWheel(amy,70,9);
+    }
+
+}

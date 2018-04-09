@@ -1,0 +1,38 @@
+<question>
+<title>TotalAngle2b</title>
+<type>MultipleChoice</type>
+<points>4</points>
+<text>
+What is the total angle that the turtle turns in the following program?
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        for(int i = 0; i < 4; i++) {
+            f(t, 20);
+        }   
+        t.forward(100);
+        g(t, 100);
+    }
+
+    public static void f(Turtle t, double x){
+        for(int i = 0; i < 4; i++) {
+            t.left(x);
+        }
+    }
+
+    public static void g(Turtle t, double x) {
+        t.forward(20 + x);
+        t.left(2 * x);
+    }
+</text>
+<option>80</option>
+<option>200</option>
+<option>260</option>
+<option>380</option>
+<option>420</option>
+<option>520</option>
+<option>600</option>
+<option>640</option>
+<answer>520</answer>
+</question>
+

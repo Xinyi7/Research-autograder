@@ -1,0 +1,32 @@
+public class ProdMult3 {
+
+    // write your method here
+    public static double prodMult3(int a, int b){
+        int result = 0;
+        int smaller = 0;
+        int bigger = 0;
+        
+        if (a <= b){     //this part ensures that for loop below will always start with the smaller number
+            smaller = a; //in the event that int a > int b, as the question did not specify
+            bigger = b;  //that we will always be given an int a smaller than int b 
+        } else {
+          smaller = b;
+          bigger = a;
+        }
+        
+        for (int i = smaller; i <= bigger; i++){
+            if (i % 3 == 0){
+                result += i;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(prodMult3(27, 3));
+        System.out.println(prodMult3(9, 3));
+        System.out.println(prodMult3(245, 3));
+    }
+
+}

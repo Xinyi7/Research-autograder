@@ -1,0 +1,16 @@
+public class ChangeLast {
+
+    public static String changeLast(String s, String last) {
+        String front = s.substring(0, s.length() -1);
+        String replacment = last.substring(last.length() - 1);
+        String result = front + replacment;
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(changeLast("book", "c"));
+        System.out.println(changeLast("root", "palm"));
+        
+    }
+
+}

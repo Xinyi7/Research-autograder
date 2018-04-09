@@ -1,0 +1,25 @@
+public class NiceVacation {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(vacation("beach", 2));
+        System.out.println(vacation("sleep", 0));
+    }
+
+    public static String vacation(String s, int n){
+        String result = "";
+        for(int i = 0; i < s.length(); i++){
+            if(s.charAt(i) == s.charAt(n)){
+                result += " nice ";
+            }
+            else if(s.charAt(i) == s.charAt(n + 1)){
+                result += " vacation ";
+            }
+            result += s.charAt(i);
+        }
+        return result;
+    }
+
+}

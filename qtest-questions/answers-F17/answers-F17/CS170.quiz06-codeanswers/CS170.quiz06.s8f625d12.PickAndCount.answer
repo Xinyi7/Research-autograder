@@ -1,0 +1,23 @@
+public class PickAndCount {
+
+    // write your method here
+    public static int pickAndCount(String s, int k)
+    {
+        char x = s.charAt(k); //the char we are looking for
+        int count = 0;
+        for(int i=0;i<s.length();i++) //we can use == because it's comparing chars. They will be compared as numbers
+        {
+            if(s.charAt(i)==x)
+                count++;
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(pickAndCount("fluffy", 0)); //3
+        System.out.println(pickAndCount("fluffy", 2)); //1
+        System.out.println(pickAndCount("mathematics", 0)); //2
+        System.out.println(pickAndCount("mathematics", 6)); //2
+    }
+
+}

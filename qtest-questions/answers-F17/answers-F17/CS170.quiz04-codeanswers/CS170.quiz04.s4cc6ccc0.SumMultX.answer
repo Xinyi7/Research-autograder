@@ -1,0 +1,11 @@
+public class SumMultX {
+
+    public static int sumMultx(int x, int y) {
+        for 
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

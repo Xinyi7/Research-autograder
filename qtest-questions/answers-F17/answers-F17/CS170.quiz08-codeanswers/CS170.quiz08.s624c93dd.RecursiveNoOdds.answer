@@ -1,0 +1,16 @@
+public class NoOdds {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+    public static boolean noOdds(String[] x, int n){
+    boolean result = true;
+        if(i==n){
+            return result;
+        }
+        
+    }
+
+}

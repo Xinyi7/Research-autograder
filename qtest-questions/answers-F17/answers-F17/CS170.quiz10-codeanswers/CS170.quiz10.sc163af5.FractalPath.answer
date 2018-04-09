@@ -1,0 +1,30 @@
+// Level 2 = 6 Level 3 = 9 Level N = 3*N
+public class FractalPath {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.forward(x);
+            t.right(90);
+            t.forward(x / 2);
+            t.right(90);
+            t.forward(x);
+            t.left(120);
+            f(t, x * 0.75, level - 1);
+            t.right(120);
+            t.backward(x);
+            t.left(90);
+            t. backward(x / 2);
+            t.left(90);
+            t.backward(x);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(20);
+        f(t, 180, 13);
+        t.hideturtle();
+    }
+}

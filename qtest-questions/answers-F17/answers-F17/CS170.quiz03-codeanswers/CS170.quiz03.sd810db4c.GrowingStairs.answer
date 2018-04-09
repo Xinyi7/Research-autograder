@@ -1,0 +1,41 @@
+public class GrowingStairs { //start class
+
+  
+    
+    public static void main (String[] args) {// start main
+         Turtle jones = new Turtle();
+    stairs(jones, 7, 10);
+    } // end main
+
+    public static void stairs ( Turtle t, int n, double s) { // start stairs
+
+        for (int i = 0; i < n; i++) { //start loop
+            step(t, s * (i+1));
+        } //end loop
+
+        // return turtle
+
+        for (int j = n; j > 0; j--) { //start loop
+            t.backward(s*(j));
+            t.left(90);
+            t.backward(s*(j));
+            t.right(90);
+
+
+            
+        } //end loop
+            
+        } //end stairs
+
+        public static void step (Turtle t, double s) {
+
+            t.left(90);
+            t.forward(s);
+            t.right(90);
+            t.forward(s);
+        }
+
+        
+    
+
+} //end class

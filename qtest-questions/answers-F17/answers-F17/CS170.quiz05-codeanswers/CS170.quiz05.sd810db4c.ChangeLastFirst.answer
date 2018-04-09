@@ -1,0 +1,17 @@
+ public static void main(String[] args) {// start of main
+        System.out.println(changeLastFirst("book", "c")) ;
+    } // end main
+
+
+public class String ChangeLastFirst (String s, String first) { // start
+
+String change = "" ;
+
+ for(int i = 1; i >= s.length()-1 ; i++) { // start loop
+
+change = change + first.charAt(0) + s.charAt(i) ;
+
+} //close loop
+
+return change ;
+} //end

@@ -1,0 +1,49 @@
+<question>
+<title>PigLatin</title>
+<type>JavaCode</type>
+<points>6</points>
+<text>
+Write a method pigLatin(String s) that takes a non-empty string s and returns a string with the first letter moved to the end of the string, and an extra "a" attached to the end.
+
+Examples:
+pigLatin("hello") returns "elloha"
+pigLatin("peaches") returns "eachespa"
+pigLatin("b") returns "ba"
+
+</text>
+<init>
+public class PigLatin {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class PigLatin {
+
+    public static String pigLatin(String s) {
+        return s.substring(1) + s.charAt(0) + "a";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(pigLatin("hello")); // elloha
+        System.out.println(pigLatin("peaches")); // eachespa
+        System.out.println(pigLatin("b")); // ba
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>

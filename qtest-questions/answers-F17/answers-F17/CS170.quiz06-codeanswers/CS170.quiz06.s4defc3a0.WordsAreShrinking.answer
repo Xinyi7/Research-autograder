@@ -1,0 +1,37 @@
+public class WordsAreShrinking {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"list", "of", "words"};
+        String[] x2 = {"a"};
+        String[] x3 = {"a", "b"};
+        String[] x4 = {"aaaa", "aa", "a"};
+
+        System.out.println(wordsareShrinking(x1));
+        System.out.println(wordsareShrinking(x2));
+        System.out.println(wordsareShrinking(x3));
+        System.out.println(wordsareShrinking(x4));
+    }
+
+    public static boolean wordsareShrinking (String [] x){
+
+        
+        int count = x[0];
+
+        for ( int i = 0; i < x.lenght; i++){
+            if (x[i].length < x[0].length ){
+                count++;
+            }
+           
+        }
+
+        if ( count < x[0].length){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+}

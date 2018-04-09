@@ -1,0 +1,30 @@
+/*f is called 9 times
+ * general formula for f(t,200,4)=3*N times 
+ */
+
+public class FractalUmbrella {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(60);
+            for (int i = 0; i < 5; i++) {
+                t.forward(x);
+                t.left(180);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(36);
+            }
+            t.left(120);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(0);
+        t.left(95);
+        f(t, 200, 5);
+    }
+}

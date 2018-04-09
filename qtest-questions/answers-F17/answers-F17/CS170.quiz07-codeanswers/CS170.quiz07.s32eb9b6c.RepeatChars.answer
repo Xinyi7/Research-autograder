@@ -1,0 +1,19 @@
+public class RepeatChars {
+
+    // write your method here
+
+    public static String repeatChars(String s, int[] k) {
+       String result = "";
+       int n =0;
+       for(i=0; i < k.length; i++) {
+        result += s.charAt(n) * k[n];
+       }
+       return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(repeatChars("hey", {2, 1, 3});
+    }
+
+}

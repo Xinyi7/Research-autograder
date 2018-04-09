@@ -1,0 +1,16 @@
+public class ChangeLast {
+    public static String changelast( String s, String last) {
+    String result = "";
+    For (int i= 0; i < s.length -1; i++){
+        If (i == s.length-1){
+        s.charAt(i)= last;}
+    }
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        changelast("book","c");
+    }
+
+}

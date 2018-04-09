@@ -1,0 +1,18 @@
+public class SplitAt {
+
+    // write your method here
+    public static String[] spliAt(String s, int n) {
+        x String[] = {s.substring(0,n), s.substring(n)};
+        return x;
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println("apple", 2);
+        System.out.println("apple", 0);
+        System.out.println("apple", 4);
+        System.out.println("apple", 5);
+    }
+
+}

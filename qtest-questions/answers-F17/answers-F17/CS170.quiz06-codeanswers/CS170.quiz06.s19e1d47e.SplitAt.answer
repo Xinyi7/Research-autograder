@@ -1,0 +1,40 @@
+public class SplitAt {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+
+    
+    System.out.println(splitAt("apples", 2));
+    
+    }
+
+public static String[] splitAt(String s, int n){
+
+
+String first = "";
+String sec= "";
+
+
+
+
+for (int i = 0; i < n; i++){
+
+    first = first + s.charAt(i);
+    
+}
+
+for (int j = n; j < s.length(); j++){
+
+    sec= sec + s.charAt(j);
+}
+
+String[] result = new String[2];
+result[0]=first;
+result[1]=sec;
+
+   return result[];
+}
+
+}

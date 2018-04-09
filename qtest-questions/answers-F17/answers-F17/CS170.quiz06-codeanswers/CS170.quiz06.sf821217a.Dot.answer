@@ -1,0 +1,21 @@
+public class Dot {
+    public static String dot(String s, int k) {
+        String result = "";
+        result.append(0,k);
+        result+=".";
+        result.append(k+1);
+        return result;
+            
+            
+        }
+        
+   
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(dot("orange", 2));
+        // test your method here
+    }
+
+}

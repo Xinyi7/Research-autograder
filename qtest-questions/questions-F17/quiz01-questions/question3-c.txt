@@ -1,0 +1,30 @@
+<question>
+<title>TotalDistance</title>
+<type>MultipleChoice</type>
+<points>4</points>
+<text>
+In the following program, what is the total distance traveled by the turtle?
+
+Turtle t = new Turtle();
+t.forward(20);
+for (int i = 0; i < 3; i++) {
+    t.forward(50);
+    t.left(90);
+    t.backward(10);
+}
+for (int j = 0; j < 2; j++) {
+    t.backward(100);
+    t.right(45);
+}
+</text>
+<option>100</option>
+<option>150</option>
+<option>260</option>
+<option>395</option>
+<option>400</option>
+<option>480</option>
+<option>840</option>
+<option>800</option>
+<answer>400</answer>
+</question>
+

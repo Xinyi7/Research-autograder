@@ -1,0 +1,53 @@
+<question>
+<title>ForToWhile2</title>
+<type>JavaCode</type>
+<points>6</points>
+<text>
+The following program uses "for" loops. Change it into an equivalent program that uses "while" loops.
+</text>
+<init>
+public class ForToWhile {
+
+    public static void main(String[] args) {
+        String x = "ABCD";
+        int y = 5;
+        for (int i = x.length() - 1; i >= 0 ; i -= 2) {
+           System.out.println(y + " " + x.charAt(i));
+           y--;
+           for (int j = y; j > 0; j /= 2) {
+               System.out.println("Z " + j);
+           }
+        }
+    }
+}
+</init>
+<answer>
+public class ForToWhile {
+
+    public static void main(String[] args) {
+        String x = "ABCD";
+        int y = 5;
+        int i = x.length() - 1;
+        while (i >= 0) {
+           System.out.println(y + " " + x.charAt(i));
+           y--;
+           int j = y;
+           while (j > 0) {
+               System.out.println("Z " + j);
+                j /= 2;
+           }
+           i -= 2;
+        }
+    }
+}
+</answer>
+<rubric>
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

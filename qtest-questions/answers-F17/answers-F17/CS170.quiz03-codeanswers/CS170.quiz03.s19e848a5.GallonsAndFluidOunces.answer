@@ -1,0 +1,13 @@
+public class GallonsAndFluidOunces {
+   
+   public static String gallons(int x){
+    return " " + x +" fluid oz equal to " + x / 128 + " gal " + x % 128 +"fluid oz.";
+ }
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(gallons(300));
+        // test your method here
+    }
+
+}

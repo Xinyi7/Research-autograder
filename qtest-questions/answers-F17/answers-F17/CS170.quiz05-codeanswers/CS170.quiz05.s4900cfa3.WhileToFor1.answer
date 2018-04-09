@@ -1,0 +1,25 @@
+public class WhileToFor {
+
+    public static void main(String[] args) {
+        String s = "WhileFor";
+        int a = 4;
+       // int b = s.length() - 2;
+        For(int b = s.length()-2; b>2 ; b-= 2){
+            If (b > 2) {
+                System.out.println("b+" + b + ": " + s.charAt(b);
+            } else if( i > 1) {
+                System.out.println("i: " + i);
+                i-= 3;
+            }
+        }
+//        while (b > 2) {
+//            System.out.println("b=" + b + ": "+ s.charAt(b));
+ //           a++;
+ //           int i = b;
+ //           while (i > 1) {
+  //              System.out.println("i: " + i);
+   //             i -= 3;
+            }
+    //        b -= 2;
+        }
+    

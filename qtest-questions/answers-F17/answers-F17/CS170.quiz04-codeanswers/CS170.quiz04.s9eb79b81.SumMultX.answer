@@ -1,0 +1,17 @@
+public class SumMultX {
+
+    // write your method here
+    public static String sumMultX(int x, int y) {
+        int result = 0;
+        for (int i = x; i <= y; i++) {
+            result = (i % x) + result;
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(sumMultX(1, 5));
+    }
+
+}

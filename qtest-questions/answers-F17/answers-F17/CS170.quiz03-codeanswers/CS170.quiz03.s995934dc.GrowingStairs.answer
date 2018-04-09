@@ -1,0 +1,32 @@
+public class GrowingStairs {
+
+
+    public static void halfsquare( Turtle t,int n, double s) {
+        for (int i =0; i <n; i++) {
+        t.left(90);
+        t.forward(s);
+        t.right(90);
+        t.forward(s);
+    }
+    }
+    public static void stairs(Turtle t, int n, double s) {
+        for (int i =0; i < n; i++) {
+            halfsquare( t, 1, s * (i +1));
+        }
+      
+
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        //halfsquare(t, 1, 10);
+        stairs(t, 7, 10);
+         t.penup();
+        t.backward(280); 
+        t.right(90);
+        t.forward(280); 
+        t.left(90);
+        t.pendown();
+    }
+
+}

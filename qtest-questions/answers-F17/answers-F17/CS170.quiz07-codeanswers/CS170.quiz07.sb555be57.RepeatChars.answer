@@ -1,0 +1,13 @@
+public class RepeatChars {
+
+    public static String repeatChars(String s, int[] k) {
+        for (int row = 0; row < k.length(); row++) {
+            
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

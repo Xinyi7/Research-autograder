@@ -1,0 +1,30 @@
+public class FractalPath {
+// 1. 7;37/4;Total=4+...+4*(3/4)**(N-1)
+    public static void f(Turtle t, double x, int level) {
+        if (level < 1) {
+            return;
+        } else {
+            t.forward(x);
+            t.right(90);
+            t.forward(x / 2);
+            t.right(90);
+            t.forward(x);
+            t.left(135);
+            f(t, x * 0.75, level - 1);
+            t.right(135);
+            
+            t.forward(x/2);
+            t.left(45);
+            t. forward(x / 2);
+            t.left(90);
+            t.backward(x / 2);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(20);
+        f(t, 180, 2);
+        t.hideturtle();
+    }
+}

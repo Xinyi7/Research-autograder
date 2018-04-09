@@ -1,0 +1,17 @@
+public class AreFactorsOf {
+    public static void areFactorsof( int a, int b, int c){
+    if ( c / a = 0 && c / b = 0) {
+        return true;
+    }
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        system.out.println(areFactorsof(3,2,6));
+     
+        
+    }
+
+}

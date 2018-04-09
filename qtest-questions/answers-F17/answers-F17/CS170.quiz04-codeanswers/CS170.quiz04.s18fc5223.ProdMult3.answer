@@ -1,0 +1,21 @@
+public class ProdMult3 {
+    public static int ProdMult3(int a, int b){
+        int result = 1;
+        for (int i=a; i<=b; i++){
+            if (i%3==0){
+                result *=i;
+            }
+        }
+        return result;
+    }
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        System.out.println(ProdMult3(1, 7));// 18
+        System.out.println(ProdMult3(3, 7));// 18
+        System.out.println(ProdMult3(4, 6));//6
+        // test your method here
+    }
+
+}

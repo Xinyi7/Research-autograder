@@ -1,0 +1,13 @@
+public class AreMultiplesOf {
+
+    public static boolean areMultiples(int a, int b, int c) {
+        if( a && b % c == 0) {
+            System.out.println(true);
+        } else 
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

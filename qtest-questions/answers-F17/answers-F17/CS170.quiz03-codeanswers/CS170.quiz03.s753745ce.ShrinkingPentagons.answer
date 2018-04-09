@@ -1,0 +1,29 @@
+public class ShrinkingPentagons {
+
+    // Write your method here
+    public static void multipentagon(Turtle t, double x, int n){
+        for (int i=0; i<n; i++){
+            pentagon(t, (x/(i+1)), n);
+            t.penup();
+            t.forward((2*x)/(i+1));
+            t.pendown();
+        }
+    }
+    
+    public static void pentagon(Turtle t, double x, int n){
+            for (int i=0; i<5; i++){
+                t.forward(x);
+                t.left(360.0/n);
+                
+            }
+      
+    }
+
+    
+    public static void main(String[] args) {
+        // Test your method here
+        Turtle t= new Turtle();
+        multipentagon(t, 100, 5);
+    }
+
+}

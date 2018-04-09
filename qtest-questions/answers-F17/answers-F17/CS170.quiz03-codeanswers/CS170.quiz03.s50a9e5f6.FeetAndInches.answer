@@ -1,0 +1,14 @@
+public class FeetAndInches {
+
+    // write your method here
+    public static void feet(int x) {
+        return x / 12;
+        return x % 12;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(
+    }
+
+}

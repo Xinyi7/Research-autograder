@@ -1,0 +1,68 @@
+<question>
+<title>SquareDiag2</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Using turtle graphics, write a method squareDiag(Turtle t, double x, int n) that draws a diagonal line of overlapping squares like those in the figure. The parameter x is the length of a side of each square; n is the number of squares. The example in the figure is the result of a call to squareDiag(t, 50, 5) with Turtle t. For full credit, make sure that the turtle goes back to its initial position.
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAALQAAAC0AQMAAAAHA5RxAAAABlBMVEX///8AAABVwtN+AAAAn0lE
+QVRYw+3WsQ2DMBAF0CNEAZpkhWMBROmS0RiNkjGYJEQYFGP5XySnipT/y+cvV6ezRZjP6Q3vDG8n
+7OoMvxle4ItU8EX6WLc8E699/5J4M2G/C3aHvZ2xdzX23nCh/6xXfrTWxK++X9Dp+b7vqyNjdBT6
+dHq+V+fRip/R0B/o9Gwvz6O1REehr3R6vr/3lSafsPH4+9Pp3zjaV/+QF+gwi0DuhubNAAAAAElF
+TkSuQmCC
+</figure>
+<init>
+public class SquareDiag {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class SquareDiag {
+
+    public static void squareDiag(Turtle t, double x, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 4; j++) {
+                t.forward(x);
+                t.right(90);
+            }
+            t.penup();
+            t.forward(x / 2);
+            t.right(90);
+            t.forward(x / 2);
+            t.left(90);
+            t.pendown();
+        }
+        t.penup();
+        t.backward(n * x / 2);
+        t.left(90);
+        t.forward(n * x / 2);
+        t.right(90);
+        t.pendown();
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        squareDiag(t, 50, 5);
+    }
+
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

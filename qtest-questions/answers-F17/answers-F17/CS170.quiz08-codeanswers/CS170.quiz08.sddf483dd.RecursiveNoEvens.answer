@@ -1,0 +1,30 @@
+public class NoEvens {
+
+    // write your method here
+    public static boolean noEvens(String[] x, int n) {
+        int count=x.length;
+        boolean result=true;
+        if (count>n) {
+            for (int i=0; i<n; i++) {
+                if (x[i].length()%2==0) {
+                    result=false;
+                }
+            }
+        }
+        else {
+            for (int i=0; i<count; i++) {
+                if (x[i].length()%2==0) {
+                    result=false;
+                }
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] a={"abc", "ab", "a"};
+        System.out.println(noEvens(a,3));
+    }
+
+}

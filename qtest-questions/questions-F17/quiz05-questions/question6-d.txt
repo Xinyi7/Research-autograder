@@ -1,0 +1,34 @@
+<question>
+<title>DogCatBird</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+String dog = "bird";
+String cat = "dog";
+double bird = 3.4;
+System.out.println("cat".charAt(2));
+System.out.println(cat.charAt(2));
+System.out.println(dog + bird);
+System.out.println(cat + dog);
+System.out.println(dog.charAt((int)bird));
+System.out.println(dog.substring(1, (int)bird));
+System.out.println(("bird" + dog).substring(2, 5));
+System.out.println(("" + cat.charAt(1) + dog.substring(0,(int)bird)).substring(3));
+System.out.println("bird" + cat.length() + dog.length());
+System.out.println(dog.substring(0, cat.length()) + "+" + cat.substring(1));
+</text>
+<answer>
+t
+g
+bird3.4
+dogbird
+d
+ir
+rdb
+r
+bird34
+bir+og
+</answer>
+</question>

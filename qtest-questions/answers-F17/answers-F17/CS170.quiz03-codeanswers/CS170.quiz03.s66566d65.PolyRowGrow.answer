@@ -1,0 +1,30 @@
+public class PolyRowGrow {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        Turtle bob = new Turtle();
+        bob.delay(10);
+        polyRowGrow(bob, 4, 5, 20);
+       
+      
+        
+        // test your method here
+    }
+    public static void polyRowGrow(Turtle t, int n, int s, double x) {
+        for (int i = 0; i < n; i ++) {
+            for (int j = 0; j < s + 2*i; j ++) {
+                t.forward(x);
+                t.left(360.0/(s + 2*i));
+            }
+            t.penup();
+            t.forward(4 * x);
+            t.pendown();
+        }
+
+        t.penup();
+        t.backward(4 * x * n);
+        t.pendown();
+    }
+
+}

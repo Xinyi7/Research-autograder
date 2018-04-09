@@ -1,0 +1,37 @@
+<question>
+<title>CoffeeTeaEspresso</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+        int coffee = 3;
+        double tea = 4.0;
+        String espresso = "coffee";
+        System.out.println(coffee + "coffee");
+        System.out.println(coffee + tea);
+        System.out.println(coffee + tea + espresso);
+        System.out.println(espresso + coffee + tea);
+        System.out.println(tea * espresso.length() + "coffee".length());
+        for (int i = 4; i < 6; i++) {
+            coffee = coffee * coffee;
+            System.out.println(coffee);
+        }
+        for (int i = 1; i < 12; i += 4) {
+            tea += i;
+            System.out.println(espresso + tea);
+        }
+</text>
+<answer>
+3coffee
+7.0
+7.0coffee
+coffee34.0
+30.0
+9
+81
+coffee5.0
+coffee10.0
+coffee19.0
+</answer>
+</question>

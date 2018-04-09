@@ -1,0 +1,22 @@
+public class SplitAt {
+  public static String[] splitAt (String s, char c){
+    String[] result = new String[2];
+    String s1 = "";
+    int i = 0;
+    while (i < s.length() && charAt(i) == c){
+        s1 += charAt(i);
+        i++;
+    }
+    String s2 = s.substring(i);
+    result[0] = s1;
+    result[1] = s2;
+    return result;
+    }
+  }
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

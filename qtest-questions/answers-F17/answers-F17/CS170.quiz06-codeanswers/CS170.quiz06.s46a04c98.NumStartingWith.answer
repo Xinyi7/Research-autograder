@@ -1,0 +1,15 @@
+public class NumStartingWith {
+
+    public static int (String[] x, char c){
+        int result=0
+        for (int i=0; i< x.length; i++)
+            
+            
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] test = {"hello", "", "wow", "hey"};
+    }
+
+}

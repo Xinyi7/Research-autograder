@@ -1,0 +1,23 @@
+public class areAllEven {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"andy", "dave", "carl"};
+        String[] x2 = {"eric", "francis", "gary"};
+        System.out.println(areAllEven(x1));
+        System.out.println(areAllEven(x2));
+    }
+
+    public static boolean areAllEven(String[] x){
+        boolean result = true;
+        for(int i = 0; i < x.length; i++){
+            if (x[i].length() % 2 == 1){
+                result = result && false;
+            }
+        }
+        return result;
+    }
+
+}

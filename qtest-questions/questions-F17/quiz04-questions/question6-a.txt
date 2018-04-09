@@ -1,0 +1,52 @@
+<question>
+<title>AreMultiplesOf</title>
+<type>JavaCode</type>
+<points>5</points>
+<text>
+Write a Java method areMultiplesOf(int a, int b, int c) that takes three integers a, b, and c and returns the boolean true if both a and b are multipes of c, false otherwise.
+
+Examples:
+areMultiplesOf(10, 6, 2) returns true
+areMultiplesOf(10, 6, 3) returns false
+areMultiplesOf(10, 6, 5) returns false
+</text>
+<init>
+public class AreMultiplesOf {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}
+</init>
+<answer>
+public class AreMultiplesOf {
+
+    public static boolean areMultiplesOf(int a, int b, int c) {
+        if (a % c == 0 && b % c == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(areMultiplesOf(10, 6, 2)); // true
+        System.out.println(areMultiplesOf(10, 6, 3)); // false
+        System.out.println(areMultiplesOf(10, 6, 5)); // false
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-3 two syntax errors
+No credit if more than 2 syntax errors
+-2 one logical error
+-4 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>

@@ -1,0 +1,32 @@
+public class ExpandString {
+
+    
+    
+    public static String expand (String s, int n){
+       String c = "";
+       String result = "";
+        for (int i =0; i < s.length(); i++ ) {
+            for (int j = 0; j < n; j++){
+                
+            
+            c= "" +c + s.charAt(i);
+        }
+        result = result + c;
+        c = "";
+        }
+        return result;
+    }
+    
+    
+    // write your method here
+    
+    public static void main(String[] args) {
+        
+        System.out.println(expand("hello",5));
+        System.out.println(expand("tree",3));
+        
+        
+        // test your method here
+    }
+
+}

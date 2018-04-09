@@ -1,0 +1,13 @@
+public class GrowPoly {
+    public static void growPoly(Turtle t, double x, int n, int m){
+        for
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        Turtle dan = new Turtle();
+        growPoly(dan,20,5,7);
+        // test your method here
+    }
+    
+}

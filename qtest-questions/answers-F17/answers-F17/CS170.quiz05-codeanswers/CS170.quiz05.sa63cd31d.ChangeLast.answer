@@ -1,0 +1,21 @@
+public class ChangeLast {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(changeLast("book", "c"));
+         System.out.println(changeLast("root", "palm"));
+    }
+
+    public static String changeLast(String s, String last){
+        String result = "";
+        int end = last.length() - 1;
+        for(int i = 0; i < s.length() - 1; i++){
+            result += s.charAt(i);
+        }
+        result += last.charAt(end);
+        return result;
+    }
+
+}

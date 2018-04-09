@@ -1,0 +1,23 @@
+public class FeetAndInches {
+
+    // write your method here
+    public static String feet(int x) {
+        int wholeFeet = x / 12;
+        int leftoverInches = x % 12;
+        String result = x + " in equals " + wholeFeet + " ft " + leftoverInches + " in";
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(feet(68));
+        //aditional test cases
+        System.out.println(feet(0));
+        System.out.println(feet(11));
+        System.out.println(feet(12));
+        System.out.println(feet(13));
+        System.out.println(feet(26));
+        
+    }
+
+}

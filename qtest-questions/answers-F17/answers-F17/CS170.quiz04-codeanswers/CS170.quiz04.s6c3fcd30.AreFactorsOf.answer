@@ -1,0 +1,26 @@
+public class AreFactorsOf {
+
+    // write your method here
+    public static boolean areFactorsOf(int a, int b, int c){
+    boolean factors;
+    boolean aIsFactor;
+    boolean bIsFactor;
+    if(c/a >= 1 && c/a == int){
+     aIsFactor = true;
+        }
+    if(c/b >= && c/a == int){
+     bIsFactor = true;  
+        }
+    if(aIsFactor == true && bIsFactor == true){
+        return true;
+        }
+    return false;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        boolean b = areFactorsOf(3, 2, 6);
+        System.out.println(b);
+    }
+
+}

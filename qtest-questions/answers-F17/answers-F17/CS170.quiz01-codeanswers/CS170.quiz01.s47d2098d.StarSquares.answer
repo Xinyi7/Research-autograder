@@ -1,0 +1,22 @@
+public class StarSquares {
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle();
+        starSquares(t, 100.0);
+    }
+    // write your method here
+    //x is star side, x*(1/5) is square side
+    
+    public static void starSquares(Turtle t, double x) {
+        for (int k = 0; k < 5; k++) {
+            //square
+            for (int i = 0; i < 4; i++) {
+                t.forward((x*1/5));
+                t.left(90);
+            }
+        t.forward(x);
+        t.right(150);
+    }
+    }
+
+}

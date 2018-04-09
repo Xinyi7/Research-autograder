@@ -1,0 +1,22 @@
+public class ChangeLastFirst {
+
+    // write your method here
+    public static String changeLastFirst(String s, String first) {
+        String result = "";
+        if (s.length() > 1) {
+            result += s.substring(0, s.length()-1) + first.charAt(0);
+        }
+        else if (s.length() == 1) {
+            result += first.charAt(0);
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(changeLastFirst("book", "c"));
+        System.out.println(changeLastFirst("root", "palm"));
+        System.out.println(changeLastFirst("b", "c"));
+    }
+
+}

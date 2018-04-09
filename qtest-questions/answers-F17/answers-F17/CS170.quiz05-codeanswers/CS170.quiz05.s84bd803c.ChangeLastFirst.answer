@@ -1,0 +1,16 @@
+public class ChangeLastFirst {
+
+    // write your method here
+
+    public static String changeLastFirst(String s, String first){
+        char last = s.charAt(s.length());
+        char firstlet = first.charAt(0);
+        return finalString;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(changeLastFirst("book", "c"));
+    }
+
+}

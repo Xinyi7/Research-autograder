@@ -1,0 +1,20 @@
+public class AreFactorsOf {
+
+    // write your method here
+    public static boolean areFactorsOf(int a, int b, int c){
+       
+        if ((c%a==0)&&(c%b==0)){
+   System.out.println(true);
+        }else{
+        System.out.println(false);
+            
+        }
+     return 
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        areFactorsOf(2,3,6);
+    }
+
+}

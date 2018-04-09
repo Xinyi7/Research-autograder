@@ -1,0 +1,18 @@
+public class StringIndices {
+
+    // write your method here
+    public static String indices(String pre, String s, String, post) {
+        String result = "";
+        for (int i = 0; i < pre.length() - 1; i ++) {
+            result += pre.charAt(i) + s;
+        }
+        result += post;
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(indices("abc", "--", "$"));
+    }
+
+}

@@ -1,0 +1,20 @@
+public class RecursiveSumRatios {
+
+    // write your method here
+    public static double sumProducts(double[] x, double[] y, int n){
+        if(){
+            return 0;
+        } else {
+            return x[x.length-1] / y[y.length-1] // + sumProducts(x.substring(0, x.length-1)); I want to delete the last index of x and y and recurse it, but I forgot the syntax 
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        double[3] a = {1.0, 2.8, 3.0};
+        double[3] b = {3.0, 2.0, 2.0};
+        System.out.println(sumRatios({1.0, 2.8, 3.0}, {3.0, 2.0, 2.0}, 3));
+        System.out.println(sumRatios({}, {}, 0));
+    }
+
+}

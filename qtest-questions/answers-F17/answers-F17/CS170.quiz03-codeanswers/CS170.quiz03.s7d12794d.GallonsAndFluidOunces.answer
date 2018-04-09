@@ -1,0 +1,14 @@
+public class GallonsAndFluidOunces {
+    public static String gallon (double fluidounces; int gallon){
+        int x = fluidounces/150;
+        int y= fluidounces%128
+        System.out.println(fluidounces+" fl oz equals"+x+"gal"+y+"fl oz")
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        gallon(300);
+        // test your method here
+    }
+
+}

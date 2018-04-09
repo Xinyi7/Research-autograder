@@ -1,0 +1,17 @@
+public class LengthProduct {
+    public static int lengthProduct (String [] x) { 
+        int c=1; 
+        for (int i=0; i<x.length; i++) { 
+            c=c*x[i].length();
+        }
+        return c;
+    }
+    // write your method here
+    
+    public static void main(String[] args) {
+        String [] x1= {"hello"};
+        System.out.println(lengthProduct(x1));
+        // test your method here
+    }
+
+}

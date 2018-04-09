@@ -1,0 +1,25 @@
+public class NoOdds {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] a = {"alpha", "beta", "lambda"};
+        System.out.println(noOdds(a, 3));
+        String[] b = {"blue", "purple", "orange"};
+        System.out.println(noOdds(b, 3));
+    }
+
+    public static boolean noOdds (String[] x, int n) {
+        if (x.length <= 0) {
+            return true;
+        } else {
+            if (x[n-1].length() % 2 == 1) {
+                return false && noOdds(x, n-1);
+            } else {
+                return true && noOdds(x, n-1);
+            }
+            
+        }
+    }
+}

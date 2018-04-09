@@ -1,0 +1,33 @@
+<question>
+<title>TotalAngle1a</title>
+<type>MultipleChoice</type>
+<points>4</points>
+<text>
+What is the total angle that the turtle turns in the following program?
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        for(int i = 0; i < 5; i++) {
+            for(int j = 1; j < 3; j++) {
+                t.left(10);
+            }
+            f(t, 20);
+        }   
+    }
+
+    public static void f(Turtle t, double x){
+        for(int k = 0; k < 2; k++) {
+            t.left(x);
+        }
+    }
+</text>
+<option>100</option>
+<option>150</option>
+<option>200</option>
+<option>210</option>
+<option>250</option>
+<option>300</option>
+<option>310</option>
+<option>350</option>
+<answer>300</answer>
+</question>

@@ -1,0 +1,19 @@
+public class PickAndCount {
+    // write your method here
+    public static int pickAndCount (String s, int k) {
+        int result = 0;
+        for(int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) == s.charAt(k)) {
+                result++;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(pickAndCount("fluffy", 0));
+        System.out.println(pickAndCount("fluffy", 2));
+    }
+
+}

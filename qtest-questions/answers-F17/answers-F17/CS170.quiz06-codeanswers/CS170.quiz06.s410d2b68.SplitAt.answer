@@ -1,0 +1,19 @@
+public class SplitAt {
+
+    // write your method here
+    public static String[] SplitAt(String s, int n){
+        String[] result= new String[2];
+        for(int i=0; i<s.length;i++){
+            if(i==n)
+            result[n]==" "+s[n];
+            }
+            return result;
+        }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1={"apple",2};
+        printArray(SplitAt(x1));
+    }
+
+}

@@ -1,0 +1,34 @@
+<question>
+<title>BooleanExpressions4</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+        System.out.println("YELLING".length() > "whispering".length());
+        System.out.println((int)2.5 == 2);
+        System.out.println(true && !true);
+        System.out.println(false || (4 >= 3) && ((2 < 1)));
+        System.out.println(false && (true && (true || true) || (true && false)));
+        System.out.println((("blah".length() / 3.0) > 1) || (-1 == 1));
+        System.out.println((("blah".length() / 3) > 1) || (1 == -1));
+        boolean p = -5 > 5;
+        boolean q = -5 != 5;
+        boolean r = -5 == 5;
+        System.out.println(p + " " + q + " " + r);
+        System.out.println(p || q || r);
+        System.out.println(p && q && r);
+</text>
+<answer>
+false
+true
+false
+false
+false
+true
+false
+false true false
+true
+false
+</answer>
+</question>

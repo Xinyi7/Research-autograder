@@ -1,0 +1,21 @@
+public class NiceVacation {
+
+    public static String vacation(String s, int n){
+        String result = "";
+        for(int i = 0; i<s.length(); i++){
+            if(i == n){
+                result += " nice " + s.charAt(i) + " vacation ";
+            }
+            else{
+                result += s.charAt(i);
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(vacation("beach", 2));
+        System.out.println(vacation("mountains", 5));
+    }
+
+}

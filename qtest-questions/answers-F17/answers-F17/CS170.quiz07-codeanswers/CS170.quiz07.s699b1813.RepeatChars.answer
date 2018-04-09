@@ -1,0 +1,25 @@
+public class RepeatChars {
+
+    // write your method here
+    public static String repeatChars(String s, int[] k)
+             String result= "";
+           int count = 0;
+        for (int i = 0; i < s.length; i++){
+            if ( k[i] > 0){
+                count++;
+            }
+
+            
+        } return result;
+        
+       
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        int [] s1 = {2, 1, 3};
+        
+        System.out.println(repeatChars("hey", s1));
+    }
+
+}

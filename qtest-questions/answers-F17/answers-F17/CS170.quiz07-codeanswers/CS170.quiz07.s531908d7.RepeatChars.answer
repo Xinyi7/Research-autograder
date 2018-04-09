@@ -1,0 +1,16 @@
+public class RepeatChars {
+
+    public static String repeatChars(String s, int[] k){
+        String repeat = "";
+        for(int i = 0; i < k.length(); i ++){
+           repeat += s.charAt(i) * k[i];
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(repeatChars("Hey", {2, 1, 3}));
+        //repeatChars("you", {2, 1, 3});
+        //repeatChars("world", {2, 1, 3});
+        
+    }
+}

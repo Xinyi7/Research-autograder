@@ -1,0 +1,36 @@
+<question>
+<title>FallBreak</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print? Hint: it will print exactly 10 lines.
+
+String x = "Fall";
+String y = "break";
+int n = y.length();
+int i = 2;
+while (x.length() <= y.length() + 1) {
+    x += x.charAt(n - 2);
+    x += n;
+    y += i;
+    System.out.println(x.length());
+    System.out.println("-" + y.substring(n));
+    System.out.println(y);
+    i++;
+}
+System.out.println(x.charAt(x.length()-1) + x.substring(1, 2) + "a" + x.charAt(0));
+</text>
+<answer>
+6
+-2
+break2
+8
+-23
+break23
+10
+-234
+break234
+5aaF
+</answer>
+</question>
+

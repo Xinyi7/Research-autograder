@@ -1,0 +1,17 @@
+public class PigLatin {
+
+    // write your method here
+    public static String pigLatin (String s) {
+        return s.substring(1,s.length()) + s.charAt(0) + "a" ;
+         
+    }
+    
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(pigLatin ("hello"));
+        System.out.println(pigLatin ("peaches"));
+        System.out.println(pigLatin ("b"));
+    }
+
+}

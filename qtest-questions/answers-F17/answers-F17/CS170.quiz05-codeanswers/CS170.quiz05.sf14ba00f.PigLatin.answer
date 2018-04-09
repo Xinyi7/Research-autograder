@@ -1,0 +1,19 @@
+public class PigLatin {
+
+    // write your method here
+    public static String pigLatin(String s){
+        if (i= 0; i < s.length()+1; i++){
+            char c = s.charAt(i);
+            
+        }
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Syetem.out.println(pigLatin("hello"));
+        System.out.println(pigLatin("peaches"));
+        System.out.println(pigLatin("b"));
+    }
+
+}

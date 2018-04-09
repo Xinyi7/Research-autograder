@@ -1,0 +1,17 @@
+public class Separate {
+
+    // write your method here
+    public static String separate(String s, int n){
+        result String = "";
+        char c = '';
+        for (i=0; i<s.length()-1; i++){
+            re
+            result = "-" + s.char(n) + "-"
+        }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

@@ -1,0 +1,78 @@
+<question>
+<title>ShrinkingOctagons</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Write a method shrinkingOctagons(Turtle t, double x, int n) that draws a line of n shrinking octagons. The length of the side of the first octagon is x; the second octagon has side length x/2, the third octagon x/3, etc. The space between a octagon and the next one is equal to its side. Don't worry about getting the turtle back to its original position.
+The figure shows a call to shrinkingOctagons(t, 100, 5).
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAhUAAAD8AQMAAAD6/sReAAAABlBMVEX///8AAABVwtN+AAAE8ElE
+QVR42u2cTW4sJxDHG0IiYkUyysq7h7LKMjdIKascC1teeOkj+AjvCD5SDhDJkad7ZiiG+mxn1yye
+Hs28H0zxZ7qqgLcsR/n/yrePrjgZta80HwPIir40clDqElCtuBgR1bKLkZiatmRmVNpSGOu45OEU
+CLBVhzx8AgmseTzy8AkkCXW7PHwCKYJ9HPJwCQTEB2Z5eAQSRAPZ5eERSFI8scrDI5CisJBZHg6B
+gOqRUR52gQSViazysAskKZ/Z5GEXSFHayCgPs0BA/ZCe2mmXf+yeWuvkJsNTy9RaJ7eoF4Bxao2T
+C6bHpg7rzpVvXf3RNF2LSQhptzxsAilGO5ns33bLwySQZh6g4WuX3fKwCCQ5WvS9xd3ysAikOmbM
+oALYLQ+9QILLVHrj593y0AskO8eo/c5hvzzUAgF3o7KrulseWoFE96RpJZB2y0MrkINxMA7GwTgY
+B+NgHIyDcTAOxsE4GD1j3fj/dxej7kwtxEucHHYxmhhLi4wgh+0iI8phu8hIctguMrL8QZFR5LBd
+ZFRZsiID5CSHyGhyskViXLsHNyMq8joSIynyOhIjKz4pMYoiryMxquI3TWLAlzKCm9EpqzkZfefg
+ZPRGqE5GP6HFyciajwqMvu/kZFTNi1Ng9HMRnAykieZi/IBq8AW+Q3UxfkK14mLcqT7LM35FteRi
+/KbyrHjGX6gWXIwnXG0H4+sZ4dPdbfsYcbr0bIw0XXo2Rp4uPRujTP+JjVGnS8/GgOnSszHadOmZ
+GI9zqZkYT/PfZn7n63laraao72VafRg+xe8TvuLqd2LsjWO84eo7MXbgGO/T/m7GXjkGHuTlbNY4
+dnYfuc3f4GAQCH7tL6kRY2f31TEjN2LsbBCOGaURY2fPGWBGbZex//nx8Y9OIBW3Qetd8KwTCLTJ
+0j+NvWFDMgJpDX/r1v8IRJVAwkIxngZDZl3UgBjPgyG5czkU42UwJBcfUYzXwZDcOSWK8TYakhRI
+JRnvoyFJgQDFWNezSiCNYqzrWSOQsFCMtL2r7i/OSFYkLjBjW8+fr3DgBZJIxraeoV4Mwbi/BGNb
+zxUuhmDOORKMbT1/DifzAqkkY1vPP3eGAEoeAuNuEdN4TWL80hmCPgfLM3JnCPo8Ls946AxBnwvm
+Gb93hqDPJ/OMvztDBEoeAuOlN0Qj5MEzQl4kgcDYEAJ+Z6yJDVYgbWwIkWOQZ+BRQ0gcgzyLjxpC
+5hjknQDUEArHIO8moIZQOQZ5RwI1BOAY9F2NNvXwpgyYywM3hIVlVMo1rdPEzpRB3qHpG37kGeRd
+njz1Eh+XCYO8U4TyhYBjoYFB3m1CecuKY6GBQd6xQvnTgmOhgUHf9WpjlH0NjUYGUGENdDOVcGg0
+MioVudRupgZJronRSPog4bYhXR9u46iYQd4FzBM3YPsRiEPkTt5JRHsWm3G2DPHoUZF3I5HJNuOk
+1H3fRDqp5bbh6rDk2I0jk05qvW24OixlGwEMswFU1AvdgBLyfXMdVFGpwLZ2holn7Amcy9A5eYe3
+3+ML5w5O4JIHI5B3idFe4zkPcwLXNEwGeacZ7XmeVXUCQhxEQd6tRu/kc14qrZm/oW/yjjfaAz7n
+x+LFnc9kiqHeNlwFVVZw7GU3EQjc/L0T9ubcpF7+E4G0m4Z4/XNzbnK/DNdC/h8A/RmBS/50jffv
+J8nUo3xF+Q//atwTkNYfRwAAAABJRU5ErkJggg==
+</figure>
+<init>
+public class ShrinkingOctagons {
+
+    // Write your method here
+    
+    public static void main(String[] args) {
+        // Test your method here
+    }
+
+}
+</init>
+<answer>
+public class ShrinkingOctagons {
+
+    public static void shrinkingOctagons(Turtle t, double x, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 8; j++) {
+                t.forward(x / (i + 1));
+                t.left(45);
+            }
+        t.penup();
+        t.forward(2 * x / (i + 1));
+        t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        shrinkingOctagons(t, 100, 5);
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+

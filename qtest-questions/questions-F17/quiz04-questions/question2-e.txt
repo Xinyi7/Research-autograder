@@ -1,0 +1,35 @@
+<question>
+<title>BooleanExpressions5</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print?
+
+        System.out.println("when?".length() == 4);
+        System.out.println(Double.parseDouble("10") > "1000000".length());
+        System.out.println(!true || false);
+        System.out.println((6 < 2) || ((3 >= 1) && 1 == "1".length()));
+        System.out.println(((true || false) && (!false || true)) && (false || true));
+        for (int i = 2; i > 0; i--){
+            System.out.println((!(5 > i)) || (("when?".length() / 2) > 2));
+        }
+        boolean a = 1 < 2;
+        boolean b = 1 == 2;
+        boolean c = ((1 > 2) || !false)  ;
+        System.out.println(a + " " + b + " " + c);
+        System.out.println((a && b) + " " + c);
+        System.out.println((a || b) && c); 
+</text>
+<answer>
+false
+true
+false
+true
+true
+false
+false
+true false true
+false true
+true
+</answer>
+</question>

@@ -1,0 +1,24 @@
+public class StarSquares {
+    public static void star(Turtle t, double x, int s){
+      for (int i = 0 ; i < 5 ; i++)
+        t.forward(x);
+        t.right(360.0/s);
+        square(t, f)
+    }
+    public static void square(Turtle t, double f) {
+      for (int i = 0; i < 4; i++)
+        t.forward(x/5);
+        t.left(90);
+        t.forward(x);
+    
+}
+    // write your method here
+    
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        star(t , 100, 3);
+        // test your method here
+    }
+
+}

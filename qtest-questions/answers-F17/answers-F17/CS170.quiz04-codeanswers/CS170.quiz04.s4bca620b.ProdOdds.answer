@@ -1,0 +1,21 @@
+public class ProdOdds {
+
+    // write your method here
+    public static int prodOdds(int a, int b){
+        int product=1;
+    for (int i=a; i<=b; i++){
+        if(i%2!=0){
+            product*=i;
+        }
+    }
+    return product;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(prodOdds(3,5));
+        System.out.println(prodOdds(3,4));
+         System.out.println(prodOdds(2,4));
+    }
+
+}

@@ -1,0 +1,22 @@
+public class ProdOdds {
+
+    // write your method here
+
+    public static int prodOdds(int a, int b) {
+        int result=1;
+        for(int i=a; i<=b; i++) {
+            if(i%2 !=0) {
+                result=result * i;
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(prodOdds(3,7));
+        System.out.println(prodOdds(2,6));
+        System.out.println(prodOdds(1,3));
+    }
+
+}

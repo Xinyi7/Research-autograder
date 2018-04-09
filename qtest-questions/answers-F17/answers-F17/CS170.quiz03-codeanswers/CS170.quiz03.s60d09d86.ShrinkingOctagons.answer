@@ -1,0 +1,35 @@
+public class ShrinkingOctagon {
+
+ // public static void ShrinkingOctagon (Turtle t, double x, int n) {
+          //  for (int i = 1; int i < n; i++){
+          //  for (int j = 0; int j < 8; j++){
+           // t.left(45);
+           // t.forward(x/i);
+           // }
+  //  }
+  //}
+
+
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        ShrinkingOctagon(t,100.0 , 5);
+    }
+
+
+
+
+
+
+  public static void ShrinkingOctagon(Turtle t, double x, int n) {
+        for(int i = 1; i < n ; i++) {
+            t.left(180);
+            for(int j = 0; j < 8 ; j++) { 
+                t.forward(x * (1/i));
+                t.left(45);
+            }
+          
+        }
+    }
+    
+}

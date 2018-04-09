@@ -1,0 +1,14 @@
+public class Dot {
+    // write your method here
+    public static String Dot(String s, int k) {
+        String s = ""; 
+        replace s.charAt(k) with "."; 
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Dot("orange", 2); //returns "or.nge"
+        Dot ("whatever", 5); //returns "whate.er"
+    }
+
+}

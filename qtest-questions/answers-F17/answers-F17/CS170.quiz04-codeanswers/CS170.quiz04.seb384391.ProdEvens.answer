@@ -1,0 +1,22 @@
+public class ProdEvens {
+
+    // write your method here
+    public static int prodEvens(int a, int b)
+    { int result = 1;
+        for(int i=a;i<=b;i++)
+        {
+            if(i%2==0)
+            {
+                result*=i;
+            }
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        // test your method here
+         System.out.println(prodEvens(1,5));//8
+         System.out.println(prodEvens(6,10));//480
+         System.out.println(prodEvens(2,8));//384
+    }
+
+}

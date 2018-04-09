@@ -1,0 +1,23 @@
+public class GrowPoly {
+
+    // write your method here
+    public static void growPoly(Turtle s, double x, int n, int m) {
+      for (int j = 0; j < m; j++) {
+        for (int i = 0; i < n; i ++) {
+           s.left(360.0/n);
+           s.forward(x + 10 * j);
+        }
+        s.penup();
+        s.right(15);
+               s.forward(x + 10 * (j +1));    
+        s.pendown();
+      }
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle();
+        growPoly(t, 20, 5, 7);
+    }
+    
+}

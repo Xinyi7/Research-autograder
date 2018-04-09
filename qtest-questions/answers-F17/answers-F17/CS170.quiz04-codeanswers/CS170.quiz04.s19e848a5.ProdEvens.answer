@@ -1,0 +1,19 @@
+public class ProdEvens {
+  public static int prodEvens(int a, int b) {
+    int result = 0;
+    for(int result=a; result <= b; result+=2) {
+        if(result % 2 = 0){ result = result * (result + 2)  ;
+        }  else { (result += 1) * (result += 3);
+        }
+        
+        }
+  }
+  return result;
+  }
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

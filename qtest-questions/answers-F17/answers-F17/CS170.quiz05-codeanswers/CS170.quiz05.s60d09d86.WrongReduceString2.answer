@@ -1,0 +1,24 @@
+public class ReduceString {
+
+    public static String reduce(String s) {
+        if (s.length() <= 1) {
+            return s;
+        }
+        int n = s.length() - 1;
+        String result = "" + s.charAt(n);
+        while (n > 1) {
+            char c = s.charAt(n - 1);
+            if (c != s.charAt(n)) {
+                result = c + result;
+            }
+            n++;
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reduce("loooottts of   $$$$$!")); // lots of $!
+        System.out.println(reduce("AA")); // A
+        System.out.println(reduce("B")); // B
+    }
+}

@@ -1,0 +1,33 @@
+public class NoEvens {
+
+    // write your method here
+    public static boolean noEvens(String[] x, int n)
+    { 
+        int count =0;
+        if(n==0)
+        {
+            return true;
+        }
+        else if(x[count].length()%2!=0)
+        
+            {
+                return false;
+            }
+        
+        else 
+        {
+            count++;
+        return   noEvens(x,count);
+        }
+        
+    }
+    
+    public static void main(String[] args) 
+    {
+        // test your method here
+        String[] a={"alpha","beta","lambda"};
+       boolean b= noEvens(a,3);
+       System.out.println(b);
+    }
+
+}

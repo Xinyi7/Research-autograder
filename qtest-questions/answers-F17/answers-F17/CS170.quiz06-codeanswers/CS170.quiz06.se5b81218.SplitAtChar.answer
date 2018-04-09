@@ -1,0 +1,52 @@
+public class SplitAtChar {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x;
+        x = splitAtChar("apple", 'p');
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'a');
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'e');
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'q');
+        System.out.println(x[0] + ", " + x[1]);
+    }
+
+    public static String[] splitAtChar(String s, char c){
+    String s1 = "";
+    String s2 = "";
+    String[] rts = new String[2];
+    int stopIndex = -1;
+                for(int i = 0;i< s.length();i++){
+                    
+                    if(s.charAt(i)!=c)
+                        s1 += s.charAt(i);
+
+                    else{
+                        stopIndex = i;
+                        break;
+                    }
+                    
+                    }
+rts[0] = s1;
+if(stopIndex==-1){
+    rts[1] = s2;
+    return rts;
+
+}
+                for(int j = stopIndex;j<s.length();j++){
+                    s2 += s.charAt(j);
+                    }
+    rts[1] = s2;
+
+    return rts;
+        
+        
+        }
+
+    
+
+}

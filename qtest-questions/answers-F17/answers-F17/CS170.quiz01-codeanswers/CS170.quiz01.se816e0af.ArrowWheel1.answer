@@ -1,0 +1,15 @@
+public class ArrowWheel {
+
+    // write your method here
+    public stativ void arrowWheel(Turtle t, double x, int n){
+        
+    }
+    
+    
+    public static void main(String[] args) {
+        // test your method here
+        Turtle t = new Turtle();
+        arrowWheel(t, x, n);
+    }
+
+}

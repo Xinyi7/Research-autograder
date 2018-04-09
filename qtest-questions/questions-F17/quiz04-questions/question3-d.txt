@@ -1,0 +1,59 @@
+<question>
+<title>HeyYou</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print? Hint: it prints exactly 10 lines.
+
+        int hey = 4;
+        int you = 3;
+        System.out.println("+");
+        if (hey - you < you) {
+            System.out.println("-");            
+        } else {
+            System.out.println("*");
+        }
+        System.out.println("/");
+        if (hey != you) {
+            System.out.println("x");
+            if (hey + you == hey - you) {
+                System.out.println("y");
+            } else {
+                System.out.println("z");
+            }
+            System.out.println("i");
+            if (hey % you != 0) {
+                System.out.println("j");
+                if (you - hey < you) {
+                    System.out.println("k");
+                }
+            }
+            System.out.println("a");
+            if (you / 2 == hey) {
+                System.out.println("b");
+            } else if (you < hey) {
+                System.out.println("c");
+            } else {
+                System.out.println("d");
+            }
+        } else {
+            System.out.println("#");
+            if (hey / you < you) {
+                System.out.println("$");
+            }
+            System.out.println("%");
+        }
+</text>
+<answer>
++
+-
+/
+x
+z
+i
+j
+k
+a
+c
+</answer>
+</question>

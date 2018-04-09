@@ -1,0 +1,31 @@
+public class ProdOdds {
+
+    // write your method here
+    public static int probOdds(int a, int b)
+    {
+        int prod = 1;
+        int c  = 0;
+        if(a > b)
+        {
+            c = b;
+            b = a;
+            a = c;
+        }
+        for(int i = a; i <= b; i++)
+        {
+            if(i % 2 == 1)
+                prod = prod * i;
+        }
+        return prod;
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println(probOdds(0, 5));
+        System.out.println(probOdds(1, 9));
+        System.out.println(probOdds(17, 10));
+        System.out.println(probOdds(5, 15));
+        // test your method here
+    }
+
+}

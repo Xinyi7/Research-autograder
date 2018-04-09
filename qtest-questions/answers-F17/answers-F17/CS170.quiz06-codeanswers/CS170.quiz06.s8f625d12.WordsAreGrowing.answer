@@ -1,0 +1,27 @@
+public class WordsAreGrowing {
+
+    // write your method here
+    public static boolean wordsAreGrowing(String[] x)
+    {
+        boolean areGrowing = true;
+        for(int i=1;i<x.length;i++) //starts at i=1 so that we do not go out of bounds.
+        {
+            if(x[i-1].length()>=x[i].length()) //if the previous one is greater or equal than the current one.
+                areGrowing=false;
+        }
+        return areGrowing;
+    }
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"list", "of", "words"};
+        String[] x2 = {"a"};
+        String[] x3 = {"a", "b"};
+        String[] x4 = {"a", "aa", "aaaa"};
+
+        System.out.println(wordsAreGrowing(x1));
+        System.out.println(wordsAreGrowing(x2));
+        System.out.println(wordsAreGrowing(x3));
+        System.out.println(wordsAreGrowing(x4));
+    }
+
+}

@@ -1,0 +1,13 @@
+public class FeetAndInches {
+
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(conver(68));
+    }
+    public static String conver(int x){
+        return x+" in equals "+x/12+" ft "+x%12+" in "; 
+    }
+
+}

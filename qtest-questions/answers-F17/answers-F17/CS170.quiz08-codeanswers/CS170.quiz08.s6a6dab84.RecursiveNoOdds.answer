@@ -1,0 +1,22 @@
+public class NoOdds {
+
+   public static boolean noOdds(String[] x, int n){
+    if (x.length == 0) {
+        return true; 
+    } else if (n - 1 < 0){
+        return true;
+    } else if (x[n - 1 ].length() % 2 == 1){ 
+        return false;
+    } else {
+        return noOdds(x, n - 1); 
+    }
+   }
+    
+    public static void main(String[] args) {
+       String[] a = {"alpha", "beta", "lambda"};
+       System.out.println(noOdds(a, 3));
+       String[] b = {"blue", "purple", "orange"};
+       System.out.println(noOdds(b, 3));
+    }
+
+}

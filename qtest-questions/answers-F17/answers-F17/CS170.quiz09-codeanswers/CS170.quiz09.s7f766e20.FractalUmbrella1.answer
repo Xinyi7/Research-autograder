@@ -1,0 +1,29 @@
+// for f(t,200,3),total number of times that f is called: 3+3**2+3**3=39  times
+// for f(t,200,4),total number of times that f is called: 3+3**2+3**3+3**4= 120  times
+// for f(t,200,N),total number of times that f is called: 3+3**2+3**3+...3**(N-1)+3**N  times
+public class FractalUmbrella {
+
+    public static void f(Turtle t, double x, int level) {
+        if (level == 0) {
+            return;
+        } else {
+            t.left(60);
+            for (int i = 0; i < 5; i++) { //should be 5 not 3
+                t.forward(x);
+                t.left(180);
+                f(t, x * 0.25, level - 1);
+                t.right(180);
+                t.backward(x);
+                t.right(30);//should be 30, not 60
+            }
+            t.left(30);
+        }
+    }
+
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(1);
+        t.left(90);
+        f(t, 200, 4);
+    }
+}

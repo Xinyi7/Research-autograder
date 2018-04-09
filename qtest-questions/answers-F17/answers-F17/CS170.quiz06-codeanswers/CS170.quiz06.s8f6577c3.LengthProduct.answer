@@ -1,0 +1,32 @@
+public class LengthProduct {
+
+    // write your method here
+    public static int lengthProduct(String[] x){
+        int product=1; 
+        for (int i=0;i<x.length;i++){
+            product*=x[i].length(); 
+        }
+        return product; 
+    }
+    
+    public static void main(String[] args) {
+        // test cases
+        String[] x1= new String[1]; 
+        x1[0]="hello";
+        String[] x2= new String[2]; 
+        x2[0]="hey";
+        x2[1]=""; 
+        String[] x3= new String[2]; 
+        x3[0]="hey";
+        x3[1]="you"; 
+        String[] x4= new String[3]; 
+        x4[0]="list";
+        x4[1]="of"; 
+        x4[2]="words"; 
+        System.out.println(lengthProduct(x1)); 
+        System.out.println(lengthProduct(x2));
+        System.out.println(lengthProduct(x3));
+        System.out.println(lengthProduct(x4));
+    }
+
+}

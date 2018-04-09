@@ -1,0 +1,13 @@
+public class AllCharsExcept {
+
+    public static String allCharsExcept(String s, char c);
+    String result = "";
+    for (i=0;i<s.length();i++){
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+    }
+
+}

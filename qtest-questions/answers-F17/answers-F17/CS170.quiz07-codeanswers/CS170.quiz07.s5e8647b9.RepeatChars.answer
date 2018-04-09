@@ -1,0 +1,47 @@
+public class RepeatChars {
+
+    // write your method here
+    public static String repeatChars(String s, int[] k){
+             String result="";
+             int n=0;
+               if(s.length()==k.length){
+                for(int i=0;i<k.length;i++){
+                    for(int j=0;j<k[n];j++){
+                        result+=s.charAt(n);
+                        n++;
+                    }
+                }
+               }else if(s.length()>k.length){
+
+                for(int i=0;i<k.length;i++){
+                    for(int j=0;j<k[n];j++){
+                        result+=s.charAt(n);
+                        n++;
+                    }
+                }
+                    
+                    
+
+                    
+                }
+
+           return result;
+                
+               }
+        
+    
+
+
+
+
+    
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(repeatingChars("hey",{2,1,3}));
+System.out.println(repeatingChars("hey",{2,0,1}));
+System.out.println(repeatingChars("hey",{2,3}));
+        
+    }
+
+}

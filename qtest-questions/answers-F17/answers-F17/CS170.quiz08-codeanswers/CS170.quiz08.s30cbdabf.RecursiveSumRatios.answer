@@ -1,0 +1,17 @@
+public class RecursiveSumRatios {
+
+    public static int sumProducts(double[] x, double[]y, int n){
+        return (x[n] / y[n] + sumProducts(x, y , n-1));
+        }
+    }
+    
+    public static void main(String[] args) {
+       int [] x = {1.5, 2.8, 3.0};
+       int[] y = {3.0, 2.0, 2.0}; 
+       int[]w = {};
+       int[] s = {};
+       sumProducts(x, y, 3);
+        sumProducts(w, s, 0);
+        }
+
+}

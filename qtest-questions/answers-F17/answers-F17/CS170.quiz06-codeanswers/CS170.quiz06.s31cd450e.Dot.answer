@@ -1,0 +1,33 @@
+public class Dot {
+
+    // write your method here
+    public static String dot(String s, int k)
+    {
+        String result = "";
+        if(k < 0 || k >= s.length())
+            return s;
+        for(int i = 0; i < s.length(); i++)
+        {
+            if(i == k)
+            {
+                result = result + ".";
+            }
+            else
+            {
+                result = result + s.charAt(i);
+            }
+        }
+        return s;
+    }
+    
+    public static void main(String[] args) {
+    System.out.println(dot("orange", 2));
+    System.out.println(dot("whatever", 5));
+    System.out.println(dot("hey", 2));
+    System.out.println(dot("hey", -1));
+    System.out.println(dot("hey", 3));
+    
+        // test your method here
+    }
+
+}

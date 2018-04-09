@@ -1,0 +1,27 @@
+public class SplitAt {
+
+    // write your method here
+    public static String[] splitAt(String s, int n) {
+        String[] result = {"", ""};
+        for (int i = 0; i < s.length(); i++) {
+            if (i < n) result[0] += s.charAt(i);
+            else result[1] += s.charAt(i);
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = splitAt("apple", 2);
+        String[] x2 = splitAt("apple", 0);
+        String[] x3 = splitAt("apple", 4);
+        String[] x4 = splitAt("apple", 5);
+        System.out.println("x1: [\"" + x1[0] + "\", \"" + x1[1] + "\"]"); //["ap", "ple"]
+        System.out.println("x2: [\"" + x2[0] + "\", \"" + x2[1] + "\"]"); //["", "apple"]
+        System.out.println("x3: [\"" + x3[0] + "\", \"" + x3[1] + "\"]"); //["appl", "e"]
+        System.out.println("x4: [\"" + x4[0] + "\", \"" + x4[1] + "\"]"); //["apple", ""]
+        
+        
+    }
+
+}

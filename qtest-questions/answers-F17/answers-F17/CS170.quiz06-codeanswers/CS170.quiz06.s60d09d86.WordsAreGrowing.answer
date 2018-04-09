@@ -1,0 +1,20 @@
+public class WordsAreGrowing {
+
+public static boolean wordsAreGrowing(String[]x)
+int t =x[0]; 
+if (x[i].length() > x[0].length(){
+return x[i];}
+
+
+
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x1 = {"list", "of", "words"};
+        String[] x2 = {"a"};
+        String[] x3 = {"a", "b"};
+        String[] x4 = {"a", "aa", "aaaa"};
+        System.out.println(wordsAreGrowing(x1));
+    }
+
+}

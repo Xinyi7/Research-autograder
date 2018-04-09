@@ -1,0 +1,16 @@
+ <question>
+<title>Integrity1</title>
+<type>TrueFalse</type>
+<points>5</points>
+<text>
+Amy and Bob are two students in CS 170. They are not part of a team. The following are examples of violation of academic integrity. True or false?
+</text>
+<item>Amy helps Bob write a program that is not part of the homework assignment</item>
+<item>Amy looks at Bob's midterm exam, but then she rewrites the answer in her own words</item>
+<item>Amy and Bob look at each other's homework solutions after the submission deadline is over</item>
+<item>Amy finds some code on the web, changes it a little bit, and submits it with her homework</item>
+<item>Amy finds and exploits a bug in QTest that allows her to copy the right answer for a question in her quiz</item> 
+<answer>F T F T T</answer>
+<rubric>1 point for each correct answer</rubric>
+</question>
+

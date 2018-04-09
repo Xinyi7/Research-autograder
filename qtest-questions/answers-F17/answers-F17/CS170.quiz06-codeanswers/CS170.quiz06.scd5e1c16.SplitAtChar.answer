@@ -1,0 +1,45 @@
+public class SplitAtChar {
+
+    public static String[] splitAtChar(String s, char c) {
+        String result1 = "";
+        String result2 = "";
+        String[] combo = new String[2];
+        int first = 50;
+        int i = 0;
+        while (first == 50 && i < s.length()) {
+            if (s.charAt(i) == c) {
+                first = i;
+            }
+            i++;
+        }
+        if (first != 50) {
+            for (int j = 0; j <= first; j++) {
+                result1 += s.charAt(j);
+            }
+            for (int k = first; k < s.length(); k++) {
+                result2 += s.charAt(k);
+            }
+        } else {
+            result1 = s;
+        }
+        combo[0] = result1;
+        combo[1] = result2;
+
+        return combo;
+        
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] x;
+        x = splitAtChar("apple", 'p');
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'a');
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'e');
+        System.out.println(x[0] + ", " + x[1]);
+        x = splitAtChar("apple", 'q');
+        System.out.println(x[0] + ", " + x[1]);
+    }
+
+}

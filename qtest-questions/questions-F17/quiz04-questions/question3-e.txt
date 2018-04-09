@@ -1,0 +1,63 @@
+<question>
+<title>CatDog</title>
+<type>CodeTrace</type>
+<points>10</points>
+<text>
+What will this program print? Hint: it prints exactly 10 lines.
+
+        int cat = 8;
+        int dog = 5;
+        System.out.println("aa");
+        if (cat < dog) {
+            System.out.println("bb");
+        } else {
+            System.out.println("cc");
+        }
+        if (cat < dog * 2 ) {
+            System.out.println("dd");
+            if (cat - dog > dog) {
+                System.out.println("ee");
+            } else if (2*cat - dog == dog) {
+                System.out.println("ff");
+            } else if (2*cat - dog > dog) {
+                System.out.println("gg");
+            } else {
+                System.out.println("hh");
+            }
+        } else if (cat + dog == 13) {
+            System.out.println("ii");
+        } else {
+            System.out.println("jj");
+        }
+        System.out.println("kk");
+        if (cat % dog == 1) {
+            System.out.println("ll");
+        } else if (cat % dog == 2) {
+            System.out.println("mm");
+        } else {
+            if (cat % dog == 3) {
+                System.out.println("nn");
+                if (cat % dog == 4) {
+                    System.out.println("oo");
+                } else {
+                    System.out.println("pp");
+                }
+                System.out.println("qq");
+            }
+            System.out.println("rr");
+        }
+        System.out.println("ss");
+</text>
+<answer>
+aa
+cc
+dd
+gg
+kk
+nn
+pp
+qq
+rr
+ss
+</answer>
+</question>

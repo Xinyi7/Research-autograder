@@ -1,0 +1,26 @@
+public class ShrinkingOctagons {
+
+    // Write your method here
+    public static void polygon(Turtle t, double n, int numSides){
+        for(int i=0; i<numSides; i++){
+            t.forward(n);
+            t.left(360.0/numSides);
+        }
+    }
+    public static void shrinkingOctagons(Turtle t, double x, int n){
+        for(int i=0; i<n; i++){
+            polygon(t, x/(i+1),8);
+            t.penup();
+            t.forward(2*x/(i+1));
+            t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        // Test your method here
+        Turtle t=new Turtle();
+        t.delay(2);
+        shrinkingOctagons(t, 100, 5);
+    }
+
+}

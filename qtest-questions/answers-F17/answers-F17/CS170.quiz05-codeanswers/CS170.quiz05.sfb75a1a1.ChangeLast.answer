@@ -1,0 +1,15 @@
+public class ChangeLast {
+
+    // write your method here
+    public static String changeLast(String s, String last) {
+        return s.charAt(0) + "-" + s.charAt(s.length()-1);
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        changeLast("book", "c");// booc
+        changeLast("root", "palm");// room
+        
+    }
+
+}

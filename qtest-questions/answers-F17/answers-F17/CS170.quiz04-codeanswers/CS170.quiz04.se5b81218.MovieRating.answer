@@ -1,0 +1,32 @@
+public class MovieRating {
+
+    // write your method here
+
+    public static String movieRating(double stars){
+
+        if(stars<0)
+            return "invalid input";
+        else if(stars<2.5)
+            return "bad";
+        else if(stars<4.2)
+            return "ok";
+        else
+            return "mustsee";
+        
+        }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(movieRating(-1));
+        System.out.println(movieRating(0));
+        System.out.println(movieRating(2));
+        System.out.println(movieRating(2.4999999f));
+        // :(
+        System.out.println(2.4999999f);
+        System.out.println(2.4999999f==2.5);
+        System.out.println(movieRating(2.50000000000001f));
+        System.out.println(movieRating(4.2));
+        System.out.println(movieRating(900000000000000000000000000000000000000.0));
+    }
+
+}

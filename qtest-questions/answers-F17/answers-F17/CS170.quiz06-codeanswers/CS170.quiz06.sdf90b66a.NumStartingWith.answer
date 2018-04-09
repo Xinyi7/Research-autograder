@@ -1,0 +1,14 @@
+public class NumStartingWith {
+
+    public static String numStartingWith(String[] x, char c) {
+        
+    }
+}
+    // write your method here
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] test = {"hello", "", "wow", "hey"};
+    }
+
+}

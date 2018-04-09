@@ -1,0 +1,20 @@
+public class EvenStrings {
+   
+    public static void main(String[] args) {
+       evenStrings("blue", "pink"); 
+    }
+
+    public static String evenStrings(String s1, String s2){
+        int i = s1.length();
+        int k = s2.length();
+        
+        if ((i== k)&& i==(i%2=0) && k==(k%2=0)){
+            System.out.println("true");
+        }
+        else {
+            System.out.println("false");
+        }
+        
+    }
+
+}

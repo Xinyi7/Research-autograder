@@ -1,0 +1,38 @@
+public class SquareDiag {
+
+    // write your method here
+    //I have created a program that will make a square with length x
+    //Then the turtle will move to the top right corner of the square in anticipation of the next square
+    //squares will be made n number of times
+    //then the pen will lift and the turtle will move back to its origional position and turn around (ie face forward as before) so it is ready to run again
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        t.delay(10);
+        squarediag(t, 50, 4);
+        //squarediag(t, 50, 9);
+        //squarediag(t, 23, 17);
+        //squarediag(t, 0, 9);
+        //squarediag(t, 50, 0);
+        //squarediag(t, 5, 100);
+        // test your method here
+    }
+    public static void squarediag(Turtle t, double x, int n){
+        for(int i=0; i < n ; i++){
+            for(int j=0 ; j<4; j++){
+                t.forward(x);
+                t.left(90);
+            }
+            t.forward(x);
+            t.left(90);
+            t.forward(x);
+            t.right(90);
+        }
+        t.penup();
+        for(int k=0; k < 2; k++){
+            t.right(90);
+            t.forward(n * x);
+        }
+        t.right(180);
+    }
+}

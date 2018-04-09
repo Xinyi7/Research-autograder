@@ -1,0 +1,22 @@
+public class MergeRepeat {
+
+    // write your method here
+    public static String mergeRepeat(String[] s,int k) {
+        String result="";
+        for (int i=0;i<s.length;i++) {
+            for (int j=0;j<k;j++) {
+                result+=s[i]; 
+            }
+        }
+        return result;
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        String[] ken1={"hey","you","hi"};
+        System.out.println(mergeRepeat(ken1,2));
+        String[] ken2={"A","BC"};
+        System.out.println(mergeRepeat(ken2,3));
+    }
+
+}

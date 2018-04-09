@@ -1,0 +1,12 @@
+public class SumMultX {
+
+    public static String sumMultX(int x, int y) {
+    
+    public static void main(String[] args) {
+        sumMultX();
+        sumMultX();
+    }
+
+}
+
+

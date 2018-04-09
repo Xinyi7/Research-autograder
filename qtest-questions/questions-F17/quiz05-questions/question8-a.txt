@@ -1,0 +1,24 @@
+<question>
+<title>BooleanLoop1</title>
+<type>CodeTrace</type>
+<points>5</points>
+<text>
+What will this program print? Hint: it will print exactly 5 lines.
+
+for (int k = 10; k > 5; k -= 3) {
+    for (int h = 4; h < k; h += 2) {
+        boolean a = k % h > k / h;
+        boolean b = (k + h) % 2 < 1;
+        System.out.println(a + " " + b + " " + (a && b) + " " + (a || b));
+    }
+}
+</text>
+<answer>
+false true false true
+true true true true
+true true true true
+true false false true
+false false false false
+</answer>
+</question>
+

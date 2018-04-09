@@ -1,0 +1,23 @@
+public class Separate {
+
+    // write your method here
+    public static String separate(String s, int n)
+    {
+        String result ="";
+        for(int i=0;i<n;i++)    //adds all the characters of s into result before index n. If n is 0, the loop won't run
+        {
+            result+= ""+ s.charAt(i);
+        }
+        result+= "-" + s.charAt(n) + "-" + s.substring(n+1); //adds the dashes and the character between them, and then adds the rest of the string.
+        return result;
+
+    }
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(separate("orange", 2));
+        System.out.println(separate("whatever", 5));
+        System.out.println(separate("hey", 0));
+        System.out.println(separate("hey", 2));
+    }
+
+}

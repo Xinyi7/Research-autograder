@@ -1,0 +1,15 @@
+public class NiceVacation {
+
+    // write your method here
+    public static String vacation(String s, int n) {
+        return s.charAt((s.length() /2 -n))  +  " nice " + " vacation " +  s.charAt(s.length() / 2)  + " " + s.substring(n+1);
+    }
+    
+    public static void main(String[] args) {
+        // test your method here
+        System.out.println(vacation("beach", 2));
+        System.out.println(vacation("mountains", 5));
+        
+    }
+
+}

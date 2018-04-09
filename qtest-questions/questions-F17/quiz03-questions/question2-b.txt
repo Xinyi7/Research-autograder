@@ -1,0 +1,71 @@
+<question>
+<title>ShrinkingHexagons</title>
+<type>JavaCode</type>
+<points>10</points>
+<text>
+Write a method shrinkingHexagons(Turtle t, double x, int n) that draws a line of n shrinking hexagons. The length of the side of the first hexagon is x; the second hexagon has side length x/2, the third hexagon x/3, etc. The space between a hexagon and the next one is equal to its side. Don't worry about getting the turtle back to its original position.
+The figure shows a call to shrinkingHexagons(t, 100, 5).
+</text>
+<figure>
+iVBORw0KGgoAAAANSUhEUgAAAfwAAAC4AQMAAAA8IsyeAAAABlBMVEX///8AAABVwtN+AAADeElE
+QVRo3u2aUZLbIAyGg8pMeeQI3KT0ZkxP2iPsCZpmQ3Akx0ISBO/L+iXBnvkQln4hMJfL9/Wu68cV
+XX8HAB434lcAAts4CxDZ8ZwFSLgBA4CMG+4rAKXTOgXgOgNSXdDxyTkA3wmrcwCh2zwDELsjsmpp
+RE3TgNwNzDMARWgbtWRX0zQABK+sB3ghMtcDgnjDpiW7mqYBSXTLakAWQ9OoJbOaZgFOMai1AFD4
+ZS3AK2LTpiWrmqYBUTWqlYCkcsxKQFYFp0lLRjXNApxyWOsAoPSMRUs2NU0DgvrmKkBUj2sVIKl9
+q9eSTU3TgGK4uwTgDAO7GN53Og/gDeG1BhBMt1cAomlk+tcN5wGyKUBXAIrxvrqnfBYAjN55P8Ab
+I/T9gNB/8NjuLcMWeNEl0wDBC0F0yTRAiMQoumQaIKgxyRmynw+ynCGnAf2cWOQMOQ3ozgtOkSGn
+Ad2pDRQp1iu0NCJHPQAUWhqRox7gFFoakaMe0C00k6ZgybKW3gAwyxF2w4OVgChraUBN4T0AUFU8
+nZXrDvDrNs1+mACeOjsf2wsKLdUb04BybK9TaKn+ZQCdPRQKcJy9RRbjfTTA2cvvI00DMnG25+xN
+spbud6YBgbM3ymK8/2cBQRbj/X/k7A0KMX4OJ/Xt7YtxDOCps3Mz7uf1+k9QUzqyYAOEXTxpAaWZ
+tQewm/PUC27rLu7jqTBamgbQSITN3rSPp8zlGAaQ1QCiRk/ckbpqgstBPvDEHfHinjleB2gRn10N
+NXiKgP1URnJiayRXgQjAfu07BsA2JC8ByLzQxhNhe6meU1N8fZCfAF8fhee70gGaT0Oo7xkB2I+2
+8JoObvRQQyU+48UIiC8A9sO1e02JN3ollYRivTCTXReAFcEBSJW2RWJ+/uRjNblXmSGnlwegoJdl
+AzxmbgxIXM2S9pPzJ71Sf+OAYU+BTAPivkD55FTqH0Y0tImXPNOAbV6okeixrexhHr+vM7fU5AB3
+MAAAAmAPNJGlb5ud71RwuCv2TBYP8DoA0WurUB4pDUcif6wMb0C0GumRlcn8ZAdECsjcdI83YbY6
+sc5MOKEMABIFJK5iwRtRW61cJ9eIu2IPOOKtMALIA4BtvVALjIBtZQ95ku3AtmKpJY7HXU0D2IOu
+ZEu0rdpqmQe4q2kAe9iXbAu3lWstdd3hMvb7Grj+A4sdmwxzR0JyAAAAAElFTkSuQmCC
+</figure>
+<init>
+public class ShrinkingHexagons {
+
+    // Write your method here
+    
+    public static void main(String[] args) {
+        // Test your method here
+    }
+
+}
+</init>
+<answer>
+public class ShrinkingHexagons {
+
+    public static void shrinkingHexagons(Turtle t, double x, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 6; j++) {
+                t.forward(x / (i + 1));
+                t.left(60);
+            }
+        t.penup();
+        t.forward(2 * x / (i + 1));
+        t.pendown();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Turtle t = new Turtle();
+        shrinkingHexagons(t, 100, 5);
+    }
+}
+</answer>
+<rubric>
+-1 method signature doesn't mach the specification (wrong names and/or types)
+-1 no test cases in main method
+-1 one syntax error
+-4 two syntax errors
+No credit if more than 2 syntax errors
+-3 one logical error
+-7 two logical errors
+No credit if more than 2 logical errors
+</rubric>
+</question>
+
