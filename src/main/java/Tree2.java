@@ -304,6 +304,18 @@ public class Tree2 {
         }
 
     }
+    public static void removeMain(Node cu){
+        cu.accept(new ModifierVisitor<Void>() {
+            @Override
+            public Visitable visit(MethodCallExpr n, Void arg) {
+                if (n.getName().getIdentifier().equals("main")) {
+                    return null;
+                }
+                return super.visit(n, arg);
+            }
+        }, null);
+
+    }
 
     public static void main(String[] args) throws IOException {
         try {
